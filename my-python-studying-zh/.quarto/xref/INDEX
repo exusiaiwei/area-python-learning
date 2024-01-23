@@ -1,0 +1,23 @@
+{
+  "index.qmd": {
+    "index.html": "9ac1782a"
+  },
+  "intro.qmd": {
+    "intro.html": "d9cd0e34"
+  },
+  "summary.qmd": {
+    "summary.html": "7ce92b0d"
+  },
+  "references.qmd": {
+    "references.html": "80ca8267"
+  },
+  "basic_zh.qmd": {
+    "basic_zh.html": "60e1fd0c"
+  },
+  "operators_and_expressions_zh.qmd": {
+    "operators_and_expressions_zh.html": "c387ab6f"
+  },
+  "control_flow_zh.qmd": {
+    "control_flow_zh.html": "051eb20a"
+  }
+}
