@@ -1,12 +1,12 @@
 # 我的Python学习仓库
 
-[English Version](https://github.com/exusiaiwei/My-Python-Studying/blob/main/README.md)
+[English Version](https://github.com/exusiaiwei/My_Python_Studying/blob/main/README.md)
 
 ![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)
 
-![GitHub Repo stars](https://img.shields.io/github/stars/exusiaiwei/My-Python-Studying)
+![GitHub Repo stars](https://img.shields.io/github/stars/exusiaiwei/My_Python_Studying)
 
-![GitHub forks](https://img.shields.io/github/forks/exusiaiwei/My-Python-Studying)
+![GitHub forks](https://img.shields.io/github/forks/exusiaiwei/My_Python_Studying)
 
 一个用于组织和展示我的 Python 学习历程的仓库。
 

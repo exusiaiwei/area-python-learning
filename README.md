@@ -1,12 +1,12 @@
 # My-Python-Studying
 
-[中文版](https://github.com/exusiaiwei/My-Python-Studying/blob/main/README.zh-CN.md)
+[中文版](https://github.com/exusiaiwei/My_Python_Studying/blob/main/README.zh-CN.md)
 
 ![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)
 
-![GitHub Repo stars](https://img.shields.io/github/stars/exusiaiwei/My-Python-Studying)
+![GitHub Repo stars](https://img.shields.io/github/stars/exusiaiwei/My_Python_Studying)
 
-![GitHub forks](https://img.shields.io/github/forks/exusiaiwei/My-Python-Studying)
+![GitHub forks](https://img.shields.io/github/forks/exusiaiwei/My_Python_Studying)
 
 A repository for organizing and showcasing my Python Studying journey.
 
