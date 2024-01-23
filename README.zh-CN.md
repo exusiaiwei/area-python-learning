@@ -42,8 +42,6 @@
 
 - [A Byte of Python](https://github.com/swaroopch/byte-of-python): 这是我学习 Python 的主要参考教程。这本书由 Swaroop Chitlur 撰写，以其易于理解和实用的方法让我受益匪浅。该书免费并开源在 GitHub 上，非常适合那些刚开始接触 Python 的读者。我在此对作者表示由衷的感谢！
 
-@exusiaiwei
-
 ## 许可证
 
 [MIT](LICENSE) © exusiaiwei

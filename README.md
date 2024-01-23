@@ -42,8 +42,6 @@ Since this is just a repository for showcasing and documenting code learning, no
 
 - [A Byte of Python](https://github.com/swaroopch/byte-of-python): This is the main reference tutorial for my Python learning. Written by Swaroop Chitlur, it has been immensely helpful with its easy-to-understand and practical approach. The book is freely available and open-source on GitHub, making it perfect for beginners in Python. I express my sincere gratitude to the author!
 
-@exusiaiwei
-
 ## License
 
 [MIT](LICENSE) © exusiaiwei
