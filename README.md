@@ -1,18 +1,18 @@
-# My-Python-Learning
+# My-Python-Studying
 
-[中文版](https://github.com/exusiaiwei/My-Python-Learning/blob/main/README.zh-CN.md)
+[中文版](https://github.com/exusiaiwei/My-Python-Studying/blob/main/README.zh-CN.md)
 
 ![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)
 
-![GitHub Repo stars](https://img.shields.io/github/stars/exusiaiwei/My-Python-Learning)
+![GitHub Repo stars](https://img.shields.io/github/stars/exusiaiwei/My-Python-Studying)
 
-![GitHub forks](https://img.shields.io/github/forks/exusiaiwei/My-Python-Learning)
+![GitHub forks](https://img.shields.io/github/forks/exusiaiwei/My-Python-Studying)
 
-A repository for organizing and showcasing my Python learning journey.
+A repository for organizing and showcasing my Python Studying journey.
 
 ## Table of Contents
 
-- [My-Python-Learning](#my-python-learning)
+- [My-Python-Studying](#my-python-studying)
   - [Table of Contents](#table-of-contents)
   - [Background](#background)
   - [Installation](#installation)
@@ -22,7 +22,7 @@ A repository for organizing and showcasing my Python learning journey.
 
 ## Background
 
-Welcome to the "My-Python-Learning" repository, where I keep my notes and practice records for learning Python.
+Welcome to the "My-Python-Studying" repository, where I keep my notes and practice records for learning Python.
 
 During my Python learning journey, I have used Quarto to create a series of interactive notebooks. I have organized them as Quarto book projects, allowing me to read the materials and execute embedded code interactively.
 
