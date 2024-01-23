@@ -1,12 +1,12 @@
 # 我的Python学习仓库
 
-[English Version](https://github.com/exusiaiwei/My_Python_Studying/blob/main/README.md)
+[English Version](https://github.com/exusiaiwei/My-Python-Learning/blob/main/README.md)
 
 ![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)
 
-![GitHub Repo stars](https://img.shields.io/github/stars/exusiaiwei/My_Python_Studying)
+![GitHub Repo stars](https://img.shields.io/github/stars/exusiaiwei/My-Python-Learning)
 
-![GitHub forks](https://img.shields.io/github/forks/exusiaiwei/My_Python_Studying)
+![GitHub forks](https://img.shields.io/github/forks/exusiaiwei/My-Python-Learning)
 
 一个用于组织和展示我的 Python 学习历程的仓库。
 
@@ -26,7 +26,7 @@
 
 在我的 Python 学习之旅中，我使用 Quarto 记录了一系列的交互式笔记。我采用的是 Quarto 书籍项目的形式，以便在阅读材料的同时，观看和执行相关的嵌入式代码。
 
-本仓库下的 **'my-python-studying-zh'** 和 **'my-python-studying-en'** 文件夹分别存放着我制作的中文和英文版本交互式笔记。
+本仓库下的 **'my-python-learning-zh'** 和 **'my-python-learning-en'** 文件夹分别存放着我制作的中文和英文版本交互式笔记。
 
 此外，对于一些简单的代码实践，我将它们放置在 **'practical_code'** 文件夹中。您可以在这里查看我在学习 Python 过程中的实战项目和练习。
 

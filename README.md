@@ -1,18 +1,18 @@
-# My-Python-Studying
+# My-Python-Learning
 
-[中文版](https://github.com/exusiaiwei/My_Python_Studying/blob/main/README.zh-CN.md)
+[中文版](https://github.com/exusiaiwei/My-Python-Learning/blob/main/README.zh-CN.md)
 
 ![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)
 
-![GitHub Repo stars](https://img.shields.io/github/stars/exusiaiwei/My_Python_Studying)
+![GitHub Repo stars](https://img.shields.io/github/stars/exusiaiwei/My-Python-Learning)
 
-![GitHub forks](https://img.shields.io/github/forks/exusiaiwei/My_Python_Studying)
+![GitHub forks](https://img.shields.io/github/forks/exusiaiwei/My-Python-Learning)
 
-A repository for organizing and showcasing my Python Studying journey.
+A repository for organizing and showcasing my Python Learning journey.
 
 ## Table of Contents
 
-- [My-Python-Studying](#my-python-studying)
+- [My-Python-Learning](#my-python-learning)
   - [Table of Contents](#table-of-contents)
   - [Background](#background)
   - [Installation](#installation)
@@ -22,11 +22,11 @@ A repository for organizing and showcasing my Python Studying journey.
 
 ## Background
 
-Welcome to the "My-Python-Studying" repository, where I keep my notes and practice records for learning Python.
+Welcome to the "My-Python-Learning" repository, where I keep my notes and practice records for learning Python.
 
 During my Python learning journey, I have used Quarto to create a series of interactive notebooks. I have organized them as Quarto book projects, allowing me to read the materials and execute embedded code interactively.
 
-The **'my-python-studying-zh'** and **'my-python-studying-en'** folders in this repository contain the interactive notebooks I have created in Chinese and English versions, respectively.
+The **'my-python-learning-zh'** and **'my-python-learning-en'** folders in this repository contain the interactive notebooks I have created in Chinese and English versions, respectively.
 
 In addition, for some simple coding exercises, I have placed them in the **'practical_code'** folder. Here, you can find my practical projects and exercises as I learn Python.
 
