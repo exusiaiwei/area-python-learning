@@ -30,6 +30,10 @@ The **'my-python-learning-zh'** and **'my-python-learning-en'** folders in this 
 
 In addition, for some simple coding exercises, I have placed them in the **'practical_code'** folder. Here, you can find my practical projects and exercises as I learn Python.
 
+These notes are based on the book 'A Byte of Python' by Swaroop C H, which is licensed under the CC BY-SA 3.0 license.
+
+Unless otherwise stated, the notes are released under the [CC BY-SA 4.0](LICENSE) license.
+
 ## Installation
 
 Since this is just a repository for showcasing and documenting code learning, no installation is required.
