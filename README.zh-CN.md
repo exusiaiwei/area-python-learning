@@ -44,4 +44,4 @@
 
 ## 许可证
 
-[MIT](LICENSE) © exusiaiwei
+[CC BY-SA 4.0](LICENSE) © exusiaiwei

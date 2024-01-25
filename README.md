@@ -44,4 +44,4 @@ Since this is just a repository for showcasing and documenting code learning, no
 
 ## License
 
-[MIT](LICENSE) © exusiaiwei
+[CC BY-SA 4.0](LICENSE) © exusiaiwei
