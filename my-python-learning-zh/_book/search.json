@@ -14,7 +14,10 @@
     "href": "intro.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSwaroopch(CH 2024)\n\n\n\n\nCH, Swaroop. 2024. “Swaroopch/Byte-of-Python.” https://github.com/swaroopch/byte-of-python."
+    "text": "This is a book created from markdown and executable code.\nSwaroopch(CH 2024)\n\n\n\n\nCH, Swaroop. 2024. “Swaroopch/Byte-of-Python.” https://github.com/swaroopch/byte-of-python.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
   },
   {
     "objectID": "summary.html",
@@ -179,6 +182,186 @@
     "text": "2.3 运行逻辑\n\n2.3.1 逻辑行和物理行\n逻辑行是指在代码中表示一个语句或命令的行，而物理行是指在代码文件中实际占据一行的文本。\n逻辑行可以跨越多个物理行，通过使用行连接符（）将多个物理行连接成一个逻辑行。 物理行则是代码文件中的实际行数，每个物理行都以换行符（）结尾。\n逻辑行的特征：\n\n一个逻辑行可以包含一个或多个语句或命令。\n逻辑行可以跨越多个物理行。\n逻辑行以换行符（）结尾。\n\n物理行的特征：\n\n物理行是代码文件中的实际行数。\n每个物理行都以换行符（）结尾。\n\nPython鼓励每个物理行对应一个逻辑行，即每行一个语句，以保证代码的可读性。\n\n# 逻辑行跨越多个物理行的示例\nx = 1 + \\\n    2 + \\\n    3\n\nprint(x)\n\n# 逻辑行和物理行相同的示例\ny = 5\nprint(y)\n\ny = 5;\nprint(y);\n\ny = 5; print(y);\n\ny = 5; print(y)\n\n6\n5\n5\n5\n5\n\n\n\n\n2.3.2 缩进\n缩进是Python中的一种语法规则，用于表示代码块的层次结构。在Python中，缩进是强制性的，它决定了代码的执行顺序和逻辑关系。逻辑行的缩进级别决定了语句的分组，同组的语句构成一个代码块。\n基本概念：\n\n缩进是通过使用空格或制表符来实现的。\n缩进的数量和方式必须保持一致，通常建议使用四个空格进行缩进。\n缩进的层次结构决定了代码块的嵌套关系。\n\n特性：\n\n缩进用于定义函数、循环、条件语句等代码块。\n缩进可以提高代码的可读性和可维护性。\n缩进错误会导致语法错误或逻辑错误。\n\n代码示例： 以下是一个缩进构成代码块的示例：\n\ndef greet(name):\n    if name == \"Alice\":\n        print(\"Hello, Alice!\")\n    else:\n        print(\"Hello, stranger!\")\n\ngreet(\"Bob\")\n\nHello, stranger!",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>基础</span>"
+    ]
+  },
+  {
+    "objectID": "functions.html",
+    "href": "functions.html",
+    "title": "5  函数",
+    "section": "",
+    "text": "5.1 函数参数\n函数可以接受参数，并利用这些值来执行某些效果。\n参数(parameter)：\n实参(argument):\n这个概念类似于食谱和做饭。食谱上的材料列表（比如说需要多少克的面粉，多少克的糖）就像是参数列表，而你实际使用的面粉和糖的数量就像实参。\n# 示例代码来源： A Byte of Python\ndef print_max(a, b):\n    if a &gt; b:\n        print(a, 'is maximum')  # 输出 a 是最大值\n    elif a == b:\n        print(a, 'is equal to', b)  # 输出 a 等于 b\n    else:\n        print(b, 'is maximum')  # 输出 b 是最大值\n\n# 直接传递字面值\nprint_max(3, 4)\n\nx = 5\ny = 7\n\n# 将变量作为参数传递\nprint_max(x, y)\n\n4 is maximum\n7 is maximum\n在示例代码中，我们定义了一个print_max的函数，其中包括两个参数a和b。我们使用一个if..else语句来找出较大的数字并将其打印出来。\n第一次调用函数 print_max 时，我们直接提供数字作为参数。在第二种情况下，我们使用变量x，y作为参数调用函数。 print_max(x, y) 导致参数 x 的值被赋给参数 a ，参数 y 的值被赋给参数 b 。",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>函数</span>"
+    ]
+  },
+  {
+    "objectID": "functions.html#函数参数",
+    "href": "functions.html#函数参数",
+    "title": "5  函数",
+    "section": "",
+    "text": "在定义函数时，我们为函数预留了一些位置，这些位置就是参数。\n参数在函数头部的圆括号之间定义，用逗号分隔，它们在整个函数体内部都是可访问的。\n参数是变量，用于存储函数调用时传递的值（实参）。\n\n\n\n在调用函数时，我们会向函数中传递一些值，这些值就是实参。\n实参是赋予函数中定义的参数的具体值。同样用逗号分隔。",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>函数</span>"
+    ]
+  },
+  {
+    "objectID": "functions.html#局部变量",
+    "href": "functions.html#局部变量",
+    "title": "5  函数",
+    "section": "5.2 局部变量",
+    "text": "5.2 局部变量\n\n在函数定义内部声明的变量被称为“局部变量”。\n“局部变量”的有效范围被限制在声明该变量的函数内部，这种约束被称为变量的”作用域”。\n变量的作用域从其声明的位置开始，直到该代码块或函数的结束。\n即使在函数外部存在同名变量，局部变量也被视为独立的变量。无论名称是否相同，函数内部的局部变量与函数外部的变量不会有任何关联。\n\n\n# 示例代码来源： A Byte of Python\nx = 50\n\ndef func(x):\n    print('x is', x)  # 输出 x 的值\n    x = 2  # 修改局部变量 x 的值\n    print('Changed local x to', x)  # 输出修改后的 x 的值\n\n\nfunc(x)\nprint('x is still', x)  # 输出最初的 x 的值\n\nx is 50\nChanged local x to 2\nx is still 50\n\n\n第一次在函数体的第一行打印变量x的值时，Python使用在函数定义之前在主块中声明的参数值。\n接下来，我们给函数中的局部变量x赋值为2。当我们在函数中改变 局部变量 x 的值时，主块中定义的 x 不受影响。",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>函数</span>"
+    ]
+  },
+  {
+    "objectID": "basic.html",
+    "href": "basic.html",
+    "title": "2  基础",
+    "section": "",
+    "text": "2.1 数据类型",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>基础</span>"
+    ]
+  },
+  {
+    "objectID": "basic.html#数据类型",
+    "href": "basic.html#数据类型",
+    "title": "2  基础",
+    "section": "",
+    "text": "2.1.1 字面常量\n字面常量是在代码中直接写入且在程序执行过程中不会改变的固定值。\n在Python中，有几种类型的字面常量，包括：\n\n数值字面常量：整数、浮点数和复数。\n字符串字面常量：用单引号（’’）或双引号（““）括起来的字符序列。\n布尔字面常量：True和False。\nNone：表示缺少值的特殊常量。\n\n字面常量用于给变量赋值、进行计算和定义Python程序中的条件。\n它们提供了一种直接在代码中表示固定值的方式，使程序更易于理解和维护。\n\nx = 10  # 将整数字面常量赋值给变量\ny = 3.14  # 将浮点数字面常量赋值给变量\nname = 'John'  # 使用单引号括起来的字符串\nmessage = \"Hello, world!\"  # 使用双引号括起来的字符串\nis_active = True  # 将布尔字面常量赋值给变量\nempty_value = None  # 将None字面常量赋值给变量\n\n\n\n2.1.2 字符串\n字符串是用于表示文本数据的数据类型。\n特性：\n\n在python中，可以用单引号和双引号指定字符串。\n三引号可以指定多行字符串。\n字符串的值不可以修改。\n\n\n# 创建字符串\nname = \"Alice\"\n\n# 连接字符串\ngreeting = \"Hello, \" + name + \"!\"\n\n# 输出字符串\nprint(greeting)  # 输出：Hello, Alice!\n\n# 获取字符串长度\nlength = len(name)\nprint(length)  # 输出：5\n\n# 截取字符串\nsubstring = name[1:3]\nprint(substring)  # 输出：li\n\n# 替换字符串\nnew_name = name.replace(\"A\", \"B\")\nprint(new_name)  # 输出：Blice\n\nHello, Alice!\n5\nli\nBlice\n\n\n\n2.1.2.1 字符串的格式化函数\n字符串的format函数可以将相应参数传入字符串中。\n\n占位符为{}\n可以通过索引指定插入顺序，python从0开始计数。\n可以命名参数。\n\n\nname = \"Alice\"\nage = 25\n\n# 使用占位符插入变量\ngreeting = \"Hello, my name is {} and I am {} years old.\".format(name, age)\nprint(greeting)  # 输出：Hello, my name is Alice and I am 25 years old.\n\n# 可以通过索引指定插入的顺序\ngreeting2 = \"Hello, my name is {1} and I am {0} years old.\".format(age, name)\nprint(greeting2)  # 输出：Hello, my name is Alice and I am 25 years old.\n\n# 可以使用关键字参数指定插入的值\ngreeting3 = \"Hello, my name is {name} and I am {age} years old.\".format(name=\"Alice\", age=25)\nprint(greeting3)  # 输出：Hello, my name is Alice and I am 25 years old.\n\nHello, my name is Alice and I am 25 years old.\nHello, my name is Alice and I am 25 years old.\nHello, my name is Alice and I am 25 years old.\n\n\n\n\n\n2.1.3 转义序列\n转义序列是一种特殊的字符序列，以反斜杠（）开头，并在其后跟着一个或多个字符。用于表示非打印字符、特殊字符或具有特殊含义的字符。\n转义序列以反斜杠（）开头，后跟一个或多个字符，用于表示特定的字符或操作。通过使用转义序列，我们可以在字符串中插入这些特殊字符，而不是将它们解释为普通字符。\n转义序列的定义和特性：\n\n转义序列以反斜杠（）开头。\n转义序列由一个或多个字符组成。\n转义序列用于表示非打印字符、特殊字符或具有特殊含义的字符。\n转义序列可以在字符串、字符常量、正则表达式和其他上下文中使用。\n\n以下是一些常见的转义序列及其含义：\n\n：换行符\n制表符\n回车符\n\\’：单引号\n\\“：双引号\n\\：反斜杠\n\n\n# 在字符串中使用转义序列来表示特殊字符：\nprint(\"Hello\\tWorld\")  # 输出：Hello    World\nprint(\"I\\'m a programmer\")  # 输出：I'm a programmer\nprint(\"She said, \\\"Hello!\\\"\")  # 输出：She said, \"Hello!\"\nprint(\"\\\"I love you.\\\" \\n \\\"Me too.\\\"\")\n# 在正则表达式中使用转义序列来匹配特殊字符：\nimport re\npattern = r\"\\d+\"  # 匹配一个或多个数字\nresult = re.findall(pattern, \"12345\")\nprint(result)  # 输出：['12345']\n\nHello   World\nI'm a programmer\nShe said, \"Hello!\"\n\"I love you.\" \n \"Me too.\"\n['12345']",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>基础</span>"
+    ]
+  },
+  {
+    "objectID": "basic.html#变量",
+    "href": "basic.html#变量",
+    "title": "2  基础",
+    "section": "2.2 变量",
+    "text": "2.2 变量\n变量是Python中的一个概念，用于存储和操作数据。它可以存储各种类型的数据，例如整数、浮点数、字符串等。\n特性：\n\n可以通过赋值操作将数据存储到变量中。\n可以使用变量名来访问变量中存储的数据。\n变量的值可以随时修改。\n变量可以在程序的不同位置使用和传递。\n变量的作用域可以限定在特定的代码块中。\n\n\ni = 5\nprint(i)\n\ne = ( i + 1 ) * 2\n\nprint(e)\n\ns = '''This is a multi-line string.\nThis is the second line.'''\n\nprint(s)\n\n5\n12\nThis is a multi-line string.\nThis is the second line.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>基础</span>"
+    ]
+  },
+  {
+    "objectID": "basic.html#运行逻辑",
+    "href": "basic.html#运行逻辑",
+    "title": "2  基础",
+    "section": "2.3 运行逻辑",
+    "text": "2.3 运行逻辑\n\n2.3.1 逻辑行和物理行\n逻辑行是指在代码中表示一个语句或命令的行，而物理行是指在代码文件中实际占据一行的文本。\n逻辑行可以跨越多个物理行，通过使用行连接符（）将多个物理行连接成一个逻辑行。 物理行则是代码文件中的实际行数，每个物理行都以换行符（）结尾。\n逻辑行的特征：\n\n一个逻辑行可以包含一个或多个语句或命令。\n逻辑行可以跨越多个物理行。\n逻辑行以换行符（）结尾。\n\n物理行的特征：\n\n物理行是代码文件中的实际行数。\n每个物理行都以换行符（）结尾。\n\nPython鼓励每个物理行对应一个逻辑行，即每行一个语句，以保证代码的可读性。\n\n# 逻辑行跨越多个物理行的示例\nx = 1 + \\\n    2 + \\\n    3\n\nprint(x)\n\n# 逻辑行和物理行相同的示例\ny = 5\nprint(y)\n\ny = 5;\nprint(y);\n\ny = 5; print(y);\n\ny = 5; print(y)\n\n6\n5\n5\n5\n5\n\n\n\n\n2.3.2 缩进\n缩进是Python中的一种语法规则，用于表示代码块的层次结构。在Python中，缩进是强制性的，它决定了代码的执行顺序和逻辑关系。逻辑行的缩进级别决定了语句的分组，同组的语句构成一个代码块。\n基本概念：\n\n缩进是通过使用空格或制表符来实现的。\n缩进的数量和方式必须保持一致，通常建议使用四个空格进行缩进。\n缩进的层次结构决定了代码块的嵌套关系。\n\n特性：\n\n缩进用于定义函数、循环、条件语句等代码块。\n缩进可以提高代码的可读性和可维护性。\n缩进错误会导致语法错误或逻辑错误。\n\n代码示例： 以下是一个缩进构成代码块的示例：\n\ndef greet(name):\n    if name == \"Alice\":\n        print(\"Hello, Alice!\")\n    else:\n        print(\"Hello, stranger!\")\n\ngreet(\"Bob\")\n\nHello, stranger!",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>基础</span>"
+    ]
+  },
+  {
+    "objectID": "operators_and_expressions.html",
+    "href": "operators_and_expressions.html",
+    "title": "3  运算符和表达式",
+    "section": "",
+    "text": "3.1 运算符",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>运算符和表达式</span>"
+    ]
+  },
+  {
+    "objectID": "operators_and_expressions.html#运算符",
+    "href": "operators_and_expressions.html#运算符",
+    "title": "3  运算符和表达式",
+    "section": "",
+    "text": "3.1.1 1. 算术运算符：\n\n加法运算符（+）：用于将两个值相加。可以处理数值，字符串和列表等类型。\n减法运算符（-）：用于将一个值减去另一个值。如果第一个操作数缺失，默认为0。\n乘法运算符（*）：用于将两个值相乘。用于处理字符串时，则返回重复固定次数的字符串。\n除法运算符（/）：用于将一个值除以另一个值。\n取模运算符（%）：用于计算两个值相除的余数。\n幂运算符（**）：用于计算一个值的指数。\n整除运算符（//）：用于计算两个值相除的整数部分。答案会向下取整到最近的整数值；如果其中有操作数是浮点数，则答案会是浮点数。\n\n\n# 加法运算符\nx1 = 2 + 3\nprint(x1)\nx2 = \"a\" + \"b\"\nprint(x2)\n# 减法运算符\ny1 = 3 - 2\nprint(y1)\ny2 = - 2\nprint(y2)\n# 乘法运算符\na1 = 5 * 6\nprint(a1)\na2 = \"my\" * 6\nprint(a2)\n# 除法运算符\nb = 50 / 25\nprint(b)\n# 取模运算符\nc1 = 26 % 3\nprint(c1)\nc2 = -25.5 % 2.25\nprint(c2)\n# 幂运算符\nd= 2 ** 3\nprint(d)\n# 整除运算符\ne1 = 28 // 3\nprint(e1)\ne2 = 9//1.8\nprint(e2)\n\n5\nab\n1\n-2\n30\nmymymymymymy\n2.0\n2\n1.5\n8\n9\n4.0\n\n\n\n\n3.1.2 2. 比较运算符：\n\n等于运算符（==）：用于检查两个值是否相等。\n不等于运算符（!=）：用于检查两个值是否不相等。\n大于运算符（&gt;）：用于检查一个值是否大于另一个值。\n小于运算符（&lt;）：用于检查一个值是否小于另一个值。\n大于等于运算符（&gt;=）：用于检查一个值是否大于或等于另一个值。\n小于等于运算符（&lt;=）：用于检查一个值是否小于或等于另一个值。\n\n\na = 1 == 1\nprint(a)\nb = 1 != 1\nprint(b)\nc = 2 &gt; 1\nprint(c)\nd = 2 &lt; 1\nprint(d)\ne = 2 &gt;= 2\nprint(e)\nf = 1 &lt;= 2\nprint(f)\n\nTrue\nFalse\nTrue\nFalse\nTrue\nTrue\n\n\n\n\n3.1.3 3. 逻辑运算符（布尔运算符）：\n\n与运算符（and）：用于检查多个条件是否同时为真。只有当所有条件都为真时，结果才为真。\n或运算符（or）：用于检查多个条件是否至少有一个为真。只要有一个条件为真，结果就为真。\n非运算符（not）：用于对条件进行取反。\n\n\n# 与运算符（and）：只有当所有条件都为真时，结果才为真\na = True and True\nprint(a)  # 输出：True\n\nb = True and False\nprint(b)  # 输出：False\n\n# 或运算符（or）：只要有一个条件为真，结果就为真\nc = True or False\nprint(c)  # 输出：True\n\nd = False or False\nprint(d)  # 输出：False\n\n# 非运算符（not）：对条件进行取反\ne = not True\nprint(e)  # 输出：False\n\nf = not False\nprint(f)  # 输出：True\n\nTrue\nFalse\nTrue\nFalse\nFalse\nTrue\n\n\n短路评估：当使用逻辑运算符（如and和or）连接多个条件表达式时，Python会根据运算符的特性来决定是否对所有条件进行求值。 - and运算中，只要任意一个条件为False，则整个表达式必然为False，此时Python会停止计算后面的值并立刻返回False。 - or运算中，只要任意一个条件为True，则整个表达式必然为True，此时Python会停止计算后面的值并立刻返回True。 - 短路评估可以提高代码的效率和性能，避免了不必要的运算和求值。\n\n# 短路评估的示例\na = 4\nb = 0\n\nif b != 0 and a / b &lt; 1:\n    print(\"条件满足\")\nelse:\n    print(\"条件不满足\")    \n\n条件不满足\n\n\n在上面的示例中，通过短路评估，在b != 0这一步判断整体结果为False，进而跳过执行后面的a / b的除以0运算，避免了出现错误。如果不适用短路评估，会先判断b != 0为False，进而执行除法运算，会出现除以0错误。\n\n\n3.1.4 4. 位运算符：\n位（bit）：存储、处理数据的最小单位。一位只能存储0或1这两个可能的值。计算机中的数字以二进制（即由0和1组成）的方式储存。\n位移：位移是用来修改数字位值的操作。位移分为左移和右移，左移是在原数右边添加一个0，右移是把最右边一位去掉。\n\n在十进制中，向左移动一位（即在尾部添加一个0）表示乘以10，向右移动一位（即去掉尾部的数字）表示除以10。\n在二进制中，向左移动一位（即在尾部添加一个0）表示乘以2，向右移动一位（即去掉尾部的数字）表示除以2。\n\n位运算符\n\n按位与运算符（&）：用于对两个值进行按位与操作。如果对应的两个二进制位都为1，则该位的结果值为1，否则0。\n按位或运算符（|）：用于对两个值进行按位或操作。如果对应的两个二进制位有一个为1，则该位的结果值为1，否则0。\n按位异或运算符（^）：用于对两个值进行按位异或操作。如果对应的两个二进制位一个为1，另一个为0，则该位结果值为1，否则0（即同为0或者同为1则结果为0）\n按位取反运算符（~）：用于对一个值进行按位取反操作。对一个二进制数按位取反，即将0变1，1变0。x的按位取反是-(x+1)。\n左移运算符（&lt;&lt;）：用于将一个值向左移动指定的位数。\n右移运算符（&gt;&gt;）：用于将一个值向右移动指定的位数。\n\n位运算符是操作二进制位的，不过在实际的编程过程中，使用并不频繁，所以在此处我只给出了简单的解释和例子。\n\n# 定义两个变量\na = 60  # 60的二进制表示为0011 1100\nb = 13  # 13的二进制表示为0000 1101\n\nprint(a, \"的二进制表示为\", bin(a))\nprint(b, \"的二进制表示为\", bin(b))\n\nprint(\"a & b =\", a & b)  # 按位与运算。二进制结果0000 1100，对应十进制为12\nprint(\"a | b =\", a | b)  # 按位或运算。二进制结果0011 1101，对应十进制为61\nprint(\"a ^ b =\", a ^ b)  # 按位异或运算。二进制结果0011 0001，对应十进制为49\nprint(\"~a =\", ~a)  # 按位取反运算。二进制结果1100 0011，对应十进制为-61（注意：是负数）\n\nprint(\"a &lt;&lt; 2 =\", a &lt;&lt; 2)  # 左移2位运算。二进制结果1111 0000，对应十进制为240\nprint(\"a &gt;&gt; 2 =\", a &gt;&gt; 2)  # 右移2位运算。二进制结果0000 1111，对应十进制为15\n\n60 的二进制表示为 0b111100\n13 的二进制表示为 0b1101\na & b = 12\na | b = 61\na ^ b = 49\n~a = -61\na &lt;&lt; 2 = 240\na &gt;&gt; 2 = 15\n\n\n\n\n3.1.5 5. 赋值运算符：\n\n简单赋值运算符（=）：用于将一个值赋给一个变量。\n加法赋值运算符（+=）：用于将一个值与一个变量相加，并将结果赋给该变量。\n减法赋值运算符（-=）：用于将一个值从一个变量中减去，并将结果赋给该变量。\n乘法赋值运算符（*=）：用于将一个值与一个变量相乘，并将结果赋给该变量。\n除法赋值运算符（/=）：用于将一个值除以一个变量，并将结果赋给该变量。\n取模赋值运算符（%=）：用于计算两个值相除的余数，并将结果赋给一个变量。\n幂赋值运算符（**=）：用于计算一个值的指数，并将结果赋给一个变量。\n整除赋值运算符（//=）：用于计算两个值相除的整数部分，并将结果赋给一个变量。\n\n\n# 简单赋值运算符（=）\na = 10\nprint(\"a =\", a)  # 输出：a = 10\n\n# 加法赋值运算符（+=）\na += 2\nprint(\"a =\", a)  # 输出：a = 12\n\n# 减法赋值运算符（-=）\na -= 2\nprint(\"a =\", a)  # 输出：a = 10\n\n# 乘法赋值运算符（*=）\na *= 2\nprint(\"a =\", a)  # 输出：a = 20\n\n# 除法赋值运算符（/=）\na /= 2\nprint(\"a =\", a)  # 输出：a = 10.0\n\n# 取模赋值运算符（%=）\na %= 3\nprint(\"a =\", a)  # 输出：a = 1.0\n\n# 幂赋值运算符（**=）\na **= 3\nprint(\"a =\", a)  # 输出：a = 1.0\n\n# 整除赋值运算符（//=）\na = 10\na //= 3\nprint(\"a =\", a)  # 输出：a = 3\n\na = 10\na = 12\na = 10\na = 20\na = 10.0\na = 1.0\na = 1.0\na = 3",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>运算符和表达式</span>"
+    ]
+  },
+  {
+    "objectID": "operators_and_expressions.html#表达式",
+    "href": "operators_and_expressions.html#表达式",
+    "title": "3  运算符和表达式",
+    "section": "3.2 表达式",
+    "text": "3.2 表达式\n表达式是由运算符和操作数组成的组合，用于计算和生成值。\n在Python中，表达式可以是简单的算术表达式，也可以是复杂的逻辑表达式。\n例如，以下是一些常见的表达式示例：\n\n算术表达式：2 + 3 * 4\n逻辑表达式：(x &gt; 5) and (y &lt; 10)\n字符串拼接表达式：‘Hello’ + ‘World’\n列表推导式：[x for x in range(10) if x % 2 == 0]\n\n表达式的值可以根据操作数的类型和运算符的规则进行计算。在计算表达式时，Python会按照一定的优先级和结合性来确定运算的顺序。\n\n3.2.1 计算顺序\n类似数学中的乘法优先级高于加法优先级，Python里的表达式也存在优先级之分。Python会先计算优先级较高的运算符和表达式，然后再计算优先级较低的表达式。\n对于复杂的表达式，虽然可以依靠记忆优先级规则来确保正确的运算顺序，但是为了代码的清晰和易读，一般建议显性地使用括号来标明运算顺序。\n在运算符具有相同的优先级时，计算顺序由它们的结合性确定。结合性可以是左结合或右结合。\n\n左结合意味着从左到右进行计算。常见的例子包括算术运算符（如加法、减法、乘法、除法等）、比较运算符和大多数位运算符。\n右结合意味着从右到左进行计算。常见的例子包括指数运算符、赋值运算符（=）和复合赋值运算符（如+=、-=、*=、/=、%=、**=、//=、&=、^=、&gt;&gt;=、&lt;&lt;=）。\n\n\n\n3.2.2 数学运算和赋值的快捷方式\n常见的做法是对变量进行数学运算，然后将运算结果赋值给变量，因此对于这种表达式有一个快捷方式。\n\na = 2\na = a * 3\nprint(\"a =\", a)\n\nb = 2\nb *= 3\nprint(\"b =\", b)\n\na = 6\nb = 6",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>运算符和表达式</span>"
+    ]
+  },
+  {
+    "objectID": "control_flow.html",
+    "href": "control_flow.html",
+    "title": "4  控制流",
+    "section": "",
+    "text": "4.1 if 语句\n条件语句允许根据条件的真假来执行不同的代码块。if 语句用于执行条件为真时的代码块，而 else 语句用于执行条件为假时的代码块。\n# 示例代码来源： A Byte of Python\n# 我们这里先定义一下猜测的值，而非通过input来获取值\n# 这是由于Quarto和Jupyter Notebook这类环境无法处理中间输入（input）\n# 这两个环境都被设计为批量执行代码的模式，一旦所有的cell开始执行，它们就能完成所有的运行，无需人工干预\n# 所以，我们这里直接设定一个值，而非通过input来获取这个值\nguess = 20  \n\nnumber = 23\n\nprint('你的猜测是：', guess)\n\nif guess == number:\n    print('恭喜你，你猜对了。')\n    print('（但你没有赢得任何奖品！）')\nelif guess &lt; number:\n    # 另一个代码块\n    print('不对，它比那个数稍微大一点')\n    # 你可以在代码块中做任何你想做的事情...\nelse:\n    print('不对，它比那个数稍微小一点')\n    # 你必须猜大于number才能到达这里\n\nprint('完成')\n# 这个最后的语句总是会被执行，\n# 在if语句执行之后。\n\n# 如果你想在其他环境（如标准Python环境或IDLE）中获得用户输入，\n# 你可以将第五行的代码改为 \"guess = int(input('请输入一个整数：'))\"。\n# 这样就能接收用户的输入作为 'guess' 的值，然后进行后续的判断。\n\n你的猜测是： 20\n不对，它比那个数稍微大一点\n完成\n示例代码中的知识点：",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>控制流</span>"
+    ]
+  },
+  {
+    "objectID": "control_flow.html#if-语句",
+    "href": "control_flow.html#if-语句",
+    "title": "4  控制流",
+    "section": "",
+    "text": "input 函数会将一个字符串打印到屏幕上并等待输入，在输入内容后，input() 函数会将输入的内容作为一个字符串返回。\nint 是一个类，在这里它用于将字符串转换为整数。如果需要转化为浮点数则用 float。\n缩进级别用于将语句分类为不同的代码块。应当遵循一致的缩进原则。\nif，elif 和 else 语句在逻辑行的末尾必须有一个冒号，后面跟着对应的代码块。\nelif 语句是将两个相关的 if else-if else 合并成一个组合的 if-elif-else 语句。可以简化程序和缩进量。\n可以在一个 if 语句里嵌套另一个 if 语句，这被称为嵌套的 if 语句。\nelif 和 else 语句是可选的。一个 if 可以在只有 if 部分的情况下生效。",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>控制流</span>"
+    ]
+  },
+  {
+    "objectID": "control_flow.html#while语句",
+    "href": "control_flow.html#while语句",
+    "title": "4  控制流",
+    "section": "4.2 while语句",
+    "text": "4.2 while语句\nwhile语句允许在条件为真时重复执行一组语句。while语句是一种循环语句，可以包括一个可选的if语句。\n\n# 示例代码来源： A Byte of Python\nnumber = 23\nrunning = True\n\n# 由于我们无法在Quarto或Jupyter环境中使用input()函数，这里我们设定了一个预设的猜测值列表\nguesses = [20, 25, 23]  \nguesses_iter = iter(guesses)  # 创建一个迭代对象 \n\nwhile running:\n    # 在Quarto和Jupyter环境中，'input()' 函数需要改写为从预设列表中迭代猜测值\n    guess = next(guesses_iter)\n    print('你的猜测是：', guess)\n\n    if guess == number:\n        # 如果猜测值等于设定值，则输出猜对了，并终止while循环\n        print('恭喜你，你猜对了。')\n        running = False\n    elif guess &lt; number:\n        # 结果也会显示预设猜测值偏小\n        print('不对，它比那个数稍微大一点')\n    else:\n        # 结果也会显示预设猜测值偏大\n        print('不对，它比那个数稍微小一点')\n\nprint('完成')\n\n# 迭代器 'guesses_iter' 遍历完所有guesses后，程序就会结束\n# 在实际的Python环境或IDLE中运行时，你可以取消 'guess = next(guesses_iter)' 这一行的注释\n# 并将 'guess = int(input('请输入一个整数 : '))' 这一行注释去掉，将 'guesses' 与 'guesses_iter'注释掉\n# 这样就能通过用户输入来获取猜测值，并通过持续的while循环来实现用户的持续猜测\n\n你的猜测是： 20\n不对，它比那个数稍微大一点\n你的猜测是： 25\n不对，它比那个数稍微小一点\n你的猜测是： 23\n恭喜你，你猜对了。\n完成\n\n\n示例代码中的知识点：\n\n在 while 循环之前将变量 running 设置为 True，程序会先检查变量 running 是否为 True，然后继续执行相应的 while 块。\n执行完块之后，再次检查条件（即变量 running）。\n如果条件为真，则再次执行 while 块。\n如果条件为假，则执行可选的 else 块，然后继续下一条语句。\n如果 while 循环有一个 else 子句，除非使用 break 语句跳出循环，否则它总是会被执行。\nTrue 和 False 被称为布尔类型，可以分别视作值 1 和 0 的等价物。",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>控制流</span>"
+    ]
+  },
+  {
+    "objectID": "control_flow.html#for-循环",
+    "href": "control_flow.html#for-循环",
+    "title": "4  控制流",
+    "section": "4.3 for 循环",
+    "text": "4.3 for 循环\nfor..in 语句是另一种循环语句，它遍历一个对象序列，即逐个遍历序列中的每个项目。\n就现在的进度，序列可以被视作一个有序的项目集合。\n\n# 示例代码来源： A Byte of Python\nfor i in range(1, 5):\n    print(i)\nelse:\n    print('for循环结束')\n\n1\n2\n3\n4\nfor循环结束\n\n\n示例代码中的知识点：\n\n内置函数 range 可以生成数字序列。\n默认情况下，range 的步长为 1。给 range 提供的第三个数字将成为步长，例如 range(1,5,2) 给出了 [1,3]。不包括第二个数字（即结尾数字）。\nrange 一次只生成一个数字，如果需要完整的数字列表需要调用 list()。\nfor 循环中的 else 部分是可选的。若包含，除非使用 break 语句跳出循环，否则它总是会被执行。\n尽管示例代码仅演示了数字列表，但 for 循环适用于任何类型的对象构成的序列。",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>控制流</span>"
+    ]
+  },
+  {
+    "objectID": "control_flow.html#break-语句",
+    "href": "control_flow.html#break-语句",
+    "title": "4  控制流",
+    "section": "4.4 break 语句",
+    "text": "4.4 break 语句\nbreak 语句被称为跳转语句，可以停止执行循环语句，即使循环条件尚未为 False 或者项的序列尚未完全迭代完成。\n如果跳出一个 for 或 while 循环，相应的循环 else 块不会被执行。\n\n# 示例代码来源： A Byte of Python\n# 设定预设的输入列表\ninputs = ['你好', 'abcdef', '12345', '退出']\n\n# 创建一个迭代器\ninputs_iter = iter(inputs)\n\nwhile True:\n    # 从预设的输入列表中获取输入\n    s = next(inputs_iter)\n\n    print('输入的字符串是: ', s)\n    if s == '退出':\n        break\n    print('字符串的长度是', len(s))\nprint('完成')\n\n# 这里我们通过预设的输入列表和迭代器来模拟用户的输入\n# 在每次循环中，我们从列表中获取一个输入，并检查这个输入是否等于'退出'，如果是就结束循环\n# 否则，我们就输出这个输入的长度\n# 这样就可以在Quarto或Jupyter这类不支持`input()`函数的环境中运行，如果在实际的Python环境或IDLE中运行时，\n# 可以将 's = next(inputs_iter)' 这一行注释掉，将 's = input('输入点什么: ')' 这一行的注释去掉，\n# 同时将 'inputs' 与 'inputs_iter' 注释，即可恢复到原先的状态。\n\n输入的字符串是:  你好\n字符串的长度是 2\n输入的字符串是:  abcdef\n字符串的长度是 6\n输入的字符串是:  12345\n字符串的长度是 5\n输入的字符串是:  退出\n完成\n\n\n示例代码中的知识点：\n\n内置的 len 函数可以测量输入字符串的长度。\nbreak 语句也可以与 for 循环一起使用。",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>控制流</span>"
+    ]
+  },
+  {
+    "objectID": "control_flow.html#continue-语句",
+    "href": "control_flow.html#continue-语句",
+    "title": "4  控制流",
+    "section": "4.5 continue 语句",
+    "text": "4.5 continue 语句\ncontinue 语句用于跳过当前循环块中的其余语句，并继续下一次循环的迭代。\n\n# 示例代码来源： A Byte of Python\n# 设定预设的输入列表\ninputs = ['你好', 'abcdef', '12', '1234', '退出']\n\n# 创建一个迭代器\ninputs_iter = iter(inputs)\n\nwhile True:\n    # 从预设的输入列表中获取输入\n    # s = input('输入点什么: ')\n    s = next(inputs_iter)\n\n    print('输入的字符串是: ', s)\n    if s == '退出':\n        break\n    if len(s) &lt; 3:\n        print('太短了')\n        continue\n    print('输入长度足够')\n    # 你可以在代码块中做任何你想做的事情...\nprint('完成')\n\n# 这段代码在Quarto和Jupyter环境下都能够顺利运行。在每次循环中，它会从预设的字符串列表中获取一个输入，然后根据这个输入的长度执行不同的操作：\n# 1. 如果输入是'退出'，那么它会结束整个循环；\n# 2. 如果输入的长度小于3，那么它会打印'太短了'，并且跳过此次循环剩下的部分，直接开始下一次循环；\n# 3. 如果输入的长度不小于3，那么它会打印'输入长度足够'。\n# 可以将 's = next(inputs_iter)' 这一行注释掉，将 's = input('输入点什么: ')' 这一行的注释去掉，\n# 同时将 'inputs' 与 'inputs_iter' 注释，即可恢复到原先的状态。\n\n输入的字符串是:  你好\n太短了\n输入的字符串是:  abcdef\n输入长度足够\n输入的字符串是:  12\n太短了\n输入的字符串是:  1234\n输入长度足够\n输入的字符串是:  退出\n完成",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>控制流</span>"
+    ]
+  },
+  {
+    "objectID": "functions.html#global-语句全局声明语句",
+    "href": "functions.html#global-语句全局声明语句",
+    "title": "5  函数",
+    "section": "5.3 global 语句（全局声明语句）",
+    "text": "5.3 global 语句（全局声明语句）\n\n当我们需要对程序整体级别（即不在函数或类等特定作用域内）定义的变量进行赋值时，我们通常会使用全局声明语句（global statement）。\n全局声明语句告诉Python，我们正在操作的是一个全局变量，而非局部变量。\n注意，如果不使用全局声明，我们是无法在函数内部直接修改函数外部定义的变量的。\n当在函数内部引用一个未经定义的变量时，Python会尝试在函数外部查找这个变量。\n尽管如此，我们并不推荐这一措施，因为这可能导致代码阅读者在理解这个变量的定义位置上出现困扰。\n如果要在函数内部操作函数外部的变量，推荐使用global声明明确指出，表明你在操纵的是在全局范围内定义的变量。\n\n\n# 示例代码来源： A Byte of Python\nx = 50\n\ndef func():\n    global x\n\n    print('x is', x)  # 输出 x 的值\n    x = 2  # 修改全局变量 x 的值\n    print('Changed global x to', x)  # 输出修改后的 x 的值\n\n\nfunc()\nprint('Value of x is', x)  # 输出最终的 x 的值\n\nx is 50\nChanged global x to 2\nValue of x is 2\n\n\nglobal 语句用于声明 x 是一个全局变量 - 因此，当我们在函数内部给 x 赋值时，当我们在主块中使用 x 的值时，这个变化会反映出来。\n可以使用相同的 global 语句指定多个全局变量，例如 global x, y, z",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>函数</span>"
+    ]
+  },
+  {
+    "objectID": "functions.html#默认参数值",
+    "href": "functions.html#默认参数值",
+    "title": "5  函数",
+    "section": "5.4 默认参数值",
+    "text": "5.4 默认参数值\n我们可以通过设置默认参数值，使得某些函数参数变得可选。当用户没有显式提供参数值时，函数将会采用这些设置的默认值。\n可以通过在函数定义中，在需要设置默认值的参数名后面加上等号（=）及其默认值来实现这一点。\n\n# 示例代码来源： A Byte of Python\ndef say(message, times=1):\n    print(message * times)\n\nsay('Hello')  # 输出 \"Hello\"\nsay('World', 5)  # 输出 \"WorldWorldWorldWorldWorld\"\n\nHello\nWorldWorldWorldWorldWorld\n\n\n函数say的功能是按照我们指定的次数重复打印一个字符串。\n\n当我们没有明确指定打印次数时，该函数会默认打印一次该字符串。这是通过设置参数times的默认值为1来实现的。\n在第一种使用情况中，我们仅传入字符串参数，此时函数会默认打印一次该字符串。\n在第二种使用情况中，我们将字符串和一个数值5作为参数传入函数，此数值表示我们希望该字符串被重复打印5次。\n\n注意：\n\n只有参数列表末尾的参数才能具有默认参数值。\n即在函数的参数列表中，不能将具有默认参数值的参数放在没有默认参数值的参数之前。这是因为参数是按位置赋值的。\n例如， def func(a, b=5) 是有效的，但 def func(a=5, b) 是无效的。",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>函数</span>"
     ]
   }
 ]

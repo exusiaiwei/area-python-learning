@@ -19,5 +19,17 @@
   },
   "control_flow_zh.qmd": {
     "control_flow_zh.html": "051eb20a"
+  },
+  "functions.qmd": {
+    "functions.html": "0dd676ab"
+  },
+  "basic.qmd": {
+    "basic.html": "69e7583a"
+  },
+  "operators_and_expressions.qmd": {
+    "operators_and_expressions.html": "65e574de"
+  },
+  "control_flow.qmd": {
+    "control_flow.html": "e7f6dcba"
   }
 }

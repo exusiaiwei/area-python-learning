@@ -106,7 +106,9 @@ f = not False
 print(f)  # Output: True
 ```
 
-Short-circuit evaluation: When using logical operators (such as and and or) to connect multiple conditional expressions, Python determines whether to evaluate all conditions based on the characteristics of the operator.
+#### Short-circuit evaluation: 
+
+When using logical operators (such as and and or) to connect multiple conditional expressions, Python determines whether to evaluate all conditions based on the characteristics of the operator.
 
 - In the case of the and operator, if any condition is False, the entire expression will be False, and Python will stop evaluating the remaining values and immediately return False.
 - In the case of the or operator, if any condition is True, the entire expression will be True, and Python will stop evaluating the remaining values and immediately return True.

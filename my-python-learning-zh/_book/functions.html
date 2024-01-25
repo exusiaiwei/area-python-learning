@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="魏子超">
-<meta name="dcterms.date" content="2024-01-22">
 
-<title>我的Python学习笔记</title>
+<title>我的Python学习笔记 - 5&nbsp; 函数</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -32,7 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./summary.html" rel="next">
+<link href="./control_flow.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./functions.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">函数</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -109,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -139,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./functions.html" class="sidebar-item-text sidebar-link">
+  <a href="./functions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">函数</span></span></a>
   </div>
 </li>
@@ -165,7 +198,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#函数参数" id="toc-函数参数" class="nav-link active" data-scroll-target="#函数参数"><span class="header-section-number">5.1</span> 函数参数</a></li>
+  <li><a href="#局部变量" id="toc-局部变量" class="nav-link" data-scroll-target="#局部变量"><span class="header-section-number">5.2</span> 局部变量</a></li>
+  <li><a href="#global-语句全局声明语句" id="toc-global-语句全局声明语句" class="nav-link" data-scroll-target="#global-语句全局声明语句"><span class="header-section-number">5.3</span> global 语句（全局声明语句）</a></li>
+  <li><a href="#默认参数值" id="toc-默认参数值" class="nav-link" data-scroll-target="#默认参数值"><span class="header-section-number">5.4</span> 默认参数值</a></li>
   </ul>
 </nav>
     </div>
@@ -174,26 +210,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">我的Python学习笔记</h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">函数</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>魏子超 </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 22, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -203,10 +227,154 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>This is a Quarto book.</p>
-<p>To learn more about Quarto books visit <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
+<p>函数是编程中的基本构建块，允许我们将一段代码命名，并在需要的地方反复使用。运行这些语句的操作被称为调用函数。</p>
+<p>在我们的学习过程中，已经接触和使用了许多Python的内置函数，比如len和range函数。</p>
+<p>我们使用def关键字来定义函数。关键字def后面紧跟着的是函数的名字，然后是一对括号。括号内可以包含一些参数（即预设的变量名），此行语句以冒号结束。</p>
+<div id="083a8f6f" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello():</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 属于函数的代码块</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'hello world'</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 函数结束</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>say_hello()  <span class="co"># 调用函数</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>say_hello()  <span class="co"># 再次调用函数</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>hello world
+hello world</code></pre>
+</div>
+</div>
+<p>以上代码定义了一个名为say_hello的函数。该函数没有接受任何参数，因此在括号里没有声明变量。我们可以通过传入不同的参数来让函数获得不同的输入，并得到相应的结果。</p>
+<section id="函数参数" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="函数参数"><span class="header-section-number">5.1</span> 函数参数</h2>
+<p>函数可以接受参数，并利用这些值来执行某些效果。</p>
+<p>参数(parameter)：</p>
+<ul>
+<li>在定义函数时，我们为函数预留了一些位置，这些位置就是参数。</li>
+<li>参数在函数头部的圆括号之间定义，用逗号分隔，它们在整个函数体内部都是可访问的。</li>
+<li>参数是变量，用于存储函数调用时传递的值（实参）。</li>
+</ul>
+<p>实参(argument):</p>
+<ul>
+<li>在调用函数时，我们会向函数中传递一些值，这些值就是实参。</li>
+<li>实参是赋予函数中定义的参数的具体值。同样用逗号分隔。</li>
+</ul>
+<p>这个概念类似于食谱和做饭。食谱上的材料列表（比如说需要多少克的面粉，多少克的糖）就像是参数列表，而你实际使用的面粉和糖的数量就像实参。</p>
+<div id="25d3e275" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_max(a, b):</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a <span class="op">&gt;</span> b:</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a, <span class="st">'is maximum'</span>)  <span class="co"># 输出 a 是最大值</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> a <span class="op">==</span> b:</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a, <span class="st">'is equal to'</span>, b)  <span class="co"># 输出 a 等于 b</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(b, <span class="st">'is maximum'</span>)  <span class="co"># 输出 b 是最大值</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 直接传递字面值</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>print_max(<span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">7</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 将变量作为参数传递</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>print_max(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>4 is maximum
+7 is maximum</code></pre>
+</div>
+</div>
+<p>在示例代码中，我们定义了一个print_max的函数，其中包括两个参数a和b。我们使用一个if..else语句来找出较大的数字并将其打印出来。</p>
+<p>第一次调用函数 print_max 时，我们直接提供数字作为参数。在第二种情况下，我们使用变量x，y作为参数调用函数。 print_max(x, y) 导致参数 x 的值被赋给参数 a ，参数 y 的值被赋给参数 b 。</p>
+</section>
+<section id="局部变量" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="局部变量"><span class="header-section-number">5.2</span> 局部变量</h2>
+<ul>
+<li>在函数定义内部声明的变量被称为“局部变量”。</li>
+<li>“局部变量”的有效范围被限制在声明该变量的函数内部，这种约束被称为变量的”作用域”。</li>
+<li>变量的作用域从其声明的位置开始，直到该代码块或函数的结束。</li>
+<li>即使在函数外部存在同名变量，局部变量也被视为独立的变量。无论名称是否相同，函数内部的局部变量与函数外部的变量不会有任何关联。</li>
+</ul>
+<div id="430d4242" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(x):</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'x is'</span>, x)  <span class="co"># 输出 x 的值</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="dv">2</span>  <span class="co"># 修改局部变量 x 的值</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Changed local x to'</span>, x)  <span class="co"># 输出修改后的 x 的值</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>func(x)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'x is still'</span>, x)  <span class="co"># 输出最初的 x 的值</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>x is 50
+Changed local x to 2
+x is still 50</code></pre>
+</div>
+</div>
+<p>第一次在函数体的第一行打印变量x的值时，Python使用在函数定义之前在主块中声明的参数值。</p>
+<p>接下来，我们给函数中的局部变量x赋值为2。当我们在函数中改变 局部变量 x 的值时，主块中定义的 x 不受影响。</p>
+</section>
+<section id="global-语句全局声明语句" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="global-语句全局声明语句"><span class="header-section-number">5.3</span> global 语句（全局声明语句）</h2>
+<ul>
+<li>当我们需要对程序整体级别（即不在函数或类等特定作用域内）定义的变量进行赋值时，我们通常会使用全局声明语句（global statement）。</li>
+<li>全局声明语句告诉Python，我们正在操作的是一个全局变量，而非局部变量。</li>
+<li>注意，如果不使用全局声明，我们是无法在函数内部直接修改函数外部定义的变量的。</li>
+<li>当在函数内部引用一个未经定义的变量时，Python会尝试在函数外部查找这个变量。</li>
+<li>尽管如此，我们并不推荐这一措施，因为这可能导致代码阅读者在理解这个变量的定义位置上出现困扰。</li>
+<li>如果要在函数内部操作函数外部的变量，推荐使用global声明明确指出，表明你在操纵的是在全局范围内定义的变量。</li>
+</ul>
+<div id="c5f62199" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func():</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> x</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'x is'</span>, x)  <span class="co"># 输出 x 的值</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="dv">2</span>  <span class="co"># 修改全局变量 x 的值</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Changed global x to'</span>, x)  <span class="co"># 输出修改后的 x 的值</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>func()</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Value of x is'</span>, x)  <span class="co"># 输出最终的 x 的值</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>x is 50
+Changed global x to 2
+Value of x is 2</code></pre>
+</div>
+</div>
+<p>global 语句用于声明 x 是一个全局变量 - 因此，当我们在函数内部给 x 赋值时，当我们在主块中使用 x 的值时，这个变化会反映出来。</p>
+<p>可以使用相同的 global 语句指定多个全局变量，例如 global x, y, z</p>
+</section>
+<section id="默认参数值" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="默认参数值"><span class="header-section-number">5.4</span> 默认参数值</h2>
+<p>我们可以通过设置默认参数值，使得某些函数参数变得可选。当用户没有显式提供参数值时，函数将会采用这些设置的默认值。</p>
+<p>可以通过在函数定义中，在需要设置默认值的参数名后面加上等号（=）及其默认值来实现这一点。</p>
+<div id="76dbbf21" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say(message, times<span class="op">=</span><span class="dv">1</span>):</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(message <span class="op">*</span> times)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>say(<span class="st">'Hello'</span>)  <span class="co"># 输出 "Hello"</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>say(<span class="st">'World'</span>, <span class="dv">5</span>)  <span class="co"># 输出 "WorldWorldWorldWorldWorld"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello
+WorldWorldWorldWorldWorld</code></pre>
+</div>
+</div>
+<p>函数say的功能是按照我们指定的次数重复打印一个字符串。</p>
+<ul>
+<li>当我们没有明确指定打印次数时，该函数会默认打印一次该字符串。这是通过设置参数times的默认值为1来实现的。</li>
+<li>在第一种使用情况中，我们仅传入字符串参数，此时函数会默认打印一次该字符串。</li>
+<li>在第二种使用情况中，我们将字符串和一个数值5作为参数传入函数，此数值表示我们希望该字符串被重复打印5次。</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>只有参数列表末尾的参数才能具有默认参数值。</li>
+<li>即在函数的参数列表中，不能将具有默认参数值的参数放在没有默认参数值的参数之前。这是因为参数是按位置赋值的。</li>
+<li>例如， def func(a, b=5) 是有效的，但 def func(a=5, b) 是无效的。</li>
+</ul>
 
 
 </section>
@@ -601,10 +769,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./control_flow.html" class="pagination-link  aria-label=" &lt;span="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">控制流</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="<span class='chapter-number'>1</span>&nbsp; <span class='chapter-title'>Introduction</span>">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./summary.html" class="pagination-link" aria-label="<span class='chapter-number'>6</span>&nbsp; <span class='chapter-title'>Summary</span>">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
