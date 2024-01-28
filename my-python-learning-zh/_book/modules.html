@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>我的Python学习笔记 - 1&nbsp; Introduction</title>
+<title>我的Python学习笔记 - 6&nbsp; 模块</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -50,8 +64,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./basic.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./summary.html" rel="next">
+<link href="./functions.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -101,7 +115,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./modules.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">模块</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -134,7 +148,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -164,7 +178,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules.html" class="sidebar-item-text sidebar-link">
+  <a href="./modules.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">模块</span></span></a>
   </div>
 </li>
@@ -186,14 +200,21 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#基本概念" id="toc-基本概念" class="nav-link active" data-scroll-target="#基本概念"><span class="header-section-number">6.1</span> 基本概念</a></li>
+  <li><a href="#字节编译的-.pyc-文件" id="toc-字节编译的-.pyc-文件" class="nav-link" data-scroll-target="#字节编译的-.pyc-文件"><span class="header-section-number">6.2</span> 字节编译的 .pyc 文件</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">模块</span></h1>
 </div>
 
 
@@ -210,15 +231,66 @@ div.csl-indent {
 </header>
 
 
-<p>This is a book created from markdown and executable code.</p>
-<p>Swaroopch<span class="citation" data-cites="chSwaroopchByteofpython2024">(<a href="references.html#ref-chSwaroopchByteofpython2024" role="doc-biblioref">CH 2024</a>)</span></p>
+<section id="基本概念" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="基本概念"><span class="header-section-number">6.1</span> 基本概念</h2>
+<p>在 Python 中，模块是一种组织和重用代码的方式。一个模块是一个包含了函数、类和变量的文件，它可以被其他程序导入和使用。</p>
+<p>模块的基本概念是将相关的代码组织在一起，以便于维护和重用。通过将代码分割成模块，可以提高代码的可读性和可维护性。</p>
+<p>模块具有以下特性：</p>
+<ul>
+<li>封装：模块将相关的代码封装在一个单独的文件中，使得代码更加有组织和易于管理。</li>
+<li>命名空间：模块创建了一个独立的命名空间，避免了命名冲突。通过使用模块名作为前缀，可以访问模块中定义的函数、类和变量。</li>
+<li>代码重用：模块可以被其他程序导入和使用，实现了代码的重用。通过导入模块，可以直接使用模块中定义的函数、类和变量，而无需重新编写代码。</li>
+<li>可扩展性：模块可以根据需要进行扩展和修改。可以在模块中添加新的函数、类和变量，以满足不同的需求。</li>
+</ul>
+<p>在 Python 中，模块可以是 Python 编写的，也可以是用 C/C++ 等其他编程语言编写并编译成二进制代码的。后者通常被称为”编译的模块”，或者”扩展模块”。</p>
+<p>它们通常用于提高性能（因为编译后的代码运行速度更快），或者提供Python不能直接提供的功能（比如调用操作系统的底层API）。</p>
+<p>模块使用方法参考如下的代码示例：</p>
+<div id="6417b3ba" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The script has the name </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span> (sys.argv[<span class="dv">0</span>]))</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(sys.argv) <span class="op">&gt;</span> <span class="dv">1</span>:</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"It has some arguments:"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> arg <span class="kw">in</span> sys.argv[<span class="dv">1</span>:]:</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(arg)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n\n</span><span class="st">The PYTHONPATH is'</span>, sys.path, <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The script has the name C:\Conda_data\envs\main\Lib\site-packages\ipykernel_launcher.py
+It has some arguments:
+-f
+C:\Windows\Temp\tmp9pphbqn_.json
+--HistoryManager.hist_file=:memory:
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-chSwaroopchByteofpython2024" class="csl-entry" role="listitem">
-CH, Swaroop. 2024. <span>“Swaroopch/Byte-of-Python.”</span> https://github.com/swaroopch/byte-of-python.
+The PYTHONPATH is ['C:\\Users\\WeiZichao\\OneDrive - MSFT\\Code\\MyProjects\\My-Python-Learning\\my-python-learning-zh', 'C:\\Conda_data\\envs\\main\\python312.zip', 'C:\\Conda_data\\envs\\main\\DLLs', 'C:\\Conda_data\\envs\\main\\Lib', 'C:\\Conda_data\\envs\\main', '', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages\\win32', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages\\win32\\lib', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages\\Pythonwin'] 
+</code></pre>
 </div>
 </div>
+<p>当 Python 执行 import 语句时，Python 解释器会通过以下步骤寻找需要 import 的对象。</p>
+<ol type="1">
+<li>首先，解释器会检查内建模块（built-in modules）。Python的内建模块是用C编写的，并链接到Python解释器中。例如示例代码中使用的 <code>sys</code> 就是内建模块。</li>
+<li>如果模块不在内建模块中，Python 解释器接着会检查 <code>sys.modules</code> 字典。<code>sys.modules</code> 字典储存了所有导入模块的路径名称和模块对象。可以将其理解为 Python 已经导入模块的一个历史记录或缓存。如果模块之前已经被导入，则直接从这个字典中获取。</li>
+<li>如果在 <code>sys.modules</code> 中也找不到，Python解释器接下来会查看 <code>sys.path</code> 列表。sys.path列表包含了Python解释器搜索模块的位置，包括：
+<ol type="1">
+<li>程序执行的当前目录，即程序启动时所在的目录。运行 import os; print(os.getcwd()) 以查找程序的当前目录。</li>
+<li>一些 Python 的标准库目录</li>
+<li>额外安装的第三方包的路径。通常位于 site-packages 目录下。</li>
+</ol></li>
+<li>Python会在sys.path中列出的目录从上到下按顺序搜索模块。它会检查每一个目录，看是否含有需要导入的模块。如果在所有目录中都找不到，那么Python会引发一个ModuleNotFoundError。</li>
+</ol>
+<p>sys 模块包含与Python解释器及其环境（即系统）相关的功能。</p>
+<ul>
+<li>sys.argv是Python中的一个列表，它包含了从命令行传递给Python脚本的参数。</li>
+<li>这些参数是以字符串的形式存储的，其中sys.argv[0]是脚本的名称（即执行的Python文件名），其余的sys.argv[1], sys.argv[2]…依次是外部传入的参数。</li>
+<li>在 sys 模块中，可以使用点表示法访问 argv 变量，即 sys.argv 。这样可以清晰地表明 argv 变量是sys模块的一部分，同时避免和程序中所使用的任何argv变量冲突。</li>
+</ul>
+</section>
+<section id="字节编译的-.pyc-文件" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="字节编译的-.pyc-文件"><span class="header-section-number">6.2</span> 字节编译的 .pyc 文件</h2>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -610,13 +682,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link  aria-label=" preface"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="./functions.html" class="pagination-link  aria-label=" &lt;span="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">函数</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./basic.html" class="pagination-link" aria-label="<span class='chapter-number'>2</span>&nbsp; <span class='chapter-title'>基础</span>">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">基础</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./summary.html" class="pagination-link" aria-label="<span class='chapter-number'>7</span>&nbsp; <span class='chapter-title'>Summary</span>">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -12,6 +12,7 @@ book:
     - operators_and_expressions.qmd
     - control_flow.qmd
     - functions.qmd
+    - modules.qmd
     - summary.qmd
     - references.qmd
 

@@ -1,8 +1,6 @@
 # Basic
 
-## Data Types
-
-### Literal Constants
+## Literal Constants
 
 Literal constants are fixed values that are directly written in the code and do not change during program execution.
 
@@ -26,7 +24,7 @@ is_active = True  # Assign a boolean literal to the variable
 empty_value = None  # Assign a None literal to the variable
 ```
 
-### String
+## String
 
 The string is a data type used to represent text data.
 
@@ -59,7 +57,7 @@ new_name = name.replace("A", "B")
 print(new_name)  # Output: Blice
 ```
 
-#### String formatting function
+### String formatting function
 
 The format function of a string can pass the corresponding parameters into the string.
 
@@ -85,7 +83,7 @@ greeting3 = "Hello, my name is {name} and I am {age} years old.".format(name="Al
 print(greeting3)  # Output: Hello, my name is Alice and I am 25 years old.
 ```
 
-### Escape Sequences
+## Escape Sequences
 
 Escape sequences are a special sequence of characters that start with a backslash (`\`) and are followed by one or more characters. They are used to represent non-printing characters, special characters, or characters with special meanings.
 
