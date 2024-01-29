@@ -31,6 +31,15 @@ if len(sys.argv) > 1:
 print('\n\nThe PYTHONPATH is', sys.path, '\n')
 ```
 
+sys 模块包含与Python解释器及其环境（即系统）相关的功能。
+
+- sys.argv是Python中的一个列表，它包含了从命令行传递给Python脚本的参数。
+- 这些参数是以字符串的形式存储的，其中sys.argv[0]是脚本的名称（即执行的Python文件名），其余的sys.argv[1], sys.argv[2]...依次是外部传入的参数。
+- 在 sys 模块中，可以使用点表示法访问 argv 变量，即 sys.argv 。这样可以清晰地表明 argv 变量是sys模块的一部分，同时避免和程序中所使用的任何argv变量冲突。
+
+
+## import 语句
+
 当 Python 执行 import 语句时，Python 解释器会通过以下步骤寻找需要 import 的对象。
 
 1. 首先，解释器会检查内建模块（built-in modules）。Python的内建模块是用C编写的，并链接到Python解释器中。例如示例代码中使用的 `sys` 就是内建模块。
@@ -41,11 +50,99 @@ print('\n\nThe PYTHONPATH is', sys.path, '\n')
    3. 额外安装的第三方包的路径。通常位于 site-packages 目录下。
 4. Python会在sys.path中列出的目录从上到下按顺序搜索模块。它会检查每一个目录，看是否含有需要导入的模块。如果在所有目录中都找不到，那么Python会引发一个ModuleNotFoundError。
 
-sys 模块包含与Python解释器及其环境（即系统）相关的功能。
-
-- sys.argv是Python中的一个列表，它包含了从命令行传递给Python脚本的参数。
-- 这些参数是以字符串的形式存储的，其中sys.argv[0]是脚本的名称（即执行的Python文件名），其余的sys.argv[1], sys.argv[2]...依次是外部传入的参数。
-- 在 sys 模块中，可以使用点表示法访问 argv 变量，即 sys.argv 。这样可以清晰地表明 argv 变量是sys模块的一部分，同时避免和程序中所使用的任何argv变量冲突。
-
 ## 字节编译的 .pyc 文件
 
+在 Python 中，字节编译的 .pyc 文件是一种优化技术，用于提高 Python 程序的执行速度。当 Python 解释器执行一个模块时，它会将模块的源代码编译成字节码，并将字节码保存到一个与模块同名的 .pyc 文件中。
+
+通常，这些 .pyc 文件在与相应的 .py 文件相同的目录中被创建。如果Python没有权限在该目录中写入文件，则 .pyc 文件将不会被创建。在Python 3中，标准库和第三方库的模块安装在Python的安装目录下，他们的.pyc文件通常被存储在__pycache__目录下。
+
+无论是自己编写的模块还是下载的模块，只要它们被Python解释器执行过，都会生成相应的.pyc文件，以提高程序的执行速度。
+
+字节编译的 .pyc 文件具有以下特性：
+
+- 提高执行速度：由于字节码是一种中间形式，比源代码更接近机器语言，因此执行字节码比执行源代码更快。通过将模块的字节码保存到 .pyc 文件中，可以避免每次执行模块时都重新编译源代码，从而提高程序的执行速度。
+- 跨平台兼容性：.pyc 文件是与平台无关的，可以在不同的操作系统上执行。这意味着可以在一个平台上编译 .pyc 文件，然后将其复制到另一个平台上执行，而无需重新编译源代码。
+- 缓存机制：Python 解释器会检查 .pyc 文件的时间戳，以确定是否需要重新编译源代码。如果源代码没有发生变化，且 .pyc 文件的时间戳较新，解释器将直接加载 .pyc 文件，而不重新编译源代码。这种缓存机制可以减少程序启动时间和内存占用。
+- 可读性差：.pyc 文件是经过编译的字节码，与源代码相比，可读性较差。这是因为字节码是一种低级的、面向机器的表示形式，而源代码是面向人的高级语言。因此，通常情况下，.pyc 文件不需要手动编辑或查看。
+
+## from..import 语句
+
+使用from...import语句可以让我们直接调用被导入的函数或者对象，不需要在前面加上模块名称。例如，我们可以直接导入math模块中的sqrt函数，这样在调用时就不需要再写math.了。
+
+这种方法的好处是我们可以只导入想用的函数或者类，不必加载整个模块，相比第一种方式可以节省一些内存。然而，如果代码中有大量的from...import语句，或从多个模块中导入具有相同名称的函数，那么这可能导致名字空间污染和函数冲突。
+
+同时，也可以使用from...import 语句导入多个函数或者类，例如,我们导入math模块中的sqrt和pi：
+
+```{python}
+from math import sqrt
+print(sqrt(16))  # Output: 4.0
+
+from math import sqrt, pi
+print(sqrt(16)) # Output: 4.0
+print(pi)       # Output: 3.141592653589793
+
+```
+
+## Python模块的 __name__ 属性
+
+在Python中，每个模块都有一个内置的属性__name__，这个属性对于理解模块的加载方式、以及模块与运行脚本的区别非常重要。
+
+当直接运行一个py文件（比如命令行执行python your_script.py）时，Python会把__name__属性自动置为__main__。在这种情况下，我们说your_script.py是作为一个脚本运行的。
+
+但是，如果你导入这个py文件作为一个模块（比如在另一个py文件中使用import your_script），那么Python会把__name__属性自动置为模块的名称（这里的例子中就是your_script）。在这种情况下，我们说your_script.py是被导入的模块。
+
+参加如下的示例代码：
+
+```{python}
+if __name__ == '__main__':
+    print('This program is being run by itself')
+else:
+    print('I am being imported from another module')
+```
+
+根据以上的属性，许多Python脚本（尤其是那些同时被作为模块和脚本运行的脚本）都会在文件末尾包含以下代码：
+
+```
+if __name__ == "__main__":
+    run_my_script()
+```
+
+其中，run_my_script()是该脚本中定义的一个函数。这段代码的目的是：
+
+- 如果你直接运行这个py文件，Python会执行run_my_script()函数；
+- 如果你把这个py文件作为模块导入，Python不会执行run_my_script()函数。
+
+这种方法允许一个Python模块同时被安全地导入并独立运行，是Python编程中一个常见且实用的技巧。
+
+
+总的来说，Python的__name__属性作为一个内建的模块属性，通过它可以有效区分脚本的直接执行和模块的导入调用，对理解和控制Python代码流程有着重要作用。
+
+## 制作自己的模块
+
+在Python中，任何一个Python文件都可以被视为一个模块，只需要按照一定的格式组织你的代码，然后将其保存为以.py结尾的文件即可。
+
+导入模块时，Python解释器会在几个特定的目录中寻找模块文件，这些目录的路径存储在sys.path列表中。如果你的模块位于这些目录之外的路径，需要将模块的路径添加到系统路径中，如下面的示例代码所示：
+```{python}
+# 示例代码来源： A Byte of Python
+import sys
+sys.path.append("practical_code/modules") # 将模块的路径添加到系统路径中
+
+import mymodule
+
+mymodule.say_hi()
+print('Version', mymodule.__version__)
+
+```
+
+使用 from..import 语句的示例代码如下：
+
+```{python}
+# 示例代码来源： A Byte of Python
+import sys
+sys.path.append("practical_code/modules") #
+
+from mymodule import say_hi, __version__
+
+say_hi()
+print('Version', __version__)
+```

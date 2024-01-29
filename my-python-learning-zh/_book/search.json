@@ -369,7 +369,7 @@
     "href": "modules.html",
     "title": "6  模块",
     "section": "",
-    "text": "6.1 基本概念\n在 Python 中，模块是一种组织和重用代码的方式。一个模块是一个包含了函数、类和变量的文件，它可以被其他程序导入和使用。\n模块的基本概念是将相关的代码组织在一起，以便于维护和重用。通过将代码分割成模块，可以提高代码的可读性和可维护性。\n模块具有以下特性：\n在 Python 中，模块可以是 Python 编写的，也可以是用 C/C++ 等其他编程语言编写并编译成二进制代码的。后者通常被称为”编译的模块”，或者”扩展模块”。\n它们通常用于提高性能（因为编译后的代码运行速度更快），或者提供Python不能直接提供的功能（比如调用操作系统的底层API）。\n模块使用方法参考如下的代码示例：\nimport sys\n\nprint(\"The script has the name %s\" % (sys.argv[0]))\nif len(sys.argv) &gt; 1:\n    print(\"It has some arguments:\")\n    for arg in sys.argv[1:]:\n        print(arg)\n\nprint('\\n\\nThe PYTHONPATH is', sys.path, '\\n')\n\nThe script has the name C:\\Conda_data\\envs\\main\\Lib\\site-packages\\ipykernel_launcher.py\nIt has some arguments:\n-f\nC:\\Windows\\Temp\\tmp9pphbqn_.json\n--HistoryManager.hist_file=:memory:\n\n\nThe PYTHONPATH is ['C:\\\\Users\\\\WeiZichao\\\\OneDrive - MSFT\\\\Code\\\\MyProjects\\\\My-Python-Learning\\\\my-python-learning-zh', 'C:\\\\Conda_data\\\\envs\\\\main\\\\python312.zip', 'C:\\\\Conda_data\\\\envs\\\\main\\\\DLLs', 'C:\\\\Conda_data\\\\envs\\\\main\\\\Lib', 'C:\\\\Conda_data\\\\envs\\\\main', '', 'C:\\\\Conda_data\\\\envs\\\\main\\\\Lib\\\\site-packages', 'C:\\\\Conda_data\\\\envs\\\\main\\\\Lib\\\\site-packages\\\\win32', 'C:\\\\Conda_data\\\\envs\\\\main\\\\Lib\\\\site-packages\\\\win32\\\\lib', 'C:\\\\Conda_data\\\\envs\\\\main\\\\Lib\\\\site-packages\\\\Pythonwin']\n当 Python 执行 import 语句时，Python 解释器会通过以下步骤寻找需要 import 的对象。\nsys 模块包含与Python解释器及其环境（即系统）相关的功能。",
+    "text": "6.1 基本概念\n在 Python 中，模块是一种组织和重用代码的方式。一个模块是一个包含了函数、类和变量的文件，它可以被其他程序导入和使用。\n模块的基本概念是将相关的代码组织在一起，以便于维护和重用。通过将代码分割成模块，可以提高代码的可读性和可维护性。\n模块具有以下特性：\n在 Python 中，模块可以是 Python 编写的，也可以是用 C/C++ 等其他编程语言编写并编译成二进制代码的。后者通常被称为”编译的模块”，或者”扩展模块”。\n它们通常用于提高性能（因为编译后的代码运行速度更快），或者提供Python不能直接提供的功能（比如调用操作系统的底层API）。\n模块使用方法参考如下的代码示例：\nimport sys\n\nprint(\"The script has the name %s\" % (sys.argv[0]))\nif len(sys.argv) &gt; 1:\n    print(\"It has some arguments:\")\n    for arg in sys.argv[1:]:\n        print(arg)\n\nprint('\\n\\nThe PYTHONPATH is', sys.path, '\\n')\n\nThe script has the name C:\\Conda_data\\envs\\main\\Lib\\site-packages\\ipykernel_launcher.py\nIt has some arguments:\n-f\nC:\\Windows\\Temp\\tmp1nb25at6.json\n--HistoryManager.hist_file=:memory:\n\n\nThe PYTHONPATH is ['C:\\\\Users\\\\WeiZichao\\\\OneDrive - MSFT\\\\Code\\\\MyProjects\\\\My-Python-Learning\\\\my-python-learning-zh', 'C:\\\\Conda_data\\\\envs\\\\main\\\\python312.zip', 'C:\\\\Conda_data\\\\envs\\\\main\\\\DLLs', 'C:\\\\Conda_data\\\\envs\\\\main\\\\Lib', 'C:\\\\Conda_data\\\\envs\\\\main', '', 'C:\\\\Conda_data\\\\envs\\\\main\\\\Lib\\\\site-packages', 'C:\\\\Conda_data\\\\envs\\\\main\\\\Lib\\\\site-packages\\\\win32', 'C:\\\\Conda_data\\\\envs\\\\main\\\\Lib\\\\site-packages\\\\win32\\\\lib', 'C:\\\\Conda_data\\\\envs\\\\main\\\\Lib\\\\site-packages\\\\Pythonwin']\nsys 模块包含与Python解释器及其环境（即系统）相关的功能。",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>模块</span>"
     ]
@@ -429,7 +429,7 @@
     "href": "modules.html#基本概念",
     "title": "6  模块",
     "section": "",
-    "text": "封装：模块将相关的代码封装在一个单独的文件中，使得代码更加有组织和易于管理。\n命名空间：模块创建了一个独立的命名空间，避免了命名冲突。通过使用模块名作为前缀，可以访问模块中定义的函数、类和变量。\n代码重用：模块可以被其他程序导入和使用，实现了代码的重用。通过导入模块，可以直接使用模块中定义的函数、类和变量，而无需重新编写代码。\n可扩展性：模块可以根据需要进行扩展和修改。可以在模块中添加新的函数、类和变量，以满足不同的需求。\n\n\n\n\n\n\n\n首先，解释器会检查内建模块（built-in modules）。Python的内建模块是用C编写的，并链接到Python解释器中。例如示例代码中使用的 sys 就是内建模块。\n如果模块不在内建模块中，Python 解释器接着会检查 sys.modules 字典。sys.modules 字典储存了所有导入模块的路径名称和模块对象。可以将其理解为 Python 已经导入模块的一个历史记录或缓存。如果模块之前已经被导入，则直接从这个字典中获取。\n如果在 sys.modules 中也找不到，Python解释器接下来会查看 sys.path 列表。sys.path列表包含了Python解释器搜索模块的位置，包括：\n\n程序执行的当前目录，即程序启动时所在的目录。运行 import os; print(os.getcwd()) 以查找程序的当前目录。\n一些 Python 的标准库目录\n额外安装的第三方包的路径。通常位于 site-packages 目录下。\n\nPython会在sys.path中列出的目录从上到下按顺序搜索模块。它会检查每一个目录，看是否含有需要导入的模块。如果在所有目录中都找不到，那么Python会引发一个ModuleNotFoundError。\n\n\n\nsys.argv是Python中的一个列表，它包含了从命令行传递给Python脚本的参数。\n这些参数是以字符串的形式存储的，其中sys.argv[0]是脚本的名称（即执行的Python文件名），其余的sys.argv[1], sys.argv[2]…依次是外部传入的参数。\n在 sys 模块中，可以使用点表示法访问 argv 变量，即 sys.argv 。这样可以清晰地表明 argv 变量是sys模块的一部分，同时避免和程序中所使用的任何argv变量冲突。",
+    "text": "封装：模块将相关的代码封装在一个单独的文件中，使得代码更加有组织和易于管理。\n命名空间：模块创建了一个独立的命名空间，避免了命名冲突。通过使用模块名作为前缀，可以访问模块中定义的函数、类和变量。\n代码重用：模块可以被其他程序导入和使用，实现了代码的重用。通过导入模块，可以直接使用模块中定义的函数、类和变量，而无需重新编写代码。\n可扩展性：模块可以根据需要进行扩展和修改。可以在模块中添加新的函数、类和变量，以满足不同的需求。\n\n\n\n\n\n\n\nsys.argv是Python中的一个列表，它包含了从命令行传递给Python脚本的参数。\n这些参数是以字符串的形式存储的，其中sys.argv[0]是脚本的名称（即执行的Python文件名），其余的sys.argv[1], sys.argv[2]…依次是外部传入的参数。\n在 sys 模块中，可以使用点表示法访问 argv 变量，即 sys.argv 。这样可以清晰地表明 argv 变量是sys模块的一部分，同时避免和程序中所使用的任何argv变量冲突。",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>模块</span>"
     ]
@@ -468,8 +468,38 @@
     "objectID": "modules.html#字节编译的-.pyc-文件",
     "href": "modules.html#字节编译的-.pyc-文件",
     "title": "6  模块",
-    "section": "6.2 字节编译的 .pyc 文件",
-    "text": "6.2 字节编译的 .pyc 文件",
+    "section": "6.3 字节编译的 .pyc 文件",
+    "text": "6.3 字节编译的 .pyc 文件\n在 Python 中，字节编译的 .pyc 文件是一种优化技术，用于提高 Python 程序的执行速度。当 Python 解释器执行一个模块时，它会将模块的源代码编译成字节码，并将字节码保存到一个与模块同名的 .pyc 文件中。\n通常，这些 .pyc 文件在与相应的 .py 文件相同的目录中被创建。如果Python没有权限在该目录中写入文件，则 .pyc 文件将不会被创建。在Python 3中，标准库和第三方库的模块安装在Python的安装目录下，他们的.pyc文件通常被存储在__pycache__目录下。\n无论是自己编写的模块还是下载的模块，只要它们被Python解释器执行过，都会生成相应的.pyc文件，以提高程序的执行速度。\n字节编译的 .pyc 文件具有以下特性：\n\n提高执行速度：由于字节码是一种中间形式，比源代码更接近机器语言，因此执行字节码比执行源代码更快。通过将模块的字节码保存到 .pyc 文件中，可以避免每次执行模块时都重新编译源代码，从而提高程序的执行速度。\n跨平台兼容性：.pyc 文件是与平台无关的，可以在不同的操作系统上执行。这意味着可以在一个平台上编译 .pyc 文件，然后将其复制到另一个平台上执行，而无需重新编译源代码。\n缓存机制：Python 解释器会检查 .pyc 文件的时间戳，以确定是否需要重新编译源代码。如果源代码没有发生变化，且 .pyc 文件的时间戳较新，解释器将直接加载 .pyc 文件，而不重新编译源代码。这种缓存机制可以减少程序启动时间和内存占用。\n可读性差：.pyc 文件是经过编译的字节码，与源代码相比，可读性较差。这是因为字节码是一种低级的、面向机器的表示形式，而源代码是面向人的高级语言。因此，通常情况下，.pyc 文件不需要手动编辑或查看。",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>模块</span>"
+    ]
+  },
+  {
+    "objectID": "modules.html#import-语句",
+    "href": "modules.html#import-语句",
+    "title": "6  模块",
+    "section": "6.2 import 语句",
+    "text": "6.2 import 语句\n当 Python 执行 import 语句时，Python 解释器会通过以下步骤寻找需要 import 的对象。\n\n首先，解释器会检查内建模块（built-in modules）。Python的内建模块是用C编写的，并链接到Python解释器中。例如示例代码中使用的 sys 就是内建模块。\n如果模块不在内建模块中，Python 解释器接着会检查 sys.modules 字典。sys.modules 字典储存了所有导入模块的路径名称和模块对象。可以将其理解为 Python 已经导入模块的一个历史记录或缓存。如果模块之前已经被导入，则直接从这个字典中获取。\n如果在 sys.modules 中也找不到，Python解释器接下来会查看 sys.path 列表。sys.path列表包含了Python解释器搜索模块的位置，包括：\n\n程序执行的当前目录，即程序启动时所在的目录。运行 import os; print(os.getcwd()) 以查找程序的当前目录。\n一些 Python 的标准库目录\n额外安装的第三方包的路径。通常位于 site-packages 目录下。\n\nPython会在sys.path中列出的目录从上到下按顺序搜索模块。它会检查每一个目录，看是否含有需要导入的模块。如果在所有目录中都找不到，那么Python会引发一个ModuleNotFoundError。",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>模块</span>"
+    ]
+  },
+  {
+    "objectID": "modules.html#from..import-语句",
+    "href": "modules.html#from..import-语句",
+    "title": "6  模块",
+    "section": "6.4 from..import 语句",
+    "text": "6.4 from..import 语句\n使用from…import语句可以让我们直接调用被导入的函数或者对象，不需要在前面加上模块名称。例如，我们可以直接导入math模块中的sqrt函数，这样在调用时就不需要再写math.了。\n这种方法的好处是我们可以只导入想用的函数或者类，不必加载整个模块，相比第一种方式可以节省一些内存。然而，如果代码中有大量的from…import语句，或从多个模块中导入具有相同名称的函数，那么这可能导致名字空间污染和函数冲突。\n同时，也可以使用from…import 语句导入多个函数或者类，例如,我们导入math模块中的sqrt和pi：\n\nfrom math import sqrt\nprint(sqrt(16))  # Output: 4.0\n\nfrom math import sqrt, pi\nprint(sqrt(16)) # Output: 4.0\nprint(pi)       # Output: 3.141592653589793\n\n4.0\n4.0\n3.141592653589793",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>模块</span>"
+    ]
+  },
+  {
+    "objectID": "modules.html#python模块的-name-属性",
+    "href": "modules.html#python模块的-name-属性",
+    "title": "6  模块",
+    "section": "6.5 Python模块的 name 属性",
+    "text": "6.5 Python模块的 name 属性\n在Python中，每个模块都有一个内置的属性__name__，这个属性对于理解模块的加载方式、以及模块与运行脚本的区别非常重要。\n__main__和模块名\n当直接运行一个py文件（比如命令行执行python your_script.py）时，Python会把__name__属性自动置为__main__。在这种情况下，我们说your_script.py是作为一个脚本运行的。\n但是，如果你导入这个py文件作为一个模块（比如在另一个py文件中使用import your_script），那么Python会把__name__属性自动置为模块的名称（这里的例子中就是your_script）。在这种情况下，我们说your_script.py是被导入的模块。\n利用__name__属性区分模块和脚本\n根据以上的属性，许多Python脚本（尤其是那些同时被作为模块和脚本运行的脚本）都会在文件末尾包含以下代码：\nif __name__ == \"__main__\":\n    run_my_script()\n或者，可以直观的从这个示例代码中看出：\n\nif __name__ == '__main__':\n    print('This program is being run by itself')\nelse:\n    print('I am being imported from another module')\n\nThis program is being run by itself\n\n\n其中run_my_script()是该脚本中定义的一个函数。这段代码的目的是：\n\n如果你直接运行这个py文件，Python会执行run_my_script()函数；\n如果你把这个py文件作为模块导入，Python不会执行run_my_script()函数。\n\n这种方法允许一个Python模块同时被安全地导入并独立运行，是Python编程中一个常见且实用的技巧。\n总的来说，Python的__name__属性作为一个内建的模块属性，通过它可以有效区分脚本的直接执行和模块的导入调用，对理解和控制Python代码流程有着重要作用。",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>模块</span>"
     ]
