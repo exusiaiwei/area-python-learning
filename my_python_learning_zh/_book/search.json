@@ -4,9 +4,9 @@
     "href": "index.html",
     "title": "我的Python学习笔记",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "text": "前言\n欢迎阅读《我的python学习笔记》！这里是我学习 Python 的笔记和实践记录。\n在我的 Python 学习之旅中，我使用 Quarto 记录了一系列的交互式笔记。我采用了 Quarto 书籍项目的形式，以便在阅读材料的同时，观看和执行相关的嵌入式代码。\n本仓库下的 ‘my-python-learning-zh’ 和 ‘my-python-learning-en’ 文件夹分别存放着我制作的中文和英文版本交互式笔记。\n此外，对于一些简单的代码实践，我将它们放置在 ‘practical_code’ 文件夹中。可以在这里查看我在学习 Python 过程中的实战项目和练习。\n目前，这些笔记是基于Swaroopch C H的书籍《A Byte of Python》(CH 2024)而编写的，该书采用CC BY-SA 3.0许可证。\n除非另有说明，这些笔记采用CC BY-SA 4.0许可证发布。\n在学完这本书之后，我可能会参考其他的书籍更进一步完善这本笔记，也可能不会？\n\n\n\n\nCH, Swaroop. 2024. “Swaroopch/Byte-of-Python.” https://github.com/swaroopch/byte-of-python.",
     "crumbs": [
-      "Preface"
+      "前言"
     ]
   },
   {
@@ -559,7 +559,7 @@
     "href": "data_structures.html",
     "title": "7  数据结构",
     "section": "",
-    "text": "7.1 列表\nPython 的列表类似于其他编程语言中的数组，但是比这些数组更灵活。列表中的元素不一定要是相同的数据类型。\n列表的创建非常简单，只需要用方括号 [] 包围元素，并用逗号 , 分割。例如，\nmy_list = [1, \"apple\", 3.14]\nprint(my_list[0]) # prints: 1\n\n1\n列表：",
+    "text": "7.1 列表（List）\nPython 的列表类似于其他编程语言中的数组，但是比这些数组更灵活。列表中的元素不一定要是相同的数据类型。\n列表用方括号 [] 包围元素，并用逗号 , 分割。\nmy_list = [1, \"apple\", 3.14]\nprint(my_list[0]) # prints: 1\n\n1\n列表：",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
     ]
@@ -570,6 +570,46 @@
     "title": "7  数据结构",
     "section": "",
     "text": "是有序的\n是可变的\n可以包含任何类型的元素\n可以通过索引访问元素",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
+    ]
+  },
+  {
+    "objectID": "data_structures.html#列表list",
+    "href": "data_structures.html#列表list",
+    "title": "7  数据结构",
+    "section": "",
+    "text": "是有序的\n是可变的\n可以包含任何类型的元素\n可以通过索引访问元素，索引从0开始\n\n\n\n\n\n\n\n注意, Python的索引是从0开始。这意味着在使用索引访问列表元素时，列表中的第一个元素是 list[0]，第二个元素是 list[1]，以此类推。",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
+    ]
+  },
+  {
+    "objectID": "data_structures.html#元组tuple",
+    "href": "data_structures.html#元组tuple",
+    "title": "7  数据结构",
+    "section": "7.2 元组（Tuple）",
+    "text": "7.2 元组（Tuple）\n元组是有序的、不可变的列表。可以理解为一种“只读”版本的列表。\n元组用括号 () 包围元素，并用逗号 , 分割。\n\nmy_tuple = (1, \"apple\", 3.14)\nprint(my_tuple[0]) # prints: 1\n\n1\n\n\n元组：\n\n是有序的\n是不可变的\n可以包含任何类型的元素\n可以通过索引访问元素，索引从0开始\n\n下面是一个体现元组和列表的差别的代码示例\n\n# 创建一个列表\nmy_list = [1, 2, 3]\n# 在列表末尾添加一个元素\nmy_list.append(4)\nprint(my_list[3])\n# 创建一个元组\nmy_tuple = (1, 2, 3)\n# 不能修改元组\n# my_tuple.append(4)  # 这样会报错\n\n4",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
+    ]
+  },
+  {
+    "objectID": "data_structures.html#集合set",
+    "href": "data_structures.html#集合set",
+    "title": "7  数据结构",
+    "section": "7.3 集合（Set）",
+    "text": "7.3 集合（Set）\n集合是非有序的数据结构，它不允许重复元素。\n集合用花括号{}包围元素，并用逗号 , 分割。\n\nmy_set = {1, \"apple\", 3.14, \"apple\"}\nprint(my_set) # prints: {1, \"apple\", 3.14}\n\n{1, 3.14, 'apple'}\n\n\n集合:\n\n是无序的\n集合中元素不能重复\n可以包含任何类型的元素\n不能通过索引访问元素",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
+    ]
+  },
+  {
+    "objectID": "data_structures.html#字典dictionary",
+    "href": "data_structures.html#字典dictionary",
+    "title": "7  数据结构",
+    "section": "7.4 字典（Dictionary）",
+    "text": "7.4 字典（Dictionary）\n字典是一个无序的键值对集合。\n“键值对”（Key-Value Pair）指的是两个关联的部分：一个是唯一的键（Key），另一个是值（Value）。每个键都有一个关联的值。这种关联叫做”映射”。\n字典使用花括号{}包围元素，键值之间用冒号:分隔，而键值对之间用逗号,分隔。\n\n\n\n\n\n\n为什么叫字典\n\n\n\n在一本实体字典中，你可以根据词条（对应于计算机中的“键”）找到对应的解释或者翻译（对应于计算机中的“值”）。这构成了一个”词条-解释”对，与计算机科学中的”键-值对”类似。\n因此，考虑到这种映射关系，计算机科学中的这种包含”键-值对”的数据结构，就被命名为字典（Dictionary）。\n\n\n\nmy_dict = {\n    \"name\": \"apple\",\n    \"color\": \"red\",\n}\nprint(my_dict[\"name\"]) # prints: apple\n\nages = {\n    \"Tom\": 30, \n    \"Alice\": 25, \n    \"Bob\": 27\n}\n\nprint(ages[\"Alice\"]) # 输出：25\nages[\"Tom\"] = 31  # 将Tom的年龄改为31\nprint(ages[\"Tom\"]) # 输出：31\n\napple\n25\n31\n\n\n字典:\n\n是无序的\n键值对中的键是唯一的,但值可以重复\n可以包含任何类型的元素\n通过键来访问元素",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
     ]

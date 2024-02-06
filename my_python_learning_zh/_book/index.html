@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -82,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">前言</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -110,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">前言</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -177,7 +197,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#前言" id="toc-前言" class="nav-link active" data-scroll-target="#前言">前言</a></li>
   </ul>
 </nav>
     </div>
@@ -215,12 +235,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>This is a Quarto book.</p>
-<p>To learn more about Quarto books visit <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
+<section id="前言" class="level1 unnumbered">
+<h1 class="unnumbered">前言</h1>
+<p>欢迎阅读《我的python学习笔记》！这里是我学习 Python 的笔记和实践记录。</p>
+<p>在我的 Python 学习之旅中，我使用 Quarto 记录了一系列的交互式笔记。我采用了 Quarto 书籍项目的形式，以便在阅读材料的同时，观看和执行相关的嵌入式代码。</p>
+<p>本仓库下的 <strong>‘my-python-learning-zh’</strong> 和 <strong>‘my-python-learning-en’</strong> 文件夹分别存放着我制作的中文和英文版本交互式笔记。</p>
+<p>此外，对于一些简单的代码实践，我将它们放置在 <strong>‘practical_code’</strong> 文件夹中。可以在这里查看我在学习 Python 过程中的实战项目和练习。</p>
+<p>目前，这些笔记是基于Swaroopch C H的书籍《A Byte of Python》<span class="citation" data-cites="chSwaroopchByteofpython2024">(<a href="references.html#ref-chSwaroopchByteofpython2024" role="doc-biblioref">CH 2024</a>)</span>而编写的，该书采用CC BY-SA 3.0许可证。</p>
+<p>除非另有说明，这些笔记采用<a href="LICENSE">CC BY-SA 4.0</a>许可证发布。</p>
+<p>在学完这本书之后，我可能会参考其他的书籍更进一步完善这本笔记，也可能不会？</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-chSwaroopchByteofpython2024" class="csl-entry" role="listitem">
+CH, Swaroop. 2024. <span>“Swaroopch/Byte-of-Python.”</span> https://github.com/swaroopch/byte-of-python.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
