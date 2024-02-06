@@ -239,7 +239,7 @@
     "href": "basic.html#变量",
     "title": "2  基础",
     "section": "2.4 变量",
-    "text": "2.4 变量\n变量是Python中的一个概念，用于存储和操作数据。它可以存储各种类型的数据，例如整数、浮点数、字符串等。\n特性：\n\n可以通过赋值操作将数据存储到变量中。\n可以使用变量名来访问变量中存储的数据。\n变量的值可以随时修改。\n变量可以在程序的不同位置使用和传递。\n变量的作用域可以限定在特定的代码块中。\n\n\ni = 5\nprint(i)\n\ne = ( i + 1 ) * 2\n\nprint(e)\n\ns = '''This is a multi-line string.\nThis is the second line.'''\n\nprint(s)\n\n5\n12\nThis is a multi-line string.\nThis is the second line.",
+    "text": "2.4 变量\n变量是 Python 中的一个概念，用于存储和操作数据。它可以存储各种类型的数据，例如整数、浮点数、字符串等。\n特性：\n\n可以通过赋值操作将数据存储到变量中。\n可以使用变量名来访问变量中存储的数据。\n变量的值可以随时修改。\n变量可以在程序的不同位置使用和传递。\n变量的作用域可以限定在特定的代码块中。\n\n\ni = 5\nprint(i)\n\ne = ( i + 1 ) * 2\n\nprint(e)\n\ns = '''This is a multi-line string.\nThis is the second line.'''\n\nprint(s)\n\n5\n12\nThis is a multi-line string.\nThis is the second line.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>基础</span>"
     ]
@@ -249,7 +249,7 @@
     "href": "basic.html#运行逻辑",
     "title": "2  基础",
     "section": "2.5 运行逻辑",
-    "text": "2.5 运行逻辑\n\n2.5.1 逻辑行和物理行\n逻辑行是指在代码中表示一个语句或命令的行，而物理行是指在代码文件中实际占据一行的文本。\n逻辑行可以跨越多个物理行，通过使用行连接符（）将多个物理行连接成一个逻辑行。 物理行则是代码文件中的实际行数，每个物理行都以换行符（）结尾。\n逻辑行的特征：\n\n一个逻辑行可以包含一个或多个语句或命令。\n逻辑行可以跨越多个物理行。\n逻辑行以换行符（）结尾。\n\n物理行的特征：\n\n物理行是代码文件中的实际行数。\n每个物理行都以换行符（）结尾。\n\nPython鼓励每个物理行对应一个逻辑行，即每行一个语句，以保证代码的可读性。\n\n# 逻辑行跨越多个物理行的示例\nx = 1 + \\\n    2 + \\\n    3\n\nprint(x)\n\n# 逻辑行和物理行相同的示例\ny = 5\nprint(y)\n\ny = 5;\nprint(y);\n\ny = 5; print(y);\n\ny = 5; print(y)\n\n6\n5\n5\n5\n5\n\n\n\n\n2.5.2 缩进\n缩进是Python中的一种语法规则，用于表示代码块的层次结构。在Python中，缩进是强制性的，它决定了代码的执行顺序和逻辑关系。逻辑行的缩进级别决定了语句的分组，同组的语句构成一个代码块。\n基本概念：\n\n缩进是通过使用空格或制表符来实现的。\n缩进的数量和方式必须保持一致，通常建议使用四个空格进行缩进。\n缩进的层次结构决定了代码块的嵌套关系。\n\n特性：\n\n缩进用于定义函数、循环、条件语句等代码块。\n缩进可以提高代码的可读性和可维护性。\n缩进错误会导致语法错误或逻辑错误。\n\n代码示例： 以下是一个缩进构成代码块的示例：\n\ndef greet(name):\n    if name == \"Alice\":\n        print(\"Hello, Alice!\")\n    else:\n        print(\"Hello, stranger!\")\n\ngreet(\"Bob\")\n\nHello, stranger!",
+    "text": "2.5 运行逻辑\n\n2.5.1 逻辑行和物理行\n逻辑行是指在代码中表示一个语句或命令的行，而物理行是指在代码文件中实际占据一行的文本。\n逻辑行可以跨越多个物理行，通过使用行连接符（）将多个物理行连接成一个逻辑行。 物理行则是代码文件中的实际行数，每个物理行都以换行符（）结尾。\n逻辑行的特征：\n\n一个逻辑行可以包含一个或多个语句或命令。\n逻辑行可以跨越多个物理行。\n逻辑行以换行符（）结尾。\n\n物理行的特征：\n\n物理行是代码文件中的实际行数。\n每个物理行都以换行符（）结尾。\n\nPython鼓励每个物理行对应一个逻辑行，即每行一个语句，以保证代码的可读性。\n\n# 逻辑行跨越多个物理行的示例\nx = 1 + \\\n    2 + \\\n    3\n\nprint(x)\n\n# 逻辑行和物理行相同的示例\ny = 5\nprint(y)\n\ny = 5;\nprint(y);\n\ny = 5; print(y);\n\ny = 5; print(y)\n\n6\n5\n5\n5\n5\n\n\n\n\n2.5.2 缩进\n缩进是 Python 中的一种语法规则，用于表示代码块的层次结构。在 Python 中，缩进是强制性的，它决定了代码的执行顺序和逻辑关系。逻辑行的缩进级别决定了语句的分组，同组的语句构成一个代码块。\n基本概念：\n\n缩进是通过使用空格或制表符来实现的。\n缩进的数量和方式必须保持一致，通常建议使用四个空格进行缩进。\n缩进的层次结构决定了代码块的嵌套关系。\n\n特性：\n\n缩进用于定义函数、循环、条件语句等代码块。\n缩进可以提高代码的可读性和可维护性。\n缩进错误会导致语法错误或逻辑错误。\n\n代码示例： 以下是一个缩进构成代码块的示例：\n\ndef greet(name):\n    if name == \"Alice\":\n        print(\"Hello, Alice!\")\n    else:\n        print(\"Hello, stranger!\")\n\ngreet(\"Bob\")\n\nHello, stranger!",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>基础</span>"
     ]
@@ -552,6 +552,26 @@
     "text": "6.5 Python模块的 __name__ 属性\n在 Python 中，每个模块都有一个内置的属性 __name__ ，这个属性对于理解模块的加载方式、以及模块与运行脚本的区别非常重要。\n当直接运行一个 py 文件（比如命令行执行 python your_script.py ）时，Python会把 __name__ 属性自动置为 __main__ 。在这种情况下，我们说 your_script.py 是作为一个脚本运行的。\n但是，如果你导入这个 py 文件作为一个模块（比如在另一个 py 文件中使用 import your_script ），那么Python会把 __name__ 属性自动置为模块的名称（这里的例子中就是 your_script ）。在这种情况下，我们说 your_script.py 是被导入的模块。\n参加如下的示例代码：\n\nif __name__ == '__main__':\n    print('This program is being run by itself')\nelse:\n    print('I am being imported from another module')\n\nThis program is being run by itself\n\n\n根据以上的属性，许多 Python 脚本（尤其是那些同时被作为模块和脚本运行的脚本）都会在文件末尾包含以下代码：\nif __name__ == \"__main__\":\n    run_my_script()\n其中，run_my_script() 是该脚本中定义的一个函数。这段代码的目的是：\n\n如果你直接运行这个 py 文件，Python 会执行 run_my_script() 函数；\n如果你把这个 py 文件作为模块导入，Python 不会执行 run_my_script() 函数。\n\n这种方法允许一个 Python 模块同时被安全地导入并独立运行，是 Python 编程中一个常见且实用的技巧。\n总的来说，Python 的 __name__ 属性作为一个内建的模块属性，通过它可以有效区分脚本的直接执行和模块的导入调用，对理解和控制 Python 代码流程有着重要作用。",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>模块</span>"
+    ]
+  },
+  {
+    "objectID": "data_structures.html",
+    "href": "data_structures.html",
+    "title": "7  数据结构",
+    "section": "",
+    "text": "7.1 列表\nPython 的列表类似于其他编程语言中的数组，但是比这些数组更灵活。列表中的元素不一定要是相同的数据类型。\n列表的创建非常简单，只需要用方括号 [] 包围元素，并用逗号 , 分割。例如，\nmy_list = [1, \"apple\", 3.14]\nprint(my_list[0]) # prints: 1\n\n1\n列表：",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
+    ]
+  },
+  {
+    "objectID": "data_structures.html#列表",
+    "href": "data_structures.html#列表",
+    "title": "7  数据结构",
+    "section": "",
+    "text": "是有序的\n是可变的\n可以包含任何类型的元素\n可以通过索引访问元素",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
     ]
   }
 ]

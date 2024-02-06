@@ -184,8 +184,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./data_structures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">数据结构</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -253,7 +259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>字面常量用于给变量赋值、进行计算和定义Python程序中的条件。</p>
 <p>它们提供了一种直接在代码中表示固定值的方式，使程序更易于理解和维护。</p>
-<div id="3bca7f32" class="cell" data-execution_count="1">
+<div id="f8675696" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span>  <span class="co"># 将整数字面常量赋值给变量</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">3.14</span>  <span class="co"># 将浮点数字面常量赋值给变量</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">'John'</span>  <span class="co"># 使用单引号括起来的字符串</span></span>
@@ -271,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>三引号可以指定多行字符串。</li>
 <li>字符串的值不可以修改。</li>
 </ul>
-<div id="bc67e8cb" class="cell" data-execution_count="2">
+<div id="97a3a282" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 创建字符串</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Alice"</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -307,7 +313,7 @@ Blice</code></pre>
 <li>可以通过索引指定插入顺序，python从0开始计数。</li>
 <li>可以命名参数。</li>
 </ul>
-<div id="30b3b812" class="cell" data-execution_count="3">
+<div id="bdffb17d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Alice"</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">25</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -350,7 +356,7 @@ Hello, my name is Alice and I am 25 years old.</code></pre>
 <li>\“：双引号</li>
 <li>\：反斜杠</li>
 </ul>
-<div id="b59699ea" class="cell" data-execution_count="4">
+<div id="4721b583" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 在字符串中使用转义序列来表示特殊字符：</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello</span><span class="ch">\t</span><span class="st">World"</span>)  <span class="co"># 输出：Hello    World</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"I</span><span class="ch">\'</span><span class="st">m a programmer"</span>)  <span class="co"># 输出：I'm a programmer</span></span>
@@ -373,7 +379,7 @@ She said, "Hello!"
 </section>
 <section id="变量" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="变量"><span class="header-section-number">2.4</span> 变量</h2>
-<p>变量是Python中的一个概念，用于存储和操作数据。它可以存储各种类型的数据，例如整数、浮点数、字符串等。</p>
+<p>变量是 Python 中的一个概念，用于存储和操作数据。它可以存储各种类型的数据，例如整数、浮点数、字符串等。</p>
 <p>特性：</p>
 <ul>
 <li>可以通过赋值操作将数据存储到变量中。</li>
@@ -382,7 +388,7 @@ She said, "Hello!"
 <li>变量可以在程序的不同位置使用和传递。</li>
 <li>变量的作用域可以限定在特定的代码块中。</li>
 </ul>
-<div id="eb43d603" class="cell" data-execution_count="5">
+<div id="aa755296" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -420,7 +426,7 @@ This is the second line.</code></pre>
 <li>每个物理行都以换行符（）结尾。</li>
 </ul>
 <p>Python鼓励每个物理行对应一个逻辑行，即每行一个语句，以保证代码的可读性。</p>
-<div id="5e6ce2e5" class="cell" data-execution_count="6">
+<div id="92b36012" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 逻辑行跨越多个物理行的示例</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="dv">2</span> <span class="op">+</span> <span class="op">\</span></span>
@@ -449,7 +455,7 @@ This is the second line.</code></pre>
 </section>
 <section id="缩进" class="level3" data-number="2.5.2">
 <h3 data-number="2.5.2" class="anchored" data-anchor-id="缩进"><span class="header-section-number">2.5.2</span> 缩进</h3>
-<p>缩进是Python中的一种语法规则，用于表示代码块的层次结构。在Python中，缩进是强制性的，它决定了代码的执行顺序和逻辑关系。逻辑行的缩进级别决定了语句的分组，同组的语句构成一个代码块。</p>
+<p>缩进是 Python 中的一种语法规则，用于表示代码块的层次结构。在 Python 中，缩进是强制性的，它决定了代码的执行顺序和逻辑关系。逻辑行的缩进级别决定了语句的分组，同组的语句构成一个代码块。</p>
 <p>基本概念：</p>
 <ul>
 <li>缩进是通过使用空格或制表符来实现的。</li>
@@ -463,7 +469,7 @@ This is the second line.</code></pre>
 <li>缩进错误会导致语法错误或逻辑错误。</li>
 </ul>
 <p>代码示例： 以下是一个缩进构成代码块的示例：</p>
-<div id="e3c365bc" class="cell" data-execution_count="7">
+<div id="24c1c317" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> greet(name):</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> name <span class="op">==</span> <span class="st">"Alice"</span>:</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Hello, Alice!"</span>)</span>

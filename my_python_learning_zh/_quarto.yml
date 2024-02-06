@@ -13,6 +13,7 @@ book:
     - control_flow.qmd
     - functions.qmd
     - modules.qmd
+    - data_structures.qmd
     - summary.qmd
     - references.qmd
 
