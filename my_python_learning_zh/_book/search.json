@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "我的Python学习笔记",
     "section": "",
-    "text": "前言\n欢迎阅读《我的python学习笔记》！这里是我学习 Python 的笔记和实践记录。\n在我的 Python 学习之旅中，我使用 Quarto 记录了一系列的交互式笔记。我采用了 Quarto 书籍项目的形式，以便在阅读材料的同时，观看和执行相关的嵌入式代码。\n本仓库下的 ‘my-python-learning-zh’ 和 ‘my-python-learning-en’ 文件夹分别存放着我制作的中文和英文版本交互式笔记。\n此外，对于一些简单的代码实践，我将它们放置在 ‘practical_code’ 文件夹中。可以在这里查看我在学习 Python 过程中的实战项目和练习。\n目前，这些笔记是基于Swaroopch C H的书籍《A Byte of Python》(CH 2024)而编写的，该书采用CC BY-SA 3.0许可证。\n除非另有说明，这些笔记采用CC BY-SA 4.0许可证发布。\n在学完这本书之后，我可能会参考其他的书籍更进一步完善这本笔记，也可能不会？\n\n\n\n\nCH, Swaroop. 2024. “Swaroopch/Byte-of-Python.” https://github.com/swaroopch/byte-of-python.",
+    "text": "前言\n欢迎阅读《我的python学习笔记》！这里是我学习 Python 的笔记和实践记录。\n在我的 Python 学习之旅中，我使用 Quarto 记录了一系列的交互式笔记。我采用了 Quarto 书籍项目的形式，以便在阅读材料的同时，观看和执行相关的嵌入式代码。\n本仓库下的 ‘my-python-learning-zh’ 和 ‘my-python-learning-en’ 文件夹分别存放着我制作的中文和英文版本交互式笔记。\n此外，对于一些简单的代码实践，我将它们放置在 ‘practical_code’ 文件夹中。可以在这里查看我在学习 Python 过程中的实战项目和练习。\n目前，这些笔记是基于Swaroopch C H的书籍《A Byte of Python》(CH 2024)而编写的，该书采用CC BY-SA 3.0许可证。\n除非另有说明，这些笔记采用CC BY-SA 4.0许可证发布。\n在学完这本书之后，我可能会参考其他的书籍更进一步完善这本笔记。\n\n\n\n\nCH, Swaroop. 2024. “Swaroopch/Byte-of-Python.” https://github.com/swaroopch/byte-of-python.",
     "crumbs": [
       "前言"
     ]
@@ -559,7 +559,7 @@
     "href": "data_structures.html",
     "title": "7  数据结构",
     "section": "",
-    "text": "7.1 列表（List）\nPython 的列表类似于其他编程语言中的数组，但是比这些数组更灵活。列表中的元素不一定要是相同的数据类型。\n列表用方括号 [] 包围元素，并用逗号 , 分割。\nmy_list = [1, \"apple\", 3.14]\nprint(my_list[0]) # prints: 1\n\n1\n列表：",
+    "text": "7.1 序列（Sequence）\n在Python中，序列(Sequence)是最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推。\nPython有三种常见的序列类型：\n另外三种非序列的数据结构是：\n这三种类型并非有序，也不能通过索引访问元素。",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
     ]
@@ -578,8 +578,8 @@
     "objectID": "data_structures.html#列表list",
     "href": "data_structures.html#列表list",
     "title": "7  数据结构",
-    "section": "",
-    "text": "是有序的\n是可变的\n可以包含任何类型的元素\n可以通过索引访问元素，索引从0开始\n\n\n\n\n\n\n\n注意, Python的索引是从0开始。这意味着在使用索引访问列表元素时，列表中的第一个元素是 list[0]，第二个元素是 list[1]，以此类推。",
+    "section": "7.2 列表（List）",
+    "text": "7.2 列表（List）\nPython 的列表类似于其他编程语言中的数组，但是比这些数组更灵活。列表中的元素不一定要是相同的数据类型。\n列表用方括号 [] 包围元素，并用逗号 , 分割。\n\nmy_list = [1, \"apple\", 3.14]\nprint(my_list[0]) # prints: 1\n\n1\n\n\n列表：\n\n是有序的\n是可变的\n可以包含任何类型的元素\n可以通过索引访问元素，索引从0开始\n\n\n\n\n\n\n\n注意, Python的索引是从0开始。这意味着在使用索引访问列表元素时，列表中的第一个元素是 list[0]，第二个元素是 list[1]，以此类推。",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
     ]
@@ -588,8 +588,8 @@
     "objectID": "data_structures.html#元组tuple",
     "href": "data_structures.html#元组tuple",
     "title": "7  数据结构",
-    "section": "7.2 元组（Tuple）",
-    "text": "7.2 元组（Tuple）\n元组是有序的、不可变的列表。可以理解为一种“只读”版本的列表。\n元组用括号 () 包围元素，并用逗号 , 分割。\n\nmy_tuple = (1, \"apple\", 3.14)\nprint(my_tuple[0]) # prints: 1\n\n1\n\n\n元组：\n\n是有序的\n是不可变的\n可以包含任何类型的元素\n可以通过索引访问元素，索引从0开始\n\n下面是一个体现元组和列表的差别的代码示例\n\n# 创建一个列表\nmy_list = [1, 2, 3]\n# 在列表末尾添加一个元素\nmy_list.append(4)\nprint(my_list[3])\n# 创建一个元组\nmy_tuple = (1, 2, 3)\n# 不能修改元组\n# my_tuple.append(4)  # 这样会报错\n\n4",
+    "section": "7.3 元组（Tuple）",
+    "text": "7.3 元组（Tuple）\n元组是有序的、不可变的列表。可以理解为一种“只读”版本的列表。\n元组用括号 () 包围元素，并用逗号 , 分割。\n\nmy_tuple = (1, \"apple\", 3.14)\nprint(my_tuple[0]) # prints: 1\n\n1\n\n\n元组：\n\n是有序的\n是不可变的\n可以包含任何类型的元素\n可以通过索引访问元素，索引从0开始\n\n下面是一个体现元组和列表的差别的代码示例\n\n# 创建一个列表\nmy_list = [1, 2, 3]\n# 在列表末尾添加一个元素\nmy_list.append(4)\nprint(my_list[3])\n# 创建一个元组\nmy_tuple = (1, 2, 3)\n# 不能修改元组\n# my_tuple.append(4)  # 这样会报错\n\n4",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
     ]
@@ -598,8 +598,8 @@
     "objectID": "data_structures.html#集合set",
     "href": "data_structures.html#集合set",
     "title": "7  数据结构",
-    "section": "7.3 集合（Set）",
-    "text": "7.3 集合（Set）\n集合是非有序的数据结构，它不允许重复元素。\n集合用花括号{}包围元素，并用逗号 , 分割。\n\nmy_set = {1, \"apple\", 3.14, \"apple\"}\nprint(my_set) # prints: {1, \"apple\", 3.14}\n\n{1, 3.14, 'apple'}\n\n\n集合:\n\n是无序的\n集合中元素不能重复\n可以包含任何类型的元素\n不能通过索引访问元素",
+    "section": "7.4 集合（Set）",
+    "text": "7.4 集合（Set）\n集合是非有序的数据结构，它不允许重复元素。\n集合用花括号{}包围元素，并用逗号 , 分割。\n\nmy_set = {1, \"apple\", 3.14, \"apple\"}\nprint(my_set) # prints: {1, \"apple\", 3.14}\n\n{1, 3.14, 'apple'}\n\n\n集合:\n\n是无序的\n集合中元素不能重复\n可以包含任何类型的元素\n不能通过索引访问元素",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
     ]
@@ -608,8 +608,38 @@
     "objectID": "data_structures.html#字典dictionary",
     "href": "data_structures.html#字典dictionary",
     "title": "7  数据结构",
-    "section": "7.4 字典（Dictionary）",
-    "text": "7.4 字典（Dictionary）\n字典是一个无序的键值对集合。\n“键值对”（Key-Value Pair）指的是两个关联的部分：一个是唯一的键（Key），另一个是值（Value）。每个键都有一个关联的值。这种关联叫做”映射”。\n字典使用花括号{}包围元素，键值之间用冒号:分隔，而键值对之间用逗号,分隔。\n\n\n\n\n\n\n为什么叫字典\n\n\n\n在一本实体字典中，你可以根据词条（对应于计算机中的“键”）找到对应的解释或者翻译（对应于计算机中的“值”）。这构成了一个”词条-解释”对，与计算机科学中的”键-值对”类似。\n因此，考虑到这种映射关系，计算机科学中的这种包含”键-值对”的数据结构，就被命名为字典（Dictionary）。\n\n\n\nmy_dict = {\n    \"name\": \"apple\",\n    \"color\": \"red\",\n}\nprint(my_dict[\"name\"]) # prints: apple\n\nages = {\n    \"Tom\": 30, \n    \"Alice\": 25, \n    \"Bob\": 27\n}\n\nprint(ages[\"Alice\"]) # 输出：25\nages[\"Tom\"] = 31  # 将Tom的年龄改为31\nprint(ages[\"Tom\"]) # 输出：31\n\napple\n25\n31\n\n\n字典:\n\n是无序的\n键值对中的键是唯一的,但值可以重复\n可以包含任何类型的元素\n通过键来访问元素",
+    "section": "7.5 字典（Dictionary）",
+    "text": "7.5 字典（Dictionary）\n字典是一个无序的键值对集合。\n“键值对”（Key-Value Pair）指的是两个关联的部分：一个是唯一的键（Key），另一个是值（Value）。每个键都有一个关联的值。这种关联叫做”映射”。\n字典使用花括号{}包围元素，键值之间用冒号:分隔，而键值对之间用逗号,分隔。\n\n\n\n\n\n\n为什么叫字典\n\n\n\n在一本实体字典中，你可以根据词条（对应于计算机中的“键”）找到对应的解释或者翻译（对应于计算机中的“值”）。这构成了一个”词条-解释”对，与计算机科学中的”键-值对”类似。\n因此，考虑到这种映射关系，计算机科学中的这种包含”键-值对”的数据结构，就被命名为字典（Dictionary）。\n\n\n\nmy_dict = {\n    \"name\": \"apple\",\n    \"color\": \"red\",\n}\nprint(my_dict[\"name\"]) # prints: apple\n\nages = {\n    \"Tom\": 30, \n    \"Alice\": 25, \n    \"Bob\": 27\n}\n\nprint(ages[\"Alice\"]) # 输出：25\nages[\"Tom\"] = 31  # 将Tom的年龄改为31\nprint(ages[\"Tom\"]) # 输出：31\n\napple\n25\n31\n\n\n字典:\n\n是无序的\n键值对中的键是唯一的,但值可以重复\n可以包含任何类型的元素\n通过键来访问元素",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
+    ]
+  },
+  {
+    "objectID": "data_structures.html#序列sequence",
+    "href": "data_structures.html#序列sequence",
+    "title": "7  数据结构",
+    "section": "",
+    "text": "列表（List）\n元组（Tuple）\n字符串（String）\n\n\n\n集合（Set）\n字典（Dictionary）\n冰冻集合（frozenset）",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
+    ]
+  },
+  {
+    "objectID": "data_structures.html#对象object和类class",
+    "href": "data_structures.html#对象object和类class",
+    "title": "7  数据结构",
+    "section": "7.6 对象（Object）和类（Class）",
+    "text": "7.6 对象（Object）和类（Class）\nPython是一种面向对象的编程语言。在Python中，几乎所有的东西都是对象，拥有其属性和方法。类(Class)就是为创建对象的种类或类型提供了定义的一种机制。\n对象(Object)：在Python中，对象是数据的核心单元。每个对象都具有一个类型（例如，字符串，列表，字典等），以及一个独一无二的身份（在内存中的地址）。对象可以包含包含多种数据（即属性）和功能（即方法）。它可以视为现实世界中的客观实体，比如一张桌子、一个圆形、一个人等。\n举例来说，一个人（对象）有姓名（属性）和能进行各种活动（方法）如跑步、学习等。\n类(Class)：类是对象的模板或蓝图。它定义了对象的基本结构，并封装了对象需要执行的行为（方法）。你可以定义一个类来创建属于这个类的对象。类就相当于制造物件的工厂，负责规定其生产出的对象应该拥有哪些特性。\n举例来说，你可以定义一个“人”的类（class），它有名字和年龄等属性，也有吃饭，睡觉等方法。然后根据这个“人”类，我们可以创建不同的人对象，比如创建一个名叫“张三”、年龄25岁的人对象。\n\nclass Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\n    def introduce(self):\n        return f\"Hello, my name is {self.name} and I am {self.age} years old.\"\n\n# 创建一个属于Person类的对象\nsomeone = Person('张三', 25)\n\n# 调用对象的方法\nprint(someone.introduce())\n\nHello, my name is 张三 and I am 25 years old.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
+    ]
+  },
+  {
+    "objectID": "data_structures.html#引用",
+    "href": "data_structures.html#引用",
+    "title": "7  数据结构",
+    "section": "7.7 引用",
+    "text": "7.7 引用\n在Python中，每当你创建一个对象并将其赋值给一个变量时，Python并不会将对象的值存储在变量中。相反，Python仅仅是将变量设置为一个引用，指向存储在内存中的对象。这种方式被称为绑定变量名到对象，或者叫做引用。\n\n创建对象和引用\n\n举个例子，当你创建一个列表并赋值给某个变量：\n\nlist1 = [1, 2, 3]\n\n此时，list1只是一个引用，它指向存储在内存中的一个列表对象，此对象包含元素1, 2, 3。如果你再创建一个引用，并指向同样的对象：\n\nlist2 = list1\n\n此时你有两个引用——list1和list2，它们同时指向同一个对象。\n\n修改可变类型的对象\n\n如果你通过其中一个引用去修改这个对象，例如你通过list1去删除第一个元素：\n\ndel list1[0]\n\n那么无论你是通过list1还是list2来访问这个列表对象，你都会发现的此对象的内容已经发生了变化：\n\nprint(list1)  # 输出: [2, 3]\nprint(list2)  # 输出: [2, 3]\n\n[2, 3]\n[2, 3]\n\n\n这是因为list1和list2都只是引用，它们并不包含实际的列表内容，而只是指向内存中的一个位置，即同一个列表对象的地址。\n\n对象的复制\n\n然而，有时你可能需要创建一个对象的副本，这样你就可以修改这个副本，而不影响原来的对象。例如，通过切片操作可以创建一个列表的副本：\n\nlist3 = list2[:]\n\n此时list3引用的是一个完全新的列表对象，这个对象的内容是list2所指向的列表的一个完全的拷贝。所以，当你更改list3的内容时，list2指向的列表内容不会被修改：\n\ndel list3[0]\nprint(list2)  # 输出: [2, 3]\nprint(list3)  # 输出: [3]\n\n[2, 3]\n[3]",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>数据结构</span>"
     ]
