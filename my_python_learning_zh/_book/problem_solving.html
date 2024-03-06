@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="魏子超">
-<meta name="dcterms.date" content="2024-01-22">
 
-<title>我的Python学习笔记</title>
+<title>我的Python学习笔记 - 8&nbsp; 问题解决</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -52,7 +64,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./summary.html" rel="next">
+<link href="./data_structures.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -102,7 +115,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">前言</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./problem_solving.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">问题解决</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -129,7 +142,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">前言</span></a>
   </div>
 </li>
@@ -177,7 +190,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./problem_solving.html" class="sidebar-item-text sidebar-link">
+  <a href="./problem_solving.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">问题解决</span></span></a>
   </div>
 </li>
@@ -203,7 +216,15 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#前言" id="toc-前言" class="nav-link active" data-scroll-target="#前言">前言</a></li>
+  <li><a href="#软件开发流程" id="toc-软件开发流程" class="nav-link active" data-scroll-target="#软件开发流程"><span class="header-section-number">8.1</span> 软件开发流程</a></li>
+  <li><a href="#问题示例备份程序" id="toc-问题示例备份程序" class="nav-link" data-scroll-target="#问题示例备份程序"><span class="header-section-number">8.2</span> 问题示例：备份程序</a></li>
+  <li><a href="#知识点" id="toc-知识点" class="nav-link" data-scroll-target="#知识点"><span class="header-section-number">8.3</span> 知识点</a>
+  <ul class="collapse">
+  <li><a href="#python字符串格式化" id="toc-python字符串格式化" class="nav-link" data-scroll-target="#python字符串格式化"><span class="header-section-number">8.3.1</span> Python字符串格式化</a></li>
+  <li><a href="#f-string格式化字符串字面值" id="toc-f-string格式化字符串字面值" class="nav-link" data-scroll-target="#f-string格式化字符串字面值"><span class="header-section-number">8.3.2</span> f-string（格式化字符串字面值）</a></li>
+  <li><a href="#操作系统路径分隔符在python中的使用" id="toc-操作系统路径分隔符在python中的使用" class="nav-link" data-scroll-target="#操作系统路径分隔符在python中的使用"><span class="header-section-number">8.3.3</span> 操作系统路径分隔符在Python中的使用</a></li>
+  </ul></li>
+  <li><a href="#其他问题" id="toc-其他问题" class="nav-link" data-scroll-target="#其他问题"><span class="header-section-number">8.4</span> 其他问题</a></li>
   </ul>
 </nav>
     </div>
@@ -212,26 +233,14 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">我的Python学习笔记</h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">问题解决</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>魏子超 </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 22, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -241,22 +250,144 @@ div.csl-indent {
 </header>
 
 
-<section id="前言" class="level1 unnumbered">
-<h1 class="unnumbered">前言</h1>
-<p>欢迎阅读《我的python学习笔记》！这里是我学习 Python 的笔记和实践记录。</p>
-<p>在我的 Python 学习之旅中，我使用 Quarto 记录了一系列的交互式笔记。我采用了 Quarto 书籍项目的形式，以便在阅读材料的同时，观看和执行相关的嵌入式代码。</p>
-<p>本仓库下的 <strong>‘my-python-learning-zh’</strong> 和 <strong>‘my-python-learning-en’</strong> 文件夹分别存放着我制作的中文和英文版本交互式笔记。</p>
-<p>此外，对于一些简单的代码实践，我将它们放置在 <strong>‘practical_code’</strong> 文件夹中。可以在这里查看我在学习 Python 过程中的实战项目和练习。</p>
-<p>目前，这些笔记是基于Swaroopch C H的书籍《A Byte of Python》<span class="citation" data-cites="chSwaroopchByteofpython2024">(<a href="references.html#ref-chSwaroopchByteofpython2024" role="doc-biblioref">CH 2024</a>)</span>而编写的，该书采用CC BY-SA 3.0许可证。</p>
-<p>除非另有说明，这些笔记采用<a href="LICENSE">CC BY-SA 4.0</a>许可证发布。</p>
-<p>在学完这本书之后，我可能会参考其他的书籍更进一步完善这本笔记。</p>
-
-
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-chSwaroopchByteofpython2024" class="csl-entry" role="listitem">
-CH, Swaroop. 2024. <span>“Swaroopch/Byte-of-Python.”</span> https://github.com/swaroopch/byte-of-python.
+<p>编程的最终目的是利用程序解决某个具体的问题。</p>
+<section id="软件开发流程" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="软件开发流程"><span class="header-section-number">8.1</span> 软件开发流程</h2>
+<p>软件开发的一个基本流程是：</p>
+<ol type="1">
+<li>分析（What）：定义我们要解决的问题</li>
+<li>设计（How）：确定实现目标的方法</li>
+<li>实施（Do It）：首先从一个简单版本开始，将核心功能实现出来</li>
+<li>测试和调试（Test）：验证程序是否按照期望运行，找出并修复程序中的错误和问题</li>
+<li>使用（Operation or Deployment）：通过实际使用，观察程序的运行效果</li>
+<li>改进（Maintain）：基于使用阶段的反馈进行，对程序进行优化和升级</li>
+</ol>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Software is grown, not built. – Bill de hÓra</p>
+<p>软件是成长的，而不是建造的。– Bill de hÓra</p>
 </div>
 </div>
+</div>
+</section>
+<section id="问题示例备份程序" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="问题示例备份程序"><span class="header-section-number">8.2</span> 问题示例：备份程序</h2>
+<p>《A Byte of Python》中给出的问题是：</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>I want a program which creates a backup of all my important files.</p>
+<p>我想要一个能够备份我所有重要文件的程序。</p>
+</div>
+</div>
+</div>
+<p>其设计思路是：</p>
+<ul>
+<li>备份的文件和目录在列表中指定。</li>
+<li>备份必须存储在一个主备份目录中。</li>
+<li>文件被备份到一个zip文件中。</li>
+<li>压缩文件的名称是当前的日期和时间。</li>
+<li>使用标准的 zip 命令，该命令在任何标准的GNU/Linux或Unix发行版中都是默认可用的。请注意，只要具有命令行界面，您可以使用任何归档命令。</li>
+</ul>
+</section>
+<section id="知识点" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="知识点"><span class="header-section-number">8.3</span> 知识点</h2>
+<p>《A Byte of Python》本章的示例代码中有一些重要的知识点：</p>
+<section id="python字符串格式化" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="python字符串格式化"><span class="header-section-number">8.3.1</span> Python字符串格式化</h3>
+<section id="format方法" class="level4" data-number="8.3.1.1">
+<h4 data-number="8.3.1.1" class="anchored" data-anchor-id="format方法"><span class="header-section-number">8.3.1.1</span> .format()方法</h4>
+<p><code>.format()</code>方法是一种字符串格式化方式，我们可以将值插入到字符串模板的占位符中。例如：</p>
+<div id="5713642c" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Alice"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(name)) <span class="co"># 输出：Hello, Alice</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello, Alice</code></pre>
+</div>
+</div>
+<p>在这段代码中，<code>{}</code> 是一个占位符，可以在<code>.format()</code>方法中传入变量name，它会被自动替换到占位符的位置。</p>
+<p>我们还可以在<code>{}</code>中添加数字，以指定<code>.format()</code>方法参数的位置：</p>
+<div id="ee687d35" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>firstname <span class="op">=</span> <span class="st">"Alice"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>lastname <span class="op">=</span> <span class="st">"Bob"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, </span><span class="sc">{0}</span><span class="st"> </span><span class="sc">{1}</span><span class="st">"</span>.<span class="bu">format</span>(firstname, lastname)) <span class="co"># 输出：Hello, Alice Bob</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello, Alice Bob</code></pre>
+</div>
+</div>
+<p>这里的 <code>{0}</code> 和 <code>{1}</code> 分别对应<code>.format()</code>方法里的第一个和第二个参数。</p>
+</section>
+</section>
+<section id="f-string格式化字符串字面值" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="f-string格式化字符串字面值"><span class="header-section-number">8.3.2</span> f-string（格式化字符串字面值）</h3>
+<p>在Python 3.6及以上版本中，我们通常使用f-string进行字符串格式化，它使字符串格式化更加简洁、高效。f-string的工作方式是，在字符串前面加上一个<code>f</code>或<code>F</code>，然后将要插入的变量或表达式写在 <code>{}</code> 之中，Python 会自动将其替换为它的值。例如：</p>
+<div id="d47a7228" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Alice"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Hello, </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span>) <span class="co"># 输出：Hello, Alice</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello, Alice</code></pre>
+</div>
+</div>
+<p>在 <code>{}</code> 中可以写入一些简单的Python表达式，Python会自动执行这些表达式并将结果替换到 <code>{}</code> 的位置：</p>
+<div id="be6728c4" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Five plus ten is </span><span class="sc">{</span>a <span class="op">+</span> b<span class="sc">}</span><span class="ss">, not </span><span class="sc">{</span><span class="dv">2</span> <span class="op">*</span> (a <span class="op">+</span> b)<span class="sc">}</span><span class="ss">."</span>) <span class="co"># 输出：Five plus ten is 15, not 30.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Five plus ten is 15, not 30.</code></pre>
+</div>
+</div>
+</section>
+<section id="操作系统路径分隔符在python中的使用" class="level3" data-number="8.3.3">
+<h3 data-number="8.3.3" class="anchored" data-anchor-id="操作系统路径分隔符在python中的使用"><span class="header-section-number">8.3.3</span> 操作系统路径分隔符在Python中的使用</h3>
+<p>在不同的操作系统中，文件路径的表示方法是不同的。在Windows系统中，我们习惯使用反斜线<code>\</code>来表示路径，例如：<code>C:\Users\Admin\Documents</code>。而在UNIX系统（比如Linux, MacOS）中，我们使用正斜线<code>/</code>来表示路径，例如：<code>/home/admin/Documents</code>。 然而，在Python的字符串中，反斜线’'是一个特殊字符，被用作转义字符，用于引入特殊的字符序列。例如<code>\n</code>表示换行，<code>\t</code>表示制表符。例如：</p>
+<div id="44984d59" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello</span><span class="ch">\n</span><span class="st">World"</span>) <span class="co"># 输出：</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Hello</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># World</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello
+World</code></pre>
+</div>
+</div>
+<p>因此，如果我们想在Python字符串中使用Windows路径，如<code>C:\Users\Admin\Documents</code>，我们需要使用双反斜线<code>\\</code>来转义，例如<code>C:\\Users\\Admin\\Documents</code>。代码示例：</p>
+<div id="72924f60" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> <span class="st">"C:</span><span class="ch">\\</span><span class="st">Users</span><span class="ch">\\</span><span class="st">Admin</span><span class="ch">\\</span><span class="st">Documents"</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(path) <span class="co"># 输出：C:\Users\Admin\Documents</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>C:\Users\Admin\Documents</code></pre>
+</div>
+</div>
+<p>另外，我们可以使用Python的原始字符串来表示路径。原始字符串不会处理反斜线<code>\</code>为特殊字符，我们只需在字符串前加上字符<code>r</code>即可。代码示例：</p>
+<div id="8115491b" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> <span class="vs">r"C:\Users\Admin\Documents"</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(path) <span class="co"># 输出：C:\Users\Admin\Documents</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>C:\Users\Admin\Documents</code></pre>
+</div>
+</div>
+<p>但是，不推荐直接在字符串中使用单个反斜线<code>\</code>来表示Windows路径，因为这很容易引入一些我们不想要的转义序列。例如，<code>\U</code>开始的是一个Unicode转义序列，如果路径中恰好包含<code>\U</code>，Python会尝试处理它为特殊字符序列，从而导致错误。所以，应尽量避免使用如<code>C:\Users</code>这样的字符串。</p>
+<p>注意：在大多数情况下，我们推荐使用<code>os.path</code>模块来处理路径，这样可以确保你的代码在不同的操作系统中都能正确运行。</p>
+</section>
+</section>
+<section id="其他问题" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="其他问题"><span class="header-section-number">8.4</span> 其他问题</h2>
+<p>与之难度相似的，可以作为新手入门的问题还有：</p>
+<ul>
+<li>一个能够整理我在多个文件夹下的文档，将它们根据类型（如.doc, .pdf等）分门别类地存放在不同的文件夹中的程序</li>
+<li>一个能够给我所有的图片按指定的大小进行缩放的程序</li>
+<li>一个能够统计一篇英文文章中每个单词出现次数的程序</li>
+<li>一个能够找出两个文件夹中相同的文件并列出的程序</li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -671,10 +802,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./data_structures.html" class="pagination-link" aria-label="数据结构">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">数据结构</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./summary.html" class="pagination-link" aria-label="Summary">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
