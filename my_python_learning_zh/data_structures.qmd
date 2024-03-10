@@ -135,7 +135,7 @@ print(ages["Tom"]) # 输出：31
 - 可以包含任何类型的元素
 - 通过键来访问元素
 
-## 对象（Object）和类（Class）
+## 对象（Object）和类（Class）{#sec-objects-and-classes}
 
 Python是一种面向对象的编程语言。在Python中，几乎所有的东西都是对象，拥有其属性和方法。类(Class)就是为创建对象的种类或类型提供了定义的一种机制。
 
