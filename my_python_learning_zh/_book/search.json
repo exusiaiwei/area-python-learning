@@ -759,7 +759,7 @@
     "href": "object_oriented_programming.html#对象和类的回顾",
     "title": "9  面向对象编程",
     "section": "",
-    "text": "类（Class）：类是对一类事物的抽象描述，它定义了这种事物的静态特性和动态行为（方法）。类是创建对象的模板，对象是类的实例。\n对象（Object）：对象是类的实例，即根据类的定义创建的实体。每个对象都有自己的属性（类变量和实例变量）和行为（方法）。\n属性（Attribute）：属性是类或对象的特性，包括静态特性和动态行为（方法）。\n方法（Method）：方法是类定义的一部分。方法定义了对象的动态行为，描述了对象如何响应外部的请求或如何完成某些具体的任务。",
+    "text": "类（Class）：类是对一类事物的抽象描述，它定义了这种事物的静态特性（字段）和动态行为（方法）。类是创建对象的模板，对象是类的实例。\n对象（Object）：对象是类的实例，即根据类的定义创建的实体。每个对象都有自己的属性（类变量和实例变量）和行为（方法）。\n属性（Attribute）：属性是类或对象的特性，包括静态特性（字段）和动态行为（方法）。\n方法（Method）：方法是类定义的一部分。方法定义了对象的动态行为，描述了对象如何响应外部的请求或如何完成某些具体的任务。\n\n\n\n\n\n\n类似结构功能主义——在面向对象编程中，对象的字段就像是他的“结构”，而方法则如同他的“功能”。",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>面向对象编程</span>"
     ]
@@ -778,8 +778,28 @@
     "objectID": "object_oriented_programming.html#总结",
     "href": "object_oriented_programming.html#总结",
     "title": "9  面向对象编程",
-    "section": "9.3 总结",
-    "text": "9.3 总结\n\n9.3.1 面向对象编程的主要特点\n面向对象编程（OOP）的主要特点是：\n\n模块化：每一个对象都可以看作是一个独立的模块，它拥有自己的属性（也称为数据成员）和方法（也称为成员函数）。\n可复用性：对象的代码可以在需要的地方复用，可以通过继承、封装、多态这些机制实现代码的重用。\n扩展性：继承和多态性的机制提高了程序的可扩展性。\n\n\n\n\n\n\n\n其他常见的编程范型：\n面向过程编程（Procedural programming）：是最早的编程范型之一，它的主要思想是将程序分解为一步一步的过程或者函数，通过定义数据和函数的执行步骤来解决问题。\n函数式编程（Functional Programming）：倡导编写纯函数，避免程序状态改变和数据可变性，以求更高的可理解性和更低的bug产生率。\n逻辑编程（Logic Programming） ：通过描述问题的逻辑来编写程序，程序会自动推导出解决问题的答案。Prolog就是一种逻辑编程语言。",
+    "section": "9.4 总结",
+    "text": "9.4 总结\n\n9.4.1 面向对象编程的主要特点\n面向对象编程（OOP）的主要特点是：\n\n模块化：每一个对象都可以看作是一个独立的模块，它拥有自己的属性（也称为数据成员）和方法（也称为成员函数）。\n可复用性：对象的代码可以在需要的地方复用，可以通过继承、封装、多态这些机制实现代码的重用。\n扩展性：继承和多态性的机制提高了程序的可扩展性。\n\n\n\n\n\n\n\n其他常见的编程范型：\n面向过程编程（Procedural programming）：是最早的编程范型之一，它的主要思想是将程序分解为一步一步的过程或者函数，通过定义数据和函数的执行步骤来解决问题。\n函数式编程（Functional Programming）：倡导编写纯函数，避免程序状态改变和数据可变性，以求更高的可理解性和更低的bug产生率。\n逻辑编程（Logic Programming） ：通过描述问题的逻辑来编写程序，程序会自动推导出解决问题的答案。Prolog就是一种逻辑编程语言。",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>面向对象编程</span>"
+    ]
+  },
+  {
+    "objectID": "object_oriented_programming.html#类的构建功能部分",
+    "href": "object_oriented_programming.html#类的构建功能部分",
+    "title": "9  面向对象编程",
+    "section": "9.2 类的构建（功能部分）",
+    "text": "9.2 类的构建（功能部分）\n类的构建主要是通过定义类的方法实现的。方法描述了类或其实例可以进行的操作。在Python中，我们常常在类的内部定义方法，就像定义普通的函数那样。\n\n9.2.1 self在类方法中的作用\n在Python中，类方法的第一个参数通常会是一个名为self的特殊参数，这个self参数代表方法的所属实例，或者说，将会调用这个方法的实例。通过self参数，方法可以自由地访问和修改对象的字段和其他方法。\n\n\n\n\n\n\n在定义类的方法时，我们并不知道这个方法将来会被哪个实例对象调用。所以我们需要一个参数（习惯上叫做self）来接收运行时传入的实例对象，这样这个方法才能访问到实例的属性或者调用实例的其他方法。\n\n\n\n\nclass Dog:\n    def __init__(self, name):\n         self.name = name\n\n    def bark(self):\n         return f\"{self.name} says woof!\"\n\nd1 = Dog(\"Fido\")\nd2 = Dog(\"Rex\")\n\nprint(d1.bark())  # 输出 \"Fido says woof!\"\nprint(d2.bark())  # 输出 \"Rex says woof!\"\n\nFido says woof!\nRex says woof!\n\n\n当一个实例调用其方法时，Python 解释器会自动将实例本身传入方法的self参数。通过self，我们可以在方法内部访问和修改实例的属性。\n在这个例子中，bark()方法在d1和d2两个不同的实例中调用，self就代表了调用这个方法的实例，因此self.name会分别返回d1和d2的name属性。在每一次方法的调用中，Python都会自动地将当前的对象实例作为第一个参数传递进去。\n\n\n\n\n\n\nrex.bark()\n在这里，当我们调用rex.bark()时，从表面看，我们并没有给bark方法提供任何参数。但实际上，Python解释器会自动把rex这个实例传递给bark方法的self参数。这就是为何在类的方法最开始位置总会有一个self参数，而在调用方法时，我们通常并不需要显式地提供这个参数。\n同理，这也意味着哪怕是一个不带参数的方法，他也仍然需要一个参数- self\n\n\n\n\n\n9.2.2 __init__方法：类的构造函数\n\n\n9.2.3 Method: 类的功能实现",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>面向对象编程</span>"
+    ]
+  },
+  {
+    "objectID": "object_oriented_programming.html#字段结构部分",
+    "href": "object_oriented_programming.html#字段结构部分",
+    "title": "9  面向对象编程",
+    "section": "9.3 字段（结构部分）",
+    "text": "9.3 字段（结构部分）\n在类或对象中定义的变量被称为字段，用于描述对象的状态或性质。上述的静态特性就是指类或对象的字段。\n\n\n\n\n\n\n属性 = 字段+ 方法\n\n\n\n字段有两种类型：\n\n类变量：属于类，所有的对象实例共享这一个变量，一个对象修改了它，会影响到所有的对象。\n实例变量：属于对象，每个对象实例都有自己的一份，一个对象修改了它，不会影响其他的对象。\n\n\n9.3.1",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>面向对象编程</span>"
     ]
