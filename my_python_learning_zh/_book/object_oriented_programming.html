@@ -225,17 +225,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#对象和类的回顾" id="toc-对象和类的回顾" class="nav-link active" data-scroll-target="#对象和类的回顾"><span class="header-section-number">9.1</span> 对象和类的回顾</a></li>
   <li><a href="#类的构建功能部分" id="toc-类的构建功能部分" class="nav-link" data-scroll-target="#类的构建功能部分"><span class="header-section-number">9.2</span> 类的构建（功能部分）</a>
   <ul class="collapse">
-  <li><a href="#self在类方法中的作用" id="toc-self在类方法中的作用" class="nav-link" data-scroll-target="#self在类方法中的作用"><span class="header-section-number">9.2.1</span> <code>self</code>在类方法中的作用</a></li>
-  <li><a href="#init__方法类的构造函数" id="toc-init__方法类的构造函数" class="nav-link" data-scroll-target="#init__方法类的构造函数"><span class="header-section-number">9.2.2</span> <code>__init__</code>方法：类的构造函数</a></li>
-  <li><a href="#method-类的功能实现" id="toc-method-类的功能实现" class="nav-link" data-scroll-target="#method-类的功能实现"><span class="header-section-number">9.2.3</span> Method: 类的功能实现</a></li>
+  <li><a href="#方法-类的功能实现" id="toc-方法-类的功能实现" class="nav-link" data-scroll-target="#方法-类的功能实现"><span class="header-section-number">9.2.1</span> 方法: 类的功能实现</a></li>
+  <li><a href="#self在类方法中的作用" id="toc-self在类方法中的作用" class="nav-link" data-scroll-target="#self在类方法中的作用"><span class="header-section-number">9.2.2</span> <code>self</code>在类方法中的作用</a></li>
+  <li><a href="#init__方法类的构造函数" id="toc-init__方法类的构造函数" class="nav-link" data-scroll-target="#init__方法类的构造函数"><span class="header-section-number">9.2.3</span> <code>__init__</code>方法：类的构造函数</a></li>
   </ul></li>
-  <li><a href="#字段结构部分" id="toc-字段结构部分" class="nav-link" data-scroll-target="#字段结构部分"><span class="header-section-number">9.3</span> 字段（结构部分）</a>
+  <li><a href="#字段结构部分" id="toc-字段结构部分" class="nav-link" data-scroll-target="#字段结构部分"><span class="header-section-number">9.3</span> 字段（结构部分）</a></li>
+  <li><a href="#继承" id="toc-继承" class="nav-link" data-scroll-target="#继承"><span class="header-section-number">9.4</span> 继承</a></li>
+  <li><a href="#总结" id="toc-总结" class="nav-link" data-scroll-target="#总结"><span class="header-section-number">9.5</span> 总结</a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">9.3.1</span> </a></li>
-  </ul></li>
-  <li><a href="#总结" id="toc-总结" class="nav-link" data-scroll-target="#总结"><span class="header-section-number">9.4</span> 总结</a>
-  <ul class="collapse">
-  <li><a href="#面向对象编程的主要特点" id="toc-面向对象编程的主要特点" class="nav-link" data-scroll-target="#面向对象编程的主要特点"><span class="header-section-number">9.4.1</span> 面向对象编程的主要特点</a></li>
+  <li><a href="#面向对象编程的主要特点" id="toc-面向对象编程的主要特点" class="nav-link" data-scroll-target="#面向对象编程的主要特点"><span class="header-section-number">9.5.1</span> 面向对象编程的主要特点</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -271,7 +269,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>对象（Object）：对象是类的实例，即根据类的定义创建的实体。每个对象都有自己的属性（类变量和实例变量）和行为（方法）。</li>
 <li>属性（Attribute）：属性是类或对象的特性，包括静态特性（字段）和动态行为（方法）。</li>
 <li>方法（Method）：方法是类定义的一部分。方法定义了对象的动态行为，描述了对象如何响应外部的请求或如何完成某些具体的任务。</li>
-<li><div class="callout callout-style-simple callout-none no-icon">
+</ul>
+<div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
@@ -280,14 +279,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>类似结构功能主义——在面向对象编程中，对象的字段就像是他的“结构”，而方法则如同他的“功能”。</p>
 </div>
 </div>
-</div></li>
-</ul>
+</div>
 </section>
 <section id="类的构建功能部分" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="类的构建功能部分"><span class="header-section-number">9.2</span> 类的构建（功能部分）</h2>
+<p>一个最简单的类如下所示：</p>
+<div id="e987ea31" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Person:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span>  <span class="co"># An empty block</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> Person()</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;__main__.Person object at 0x0000023E81B5E390&gt;</code></pre>
+</div>
+</div>
+<p>我们使用<code>class</code>语句和类的名称创建一个新的类，然后是一个缩进的语句块，构成类的主体。在这里，用<code>pass</code>语句表示一个空的语句块，因为Python中的语句块不能为空。</p>
+<p>类的名称后跟一对括号可以创建一个对象/实例。在实例代码中，我们通过<code>print(p)</code>语句来确认这个对象已经被创建。打印的结果说明这个对象是一个在 <code>__main__</code> 模块中的<code>Person</code>类的实例。</p>
 <p>类的构建主要是通过定义类的方法实现的。方法描述了类或其实例可以进行的操作。在Python中，我们常常在类的内部定义方法，就像定义普通的函数那样。</p>
-<section id="self在类方法中的作用" class="level3" data-number="9.2.1">
-<h3 data-number="9.2.1" class="anchored" data-anchor-id="self在类方法中的作用"><span class="header-section-number">9.2.1</span> <code>self</code>在类方法中的作用</h3>
+<section id="方法-类的功能实现" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="方法-类的功能实现"><span class="header-section-number">9.2.1</span> 方法: 类的功能实现</h3>
+<p>类和对象可以和函数一样拥有方法，唯一的不同之处在于方法的第一个参数是<code>self</code>。</p>
+<p>以下是一个简单的类的方法例子：</p>
+<div id="4652ab77" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Person:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> say_hi(<span class="va">self</span>):</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Hello, how are you?'</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> Person()</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>p.say_hi()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello, how are you?</code></pre>
+</div>
+</div>
+</section>
+<section id="self在类方法中的作用" class="level3" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="self在类方法中的作用"><span class="header-section-number">9.2.2</span> <code>self</code>在类方法中的作用</h3>
 <p>在Python中，类方法的第一个参数通常会是一个名为<code>self</code>的特殊参数，这个<code>self</code>参数代表方法的所属实例，或者说，将会调用这个方法的实例。通过self参数，方法可以自由地访问和修改对象的字段和其他方法。</p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -299,19 +326,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="97a23cb7" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>         <span class="va">self</span>.name <span class="op">=</span> name</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> bark(<span class="va">self</span>):</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>         <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> says woof!"</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>d1 <span class="op">=</span> Dog(<span class="st">"Fido"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>d2 <span class="op">=</span> Dog(<span class="st">"Rex"</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d1.bark())  <span class="co"># 输出 "Fido says woof!"</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d2.bark())  <span class="co"># 输出 "Rex says woof!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="f80ddabc" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> bark(<span class="va">self</span>):</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> says woof!"</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>d1 <span class="op">=</span> Dog(<span class="st">"Fido"</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>d2 <span class="op">=</span> Dog(<span class="st">"Rex"</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d1.bark())  <span class="co"># 输出 "Fido says woof!"</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d2.bark())  <span class="co"># 输出 "Rex says woof!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Fido says woof!
 Rex says woof!</code></pre>
@@ -332,11 +359,35 @@ Rex says woof!</code></pre>
 </div>
 </div>
 </section>
-<section id="init__方法类的构造函数" class="level3" data-number="9.2.2">
-<h3 data-number="9.2.2" class="anchored" data-anchor-id="init__方法类的构造函数"><span class="header-section-number">9.2.2</span> <code>__init__</code>方法：类的构造函数</h3>
-</section>
-<section id="method-类的功能实现" class="level3" data-number="9.2.3">
-<h3 data-number="9.2.3" class="anchored" data-anchor-id="method-类的功能实现"><span class="header-section-number">9.2.3</span> Method: 类的功能实现</h3>
+<section id="init__方法类的构造函数" class="level3" data-number="9.2.3">
+<h3 data-number="9.2.3" class="anchored" data-anchor-id="init__方法类的构造函数"><span class="header-section-number">9.2.3</span> <code>__init__</code>方法：类的构造函数</h3>
+<p>在Python中，我们通常会在类中定义一个特殊的方法<code>__init__</code>，这个方法称为类的构造函数。当我们根据类创建一个新的实例时，Python解释器会自动调用<code>__init__</code>方法对新创建的实例进行初始化。</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+魔术方法
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>__init__</code>方法的名称前后都有两个下划线，这代表它是一个特殊的方法，有特别的含义。</p>
+<p>在Python中，这种双下划线开头和结尾的方法通常被称为“魔术方法”。这些方法是由Python解释器自动调用的，我们通常不需要显式地调用它们。</p>
+</div>
+</div>
+<p><code>__init__</code>方法的第一个参数总是<code>self</code>，即这个对象本身的引用。在<code>__init__</code>方法中，我们可以设置实例的初始状态，比如添加一些初始的属性值。</p>
+<p>以下是一个包含有<code>__init__</code>方法的类的例子：</p>
+<div id="9f861e8f" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.age <span class="op">=</span> age</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>my_dog <span class="op">=</span> Dog(<span class="st">'Willy'</span>, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>在这个例子中，<code>Dog</code>类有一个<code>__init__</code>方法，这个方法接收三个参数：<code>self</code>、<code>name</code>和<code>age</code>。对于<code>self</code>参数，我们已经知道，当我们创建类的实例时，Python会自动为我们提供。其它的参数（<code>name</code>和<code>age</code>），我们需要在创建对象时提供。</p>
+<p><code>__init__</code>方法通常用于在创建对象时初始化对象的状态。通过在<code>__init__</code>方法中设置对象的属性，可以确保对象一旦被创建，就具有一定的初始状态。</p>
 </section>
 </section>
 <section id="字段结构部分" class="level2" data-number="9.3">
@@ -352,19 +403,176 @@ Rex says woof!</code></pre>
 </div>
 </div>
 </div>
+<p>字段是绑定到类或对象的命名空间中的变量，因此，这些名称只在类和对象的上下文中有效。</p>
 <p>字段有两种类型：</p>
 <ul>
 <li>类变量：属于类，所有的对象实例共享这一个变量，一个对象修改了它，会影响到所有的对象。</li>
-<li>实例变量：属于对象，每个对象实例都有自己的一份，一个对象修改了它，不会影响其他的对象。</li>
+<li>实例变量：属于对象，每个对象实例都有自己的一份副本，一个对象修改了它，不会影响其他的对象。</li>
 </ul>
-<section id="section" class="level3" data-number="9.3.1">
-<h3 data-number="9.3.1" class="anchored" data-anchor-id="section"><span class="header-section-number">9.3.1</span> </h3>
+<p>下面是一个用于理解类变量和实例变量的例子：</p>
+<div id="e166f76e" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Robot:</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Represents a robot, with a name."""</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># A class variable, counting the number of robots</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    population <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Initializes the data."""</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"(Initializing </span><span class="sc">{}</span><span class="st">)"</span>.<span class="bu">format</span>(<span class="va">self</span>.name))</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>        <span class="co"># When this person is created, the robot</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>        <span class="co"># adds to the population</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>        Robot.population <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> die(<span class="va">self</span>):</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""I am dying."""</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"</span><span class="sc">{}</span><span class="st"> is being destroyed!"</span>.<span class="bu">format</span>(<span class="va">self</span>.name))</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>        Robot.population <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> Robot.population <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"</span><span class="sc">{}</span><span class="st"> was the last one."</span>.<span class="bu">format</span>(<span class="va">self</span>.name))</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"There are still </span><span class="sc">{:d}</span><span class="st"> robots working."</span>.<span class="bu">format</span>(</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>                Robot.population))</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> say_hi(<span class="va">self</span>):</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Greeting by the robot.</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="co">        Yeah, they can do that."""</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Greetings, my masters call me </span><span class="sc">{}</span><span class="st">."</span>.<span class="bu">format</span>(<span class="va">self</span>.name))</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">@classmethod</span></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> how_many(cls):</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Prints the current population."""</span></span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"We have </span><span class="sc">{:d}</span><span class="st"> robots."</span>.<span class="bu">format</span>(cls.population))</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>droid1 <span class="op">=</span> Robot(<span class="st">"R2-D2"</span>)</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>droid1.say_hi()</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>Robot.how_many()</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>droid2 <span class="op">=</span> Robot(<span class="st">"C-3PO"</span>)</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>droid2.say_hi()</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>Robot.how_many()</span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Robots can do some work here.</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Robots have finished their work. So let's destroy them."</span>)</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>droid1.die()</span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>droid2.die()</span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>Robot.how_many()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(Initializing R2-D2)
+Greetings, my masters call me R2-D2.
+We have 1 robots.
+(Initializing C-3PO)
+Greetings, my masters call me C-3PO.
+We have 2 robots.
+
+Robots can do some work here.
+
+Robots have finished their work. So let's destroy them.
+R2-D2 is being destroyed!
+There are still 1 robots working.
+C-3PO is being destroyed!
+C-3PO was the last one.
+We have 0 robots.</code></pre>
+</div>
+</div>
+<p>在这个例子中：</p>
+<ul>
+<li><code>population</code>是一个类变量，用于跟踪机器人的数量。</li>
+<li><code>name</code>是一个实例变量，用于存储机器人的名字。</li>
+<li><code>__init__</code>方法是一个特殊的方法，用于初始化机器人的名字。</li>
+<li><code>how_many</code>是一个类方法，用于打印当前机器人的数量。我们使用装饰器将<code>how_many</code>方法标记为类方法。</li>
+<li><code>die</code>是一个实例方法，用于表示机器人的销毁。</li>
+<li>所有的类成员都是公有的。一个下划线开头的名称（例如<code>_name</code>）表示这个名称是受保护的，不应该被外部访问。两个下划线开头的名称（例如<code>__name</code>）表示这个名称是私有的，不应该被外部访问。</li>
+</ul>
 </section>
+<section id="继承" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="继承"><span class="header-section-number">9.4</span> 继承</h2>
+<p>继承是面向对象编程的一个重要特性，它允许我们定义一个新的类，这个类可以继承一个或多个已经存在的类的属性和方法。被继承的类称为父类（或基类），继承的类称为子类（或派生类）。</p>
+<p>继承的主要作用是实现代码的复用，通过继承，子类可以继承父类的属性和方法，从而不需要重复编写相同的代码。</p>
+<p>在Python中，继承是通过在类定义时在类名后面的括号中指定父类来实现的。下面是一个简单的继承的例子：</p>
+<div id="bf7d1389" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SchoolMember:</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''Represents any school member.'''</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.age <span class="op">=</span> age</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'(Initialized SchoolMember: </span><span class="sc">{}</span><span class="st">)'</span>.<span class="bu">format</span>(<span class="va">self</span>.name))</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> tell(<span class="va">self</span>):</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>        <span class="co">'''Tell my details.'''</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Name:"</span><span class="sc">{}</span><span class="st">" Age:"</span><span class="sc">{}</span><span class="st">"'</span>.<span class="bu">format</span>(<span class="va">self</span>.name, <span class="va">self</span>.age), end<span class="op">=</span><span class="st">" "</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Teacher(SchoolMember):</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''Represents a teacher.'''</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age, salary):</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>        SchoolMember.<span class="fu">__init__</span>(<span class="va">self</span>, name, age)</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.salary <span class="op">=</span> salary</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'(Initialized Teacher: </span><span class="sc">{}</span><span class="st">)'</span>.<span class="bu">format</span>(<span class="va">self</span>.name))</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> tell(<span class="va">self</span>):</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>        SchoolMember.tell(<span class="va">self</span>)</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Salary: "</span><span class="sc">{:d}</span><span class="st">"'</span>.<span class="bu">format</span>(<span class="va">self</span>.salary))</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Student(SchoolMember):</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''Represents a student.'''</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age, marks):</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>        SchoolMember.<span class="fu">__init__</span>(<span class="va">self</span>, name, age)</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.marks <span class="op">=</span> marks</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'(Initialized Student: </span><span class="sc">{}</span><span class="st">)'</span>.<span class="bu">format</span>(<span class="va">self</span>.name))</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> tell(<span class="va">self</span>):</span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>        SchoolMember.tell(<span class="va">self</span>)</span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Marks: "</span><span class="sc">{:d}</span><span class="st">"'</span>.<span class="bu">format</span>(<span class="va">self</span>.marks))</span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> Teacher(<span class="st">'Mrs. Shrividya'</span>, <span class="dv">40</span>, <span class="dv">30000</span>)</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> Student(<span class="st">'Swaroop'</span>, <span class="dv">25</span>, <span class="dv">75</span>)</span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a><span class="co"># prints a blank line</span></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>members <span class="op">=</span> [t, s]</span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> member <span class="kw">in</span> members:</span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Works for both Teachers and Students</span></span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>    member.tell()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(Initialized SchoolMember: Mrs. Shrividya)
+(Initialized Teacher: Mrs. Shrividya)
+(Initialized SchoolMember: Swaroop)
+(Initialized Student: Swaroop)
+
+Name:"Mrs. Shrividya" Age:"40" Salary: "30000"
+Name:"Swaroop" Age:"25" Marks: "75"</code></pre>
+</div>
+</div>
+<p>在这个例子中：</p>
+<ul>
+<li>使用继承时，在类定义中的类名后面的元组中指定基类名（例如，<code>class Teacher(SchoolMember):</code>）。</li>
+<li>基类的<code>__init__</code>方法是通过调用<code>SchoolMember.__init__(self, name, age)</code>来显式调用的。
+<ul>
+<li>这是因为子类的<code>__init__</code>方法会覆盖父类的<code>__init__</code>方法，如果我们想要在子类的<code>__init__</code>方法中调用父类的<code>__init__</code>方法，我们需要显式地调用它。</li>
+</ul></li>
+<li><code>Teacher</code>和<code>Student</code>类都继承了<code>SchoolMember</code>类。这意味着<code>Teacher</code>和<code>Student</code>类都可以访问<code>SchoolMember</code>类的属性和方法。</li>
+<li>对于每一个子类，我们都定义了一个<code>tell</code>方法，这个方法会覆盖父类的<code>tell</code>方法。这就是所谓的多态性，即不同的类可以对相同的方法做出不同的响应。
+<ul>
+<li>如果子类中没有定义<code>tell</code>方法，那么子类会继承父类的<code>tell</code>方法。</li>
+<li>Python始终会优先调用子类的方法，如果找不到这个方法，则开始按照继承链向上查找。</li>
+</ul></li>
+</ul>
 </section>
-<section id="总结" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="总结"><span class="header-section-number">9.4</span> 总结</h2>
-<section id="面向对象编程的主要特点" class="level3" data-number="9.4.1">
-<h3 data-number="9.4.1" class="anchored" data-anchor-id="面向对象编程的主要特点"><span class="header-section-number">9.4.1</span> 面向对象编程的主要特点</h3>
+<section id="总结" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="总结"><span class="header-section-number">9.5</span> 总结</h2>
+<section id="面向对象编程的主要特点" class="level3" data-number="9.5.1">
+<h3 data-number="9.5.1" class="anchored" data-anchor-id="面向对象编程的主要特点"><span class="header-section-number">9.5.1</span> 面向对象编程的主要特点</h3>
 <p>面向对象编程（OOP）的主要特点是：</p>
 <ul>
 <li>模块化：每一个对象都可以看作是一个独立的模块，它拥有自己的属性（也称为数据成员）和方法（也称为成员函数）。</li>
