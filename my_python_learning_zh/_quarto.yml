@@ -16,6 +16,7 @@ book:
     - data_structures.qmd
     - problem_solving.qmd
     - object_oriented_programming.qmd
+    - input_and_output.qmd
     - summary.qmd
     - references.qmd
 
