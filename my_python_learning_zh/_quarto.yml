@@ -17,6 +17,7 @@ book:
     - problem_solving.qmd
     - object_oriented_programming.qmd
     - input_and_output.qmd
+    - exceptions.qmd
     - summary.qmd
     - references.qmd
 
