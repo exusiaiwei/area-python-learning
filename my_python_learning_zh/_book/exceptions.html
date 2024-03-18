@@ -234,8 +234,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#处理异常" id="toc-处理异常" class="nav-link active" data-scroll-target="#处理异常"><span class="header-section-number">11.1</span> 处理异常</a></li>
+  <li><a href="#处理异常" id="toc-处理异常" class="nav-link active" data-scroll-target="#处理异常"><span class="header-section-number">11.1</span> 处理异常</a>
+  <ul class="collapse">
+  <li><a href="#else语句" id="toc-else语句" class="nav-link" data-scroll-target="#else语句"><span class="header-section-number">11.1.1</span> <code>else</code>语句</a></li>
+  <li><a href="#finally语句" id="toc-finally语句" class="nav-link" data-scroll-target="#finally语句"><span class="header-section-number">11.1.2</span> <code>finally</code>语句</a></li>
+  <li><a href="#with语句" id="toc-with语句" class="nav-link" data-scroll-target="#with语句"><span class="header-section-number">11.1.3</span> <code>with</code>语句</a></li>
+  </ul></li>
   <li><a href="#异常类" id="toc-异常类" class="nav-link" data-scroll-target="#异常类"><span class="header-section-number">11.2</span> 异常类</a></li>
+  <li><a href="#引发异常" id="toc-引发异常" class="nav-link" data-scroll-target="#引发异常"><span class="header-section-number">11.3</span> 引发异常</a></li>
+  <li><a href="#自定义异常类" id="toc-自定义异常类" class="nav-link" data-scroll-target="#自定义异常类"><span class="header-section-number">11.4</span> 自定义异常类</a></li>
   </ul>
 </nav>
     </div>
@@ -266,23 +273,113 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="11.1" class="anchored" data-anchor-id="处理异常"><span class="header-section-number">11.1</span> 处理异常</h2>
 <p>我们可以使用<code>try..except</code>语句来捕获异常。<code>try</code>语句包含了可能会引发异常的代码块，以及对这些异常的处理代码块。<code>except</code>块中包含了所有的错误处理程序。</p>
 <p><code>try..except</code>语句的基本语法如下：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Please enter a number: '</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    number <span class="op">=</span> <span class="bu">float</span>(text)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The number is:'</span>, number)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">ValueError</span>:</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Invalid number'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="f33a9a75" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 这里是可能抛出异常的代码</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> <span class="dv">0</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">ZeroDivisionError</span>:</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 当ZeroDivisionError异常被抛出时，这里的代码将被执行</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Cannot divide by zero"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="9af73c69" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 这里是可能抛出异常的代码</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> <span class="dv">0</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">ZeroDivisionError</span>:</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Cannot divide by zero"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Cannot divide by zero</code></pre>
 </div>
 </div>
+<p>在上述代码示例中：</p>
+<ul>
+<li><code>try</code>语句包含了可能抛出异常的代码块，即<code>x = 1 / 0</code>。</li>
+<li><code>except</code>语句包含了对异常的处理代码块，即<code>print("Cannot divide by zero")</code>。</li>
+<li><code>except</code>语句可以处理单个指定的异常，也可以处理一个括号内的异常元组。</li>
+<li>如果没有指定异常类型，那么<code>except</code>语句将捕获所有类型的异常。</li>
+<li>在代码示例中，<code>except ZeroDivisionError</code>指定了只捕获<code>ZeroDivisionError</code>异常。这是一个特定的异常类型，用于处理除零错误。</li>
+<li>每个<code>try</code>语句都可以包含多个<code>except</code>语句，用于处理不同类型的异常。但是，只有一个<code>except</code>语句会被执行。</li>
+<li>每个<code>try</code>语句都至少包含一个<code>except</code>语句或<code>finally</code>语句，用于处理异常。</li>
+</ul>
+<section id="else语句" class="level3" data-number="11.1.1">
+<h3 data-number="11.1.1" class="anchored" data-anchor-id="else语句"><span class="header-section-number">11.1.1</span> <code>else</code>语句</h3>
+<p><code>else</code>语句用于指定只有在没有发生异常时才会执行的代码块。<code>else</code>语句的基本语法如下：</p>
+<div id="6de52dce" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 这里是可能抛出异常的代码</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> <span class="dv">1</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">ZeroDivisionError</span>:</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Cannot divide by zero"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 这里是只有在没有发生异常时才会执行的代码</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"No exceptions occurred"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>No exceptions occurred</code></pre>
+</div>
+</div>
+<p>在上述代码示例中：</p>
+<ul>
+<li><code>else</code>语句包含了只有在没有发生异常时才会执行的代码块，即<code>print("No exceptions occurred")</code>。</li>
+<li><code>else</code>语句通常用于在没有发生异常时执行一些清理操作。</li>
+<li><code>else</code>语句必须在所有的<code>except</code>语句之后，但在<code>finally</code>语句之前。</li>
+</ul>
+</section>
+<section id="finally语句" class="level3" data-number="11.1.2">
+<h3 data-number="11.1.2" class="anchored" data-anchor-id="finally语句"><span class="header-section-number">11.1.2</span> <code>finally</code>语句</h3>
+<p><code>finally</code>语句用于指定无论是否发生异常都要执行的代码块。<code>finally</code>语句通常用于释放资源或执行清理操作。<code>finally</code>语句的基本语法如下：</p>
+<div id="f6b6ad9a" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 这里是可能抛出异常的代码</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> <span class="dv">0</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">ZeroDivisionError</span>:</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Cannot divide by zero"</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 这里是只有在没有发生异常时才会执行的代码</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"No exceptions occurred"</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="cf">finally</span>:</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 这里是无论是否发生异常都要执行的代码</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"This is always executed"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Cannot divide by zero
+This is always executed</code></pre>
+</div>
+</div>
+<p>在上述代码示例中：</p>
+<ul>
+<li><code>finally</code>语句包含了无论是否发生异常都要执行的代码块，即<code>print("This is always executed")</code>。</li>
+<li><code>finally</code>语句通常用于释放资源或执行清理操作。例如，我们可以在<code>finally</code>语句中关闭文件、释放锁、关闭数据库连接等。</li>
+</ul>
+</section>
+<section id="with语句" class="level3" data-number="11.1.3">
+<h3 data-number="11.1.3" class="anchored" data-anchor-id="with语句"><span class="header-section-number">11.1.3</span> <code>with</code>语句</h3>
+<p>在Python中，<code>with</code>语句是一种语法糖，主要用于简化资源管理相关的代码。对于文件操作、网络连接、数据库连接这类需要在使用结束后显式释放的资源，可以通过<code>with</code>语句来自动处理资源的释放，使得代码更加简洁，避免了资源泄露的可能性。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+什么是语法糖
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>语法糖（Syntactic Sugar）指的是一种设计使得某些编程任务更易读或者可表现性更强的语法。其主要目的是提高程序的可读性，使代码更简洁，或者语义更明显。</p>
+<p>“语法糖”这个术语的含义最早源于 Peter J. Landin（一位计算机科学家）在1964年创造的，该术语是用来形象地描述那些没有给计算机语言添加新功能，但是使人们用更舒适的方式编写或读代码的特性。</p>
+<p>这个名词的形象含义是，这种语法就像是在给代码增加了一些“糖”，让原本可能枯燥乏味、硬邦邦的代码变得更加甜美，更具美感，给编程带来了乐趣。就像糖改善了食物的口感，但是并没有增加食物的营养，语法糖使代码写起来更加愉快、更容易理解，但并没有改变编程语言的核心功能或语义。</p>
+<p>比如在Python中的装饰器、列表推导式等，它们并没有为Python语言增加什么新的功能，只是让我们在编写相同功能代码的时候，代码显得更加清晰，可阅读性更强，让编程更具有乐趣。所以称其为”语法糖”。</p>
+</div>
+</div>
+<p><code>with</code>语句的基本语法如下：</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> expression <span class="im">as</span> variable:</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># code block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>其中<code>expression</code>必须是一个对象，它必须实现了<code>__enter__</code>和<code>__exit__</code>方法。</p>
+<ul>
+<li><code>__enter__</code>方法在代码块开始执行前调用，用于返回一个资源对象。</li>
+<li><code>__exit__</code>方法在代码块结束后调用，负责清理或释放资源。</li>
+</ul>
+<p>一个使用<code>with</code>语句的示例如下：</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="vs">r"practical_code\input_and_output\data.pkl"</span>, <span class="st">"wb"</span>) <span class="im">as</span> f:</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    pickle.dump(data, f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>在上述代码示例中：</p>
+<ul>
+<li><code>with</code>语句首先调用文件对象的<code>__enter__</code>方法打开文件，然后将返回的文件对象赋值给<code>f</code>。</li>
+<li>之后，<code>with</code>语句执行代码块，即<code>pickle.dump(data, f)</code>。</li>
+<li>无论这个代码块是否发生异常，<code>with</code>语句都会调用文件对象的<code>__exit__</code>方法关闭文件。这样，我们就不需要显式地调用<code>f.close()</code>方法来关闭文件了。</li>
+</ul>
+<p>在处理异常时，如果不使用<code>with</code>语句，我们需要在<code>try</code>语句的<code>finally</code>语句中显式地调用<code>f.close()</code>方法来关闭文件。而使用<code>with</code>语句，我们就不需要这样做了。</p>
+</section>
 </section>
 <section id="异常类" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="异常类"><span class="header-section-number">11.2</span> 异常类</h2>
@@ -295,6 +392,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>IndexError</code>：索引错误，当尝试访问列表、元组或字符串中不存在的索引时引发。</li>
 <li><code>KeyError</code>：键错误，当尝试访问字典中不存在的键时引发。</li>
 <li><code>FileNotFoundError</code>：文件未找到错误，当尝试打开不存在的文件时引发。</li>
+</ul>
+</section>
+<section id="引发异常" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="引发异常"><span class="header-section-number">11.3</span> 引发异常</h2>
+<p>我们可以使用<code>raise</code>语句来引发异常。<code>raise</code>语句用于引发指定的异常。</p>
+<p>可以被引发的异常可以是任何类的实例，但通常是内置的异常类的实例。<code>raise</code>语句的基本语法如下：</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Invalid value"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>这行代码将引发一个<code>ValueError</code>异常，异常消息为<code>Invalid value</code>。一般来说，我们用这种方式引发异常来通知调用者发生了一些特定的错误情况，这种时候我们可以自定义异常类。</p>
+</section>
+<section id="自定义异常类" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="自定义异常类"><span class="header-section-number">11.4</span> 自定义异常类</h2>
+<p>自定义异常类是一个继承自<code>Exception</code>类的类。我们可以通过继承<code>Exception</code>类来创建自定义的异常类。自定义异常类的基本语法如下：</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ShortInputException(<span class="pp">Exception</span>):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, length, atleast):</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.length <span class="op">=</span> length</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.atleast <span class="op">=</span> atleast</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter something --&gt; "</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(text) <span class="op">&lt;</span> <span class="dv">3</span>:</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> ShortInputException(<span class="bu">len</span>(text), <span class="dv">3</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">EOFError</span>:</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Why did you do an EOF on me?"</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> ShortInputException <span class="im">as</span> e:</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">#print("ShortInputException: The input was of length %d, was expecting at least %d" % (e.length, e.atleast))</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"ShortInputException: The input was of length </span><span class="sc">{</span>e<span class="sc">.</span>length<span class="sc">}</span><span class="ss">, was expecting at least </span><span class="sc">{</span>e<span class="sc">.</span>atleast<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"No exception was raised"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>在上述代码示例中：</p>
+<ul>
+<li><code>ShortInputException</code>是一个自定义的异常类，它继承自<code>Exception</code>类。</li>
+<li><code>raise ShortInputException(len(text), 3)</code>语句引发了一个<code>ShortInputException</code>异常。</li>
+<li>当<code>except</code>语句捕获到一个异常时，它会生成一个异常实例。这个异常实例包括了异常的详细信息。我们可以使用<code>as</code>关键字来给这个异常实例指定一个变量名，然后在<code>except</code>语句中使用这个变量名来访问异常的详细信息。</li>
+<li><code>%d</code>是一个占位符，用于格式化字符串。<code>%</code>运算符用于格式化字符串。在这个例子中，<code>%d</code>表示将一个整数插入到字符串中。</li>
+<li>在Python 3.6及以后的版本中，我们可以使用<code>f</code>字符串来格式化字符串。<code>f</code>字符串是一种新的字符串格式化语法，它允许我们在字符串中使用变量名，而不是占位符。这种方式更为直观灵活。</li>
 </ul>
 
 

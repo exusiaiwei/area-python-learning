@@ -208,8 +208,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./exceptions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">异常情况</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -276,28 +282,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>属性（Attribute）：属性是类或对象的特性，包括静态特性（字段）和动态行为（方法）。</li>
 <li>方法（Method）：方法是类定义的一部分。方法定义了对象的动态行为，描述了对象如何响应外部的请求或如何完成某些具体的任务。</li>
 </ul>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>类似结构功能主义——在面向对象编程中，对象的字段就像是他的“结构”，而方法则如同他的“功能”。</p>
-</div>
 </div>
 </div>
 </section>
 <section id="类的构建功能部分" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="类的构建功能部分"><span class="header-section-number">9.2</span> 类的构建（功能部分）</h2>
 <p>一个最简单的类如下所示：</p>
-<div id="37265c86" class="cell" data-execution_count="1">
+<div id="e74fa0ab" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Person:</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span>  <span class="co"># An empty block</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> Person()</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>&lt;__main__.Person object at 0x0000025AA60F0610&gt;</code></pre>
+<pre><code>&lt;__main__.Person object at 0x00000223C834AD90&gt;</code></pre>
 </div>
 </div>
 <p>我们使用<code>class</code>语句和类的名称创建一个新的类，然后是一个缩进的语句块，构成类的主体。在这里，用<code>pass</code>语句表示一个空的语句块，因为Python中的语句块不能为空。</p>
@@ -307,7 +316,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="9.2.1" class="anchored" data-anchor-id="方法-类的功能实现"><span class="header-section-number">9.2.1</span> 方法: 类的功能实现</h3>
 <p>类和对象可以和函数一样拥有方法，唯一的不同之处在于方法的第一个参数是<code>self</code>。</p>
 <p>以下是一个简单的类的方法例子：</p>
-<div id="e8adc327" class="cell" data-execution_count="2">
+<div id="cf2d1161" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Person:</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> say_hi(<span class="va">self</span>):</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Hello, how are you?'</span>)</span>
@@ -322,17 +331,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="self在类方法中的作用" class="level3" data-number="9.2.2">
 <h3 data-number="9.2.2" class="anchored" data-anchor-id="self在类方法中的作用"><span class="header-section-number">9.2.2</span> <code>self</code>在类方法中的作用</h3>
 <p>在Python中，类方法的第一个参数通常会是一个名为<code>self</code>的特殊参数，这个<code>self</code>参数代表方法的所属实例，或者说，将会调用这个方法的实例。通过self参数，方法可以自由地访问和修改对象的字段和其他方法。</p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>在定义类的方法时，我们并不知道这个方法将来会被哪个实例对象调用。所以我们需要一个参数（习惯上叫做<code>self</code>）来接收运行时传入的实例对象，这样这个方法才能访问到实例的属性或者调用实例的其他方法。</p>
 </div>
 </div>
-</div>
-<div id="637a3264" class="cell" data-execution_count="3">
+<div id="a30008ec" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
@@ -352,26 +364,29 @@ Rex says woof!</code></pre>
 </div>
 <p>当一个实例调用其方法时，Python 解释器会自动将实例本身传入方法的<code>self</code>参数。通过<code>self</code>，我们可以在方法内部访问和修改实例的属性。</p>
 <p>在这个例子中，<code>bark()</code>方法在<code>d1</code>和<code>d2</code>两个不同的实例中调用，<code>self</code>就代表了调用这个方法的实例，因此<code>self.name</code>会分别返回<code>d1</code>和<code>d2</code>的<code>name</code>属性。在每一次方法的调用中，Python都会自动地将当前的对象实例作为第一个参数传递进去。</p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <pre><code>rex.bark()</code></pre>
 <p>在这里，当我们调用<code>rex.bark()</code>时，从表面看，我们并没有给<code>bark</code>方法提供任何参数。但实际上，Python解释器会自动把<code>rex</code>这个实例传递给<code>bark</code>方法的<code>self</code>参数。这就是为何在类的方法最开始位置总会有一个<code>self</code>参数，而在调用方法时，我们通常并不需要显式地提供这个参数。</p>
 <p>同理，这也意味着哪怕是一个不带参数的方法，他也仍然需要一个参数- <code>self</code></p>
-</div>
 </div>
 </div>
 </section>
 <section id="init__方法类的构造函数" class="level3" data-number="9.2.3">
 <h3 data-number="9.2.3" class="anchored" data-anchor-id="init__方法类的构造函数"><span class="header-section-number">9.2.3</span> <code>__init__</code>方法：类的构造函数</h3>
 <p>在Python中，我们通常会在类中定义一个特殊的方法<code>__init__</code>，这个方法称为类的构造函数。当我们根据类创建一个新的实例时，Python解释器会自动调用<code>__init__</code>方法对新创建的实例进行初始化。</p>
-<div class="callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 魔术方法
@@ -384,7 +399,7 @@ Rex says woof!</code></pre>
 </div>
 <p><code>__init__</code>方法的第一个参数总是<code>self</code>，即这个对象本身的引用。在<code>__init__</code>方法中，我们可以设置实例的初始状态，比如添加一些初始的属性值。</p>
 <p>以下是一个包含有<code>__init__</code>方法的类的例子：</p>
-<div id="5a939881" class="cell" data-execution_count="4">
+<div id="772f50cc" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
@@ -399,14 +414,17 @@ Rex says woof!</code></pre>
 <section id="字段结构部分" class="level2" data-number="9.3">
 <h2 data-number="9.3" class="anchored" data-anchor-id="字段结构部分"><span class="header-section-number">9.3</span> 字段（结构部分）</h2>
 <p>在类或对象中定义的变量被称为字段，用于描述对象的状态或性质。上述的静态特性就是指类或对象的字段。</p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><strong>属性 = 字段+ 方法</strong></p>
-</div>
 </div>
 </div>
 <p>字段是绑定到类或对象的命名空间中的变量，因此，这些名称只在类和对象的上下文中有效。</p>
@@ -416,7 +434,7 @@ Rex says woof!</code></pre>
 <li>实例变量：属于对象，每个对象实例都有自己的一份副本，一个对象修改了它，不会影响其他的对象。</li>
 </ul>
 <p>下面是一个用于理解类变量和实例变量的例子：</p>
-<div id="34311994" class="cell" data-execution_count="5">
+<div id="1b380ab6" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Robot:</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Represents a robot, with a name."""</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -504,7 +522,7 @@ We have 0 robots.</code></pre>
 <p>继承是面向对象编程的一个重要特性，它允许我们定义一个新的类，这个类可以继承一个或多个已经存在的类的属性和方法。被继承的类称为父类（或基类），继承的类称为子类（或派生类）。</p>
 <p>继承的主要作用是实现代码的复用，通过继承，子类可以继承父类的属性和方法，从而不需要重复编写相同的代码。</p>
 <p>在Python中，继承是通过在类定义时在类名后面的括号中指定父类来实现的。下面是一个简单的继承的例子：</p>
-<div id="7a1d72fe" class="cell" data-execution_count="6">
+<div id="96895092" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SchoolMember:</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''Represents any school member.'''</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</span>
@@ -586,17 +604,19 @@ Name:"Swaroop" Age:"25" Marks: "75"</code></pre>
 <li>可复用性：对象的代码可以在需要的地方复用，可以通过继承、封装、多态这些机制实现代码的重用。</li>
 <li>扩展性：继承和多态性的机制提高了程序的可扩展性。</li>
 </ul>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
-<div class="callout-body-container">
-<p>其他常见的编程范型：</p>
+<div class="callout-title-container flex-fill">
+其他常见的编程范型
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>面向过程编程（Procedural programming）：是最早的编程范型之一，它的主要思想是将程序分解为一步一步的过程或者函数，通过定义数据和函数的执行步骤来解决问题。</p>
 <p>函数式编程（Functional Programming）：倡导编写纯函数，避免程序状态改变和数据可变性，以求更高的可理解性和更低的bug产生率。</p>
 <p>逻辑编程（Logic Programming） ：通过描述问题的逻辑来编写程序，程序会自动推导出解决问题的答案。Prolog就是一种逻辑编程语言。</p>
-</div>
 </div>
 </div>
 
