@@ -209,7 +209,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./exceptions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">exceptions.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">异常情况</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -278,39 +278,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 <p>下面是一些示例代码：</p>
-<pre><code># 例子1
-name = input("What is your name? ")
-print("Hello, " + name + "!")</code></pre>
-<pre><code># 例子2
-def reverse(text):
-    return text[::-1]
-
-def is_palindrome(text):
-    return text == reverse(text)
-something = input("Enter text: ")
-if is_palindrome(something):
-    print("Yes, it is a palindrome")
-else:
-    print("No, it is not a palindrome")</code></pre>
-<pre><code># 例子3
-import getpass
-password = getpass.getpass("Enter your password: ")
-if password == "12345":
-    print("Access granted")
-else:
-    print("Access denied")</code></pre>
-<pre><code># 例子4
-def reverse(text):
-    return text[::-1]
-def is_palindrome(text):
-    return text == reverse(text)
-    
-something = input("Enter text: ")
-filtered_something = ''.join(c for c in something if c.isalnum()).lower()
-if is_palindrome(filtered_something):
-    print("Yes, it is a palindrome")
-else:
-    print("No, it is not a palindrome")</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 例子1</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is your name? "</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, "</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">"!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 例子2</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> reverse(text):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text[::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_palindrome(text):</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text <span class="op">==</span> reverse(text)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>something <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter text: "</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> is_palindrome(something):</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Yes, it is a palindrome"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"No, it is not a palindrome"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 例子3</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> getpass</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>password <span class="op">=</span> getpass.getpass(<span class="st">"Enter your password: "</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> password <span class="op">==</span> <span class="st">"12345"</span>:</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Access granted"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Access denied"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 例子4</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> reverse(text):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text[::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_palindrome(text):</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text <span class="op">==</span> reverse(text)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>something <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter text: "</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>filtered_something <span class="op">=</span> <span class="st">''</span>.join(c <span class="cf">for</span> c <span class="kw">in</span> something <span class="cf">if</span> c.isalnum()).lower()</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> is_palindrome(filtered_something):</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Yes, it is a palindrome"</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"No, it is not a palindrome"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>以上的示例代码中有以下几个要点：</p>
 <ul>
 <li>例子1中，<code>input()</code> 函数带有一个字符串参数，这个字符串作为提示信息显示给用户。</li>
@@ -342,7 +342,7 @@ else:
 <li><code>close</code> 方法：用于关闭文件。关闭文件后，任何对文件对象的操作都将失败。</li>
 </ol>
 <p>以下是一些示例代码：</p>
-<div id="0b678e94" class="cell" data-execution_count="1">
+<div id="f449bf0b" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>file1 <span class="op">=</span> <span class="bu">open</span>(<span class="vs">r"practical_code\input_and_output\myfile.txt"</span>, <span class="st">"r"</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>content <span class="op">=</span> file1.read()</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(content)</span>
@@ -352,13 +352,13 @@ else:
 And this is the second line.</code></pre>
 </div>
 </div>
-<div id="35667f58" class="cell" data-execution_count="2">
+<div id="f7bbed87" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>file2 <span class="op">=</span> <span class="bu">open</span>(<span class="vs">r"practical_code\input_and_output\myfile2.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>file2.write(<span class="st">"This is a test"</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>file2.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>当进行文件操作时，应始终注意在操作结束后关闭文件。为了更有效地管理文件资源，Python提供了 <code>with</code> 语句，它可以自动关闭文件。以下是一个示例：</p>
-<div id="6d013903" class="cell" data-execution_count="3">
+<div id="962ff27c" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="vs">r"practical_code\input_and_output\myfile.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    content <span class="op">=</span> <span class="bu">file</span>.read()</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(content)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -368,7 +368,7 @@ And this is the second line.</code></pre>
 </div>
 </div>
 <p>以下是一个更复杂的示例：</p>
-<div id="18b735c2" class="cell" data-execution_count="4">
+<div id="94ffb723" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>poem <span class="op">=</span> <span class="st">'''</span><span class="ch">\</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="st">Programming is fun</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="st">When the work is done</span></span>
@@ -415,7 +415,7 @@ if you wanna make your work also fun:
 <li><code>pickle.load(file)</code>：从文件中读取字节流，并将这些字节流转化为Python对象。</li>
 </ul>
 <p>下面是这个模块一些基本使用示例：</p>
-<div id="f4dd2703" class="cell" data-execution_count="5">
+<div id="eca7804e" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
@@ -448,7 +448,7 @@ if you wanna make your work also fun:
 </ul>
 <p>当我们编写一个使用Unicode字符的程序时，我们应该确保程序使用UTF-8编码。这样，我们的程序可以处理世界上所有的文字。</p>
 <p>下面是一个处理Unicode字符的示例：</p>
-<div id="b378e9a5" class="cell" data-execution_count="6">
+<div id="b97563c3" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> io</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> io.<span class="bu">open</span>(<span class="vs">r"practical_code\input_and_output\zh_CN.txt"</span>, <span class="st">"wt"</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
@@ -888,8 +888,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./exceptions.html" class="pagination-link" aria-label="exceptions.html">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">exceptions.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./exceptions.html" class="pagination-link" aria-label="异常情况">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">异常情况</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

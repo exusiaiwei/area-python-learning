@@ -863,5 +863,35 @@
     "crumbs": [
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>输入和输出</span>"
     ]
+  },
+  {
+    "objectID": "exceptions.html",
+    "href": "exceptions.html",
+    "title": "11  异常情况",
+    "section": "",
+    "text": "11.1 处理异常\n我们可以使用try..except语句来捕获异常。try语句包含了可能会引发异常的代码块，以及对这些异常的处理代码块。except块中包含了所有的错误处理程序。\ntry..except语句的基本语法如下：\ntry:\n    # 这里是可能抛出异常的代码\n    x = 1 / 0\nexcept ZeroDivisionError:\n    # 当ZeroDivisionError异常被抛出时，这里的代码将被执行\n    print(\"Cannot divide by zero\")\n\nCannot divide by zero",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>异常情况</span>"
+    ]
+  },
+  {
+    "objectID": "exceptions.html#异常类",
+    "href": "exceptions.html#异常类",
+    "title": "11  异常情况",
+    "section": "11.2 异常类",
+    "text": "11.2 异常类\nPython提供了一些内置的异常类，用于表示不同类型的错误情况。常见的异常类包括：\n\nException：所有异常类的基类。\nNameError：名称错误，当尝试访问不存在的变量或函数时引发。\nTypeError：类型错误，当操作或函数应用于不兼容的类型时引发。\nValueError：值错误，当操作或函数应用于具有正确类型但具有无效值的对象时引发。\nIndexError：索引错误，当尝试访问列表、元组或字符串中不存在的索引时引发。\nKeyError：键错误，当尝试访问字典中不存在的键时引发。\nFileNotFoundError：文件未找到错误，当尝试打开不存在的文件时引发。",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>异常情况</span>"
+    ]
+  },
+  {
+    "objectID": "exceptions.html#处理异常",
+    "href": "exceptions.html#处理异常",
+    "title": "11  异常情况",
+    "section": "",
+    "text": "try:\n    text = input('Please enter a number: ')\n    number = float(text)\n    print('The number is:', number)\nexcept ValueError:\n    print('Invalid number')",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>异常情况</span>"
+    ]
   }
 ]

@@ -15,13 +15,13 @@
 下面是一些示例代码：
 
 
-```
+```python
 # 例子1
 name = input("What is your name? ")
 print("Hello, " + name + "!")
 ```
 
-```
+```python
 # 例子2
 def reverse(text):
     return text[::-1]
@@ -35,7 +35,7 @@ else:
     print("No, it is not a palindrome")
 ```
 
-```
+```python
 # 例子3
 import getpass
 password = getpass.getpass("Enter your password: ")
@@ -46,7 +46,7 @@ else:
 ```
 
 
-```
+```python
 # 例子4
 def reverse(text):
     return text[::-1]
