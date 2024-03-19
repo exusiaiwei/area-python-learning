@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
+<link href="./more.html" rel="next">
 <link href="./exceptions.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -220,8 +220,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./more.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">more.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -255,6 +261,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#os.rmdir" id="toc-os.rmdir" class="nav-link" data-scroll-target="#os.rmdir"><span class="header-section-number">12.2.5</span> <code>os.rmdir()</code></a></li>
   </ul></li>
   <li><a href="#logging模块" id="toc-logging模块" class="nav-link" data-scroll-target="#logging模块"><span class="header-section-number">12.3</span> <code>logging</code>模块</a></li>
+  <li><a href="#每周模块系列" id="toc-每周模块系列" class="nav-link" data-scroll-target="#每周模块系列"><span class="header-section-number">12.4</span> 每周模块系列</a></li>
   </ul>
 </nav>
     </div>
@@ -297,7 +304,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>sys.argv</code>的长度是命令行参数的个数</li>
 </ul>
 <p>下面是一个简单的例子：</p>
-<div id="26fd4c69" class="cell" data-execution_count="1">
+<div id="c1046b7d" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sys.argv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -309,7 +316,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="sys.version" class="level3" data-number="12.1.2">
 <h3 data-number="12.1.2" class="anchored" data-anchor-id="sys.version"><span class="header-section-number">12.1.2</span> <code>sys.version</code></h3>
 <p><code>sys.version</code>包含了Python解释器的版本信息。</p>
-<div id="b3dbd44e" class="cell" data-execution_count="2">
+<div id="4da75860" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sys.version)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -322,7 +329,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="sys.path" class="level3" data-number="12.1.3">
 <h3 data-number="12.1.3" class="anchored" data-anchor-id="sys.path"><span class="header-section-number">12.1.3</span> <code>sys.path</code></h3>
 <p><code>sys.path</code>是一个包含了模块搜索路径的列表。</p>
-<div id="6bd798ce" class="cell" data-execution_count="3">
+<div id="950dbed4" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sys.path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -339,7 +346,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="os.getcwd" class="level3" data-number="12.2.1">
 <h3 data-number="12.2.1" class="anchored" data-anchor-id="os.getcwd"><span class="header-section-number">12.2.1</span> <code>os.getcwd()</code></h3>
 <p><code>os.getcwd()</code>返回当前工作目录。</p>
-<div id="7f4eac3d" class="cell" data-execution_count="4">
+<div id="9b89724b" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.getcwd())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -351,12 +358,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="os.listdir" class="level3" data-number="12.2.2">
 <h3 data-number="12.2.2" class="anchored" data-anchor-id="os.listdir"><span class="header-section-number">12.2.2</span> <code>os.listdir()</code></h3>
 <p><code>os.listdir()</code>返回指定目录下的文件和目录列表。</p>
-<div id="ab41e388" class="cell" data-execution_count="5">
+<div id="084053c1" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.listdir())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>['.gitignore', '.quarto', 'basic.qmd', 'control_flow.qmd', 'cover.png', 'data_structures.qmd', 'exceptions.qmd', 'functions.qmd', 'index.qmd', 'input_and_output.qmd', 'intro.qmd', 'modules.qmd', 'object_oriented_programming.qmd', 'operators_and_expressions.qmd', 'practical_code', 'problem_solving.qmd', 'references.bib', 'references.qmd', 'standard_library.ipynb', 'standard_library.qmd', 'summary.qmd', '_book', '_quarto.yml']</code></pre>
+<pre><code>['.gitignore', '.quarto', 'basic.qmd', 'control_flow.qmd', 'cover.png', 'data_structures.qmd', 'exceptions.qmd', 'functions.qmd', 'index.qmd', 'input_and_output.qmd', 'intro.qmd', 'modules.qmd', 'more.qmd', 'object_oriented_programming.qmd', 'operators_and_expressions.qmd', 'practical_code', 'problem_solving.qmd', 'references.bib', 'references.qmd', 'standard_library.ipynb', 'standard_library.qmd', 'standard_library_files', 'summary.qmd', '_book', '_quarto.yml']</code></pre>
 </div>
 </div>
 </section>
@@ -386,7 +393,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="12.3" class="anchored" data-anchor-id="logging模块"><span class="header-section-number">12.3</span> <code>logging</code>模块</h2>
 <p><code>logging</code>模块提供了一个灵活的方式来记录日志信息。</p>
 <p><code>logging</code>模块的基本语法如下：</p>
-<div id="d4a59d75" class="cell" data-execution_count="6">
+<div id="5ded83ab" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> logging</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>logging.debug(<span class="st">'This is a debug message'</span>)</span>
@@ -402,7 +409,7 @@ CRITICAL:root:This is a critical message</code></pre>
 </div>
 <p>此外，<code>logging</code>模块还提供了一些配置选项，可以将日志信息输出到指定位置，或者指定日志的格式、等级等。</p>
 <p>以下是一个更复杂一点的例子：</p>
-<div id="fe0c9eb0" class="cell" data-execution_count="7">
+<div id="cd55d885" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> logging</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -427,6 +434,19 @@ CRITICAL:root:This is a critical message</code></pre>
 <pre><code>Logging to C:\Users\WeiZichao\OneDrive - MSFT\Code\MyProjects\My-Python-Learning\my_python_learning_zh\practical_code/standard_library/logging.log</code></pre>
 </div>
 </div>
+<p>在上述的示例代码中：</p>
+<ul>
+<li><code>logging_file</code>是日志文件的路径，这里配置为<code>practical_code/standard_library/logging.log</code></li>
+<li><code>logging.basicConfig()</code>函数用于配置日志的格式、等级、输出位置等</li>
+<li><code>logging.debug()</code>、<code>logging.info()</code>、<code>logging.warning()</code>等函数用于记录日志信息</li>
+<li><code>filemode='w'</code>表示以写入模式打开日志文件，如果文件已经存在，会被覆盖</li>
+<li><code>%(asctime)s</code>、<code>%(name)s</code>、<code>%(levelname)s</code>、<code>%(message)s</code>是日志格式的占位符，分别表示日志记录的时间、日志记录的名称、日志的等级、日志的信息</li>
+</ul>
+</section>
+<section id="每周模块系列" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="每周模块系列"><span class="header-section-number">12.4</span> 每周模块系列</h2>
+<p>除了上述介绍的模块外，还有许多其他有用的标准库模块，例如调试、测试、文件处理、网络通信、日期和时间处理、数学、科学、加密等等。</p>
+<p>此外，Doug Hellmann的<a href="https://pymotw.com/3/">Python模块每周精选</a>是一个很好的资源，它介绍了Python标准库中的许多模块。</p>
 
 
 </section>
@@ -848,8 +868,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./more.html" class="pagination-link" aria-label="more.html">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">more.html</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -19,6 +19,7 @@ book:
     - input_and_output.qmd
     - exceptions.qmd
     - standard_library.qmd
+    - more.qmd
     - summary.qmd
     - references.qmd
 
