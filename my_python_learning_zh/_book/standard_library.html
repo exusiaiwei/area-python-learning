@@ -243,7 +243,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#sys模块" id="toc-sys模块" class="nav-link active" data-scroll-target="#sys模块"><span class="header-section-number">12.1</span> <code>sys</code>模块</a>
   <ul class="collapse">
   <li><a href="#sys.argv" id="toc-sys.argv" class="nav-link" data-scroll-target="#sys.argv"><span class="header-section-number">12.1.1</span> <code>sys.argv</code></a></li>
+  <li><a href="#sys.version" id="toc-sys.version" class="nav-link" data-scroll-target="#sys.version"><span class="header-section-number">12.1.2</span> <code>sys.version</code></a></li>
+  <li><a href="#sys.path" id="toc-sys.path" class="nav-link" data-scroll-target="#sys.path"><span class="header-section-number">12.1.3</span> <code>sys.path</code></a></li>
   </ul></li>
+  <li><a href="#os模块" id="toc-os模块" class="nav-link" data-scroll-target="#os模块"><span class="header-section-number">12.2</span> <code>os</code>模块</a>
+  <ul class="collapse">
+  <li><a href="#os.getcwd" id="toc-os.getcwd" class="nav-link" data-scroll-target="#os.getcwd"><span class="header-section-number">12.2.1</span> <code>os.getcwd()</code></a></li>
+  <li><a href="#os.listdir" id="toc-os.listdir" class="nav-link" data-scroll-target="#os.listdir"><span class="header-section-number">12.2.2</span> <code>os.listdir()</code></a></li>
+  <li><a href="#os.mkdir" id="toc-os.mkdir" class="nav-link" data-scroll-target="#os.mkdir"><span class="header-section-number">12.2.3</span> <code>os.mkdir()</code></a></li>
+  <li><a href="#os.remove" id="toc-os.remove" class="nav-link" data-scroll-target="#os.remove"><span class="header-section-number">12.2.4</span> <code>os.remove()</code></a></li>
+  <li><a href="#os.rmdir" id="toc-os.rmdir" class="nav-link" data-scroll-target="#os.rmdir"><span class="header-section-number">12.2.5</span> <code>os.rmdir()</code></a></li>
+  </ul></li>
+  <li><a href="#logging模块" id="toc-logging模块" class="nav-link" data-scroll-target="#logging模块"><span class="header-section-number">12.3</span> <code>logging</code>模块</a></li>
   </ul>
 </nav>
     </div>
@@ -277,18 +288,147 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><code>sys</code>模块提供了一些变量和函数，用于与Python解释器进行交互。</p>
 <section id="sys.argv" class="level3" data-number="12.1.1">
 <h3 data-number="12.1.1" class="anchored" data-anchor-id="sys.argv"><span class="header-section-number">12.1.1</span> <code>sys.argv</code></h3>
-<p><code>sys.argv</code>是一个列表，包含了命令行参数。<code>sys.argv[0]</code>是脚本名称，<code>sys.argv[1:]</code>是脚本的参数。</p>
-<div id="e9d85dd0" class="cell" data-execution_count="1">
+<p>正如我们在 <a href="modules.html#sec-sys" class="quarto-xref"><span>Section 6.1.1</span></a> 看到的，<code>sys.argv</code>是一个包含命令行参数的列表。</p>
+<p>我们在此总结一下：</p>
+<ul>
+<li><code>sys.argv[0]</code>是脚本的名称</li>
+<li><code>sys.argv[1]</code>是第一个参数</li>
+<li><code>sys.argv[2]</code>是第二个参数</li>
+<li><code>sys.argv</code>的长度是命令行参数的个数</li>
+</ul>
+<p>下面是一个简单的例子：</p>
+<div id="26fd4c69" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sys.argv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>['C:\\Conda_data\\envs\\main\\Lib\\site-packages\\ipykernel_launcher.py', '-f', 'C:\\Windows\\Temp\\tmpax5x_y7h.json', '--HistoryManager.hist_file=:memory:']</code></pre>
+<pre><code>['C:\\Conda_data\\envs\\main\\Lib\\site-packages\\ipykernel_launcher.py', '-f', 'C:\\Windows\\Temp\\tmpnvm7lsyn.json', '--HistoryManager.hist_file=:memory:']</code></pre>
 </div>
 </div>
-
-
 </section>
+<section id="sys.version" class="level3" data-number="12.1.2">
+<h3 data-number="12.1.2" class="anchored" data-anchor-id="sys.version"><span class="header-section-number">12.1.2</span> <code>sys.version</code></h3>
+<p><code>sys.version</code>包含了Python解释器的版本信息。</p>
+<div id="b3dbd44e" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sys.version)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>3.11.8 | packaged by conda-forge | (main, Feb 16 2024, 20:40:50) [MSC v.1937 64 bit (AMD64)]</code></pre>
+</div>
+</div>
+<p><code>sys</code>模块有一个名为<code>version_info</code>的元组，它包含了Python解释器的版本信息。</p>
+</section>
+<section id="sys.path" class="level3" data-number="12.1.3">
+<h3 data-number="12.1.3" class="anchored" data-anchor-id="sys.path"><span class="header-section-number">12.1.3</span> <code>sys.path</code></h3>
+<p><code>sys.path</code>是一个包含了模块搜索路径的列表。</p>
+<div id="6bd798ce" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sys.path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['C:\\Conda_data\\envs\\main\\python311.zip', 'C:\\Conda_data\\envs\\main\\DLLs', 'C:\\Conda_data\\envs\\main\\Lib', 'C:\\Conda_data\\envs\\main', '', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages\\win32', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages\\win32\\lib', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages\\Pythonwin']</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="os模块" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="os模块"><span class="header-section-number">12.2</span> <code>os</code>模块</h2>
+<p><code>os</code>模块提供了许多与操作系统交互的函数。</p>
+<p>常见的操作包括：获取当前工作目录、更改目录、创建目录、删除目录、删除文件等。</p>
+<section id="os.getcwd" class="level3" data-number="12.2.1">
+<h3 data-number="12.2.1" class="anchored" data-anchor-id="os.getcwd"><span class="header-section-number">12.2.1</span> <code>os.getcwd()</code></h3>
+<p><code>os.getcwd()</code>返回当前工作目录。</p>
+<div id="7f4eac3d" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.getcwd())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>C:\Users\WeiZichao\OneDrive - MSFT\Code\MyProjects\My-Python-Learning\my_python_learning_zh</code></pre>
+</div>
+</div>
+</section>
+<section id="os.listdir" class="level3" data-number="12.2.2">
+<h3 data-number="12.2.2" class="anchored" data-anchor-id="os.listdir"><span class="header-section-number">12.2.2</span> <code>os.listdir()</code></h3>
+<p><code>os.listdir()</code>返回指定目录下的文件和目录列表。</p>
+<div id="ab41e388" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.listdir())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['.gitignore', '.quarto', 'basic.qmd', 'control_flow.qmd', 'cover.png', 'data_structures.qmd', 'exceptions.qmd', 'functions.qmd', 'index.qmd', 'input_and_output.qmd', 'intro.qmd', 'modules.qmd', 'object_oriented_programming.qmd', 'operators_and_expressions.qmd', 'practical_code', 'problem_solving.qmd', 'references.bib', 'references.qmd', 'standard_library.ipynb', 'standard_library.qmd', 'summary.qmd', '_book', '_quarto.yml']</code></pre>
+</div>
+</div>
+</section>
+<section id="os.mkdir" class="level3" data-number="12.2.3">
+<h3 data-number="12.2.3" class="anchored" data-anchor-id="os.mkdir"><span class="header-section-number">12.2.3</span> <code>os.mkdir()</code></h3>
+<p><code>os.mkdir()</code>创建一个新目录。</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>os.mkdir(<span class="vs">r'practical_code/standard_library/newdir'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="os.remove" class="level3" data-number="12.2.4">
+<h3 data-number="12.2.4" class="anchored" data-anchor-id="os.remove"><span class="header-section-number">12.2.4</span> <code>os.remove()</code></h3>
+<p><code>os.remove()</code>删除一个文件。</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>os.remove(<span class="vs">r'practical_code/standard_library/newdir'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="os.rmdir" class="level3" data-number="12.2.5">
+<h3 data-number="12.2.5" class="anchored" data-anchor-id="os.rmdir"><span class="header-section-number">12.2.5</span> <code>os.rmdir()</code></h3>
+<p><code>os.rmdir()</code>删除一个目录。</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>os.rmdir(<span class="vs">r'practical_code/standard_library/newdir'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="logging模块" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="logging模块"><span class="header-section-number">12.3</span> <code>logging</code>模块</h2>
+<p><code>logging</code>模块提供了一个灵活的方式来记录日志信息。</p>
+<p><code>logging</code>模块的基本语法如下：</p>
+<div id="d4a59d75" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> logging</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>logging.debug(<span class="st">'This is a debug message'</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>logging.info(<span class="st">'This is an info message'</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>logging.warning(<span class="st">'This is a warning message'</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>logging.error(<span class="st">'This is an error message'</span>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>logging.critical(<span class="st">'This is a critical message'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>WARNING:root:This is a warning message
+ERROR:root:This is an error message
+CRITICAL:root:This is a critical message</code></pre>
+</div>
+</div>
+<p>此外，<code>logging</code>模块还提供了一些配置选项，可以将日志信息输出到指定位置，或者指定日志的格式、等级等。</p>
+<p>以下是一个更复杂一点的例子：</p>
+<div id="fe0c9eb0" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> logging</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>logging_file <span class="op">=</span> os.path.join(os.getcwd(), <span class="st">'practical_code/standard_library/logging.log'</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Logging to"</span>, logging_file)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>logging.basicConfig(</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    level<span class="op">=</span>logging.DEBUG,</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">format</span><span class="op">=</span><span class="st">'</span><span class="sc">%(asctime)s</span><span class="st"> - </span><span class="sc">%(name)s</span><span class="st"> - </span><span class="sc">%(levelname)s</span><span class="st"> - </span><span class="sc">%(message)s</span><span class="st">'</span>,</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    filename<span class="op">=</span>logging_file,</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    filemode<span class="op">=</span><span class="st">'w'</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>logging.debug(<span class="st">'This is a debug message'</span>)</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>logging.info(<span class="st">'This is an info message'</span>)</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>logging.warning(<span class="st">'This is a warning message'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>WARNING:root:This is a warning message</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Logging to C:\Users\WeiZichao\OneDrive - MSFT\Code\MyProjects\My-Python-Learning\my_python_learning_zh\practical_code/standard_library/logging.log</code></pre>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->

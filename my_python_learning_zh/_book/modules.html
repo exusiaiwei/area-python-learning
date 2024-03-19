@@ -216,8 +216,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./standard_library.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">标准库</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -236,7 +242,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#基本概念" id="toc-基本概念" class="nav-link active" data-scroll-target="#基本概念"><span class="header-section-number">6.1</span> 基本概念</a></li>
+  <li><a href="#基本概念" id="toc-基本概念" class="nav-link active" data-scroll-target="#基本概念"><span class="header-section-number">6.1</span> 基本概念</a>
+  <ul class="collapse">
+  <li><a href="#sec-sys" id="toc-sec-sys" class="nav-link" data-scroll-target="#sec-sys"><span class="header-section-number">6.1.1</span> <code>sys</code>模块</a></li>
+  </ul></li>
   <li><a href="#import-语句" id="toc-import-语句" class="nav-link" data-scroll-target="#import-语句"><span class="header-section-number">6.2</span> import 语句</a></li>
   <li><a href="#字节编译的-.pyc-文件" id="toc-字节编译的-.pyc-文件" class="nav-link" data-scroll-target="#字节编译的-.pyc-文件"><span class="header-section-number">6.3</span> 字节编译的 <code>.pyc</code> 文件</a></li>
   <li><a href="#from...import-语句" id="toc-from...import-语句" class="nav-link" data-scroll-target="#from...import-语句"><span class="header-section-number">6.4</span> <code>from...import</code> 语句</a></li>
@@ -283,7 +292,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>在 Python 中，模块可以是 Python 编写的，也可以是用 C/C++ 等其他编程语言编写并编译成二进制代码的。后者通常被称为”编译的模块”，或者”扩展模块”。</p>
 <p>它们通常用于提高性能（因为编译后的代码运行速度更快），或者提供Python不能直接提供的功能（比如调用操作系统的底层API）。</p>
 <p>模块使用方法参考如下的代码示例：</p>
-<div id="4427c473" class="cell" data-execution_count="1">
+<div id="2fb30dbd" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The script has the name </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span> (sys.argv[<span class="dv">0</span>]))</span>
@@ -297,20 +306,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>The script has the name C:\Conda_data\envs\main\Lib\site-packages\ipykernel_launcher.py
 It has some arguments:
 -f
-C:\Windows\Temp\tmpkxw8fxum.json
+C:\Windows\Temp\tmp4fvw2j78.json
 --HistoryManager.hist_file=:memory:
 
 
-The PYTHONPATH is ['C:\\Users\\WeiZichao\\OneDrive - MSFT\\Code\\MyProjects\\My-Python-Learning\\my_python_learning_zh', 'C:\\Conda_data\\envs\\main\\python312.zip', 'C:\\Conda_data\\envs\\main\\DLLs', 'C:\\Conda_data\\envs\\main\\Lib', 'C:\\Conda_data\\envs\\main', '', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages\\win32', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages\\win32\\lib', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages\\Pythonwin'] 
+The PYTHONPATH is ['C:\\Conda_data\\envs\\main\\python311.zip', 'C:\\Conda_data\\envs\\main\\DLLs', 'C:\\Conda_data\\envs\\main\\Lib', 'C:\\Conda_data\\envs\\main', '', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages\\win32', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages\\win32\\lib', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages\\Pythonwin'] 
 </code></pre>
 </div>
 </div>
+<section id="sec-sys" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="sec-sys"><span class="header-section-number">6.1.1</span> <code>sys</code>模块</h3>
 <p><code>sys</code>模块包含与Python解释器及其环境（即系统）相关的功能。</p>
 <ul>
 <li><code>sys.argv</code>是Python中的一个列表，它包含了从命令行传递给Python脚本的参数。</li>
 <li>这些参数是以字符串的形式存储的，其中<code>sys.argv[0]</code>是脚本的名称（即执行的Python文件名），其余的<code>sys.argv[1]</code>、<code>sys.argv[2]</code>…依次是外部传入的参数。</li>
 <li>在<code>sys</code>模块中，可以使用点表示法访问<code>argv</code>变量，即<code>sys.argv</code>。这样可以清晰地表明<code>argv</code>变量是<code>sys</code>模块的一部分，同时避免和程序中所使用的任何<code>argv</code>变量冲突。</li>
 </ul>
+</section>
 </section>
 <section id="import-语句" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="import-语句"><span class="header-section-number">6.2</span> import 语句</h2>
@@ -345,7 +357,7 @@ The PYTHONPATH is ['C:\\Users\\WeiZichao\\OneDrive - MSFT\\Code\\MyProjects\\My-
 <p>使用 <code>from...import</code> 语句可以让我们直接调用被导入的函数或者对象，不需要在前面加上模块名称。例如，我们可以直接导入 <code>math</code> 模块中的 <code>sqrt</code> 函数，这样在调用时就不需要再写 <code>math.</code> 了。</p>
 <p>这种方法的好处是我们可以只导入想用的函数或者类，不必加载整个模块，相比第一种方式可以节省一些内存。然而，如果代码中有大量的 <code>from...import</code> 语句，或从多个模块中导入具有相同名称的函数，那么这可能导致名字空间污染和函数冲突。</p>
 <p>同时，也可以使用 <code>from...import</code> 语句导入多个函数或者类，例如，我们导入 <code>math</code> 模块中的 <code>sqrt</code> 和 <code>pi</code>：</p>
-<div id="ed2dc3ef" class="cell" data-execution_count="2">
+<div id="285571ad" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sqrt(<span class="dv">16</span>))  <span class="co"># Output: 4.0</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -365,7 +377,7 @@ The PYTHONPATH is ['C:\\Users\\WeiZichao\\OneDrive - MSFT\\Code\\MyProjects\\My-
 <p>当直接运行一个 py 文件（比如命令行执行 <code>python your_script.py</code> ）时，Python会把 <code>__name__</code> 属性自动置为 <code>__main__</code> 。在这种情况下，我们说 <code>your_script.py</code> 是作为一个脚本运行的。</p>
 <p>但是，如果你导入这个 py 文件作为一个模块（比如在另一个 py 文件中使用 <code>import your_script</code> ），那么Python会把 <code>__name__</code> 属性自动置为模块的名称（这里的例子中就是 <code>your_script</code> ）。在这种情况下，我们说 <code>your_script.py</code> 是被导入的模块。</p>
 <p>参加如下的示例代码：</p>
-<div id="7bd41ea6" class="cell" data-execution_count="3">
+<div id="f46b21e3" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'This program is being run by itself'</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
@@ -389,7 +401,7 @@ The PYTHONPATH is ['C:\\Users\\WeiZichao\\OneDrive - MSFT\\Code\\MyProjects\\My-
 <h2 data-number="6.6" class="anchored" data-anchor-id="制作自己的模块"><span class="header-section-number">6.6</span> 制作自己的模块</h2>
 <p>在 Python 中，任何一个 Python 文件都可以被视为一个模块，只需要按照一定的格式组织你的代码，然后将其保存为以 <code>.py</code> 结尾的文件即可。</p>
 <p>导入模块时，Python 解释器会在几个特定的目录中寻找模块文件，这些目录的路径存储在 <code>sys.path</code> 列表中。如果你的模块位于这些目录之外的路径，需要将模块的路径添加到系统路径中，如下面的示例代码所示：</p>
-<div id="bb8ad725" class="cell" data-execution_count="4">
+<div id="97159c9d" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>sys.path.append(<span class="st">"practical_code/modules"</span>) <span class="co"># 将模块的路径添加到系统路径中</span></span>
@@ -404,7 +416,7 @@ Version 0.1</code></pre>
 </div>
 </div>
 <p>使用 <code>from..import</code> 语句的示例代码如下：</p>
-<div id="74efba0c" class="cell" data-execution_count="5">
+<div id="b4e4e5ef" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>sys.path.append(<span class="st">"practical_code/modules"</span>) <span class="co">#</span></span>
@@ -424,7 +436,7 @@ Version 0.1</code></pre>
 <p><code>dir</code> 函数是 Python 内置函数之一，用于返回一个对象的属性和方法列表。 它接受一个可选的参数，该参数是一个对象或模块的名称。如果直接使用 <code>dir()</code> 并且不提供任何参数，则返回当前作用域中能访问到的所有变量、函数、类等的名称。</p>
 <p>基本概念： - 对象：在 Python 中，一切皆为对象，包括数字、字符串、列表、函数等。对象 - 属性：对象的特征或数据，可以通过点运算符访问。 - 方法：对象的行为或功能，可以通过点运算符调用。</p>
 <p>特性： - <code>dir</code> 函数返回的列表包含了对象或模块的所有属性和方法的名称。 - 返回的列表是无序的，不保证属性和方法的顺序。 - <code>dir</code> 函数只返回公共的属性和方法，不包括私有的属性和方法。 - 如果参数是一个模块的名称，<code>dir</code> 函数返回的列表包含了该模块的所有公共属性和方法的名称。 - 如果参数是一个对象，<code>dir</code> 函数返回的列表包含了该对象的所有属性和方法的名称。</p>
-<div id="4c438e14" class="cell" data-execution_count="6">
+<div id="368fcbb6" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 调用dir()函数，打印当前全局作用域的所有名称</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">dir</span>())</span>
@@ -450,7 +462,7 @@ Version 0.1</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>['In', 'Out', '__builtin__', '__builtins__', '__name__', '__version__', '_dh', '_i', '_i1', '_i2', '_i3', '_i4', '_i5', '_i6', '_ih', '_ii', '_iii', '_oh', 'a', 'arg', 'exit', 'get_ipython', 'mymodule', 'ojs_define', 'open', 'pi', 'quit', 'say_hi', 'sqrt', 'sys']
 ['In', 'Out', '__builtin__', '__builtins__', '__name__', '__version__', '_dh', '_i', '_i1', '_i2', '_i3', '_i4', '_i5', '_i6', '_ih', '_ii', '_iii', '_oh', 'arg', 'exit', 'get_ipython', 'mymodule', 'ojs_define', 'open', 'pi', 'quit', 'say_hi', 'sqrt', 'sys']
-['__annotations__', '__builtins__', '__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__get__', '__getattribute__', '__getstate__', '__globals__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__kwdefaults__', '__le__', '__lt__', '__module__', '__name__', '__ne__', '__new__', '__qualname__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__type_params__']</code></pre>
+['__annotations__', '__builtins__', '__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__get__', '__getattribute__', '__getstate__', '__globals__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__kwdefaults__', '__le__', '__lt__', '__module__', '__name__', '__ne__', '__new__', '__qualname__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__']</code></pre>
 </div>
 </div>
 <ul>
@@ -489,7 +501,7 @@ Version 0.1</code></pre>
     </code></pre>
 <p>在这个结构中，<code>my_package</code> 是一个 Python 包，它包含一个模块 <code>module1</code> 和一个子包 <code>sub_package</code>。<code>sub_package</code> 也是 Python 包，并且它包含一个模块 <code>module2.py</code>。</p>
 <p>假设在 <code>module1.py</code> 中，我们定义了一个函数 <code>func1</code>，在 <code>module2.py</code> 中，我们定义了一个函数<code>func2</code>。</p>
-<div id="96981636" class="cell" data-execution_count="7">
+<div id="0fad6572" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 文件路径: my_package/module1.py</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func1():</span>
@@ -501,7 +513,7 @@ Version 0.1</code></pre>
 <span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"This is function 2 from module 2"</span>)    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>在 Python 中，我们可以使用以下方法导入和使用这些函数：</p>
-<div id="8649cd80" class="cell" data-execution_count="8">
+<div id="4337ca17" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>sys.path.append(<span class="st">"practical_code/modules"</span>) <span class="co">#将包的路径添加到系统路径中</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>

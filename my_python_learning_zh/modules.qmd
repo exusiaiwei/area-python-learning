@@ -30,7 +30,7 @@ if len(sys.argv) > 1:
 
 print('\n\nThe PYTHONPATH is', sys.path, '\n')
 ```
-
+### `sys`模块{#sec-sys}
 `sys`模块包含与Python解释器及其环境（即系统）相关的功能。
 
 - `sys.argv`是Python中的一个列表，它包含了从命令行传递给Python脚本的参数。

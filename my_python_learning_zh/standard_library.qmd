@@ -12,10 +12,150 @@ Python标准库是每个Python安装的一部分，它包含了许多有用的�
 
 ### `sys.argv`
 
-`sys.argv`是一个列表，包含了命令行参数。`sys.argv[0]`是脚本名称，`sys.argv[1:]`是脚本的参数。
+正如我们在 @sec-sys 看到的，`sys.argv`是一个包含命令行参数的列表。
 
+我们在此总结一下：
+
+- `sys.argv[0]`是脚本的名称
+- `sys.argv[1]`是第一个参数
+- `sys.argv[2]`是第二个参数
+- `sys.argv`的长度是命令行参数的个数
+
+下面是一个简单的例子：
 ```{python}
 import sys
 
 print(sys.argv)
 ```
+
+### `sys.version`
+
+`sys.version`包含了Python解释器的版本信息。
+
+```{python}
+import sys
+
+print(sys.version)
+```
+`sys`模块有一个名为`version_info`的元组，它包含了Python解释器的版本信息。
+
+### `sys.path`
+
+`sys.path`是一个包含了模块搜索路径的列表。
+
+```{python}
+import sys
+
+print(sys.path)
+```
+
+## `os`模块
+
+`os`模块提供了许多与操作系统交互的函数。
+
+常见的操作包括：获取当前工作目录、更改目录、创建目录、删除目录、删除文件等。
+
+
+### `os.getcwd()`
+
+`os.getcwd()`返回当前工作目录。
+
+```{python}
+import os
+
+print(os.getcwd())
+```
+
+### `os.listdir()`
+
+`os.listdir()`返回指定目录下的文件和目录列表。
+
+```{python}
+import os
+
+print(os.listdir())
+```
+
+### `os.mkdir()`
+
+`os.mkdir()`创建一个新目录。
+
+```python
+import os
+
+os.mkdir(r'practical_code/standard_library/newdir')
+```
+
+### `os.remove()`
+
+`os.remove()`删除一个文件。
+
+```python
+import os
+
+os.remove(r'practical_code/standard_library/newdir')
+```
+
+### `os.rmdir()`
+
+`os.rmdir()`删除一个目录。
+
+```python
+import os
+
+os.rmdir(r'practical_code/standard_library/newdir')
+```
+
+## `logging`模块
+
+`logging`模块提供了一个灵活的方式来记录日志信息。
+
+`logging`模块的基本语法如下：
+
+```{python}
+import logging
+
+logging.debug('This is a debug message')
+logging.info('This is an info message')
+logging.warning('This is a warning message')
+logging.error('This is an error message')
+logging.critical('This is a critical message')
+```
+
+此外，`logging`模块还提供了一些配置选项，可以将日志信息输出到指定位置，或者指定日志的格式、等级等。
+
+以下是一个更复杂一点的例子：
+
+```{python}
+import os
+import logging
+
+logging_file = os.path.join(os.getcwd(), 'practical_code/standard_library/logging.log')
+
+print("Logging to", logging_file)
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    filename=logging_file,
+    filemode='w'
+)
+
+logging.debug('This is a debug message')
+logging.info('This is an info message')
+logging.warning('This is a warning message')
+```
+
+在上述的示例代码中：
+
+- `logging_file`是日志文件的路径，这里配置为`practical_code/standard_library/logging.log`
+- `logging.basicConfig()`函数用于配置日志的格式、等级、输出位置等
+- `logging.debug()`、`logging.info()`、`logging.warning()`等函数用于记录日志信息
+- `filemode='w'`表示以写入模式打开日志文件，如果文件已经存在，会被覆盖
+- `%(asctime)s`、`%(name)s`、`%(levelname)s`、`%(message)s`是日志格式的占位符，分别表示日志记录的时间、日志记录的名称、日志的等级、日志的信息
+
+## 每周模块系列
+
+除了上述介绍的模块外，还有许多其他有用的标准库模块，例如调试、测试、文件处理、网络通信、日期和时间处理、数学、科学、加密等等。
+
+此外，Doug Hellmann的[Python模块每周精选](https://pymotw.com/3/)是一个很好的资源，它介绍了Python标准库中的许多模块。
