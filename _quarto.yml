@@ -12,7 +12,6 @@ book:
   repo-url: https://github.com/exusiaiwei/My-Python-Learning
   repo-actions: [edit]
   search: true
-  downloads: [pdf, epub]
   sidebar:
     style: docked
     background: light
