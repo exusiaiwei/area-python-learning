@@ -7,7 +7,6 @@ book:
   date: "2024/1/22"
   chapters:
     - index.qmd
-    - intro.qmd
     - basic.qmd
     - operators_and_expressions.qmd
     - control_flow.qmd
@@ -20,7 +19,6 @@ book:
     - exceptions.qmd
     - standard_library.qmd
     - more.qmd
-    - summary.qmd
     - references.qmd
 
 jupyter:
