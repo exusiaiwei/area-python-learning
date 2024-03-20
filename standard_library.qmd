@@ -1,64 +1,64 @@
-# 标准库
+# Standard Library
 
-Python标准库是每个Python安装的一部分，它包含了许多有用的模块，包括操作文件、字符串处理、网络通信、日期和时间处理、数学、科学、加密等等。
+The Python standard library comes with every Python installation and contains many useful modules including file handling, string processing, network communication, date/time handling, math/science, encryption etc.  
 
-熟悉Python标准库的模块，可以帮助我们更快速的编写程序，提高开发效率。
+Familiarizing with standard library modules can help us program faster and improve efficiency.  
 
-让我们探索一些常用的标准库模块。
+Let's explore some commonly used standard library modules.
 
-## `sys`模块
+## The `sys` Module  
 
-`sys`模块提供了一些变量和函数，用于与Python解释器进行交互。
+The `sys` module provides variables and functions for interacting with the Python interpreter.  
 
-### `sys.argv`
+### `sys.argv`  
 
-正如我们在 @sec-sys 看到的，`sys.argv`是一个包含命令行参数的列表。
+As we saw in @sec-sys, `sys.argv` is a list containing command line arguments.  
 
-我们在此总结一下：
+We summarize again here:  
 
-- `sys.argv[0]`是脚本的名称
-- `sys.argv[1]`是第一个参数
-- `sys.argv[2]`是第二个参数
-- `sys.argv`的长度是命令行参数的个数
+- `sys.argv[0]` is the script name  
+- `sys.argv[1]` is the first argument
+- `sys.argv[2]` is the second argument
+- Length of `sys.argv` is number of command line arguments
 
-下面是一个简单的例子：
+A simple example:
 ```{python}
 import sys
 
-print(sys.argv)
+print(sys.argv) 
 ```
 
-### `sys.version`
+### `sys.version`  
 
-`sys.version`包含了Python解释器的版本信息。
+`sys.version` contains Python interpreter version info.
 
-```{python}
+```{python}  
 import sys
 
 print(sys.version)
 ```
-`sys`模块有一个名为`version_info`的元组，它包含了Python解释器的版本信息。
+`sys` module has a tuple called `version_info` containing version info too.  
 
 ### `sys.path`
 
-`sys.path`是一个包含了模块搜索路径的列表。
+`sys.path` is a list containing module search paths.  
 
 ```{python}
 import sys
 
-print(sys.path)
+print(sys.path)  
 ```
 
-## `os`模块
+## The `os` Module  
 
-`os`模块提供了许多与操作系统交互的函数。
+The `os` module provides many functions to interact with the operating system.  
 
-常见的操作包括：获取当前工作目录、更改目录、创建目录、删除目录、删除文件等。
+Common operations include getting current working directory, changing directory, creating/deleting directories/files etc.  
 
 
-### `os.getcwd()`
+### `os.getcwd()`  
 
-`os.getcwd()`返回当前工作目录。
+`os.getcwd()` returns current working directory.  
 
 ```{python}
 import os
@@ -68,94 +68,94 @@ print(os.getcwd())
 
 ### `os.listdir()`
 
-`os.listdir()`返回指定目录下的文件和目录列表。
+`os.listdir()` returns files and directories in the specified directory.  
 
-```{python}
+```{python} 
 import os
 
 print(os.listdir())
-```
+```  
 
-### `os.mkdir()`
+### `os.mkdir()`  
 
-`os.mkdir()`创建一个新目录。
+`os.mkdir()` creates a new directory.  
 
 ```python
 import os
 
-os.mkdir(r'practical_code/standard_library/newdir')
+os.mkdir(r'practical_code/standard_library/newdir') 
 ```
 
-### `os.remove()`
+### `os.remove()`  
 
-`os.remove()`删除一个文件。
+`os.remove()` deletes a file.  
 
 ```python
 import os
 
 os.remove(r'practical_code/standard_library/newdir')
-```
+```  
 
 ### `os.rmdir()`
 
-`os.rmdir()`删除一个目录。
+`os.rmdir()` deletes a directory.  
 
-```python
+```python 
 import os
 
 os.rmdir(r'practical_code/standard_library/newdir')
 ```
 
-## `logging`模块
+## The `logging` Module   
 
-`logging`模块提供了一个灵活的方式来记录日志信息。
+The `logging` module provides a flexible way to record log information.  
 
-`logging`模块的基本语法如下：
+Basic `logging` module syntax:  
 
-```{python}
+```{python} 
 import logging
 
-logging.debug('This is a debug message')
+logging.debug('This is a debug message')  
 logging.info('This is an info message')
 logging.warning('This is a warning message')
-logging.error('This is an error message')
+logging.error('This is an error message') 
 logging.critical('This is a critical message')
-```
+```  
 
-此外，`logging`模块还提供了一些配置选项，可以将日志信息输出到指定位置，或者指定日志的格式、等级等。
+Additionally, the `logging` module also provides configuration options like outputting log messages to specified locations, specifying log format, log level etc.  
 
-以下是一个更复杂一点的例子：
+A slightly more complex example:  
 
-```{python}
+```{python}  
 import os
 import logging
 
-logging_file = os.path.join(os.getcwd(), 'practical_code/standard_library/logging.log')
+logging_file = os.path.join(os.getcwd(), 'practical_code/standard_library/logging.log')  
 
-print("Logging to", logging_file)
+print("Logging to", logging_file)  
 
 logging.basicConfig(
     level=logging.DEBUG,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     filename=logging_file,
-    filemode='w'
+    filemode='w'  
 )
 
 logging.debug('This is a debug message')
-logging.info('This is an info message')
+logging.info('This is an info message') 
 logging.warning('This is a warning message')
 ```
 
-在上述的示例代码中：
+In the above sample code:  
 
-- `logging_file`是日志文件的路径，这里配置为`practical_code/standard_library/logging.log`
-- `logging.basicConfig()`函数用于配置日志的格式、等级、输出位置等
-- `logging.debug()`、`logging.info()`、`logging.warning()`等函数用于记录日志信息
-- `filemode='w'`表示以写入模式打开日志文件，如果文件已经存在，会被覆盖
-- `%(asctime)s`、`%(name)s`、`%(levelname)s`、`%(message)s`是日志格式的占位符，分别表示日志记录的时间、日志记录的名称、日志的等级、日志的信息
+- `logging_file` is path to log file, configured here as `practical_code/standard_library/logging.log`
+- `logging.basicConfig()` configures log format, level, output location etc.   
+- Functions like `logging.debug()`, `logging.info()`, `logging.warning()` etc record log messages
+- `filemode='w'` opens log file in write mode, overwriting existing files if any
+- `%(asctime)s`, `%(name)s`, `%(levelname)s`, `%(message)s` are log format placeholders for log timestamp, name, level and message respectively.  
 
-## 每周模块系列
+## Module of the Week Series  
 
-除了上述介绍的模块外，还有许多其他有用的标准库模块，例如调试、测试、文件处理、网络通信、日期和时间处理、数学、科学、加密等等。
+Besides the modules introduced above, there are many other useful standard library modules like debugging, testing, file handling, network communication, date/time handling, math/science, encryption etc.  
 
-此外，Doug Hellmann的[Python模块每周精选](https://pymotw.com/3/)是一个很好的资源，它介绍了Python标准库中的许多模块。
+Additionally, Doug Hellmann's [Python Module of the Week](https://pymotw.com/3/) is a great resource introducing many modules in the Python standard library.

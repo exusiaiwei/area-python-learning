@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>我的Python学习笔记 - 8&nbsp; 面向对象编程</title>
+<title>My Python Studying - 8&nbsp; Object-Oriented Programming</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <link href="./input_and_output.html" rel="next">
 <link href="./problem_solving.html" rel="prev">
+<link href="./python-logo-only.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -102,11 +103,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -115,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./object_oriented_programming.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">面向对象编程</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./object_oriented_programming.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Object-Oriented Programming</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -127,10 +134,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">我的Python学习笔记</a> 
+      <a href="./">My Python Studying</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/exusiaiwei/My-Python-Learning" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./My-Python-Studying.pdf">
+              <i class="bi bi-bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./My-Python-Studying.epub">
+              <i class="bi bi-bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -143,79 +170,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">前言</span></a>
+ <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">基础</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Basic</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./operators_and_expressions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">运算符和表达式</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Operators and Expressions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./control_flow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">控制流</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Control Flow</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">函数</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Functions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./modules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">模块</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modules</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data_structures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">数据结构</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Data Structures</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./problem_solving.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">问题解决</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Problem Solving</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./object_oriented_programming.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">面向对象编程</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Object-Oriented Programming</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./input_and_output.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">输入和输出</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Input and Output</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./exceptions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">异常情况</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Exceptions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./standard_library.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">标准库</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Standard Library</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./more.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">更多</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">More</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -234,28 +261,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#对象和类的回顾" id="toc-对象和类的回顾" class="nav-link active" data-scroll-target="#对象和类的回顾"><span class="header-section-number">8.1</span> 对象和类的回顾</a></li>
-  <li><a href="#类的构建功能部分" id="toc-类的构建功能部分" class="nav-link" data-scroll-target="#类的构建功能部分"><span class="header-section-number">8.2</span> 类的构建（功能部分）</a>
+  <li><a href="#review-of-objects-and-classes" id="toc-review-of-objects-and-classes" class="nav-link active" data-scroll-target="#review-of-objects-and-classes"><span class="header-section-number">8.1</span> Review of Objects and Classes</a></li>
+  <li><a href="#class-construction-functional-part" id="toc-class-construction-functional-part" class="nav-link" data-scroll-target="#class-construction-functional-part"><span class="header-section-number">8.2</span> Class Construction (Functional Part)</a>
   <ul class="collapse">
-  <li><a href="#方法-类的功能实现" id="toc-方法-类的功能实现" class="nav-link" data-scroll-target="#方法-类的功能实现"><span class="header-section-number">8.2.1</span> 方法: 类的功能实现</a></li>
-  <li><a href="#self在类方法中的作用" id="toc-self在类方法中的作用" class="nav-link" data-scroll-target="#self在类方法中的作用"><span class="header-section-number">8.2.2</span> <code>self</code>在类方法中的作用</a></li>
-  <li><a href="#init__方法类的构造函数" id="toc-init__方法类的构造函数" class="nav-link" data-scroll-target="#init__方法类的构造函数"><span class="header-section-number">8.2.3</span> <code>__init__</code>方法：类的构造函数</a></li>
+  <li><a href="#methods-functional-implementation-of-classes" id="toc-methods-functional-implementation-of-classes" class="nav-link" data-scroll-target="#methods-functional-implementation-of-classes"><span class="header-section-number">8.2.1</span> Methods: Functional Implementation of Classes</a></li>
+  <li><a href="#the-role-of-self-in-class-methods" id="toc-the-role-of-self-in-class-methods" class="nav-link" data-scroll-target="#the-role-of-self-in-class-methods"><span class="header-section-number">8.2.2</span> The Role of <code>self</code> in Class Methods</a></li>
+  <li><a href="#the-__init__-method-class-constructor" id="toc-the-__init__-method-class-constructor" class="nav-link" data-scroll-target="#the-__init__-method-class-constructor"><span class="header-section-number">8.2.3</span> The <code>__init__</code> Method: Class Constructor</a></li>
   </ul></li>
-  <li><a href="#字段结构部分" id="toc-字段结构部分" class="nav-link" data-scroll-target="#字段结构部分"><span class="header-section-number">8.3</span> 字段（结构部分）</a></li>
-  <li><a href="#继承" id="toc-继承" class="nav-link" data-scroll-target="#继承"><span class="header-section-number">8.4</span> 继承</a></li>
-  <li><a href="#总结" id="toc-总结" class="nav-link" data-scroll-target="#总结"><span class="header-section-number">8.5</span> 总结</a>
+  <li><a href="#fields-structural-part" id="toc-fields-structural-part" class="nav-link" data-scroll-target="#fields-structural-part"><span class="header-section-number">8.3</span> Fields (Structural Part)</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">8.5</span> Summary</a>
   <ul class="collapse">
-  <li><a href="#面向对象编程的主要特点" id="toc-面向对象编程的主要特点" class="nav-link" data-scroll-target="#面向对象编程的主要特点"><span class="header-section-number">8.5.1</span> 面向对象编程的主要特点</a></li>
+  <li><a href="#key-characteristics-of-object-oriented-programming" id="toc-key-characteristics-of-object-oriented-programming" class="nav-link" data-scroll-target="#key-characteristics-of-object-oriented-programming"><span class="header-section-number">8.5.1</span> Key Characteristics of Object-Oriented Programming</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/object_oriented_programming.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">面向对象编程</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Object-Oriented Programming</span></h1>
 </div>
 
 
@@ -272,15 +298,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>面向对象编程（Object-Oriented Programming，OOP）是一种程序设计范型，其主要思想是将数据及对数据的操作封装在一起形成对象，对相同类型的对象进行抽象形成类，通过类的封装、继承和多态性实现代码的复用和模块化。</p>
-<section id="对象和类的回顾" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="对象和类的回顾"><span class="header-section-number">8.1</span> 对象和类的回顾</h2>
-<p>在 <a href="data_structures.html#sec-objects-and-classes" class="quarto-xref"><span>Section 6.6</span></a> 中我们已经介绍了对象和类的概念，我们可以总结如下：</p>
+<p>Object-Oriented Programming (OOP) is a programming paradigm where the main ideas are to encapsulate data and operations on data into objects, abstract similar objects into classes, and achieve code reuse and modularization through encapsulation, inheritance and polymorphism of classes.</p>
+<section id="review-of-objects-and-classes" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="review-of-objects-and-classes"><span class="header-section-number">8.1</span> Review of Objects and Classes</h2>
+<p>We have already introduced the concepts of objects and classes in <a href="data_structures.html#sec-objects-and-classes" class="quarto-xref"><span>Section 6.6</span></a>. We can summarize as follows:</p>
 <ul>
-<li>类（Class）：类是对一类事物的抽象描述，它定义了这种事物的静态特性（字段）和动态行为（方法）。类是创建对象的模板，对象是类的实例。</li>
-<li>对象（Object）：对象是类的实例，即根据类的定义创建的实体。每个对象都有自己的属性（类变量和实例变量）和行为（方法）。</li>
-<li>属性（Attribute）：属性是类或对象的特性，包括静态特性（字段）和动态行为（方法）。</li>
-<li>方法（Method）：方法是类定义的一部分。方法定义了对象的动态行为，描述了对象如何响应外部的请求或如何完成某些具体的任务。</li>
+<li>Class: A class is an abstract description of a category of things. It defines the static attributes (fields) and dynamic behaviors (methods) of such things. A class is the template for creating objects and an object is an instance of a class.<br>
+</li>
+<li>Object: An object is an instance of a class, i.e.&nbsp;an entity created based on the class definition. Each object has its own attributes (class variables and instance variables) and behaviors (methods).<br>
+</li>
+<li>Attribute: Attributes are characteristics of a class or object, including static attributes (fields) and dynamic behaviors (methods).</li>
+<li>Method: Methods are part of a class definition. Methods define the dynamic behaviors of objects, describing how objects can respond to external requests or how to accomplish specific tasks.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -292,45 +320,45 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>类似结构功能主义——在面向对象编程中，对象的字段就像是他的“结构”，而方法则如同他的“功能”。</p>
+<p>Similar to structural functionalism - in object-oriented programming, the fields of an object are like its “structure” while the methods are like its “functions”.</p>
 </div>
 </div>
 </section>
-<section id="类的构建功能部分" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="类的构建功能部分"><span class="header-section-number">8.2</span> 类的构建（功能部分）</h2>
-<p>一个最简单的类如下所示：</p>
-<div id="e74fa0ab" class="cell" data-execution_count="1">
+<section id="class-construction-functional-part" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="class-construction-functional-part"><span class="header-section-number">8.2</span> Class Construction (Functional Part)</h2>
+<p>A simplest class looks like:</p>
+<div id="cba155f5" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Person:</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span>  <span class="co"># An empty block</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span>  <span class="co"># An empty block  </span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> Person()</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(p)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>&lt;__main__.Person object at 0x00000223C834AD90&gt;</code></pre>
+<pre><code>&lt;__main__.Person object at 0x0000020D28BBD510&gt;</code></pre>
 </div>
 </div>
-<p>我们使用<code>class</code>语句和类的名称创建一个新的类，然后是一个缩进的语句块，构成类的主体。在这里，用<code>pass</code>语句表示一个空的语句块，因为Python中的语句块不能为空。</p>
-<p>类的名称后跟一对括号可以创建一个对象/实例。在实例代码中，我们通过<code>print(p)</code>语句来确认这个对象已经被创建。打印的结果说明这个对象是一个在 <code>__main__</code> 模块中的<code>Person</code>类的实例。</p>
-<p>类的构建主要是通过定义类的方法实现的。方法描述了类或其实例可以进行的操作。在Python中，我们常常在类的内部定义方法，就像定义普通的函数那样。</p>
-<section id="方法-类的功能实现" class="level3" data-number="8.2.1">
-<h3 data-number="8.2.1" class="anchored" data-anchor-id="方法-类的功能实现"><span class="header-section-number">8.2.1</span> 方法: 类的功能实现</h3>
-<p>类和对象可以和函数一样拥有方法，唯一的不同之处在于方法的第一个参数是<code>self</code>。</p>
-<p>以下是一个简单的类的方法例子：</p>
-<div id="cf2d1161" class="cell" data-execution_count="2">
+<p>We use the <code>class</code> statement and class name to create a new class, followed by an indented block of statements that make up the body of the class. Here, the <code>pass</code> statement denotes an empty block since Python block statements cannot be empty.</p>
+<p>Appending parentheses after the class name creates an object/instance. In the example code, we confirm the object is created by printing it out with the <code>print(p)</code> statement. The print result indicates this object is a <code>Person</code> class instance in the <code>__main__</code> module.</p>
+<p>Class construction is mainly achieved by defining methods of the class. Methods describe operations that can be performed by the class or its instances. In Python we often define methods inside the class, just like defining normal functions.</p>
+<section id="methods-functional-implementation-of-classes" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="methods-functional-implementation-of-classes"><span class="header-section-number">8.2.1</span> Methods: Functional Implementation of Classes</h3>
+<p>Classes and objects can have methods just like functions, the only difference being the first parameter of methods is <code>self</code>.</p>
+<p>Below is a simple example of class methods:</p>
+<div id="e94e584e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Person:</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> say_hi(<span class="va">self</span>):</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Hello, how are you?'</span>)</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> Person()</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> Person()  </span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>p.say_hi()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello, how are you?</code></pre>
 </div>
 </div>
 </section>
-<section id="self在类方法中的作用" class="level3" data-number="8.2.2">
-<h3 data-number="8.2.2" class="anchored" data-anchor-id="self在类方法中的作用"><span class="header-section-number">8.2.2</span> <code>self</code>在类方法中的作用</h3>
-<p>在Python中，类方法的第一个参数通常会是一个名为<code>self</code>的特殊参数，这个<code>self</code>参数代表方法的所属实例，或者说，将会调用这个方法的实例。通过self参数，方法可以自由地访问和修改对象的字段和其他方法。</p>
+<section id="the-role-of-self-in-class-methods" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="the-role-of-self-in-class-methods"><span class="header-section-number">8.2.2</span> The Role of <code>self</code> in Class Methods</h3>
+<p>In Python, the first parameter of class methods is usually a special parameter called <code>self</code>, representing the instance that owns the method, or in other words, the instance that will call this method. Through the self parameter, methods can freely access and modify fields and other methods of the object.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -341,29 +369,29 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>在定义类的方法时，我们并不知道这个方法将来会被哪个实例对象调用。所以我们需要一个参数（习惯上叫做<code>self</code>）来接收运行时传入的实例对象，这样这个方法才能访问到实例的属性或者调用实例的其他方法。</p>
+<p>When defining class methods, we don’t know beforehand which instance object will call this method in the future. So we need a parameter (conventionally called <code>self</code>) to receive the runtime passed-in instance object, so that this method can access properties of the instance or call other instance methods.</p>
 </div>
 </div>
-<div id="a30008ec" class="cell" data-execution_count="3">
+<div id="38fc0264" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> bark(<span class="va">self</span>):</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> says woof!"</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> says woof!"</span>  </span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>d1 <span class="op">=</span> Dog(<span class="st">"Fido"</span>)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>d2 <span class="op">=</span> Dog(<span class="st">"Rex"</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>d2 <span class="op">=</span> Dog(<span class="st">"Rex"</span>)  </span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d1.bark())  <span class="co"># 输出 "Fido says woof!"</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d2.bark())  <span class="co"># 输出 "Rex says woof!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d1.bark())  <span class="co"># Prints "Fido says woof!"  </span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d2.bark())  <span class="co"># Prints "Rex says woof!"  </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Fido says woof!
 Rex says woof!</code></pre>
 </div>
 </div>
-<p>当一个实例调用其方法时，Python 解释器会自动将实例本身传入方法的<code>self</code>参数。通过<code>self</code>，我们可以在方法内部访问和修改实例的属性。</p>
-<p>在这个例子中，<code>bark()</code>方法在<code>d1</code>和<code>d2</code>两个不同的实例中调用，<code>self</code>就代表了调用这个方法的实例，因此<code>self.name</code>会分别返回<code>d1</code>和<code>d2</code>的<code>name</code>属性。在每一次方法的调用中，Python都会自动地将当前的对象实例作为第一个参数传递进去。</p>
+<p>When an instance calls its method, the Python interpreter automatically passes the instance itself to the <code>self</code> parameter of the method. Through <code>self</code>, we can access and modify instance attributes within the method.</p>
+<p>In this example, the <code>bark()</code> method gets called on instances <code>d1</code> and <code>d2</code>, so <code>self</code> represents the calling instance respectively, hence <code>self.name</code> returns the <code>name</code> attribute of <code>d1</code> and <code>d2</code> respectively. Each time a method gets called, Python automatically passes in the current object instance as the first argument.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -374,46 +402,46 @@ Caution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<pre><code>rex.bark()</code></pre>
-<p>在这里，当我们调用<code>rex.bark()</code>时，从表面看，我们并没有给<code>bark</code>方法提供任何参数。但实际上，Python解释器会自动把<code>rex</code>这个实例传递给<code>bark</code>方法的<code>self</code>参数。这就是为何在类的方法最开始位置总会有一个<code>self</code>参数，而在调用方法时，我们通常并不需要显式地提供这个参数。</p>
-<p>同理，这也意味着哪怕是一个不带参数的方法，他也仍然需要一个参数- <code>self</code></p>
+<pre><code>rex.bark()  </code></pre>
+<p>Here when we call <code>rex.bark()</code>, seemingly we did not provide any parameters to the <code>bark</code> method. But actually, the Python interpreter automatically passes the <code>rex</code> instance to <code>bark</code> method’s <code>self</code> parameter. This is why there is always a <code>self</code> parameter at the beginning of class methods, and usually we don’t need to explicitly provide this parameter when calling methods.</p>
+<p>Similarly, this also means that even for a parameter-less method, it still needs one parameter - <code>self</code>.</p>
 </div>
 </div>
 </section>
-<section id="init__方法类的构造函数" class="level3" data-number="8.2.3">
-<h3 data-number="8.2.3" class="anchored" data-anchor-id="init__方法类的构造函数"><span class="header-section-number">8.2.3</span> <code>__init__</code>方法：类的构造函数</h3>
-<p>在Python中，我们通常会在类中定义一个特殊的方法<code>__init__</code>，这个方法称为类的构造函数。当我们根据类创建一个新的实例时，Python解释器会自动调用<code>__init__</code>方法对新创建的实例进行初始化。</p>
+<section id="the-__init__-method-class-constructor" class="level3" data-number="8.2.3">
+<h3 data-number="8.2.3" class="anchored" data-anchor-id="the-__init__-method-class-constructor"><span class="header-section-number">8.2.3</span> The <code>__init__</code> Method: Class Constructor</h3>
+<p>In Python we often define a special method called <code>__init__</code> in classes, which is called the constructor method of the class. When we create a new instance from a class, the Python interpreter automatically invokes the <code>__init__</code> method to initialize the newly created instance.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-魔术方法
+Magic Methods
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>__init__</code>方法的名称前后都有两个下划线，这代表它是一个特殊的方法，有特别的含义。</p>
-<p>在Python中，这种双下划线开头和结尾的方法通常被称为“魔术方法”。这些方法是由Python解释器自动调用的，我们通常不需要显式地调用它们。</p>
+<p>The <code>__init__</code> method name is surrounded by double underscores, meaning it’s a special method with special significance.</p>
+<p>Such methods prefixed and suffixed by double underscores in Python are usually called “magic methods”. These methods get invoked automatically by the Python interpreter, usually we don’t need to explicitly call them.</p>
 </div>
 </div>
-<p><code>__init__</code>方法的第一个参数总是<code>self</code>，即这个对象本身的引用。在<code>__init__</code>方法中，我们可以设置实例的初始状态，比如添加一些初始的属性值。</p>
-<p>以下是一个包含有<code>__init__</code>方法的类的例子：</p>
-<div id="772f50cc" class="cell" data-execution_count="4">
+<p>The first parameter of the <code>__init__</code> method is always <code>self</code>, i.e.&nbsp;a reference to the object itself. In the <code>__init__</code> method we can set initial state of the instance, for example, assigning some initial attribute values.</p>
+<p>Below is an example of a class with an <code>__init__</code> method:</p>
+<div id="2192b393" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.age <span class="op">=</span> age</span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>my_dog <span class="op">=</span> Dog(<span class="st">'Willy'</span>, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>my_dog <span class="op">=</span> Dog(<span class="st">'Willy'</span>, <span class="dv">5</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>在这个例子中，<code>Dog</code>类有一个<code>__init__</code>方法，这个方法接收三个参数：<code>self</code>、<code>name</code>和<code>age</code>。对于<code>self</code>参数，我们已经知道，当我们创建类的实例时，Python会自动为我们提供。其它的参数（<code>name</code>和<code>age</code>），我们需要在创建对象时提供。</p>
-<p><code>__init__</code>方法通常用于在创建对象时初始化对象的状态。通过在<code>__init__</code>方法中设置对象的属性，可以确保对象一旦被创建，就具有一定的初始状态。</p>
+<p>In this example, the <code>Dog</code> class has an <code>__init__</code> method taking three parameters: <code>self</code>, <code>name</code> and <code>age</code>. For the <code>self</code> parameter, as we know, Python provides it automatically when we create class instances. The other parameters (<code>name</code> and <code>age</code>) need to be provided when creating the object.</p>
+<p>The <code>__init__</code> method is usually used to initialize state of the object during object creation. By setting object attributes in <code>__init__</code> method, we can ensure objects have certain initial states once created.</p>
 </section>
 </section>
-<section id="字段结构部分" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="字段结构部分"><span class="header-section-number">8.3</span> 字段（结构部分）</h2>
-<p>在类或对象中定义的变量被称为字段，用于描述对象的状态或性质。上述的静态特性就是指类或对象的字段。</p>
+<section id="fields-structural-part" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="fields-structural-part"><span class="header-section-number">8.3</span> Fields (Structural Part)</h2>
+<p>Variables defined inside a class or object are called fields, used to describe state or properties of objects. The aforementioned static attributes refer to fields of a class or object.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -424,17 +452,17 @@ Caution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>属性 = 字段+ 方法</strong></p>
+<p><strong>Attribute = Field + Method</strong></p>
 </div>
 </div>
-<p>字段是绑定到类或对象的命名空间中的变量，因此，这些名称只在类和对象的上下文中有效。</p>
-<p>字段有两种类型：</p>
+<p>Fields are variables bound to the namespace of the class or object, so these names are only valid within context of the class and object.</p>
+<p>There are two types of fields:</p>
 <ul>
-<li>类变量：属于类，所有的对象实例共享这一个变量，一个对象修改了它，会影响到所有的对象。</li>
-<li>实例变量：属于对象，每个对象实例都有自己的一份副本，一个对象修改了它，不会影响其他的对象。</li>
+<li>Class variables: Belonging to the class, all object instances share this one variable. Modifying it on one object affects all objects.</li>
+<li>Instance variables: Belonging to the object, each object instance has its own copy. Modifying it on one object does not affect others.</li>
 </ul>
-<p>下面是一个用于理解类变量和实例变量的例子：</p>
-<div id="1b380ab6" class="cell" data-execution_count="5">
+<p>Below is an example for understanding class variables and instance variables:</p>
+<div id="01d8ea7c" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Robot:</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Represents a robot, with a name."""</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -476,16 +504,16 @@ Caution
 <span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>droid1 <span class="op">=</span> Robot(<span class="st">"R2-D2"</span>)</span>
 <span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>droid1.say_hi()</span>
-<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>Robot.how_many()</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>Robot.how_many()  </span>
 <span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>droid2 <span class="op">=</span> Robot(<span class="st">"C-3PO"</span>)</span>
-<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>droid2.say_hi()</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>droid2.say_hi() </span>
 <span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>Robot.how_many()</span>
 <span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Robots can do some work here.</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Robots can do some work here.</span><span class="ch">\n</span><span class="st">"</span>)  </span>
 <span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Robots have finished their work. So let's destroy them."</span>)</span>
-<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>droid1.die()</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>droid1.die()  </span>
 <span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>droid2.die()</span>
 <span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>Robot.how_many()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -507,22 +535,23 @@ C-3PO was the last one.
 We have 0 robots.</code></pre>
 </div>
 </div>
-<p>在这个例子中：</p>
+<p>In this example:</p>
 <ul>
-<li><code>population</code>是一个类变量，用于跟踪机器人的数量。</li>
-<li><code>name</code>是一个实例变量，用于存储机器人的名字。</li>
-<li><code>__init__</code>方法是一个特殊的方法，用于初始化机器人的名字。</li>
-<li><code>how_many</code>是一个类方法，用于打印当前机器人的数量。我们使用装饰器将<code>how_many</code>方法标记为类方法。</li>
-<li><code>die</code>是一个实例方法，用于表示机器人的销毁。</li>
-<li>所有的类成员都是公有的。一个下划线开头的名称（例如<code>_name</code>）表示这个名称是受保护的，不应该被外部访问。两个下划线开头的名称（例如<code>__name</code>）表示这个名称是私有的，不应该被外部访问。</li>
+<li><p><code>population</code> is a class variable, used to keep track number of robots.</p></li>
+<li><p><code>name</code> is an instance variable, used to store robot’s name.<br>
+</p></li>
+<li><p><code>__init__</code> method is a special method used to initialize robot’s name.</p></li>
+<li><p><code>how_many</code> is a class method, used to print current number of robots. We decorate <code>how_many</code> as a class method.<br>
+</p></li>
+<li><p><code>die</code> is an instance method, used to represent robot destruction.<br>
+</p></li>
+<li><p>All class members are public here. Names prefixed with a single underscore <code>_</code> indicate protected names that should not be directly accessed externally. Names prefixed with double underscore <code>__</code> indicate private names that should not be directly accessed externally.</p>
+<h2 id="inheritance" data-number="8.4" class="anchored"><span class="header-section-number">8.4</span> Inheritance</h2></li>
 </ul>
-</section>
-<section id="继承" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="继承"><span class="header-section-number">8.4</span> 继承</h2>
-<p>继承是面向对象编程的一个重要特性，它允许我们定义一个新的类，这个类可以继承一个或多个已经存在的类的属性和方法。被继承的类称为父类（或基类），继承的类称为子类（或派生类）。</p>
-<p>继承的主要作用是实现代码的复用，通过继承，子类可以继承父类的属性和方法，从而不需要重复编写相同的代码。</p>
-<p>在Python中，继承是通过在类定义时在类名后面的括号中指定父类来实现的。下面是一个简单的继承的例子：</p>
-<div id="96895092" class="cell" data-execution_count="6">
+<p>Inheritance is an important feature in object-oriented programming. It allows us to define a new class that inherits attributes and methods from one or more existing classes. The inherited class is called the parent class (or base class), and the inheriting class is called the child class (or derived class).</p>
+<p>The main purpose of inheritance is to achieve code reuse. Through inheritance, the child class can inherit attributes and methods of the parent class so that identical code does not need to be rewritten.</p>
+<p>In Python, inheritance is achieved by specifying the parent class in parentheses after the class name when defining a class. Below is a simple inheritance example:</p>
+<div id="e5ac3f5d" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SchoolMember:</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''Represents any school member.'''</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</span>
@@ -559,15 +588,15 @@ We have 0 robots.</code></pre>
 <span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Marks: "</span><span class="sc">{:d}</span><span class="st">"'</span>.<span class="bu">format</span>(<span class="va">self</span>.marks))</span>
 <span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> Teacher(<span class="st">'Mrs. Shrividya'</span>, <span class="dv">40</span>, <span class="dv">30000</span>)</span>
-<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> Student(<span class="st">'Swaroop'</span>, <span class="dv">25</span>, <span class="dv">75</span>)</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> Student(<span class="st">'Swaroop'</span>, <span class="dv">25</span>, <span class="dv">75</span>)  </span>
 <span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a><span class="co"># prints a blank line</span></span>
-<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()   </span>
 <span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>members <span class="op">=</span> [t, s]</span>
 <span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> member <span class="kw">in</span> members:</span>
-<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Works for both Teachers and Students</span></span>
-<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>    member.tell()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Works for both Teachers and Students </span></span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>    member.tell() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(Initialized SchoolMember: Mrs. Shrividya)
 (Initialized Teacher: Mrs. Shrividya)
@@ -578,31 +607,35 @@ Name:"Mrs. Shrividya" Age:"40" Salary: "30000"
 Name:"Swaroop" Age:"25" Marks: "75"</code></pre>
 </div>
 </div>
-<p>在这个例子中：</p>
+<p>In this example:</p>
 <ul>
-<li>使用继承时，在类定义中的类名后面的元组中指定基类名（例如，<code>class Teacher(SchoolMember):</code>）。</li>
-<li>基类的<code>__init__</code>方法是通过调用<code>SchoolMember.__init__(self, name, age)</code>来显式调用的。
+<li>When using inheritance, specify the base class name(s) in the tuple after the class name in the class definition (e.g.&nbsp;<code>class Teacher(SchoolMember):</code>).</li>
+<li>The base class <code>__init__</code> method needs to be explicitly called via <code>SchoolMember.__init__(self, name, age)</code>.
 <ul>
-<li>这是因为子类的<code>__init__</code>方法会覆盖父类的<code>__init__</code>方法。</li>
-<li>如果我们想要在子类的<code>__init__</code>方法中调用父类的<code>__init__</code>方法，我们需要显式地调用它。</li>
+<li>This is because the subclass <code>__init__</code> method overrides the base class <code>__init__</code> method.<br>
+</li>
+<li>If we want to call the base class <code>__init__</code> method in the subclass <code>__init__</code> method, we need to explicitly call it.<br>
+</li>
 </ul></li>
-<li><code>Teacher</code>和<code>Student</code>类都继承了<code>SchoolMember</code>类。这意味着<code>Teacher</code>和<code>Student</code>类都可以访问<code>SchoolMember</code>类的属性和方法。</li>
-<li>对于每一个子类，我们都定义了一个<code>tell</code>方法，这个方法会覆盖父类的<code>tell</code>方法。这就是所谓的多态性，即不同的类可以对相同的方法做出不同的响应。
+<li>Both <code>Teacher</code> and <code>Student</code> classes inherit from <code>SchoolMember</code> class. This means <code>Teacher</code> and <code>Student</code> classes can access attributes and methods of the <code>SchoolMember</code> class.</li>
+<li>For each subclass we define a <code>tell</code> method which overrides the base class <code>tell</code> method. This is called polymorphism, meaning different classes can produce different responses to the same method.
 <ul>
-<li>如果子类中没有定义<code>tell</code>方法，那么子类会继承父类的<code>tell</code>方法。</li>
-<li>Python始终会优先调用子类的方法，如果找不到这个方法，则开始按照继承链向上查找。</li>
+<li>If <code>tell</code> method was not defined in subclasses, subclasses would inherit the base class <code>tell</code> method.</li>
+<li>Python always calls subclass methods first, and searches up the inheritance chain for the method if not found.</li>
 </ul></li>
 </ul>
 </section>
-<section id="总结" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="总结"><span class="header-section-number">8.5</span> 总结</h2>
-<section id="面向对象编程的主要特点" class="level3" data-number="8.5.1">
-<h3 data-number="8.5.1" class="anchored" data-anchor-id="面向对象编程的主要特点"><span class="header-section-number">8.5.1</span> 面向对象编程的主要特点</h3>
-<p>面向对象编程（OOP）的主要特点是：</p>
+<section id="summary" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.5</span> Summary</h2>
+<section id="key-characteristics-of-object-oriented-programming" class="level3" data-number="8.5.1">
+<h3 data-number="8.5.1" class="anchored" data-anchor-id="key-characteristics-of-object-oriented-programming"><span class="header-section-number">8.5.1</span> Key Characteristics of Object-Oriented Programming</h3>
+<p>Key characteristics of object-oriented programming (OOP) are:</p>
 <ul>
-<li>模块化：每一个对象都可以看作是一个独立的模块，它拥有自己的属性（也称为数据成员）和方法（也称为成员函数）。</li>
-<li>可复用性：对象的代码可以在需要的地方复用，可以通过继承、封装、多态这些机制实现代码的重用。</li>
-<li>扩展性：继承和多态性的机制提高了程序的可扩展性。</li>
+<li>Modularity: Each object can be viewed as an independent module with its own attributes (also called data members) and methods (also called member functions).<br>
+</li>
+<li>Reusability: Object code can be reused wherever needed, code reuse can be achieved through inheritance, encapsulation, polymorphism etc.<br>
+</li>
+<li>Extensibility: Inheritance and polymorphism mechanisms improve extensibility of programs.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -610,13 +643,13 @@ Name:"Swaroop" Age:"25" Marks: "75"</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-其他常见的编程范型
+Other Common Programming Paradigms
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>面向过程编程（Procedural programming）：是最早的编程范型之一，它的主要思想是将程序分解为一步一步的过程或者函数，通过定义数据和函数的执行步骤来解决问题。</p>
-<p>函数式编程（Functional Programming）：倡导编写纯函数，避免程序状态改变和数据可变性，以求更高的可理解性和更低的bug产生率。</p>
-<p>逻辑编程（Logic Programming） ：通过描述问题的逻辑来编写程序，程序会自动推导出解决问题的答案。Prolog就是一种逻辑编程语言。</p>
+<p>Procedural Programming: One of the earliest programming paradigms where main idea is to break down programs into a sequence of steps or functions, solving problems by defining data and execution steps of functions.</p>
+<p>Functional Programming: Advocates writing pure functions, avoiding program state change and data mutability, seeking higher comprehensibility and lower bug rates.</p>
+<p>Logic Programming: Writing programs by describing the logic of a problem, programs would then automatically deduce answers to solving the problem. Prolog is a logic programming language.</p>
 </div>
 </div>
 
@@ -1036,13 +1069,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./problem_solving.html" class="pagination-link" aria-label="问题解决">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">问题解决</span></span>
+      <a href="./problem_solving.html" class="pagination-link" aria-label="Problem Solving">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Problem Solving</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./input_and_output.html" class="pagination-link" aria-label="输入和输出">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">输入和输出</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./input_and_output.html" class="pagination-link" aria-label="Input and Output">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Input and Output</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1051,4 +1084,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/object_oriented_programming.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

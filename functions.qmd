@@ -1,4 +1,4 @@
- # Functions
+# Functions
 
 Functions are basic building blocks in programming that allow us to name a block of code and reuse it wherever needed. The act of executing these statements is called calling the function.  
 

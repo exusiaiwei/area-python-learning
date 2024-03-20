@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>我的Python学习笔记 - 4&nbsp; 函数</title>
+<title>My Python Studying - 4&nbsp; Functions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <link href="./modules.html" rel="next">
 <link href="./control_flow.html" rel="prev">
+<link href="./python-logo-only.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -102,11 +103,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -115,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./functions.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">函数</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./functions.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Functions</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -127,10 +134,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">我的Python学习笔记</a> 
+      <a href="./">My Python Studying</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/exusiaiwei/My-Python-Learning" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./My-Python-Studying.pdf">
+              <i class="bi bi-bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./My-Python-Studying.epub">
+              <i class="bi bi-bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -143,79 +170,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">前言</span></a>
+ <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">基础</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Basic</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./operators_and_expressions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">运算符和表达式</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Operators and Expressions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./control_flow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">控制流</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Control Flow</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./functions.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">函数</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Functions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./modules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">模块</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modules</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data_structures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">数据结构</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Data Structures</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./problem_solving.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">问题解决</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Problem Solving</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./object_oriented_programming.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">面向对象编程</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Object-Oriented Programming</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./input_and_output.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">输入和输出</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Input and Output</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./exceptions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">异常情况</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Exceptions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./standard_library.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">标准库</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Standard Library</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./more.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">更多</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">More</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -234,23 +261,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#函数参数" id="toc-函数参数" class="nav-link active" data-scroll-target="#函数参数"><span class="header-section-number">4.1</span> 函数参数</a></li>
-  <li><a href="#局部变量" id="toc-局部变量" class="nav-link" data-scroll-target="#局部变量"><span class="header-section-number">4.2</span> 局部变量</a></li>
-  <li><a href="#global-语句" id="toc-global-语句" class="nav-link" data-scroll-target="#global-语句"><span class="header-section-number">4.3</span> global 语句</a></li>
-  <li><a href="#默认参数值" id="toc-默认参数值" class="nav-link" data-scroll-target="#默认参数值"><span class="header-section-number">4.4</span> 默认参数值</a></li>
-  <li><a href="#关键字参数" id="toc-关键字参数" class="nav-link" data-scroll-target="#关键字参数"><span class="header-section-number">4.5</span> 关键字参数</a></li>
-  <li><a href="#可变参数" id="toc-可变参数" class="nav-link" data-scroll-target="#可变参数"><span class="header-section-number">4.6</span> 可变参数</a></li>
-  <li><a href="#return-语句" id="toc-return-语句" class="nav-link" data-scroll-target="#return-语句"><span class="header-section-number">4.7</span> <code>return</code> 语句</a></li>
-  <li><a href="#文档字符串" id="toc-文档字符串" class="nav-link" data-scroll-target="#文档字符串"><span class="header-section-number">4.8</span> 文档字符串</a></li>
+  <li><a href="#function-parameters" id="toc-function-parameters" class="nav-link active" data-scroll-target="#function-parameters"><span class="header-section-number">4.1</span> Function Parameters</a></li>
+  <li><a href="#local-variables" id="toc-local-variables" class="nav-link" data-scroll-target="#local-variables"><span class="header-section-number">4.2</span> Local Variables</a></li>
+  <li><a href="#the-global-statement" id="toc-the-global-statement" class="nav-link" data-scroll-target="#the-global-statement"><span class="header-section-number">4.3</span> The global statement</a></li>
+  <li><a href="#default-parameter-values" id="toc-default-parameter-values" class="nav-link" data-scroll-target="#default-parameter-values"><span class="header-section-number">4.4</span> Default Parameter Values</a></li>
+  <li><a href="#keyword-arguments" id="toc-keyword-arguments" class="nav-link" data-scroll-target="#keyword-arguments"><span class="header-section-number">4.5</span> Keyword Arguments</a></li>
+  <li><a href="#variable-arguments" id="toc-variable-arguments" class="nav-link" data-scroll-target="#variable-arguments"><span class="header-section-number">4.6</span> Variable Arguments</a></li>
+  <li><a href="#the-return-statement" id="toc-the-return-statement" class="nav-link" data-scroll-target="#the-return-statement"><span class="header-section-number">4.7</span> The <code>return</code> Statement</a></li>
+  <li><a href="#docstrings" id="toc-docstrings" class="nav-link" data-scroll-target="#docstrings"><span class="header-section-number">4.8</span> Docstrings</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">函数</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Functions</span></h1>
 </div>
 
 
@@ -267,203 +294,219 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>函数是编程中的基本构建块，允许我们将一段代码命名，并在需要的地方反复使用。运行这些语句的操作被称为调用函数。</p>
-<p>在我们的学习过程中，已经接触和使用了许多 Python 的内置函数，比如 <code>len</code> 和 <code>range</code> 函数。</p>
-<p>我们使用 <code>def</code> 关键字来定义函数。关键字 <code>def</code> 后面紧跟着的是函数的名字，然后是一对括号。括号内可以包含一些参数（即预设的变量名），此行语句以冒号结束。</p>
-<div id="14c1dfe0" class="cell" data-execution_count="1">
+<p>Functions are basic building blocks in programming that allow us to name a block of code and reuse it wherever needed. The act of executing these statements is called calling the function.</p>
+<p>In our learning process, we have already come across and used many of Python’s built-in functions like <code>len</code> and <code>range</code>.</p>
+<p>We use the <code>def</code> keyword to define functions. The <code>def</code> keyword is followed by the function name and parentheses <code>()</code>. The parentheses may contain some parameters (preset variable names), and the line ends with a colon <code>:</code>.</p>
+<div id="3adc165f" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello():</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 属于函数的代码块</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'hello world'</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 函数结束</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Block belonging to the function </span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'hello world'</span>)  </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># End of function</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>say_hello()  <span class="co"># 调用函数</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>say_hello()  <span class="co"># 再次调用函数</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>say_hello() <span class="co"># Call the function  </span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>say_hello() <span class="co"># Call the function again</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>hello world
 hello world</code></pre>
 </div>
 </div>
-<p>以上代码定义了一个名为 <code>say_hello</code> 的函数。该函数没有接受任何参数，因此在括号里没有声明变量。我们可以通过传入不同的参数来让函数获得不同的输入，并得到相应的结果。</p>
-<section id="函数参数" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="函数参数"><span class="header-section-number">4.1</span> 函数参数</h2>
-<p>函数可以接受参数，并利用这些值来执行某些效果。</p>
-<p>参数（parameter）：</p>
+<p>The above code defines a function named <code>say_hello</code>. This function accepts no parameters, so there are no variables declared in the parentheses. We can pass in different arguments to let the function take different inputs and produce corresponding results.</p>
+<section id="function-parameters" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="function-parameters"><span class="header-section-number">4.1</span> Function Parameters</h2>
+<p>Functions can accept parameters and utilize these values to produce some effect.</p>
+<p>Parameter:</p>
 <ul>
-<li>在定义函数时，我们为函数预留了一些位置，这些位置就是参数。参数是函数定义时的接收者。</li>
-<li>参数在函数头部的圆括号之间定义，用逗号分隔，它们在整个函数体内部都是可访问的。</li>
-<li>参数是变量，用于存储函数调用时传递的值（实参）。</li>
+<li>When defining a function, we reserve some space for the function which are called parameters. Parameters are the receivers of the function definition.</li>
+<li>Parameters are defined within the function header’s parentheses, separated by commas. They are accessible within the entire function body.<br>
+</li>
+<li>Parameters are variables used to store the values passed in during function calls (arguments).</li>
 </ul>
-<p>实参（argument）：</p>
+<p>Argument:</p>
 <ul>
-<li>在调用函数时，我们会向函数中传递一些值，这些值就是实参。实参是函数调用时的输入。</li>
-<li>实参是赋予函数中定义的参数的具体值。同样用逗号分隔。</li>
+<li>When calling a function, we pass in some values to the function, these values are called arguments. Arguments are the inputs of a function call.<br>
+</li>
+<li>Arguments assign concrete values to the parameters defined in the function. Also separated by commas.</li>
 </ul>
-<p>这个概念类似于食谱和做饭。食谱上的材料列表（比如说需要多少克的面粉，多少克的糖）就像是参数列表，而你实际使用的面粉和糖的数量就像实参。</p>
-<div id="f992cea0" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
+<p>This concept is analogous to a recipe and cooking. The list of ingredients on a recipe (e.g.&nbsp;certain grams of flour, certain grams of sugar) is like the parameter list, while the actual amount of flour and sugar you use is like the arguments.</p>
+<div id="51734297" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Code sample from: A Byte of Python</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_max(a, b):</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a <span class="op">&gt;</span> b:</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a, <span class="st">'is maximum'</span>)  <span class="co"># 输出 a 是最大值</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a <span class="op">&gt;</span> b:  </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a, <span class="st">'is maximum'</span>) <span class="co"># Prints a is max  </span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> a <span class="op">==</span> b:</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a, <span class="st">'is equal to'</span>, b)  <span class="co"># 输出 a 等于 b</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a, <span class="st">'is equal to'</span>, b) <span class="co"># Prints a is equal to b</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(b, <span class="st">'is maximum'</span>)  <span class="co"># 输出 b 是最大值</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(b, <span class="st">'is maximum'</span>) <span class="co"># Prints b is max</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 直接传递字面值</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>print_max(<span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Directly pass literals  </span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>print_max(<span class="dv">3</span>, <span class="dv">4</span>)  </span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">7</span></span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 将变量作为参数传递</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Pass variables as arguments </span></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>print_max(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>4 is maximum
 7 is maximum</code></pre>
 </div>
 </div>
-<p>在示例代码中，我们定义了一个 <code>print_max</code> 的函数，其中包括两个参数 <code>a</code> 和 <code>b</code>。我们使用一个 <code>if..else</code> 语句来找出较大的数字并将其打印出来。</p>
-<p>第一次调用函数 <code>print_max</code> 时，我们直接提供数字作为参数。在第二种情况下，我们使用变量 <code>x</code>，<code>y</code> 作为参数调用函数。 <code>print_max(x, y)</code> 导致参数 <code>x</code> 的值被赋给参数 <code>a</code>，参数 <code>y</code> 的值被赋给参数 <code>b</code>。</p>
+<p>In the sample code, we defined a function called <code>print_max</code> which contains two parameters <code>a</code> and <code>b</code>. We use an <code>if..else</code> statement to find out the larger number and print it out.</p>
+<p>The first time calling the <code>print_max</code> function, we directly provide numbers as arguments. In the second case, we use variables <code>x</code>, <code>y</code> as arguments when calling the function. <code>print_max(x, y)</code> causes the value of parameter <code>x</code> to be assigned the value of argument <code>x</code>, and the value of parameter <code>y</code> to be assigned the value of argument <code>y</code>.</p>
 </section>
-<section id="局部变量" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="局部变量"><span class="header-section-number">4.2</span> 局部变量</h2>
+<section id="local-variables" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="local-variables"><span class="header-section-number">4.2</span> Local Variables</h2>
 <ul>
-<li>在函数定义内部声明的变量被称为“局部变量”。</li>
-<li>“局部变量”的有效范围被限制在声明该变量的函数内部，这种约束被称为变量的”作用域”。</li>
-<li>变量的作用域从其声明的位置开始，直到该代码块或函数的结束。</li>
-<li>即使在函数外部存在同名变量，局部变量也被视为独立的变量。无论名称是否相同，函数内部的局部变量与函数外部的变量不会有任何关联。</li>
+<li>Variables declared inside a function definition are called “local variables”.<br>
+</li>
+<li>The scope of “local variables” is limited to within the function where it is declared, this constraint is called variable “scope”.<br>
+</li>
+<li>A variable’s scope starts from where it is declared to the end of that code block or function.<br>
+</li>
+<li>Local variables inside functions are viewed as independent even if variables with the same names exist outside the function. Regardless of identical names, local variables inside functions have no relation with variables outside functions.</li>
 </ul>
-<div id="5bbb9f29" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">50</span></span>
+<div id="a19aa0b0" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Code sample from: A Byte of Python</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">50</span>  </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(x):</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'x is'</span>, x)  <span class="co"># 输出 x 的值</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="dv">2</span>  <span class="co"># 修改局部变量 x 的值</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Changed local x to'</span>, x)  <span class="co"># 输出修改后的 x 的值</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'x is'</span>, x) <span class="co"># Print x's value  </span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="dv">2</span> <span class="co"># Modify local x's value</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Changed local x to'</span>, x) <span class="co"># Prints modified x  </span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>func(x)</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'x is still'</span>, x)  <span class="co"># 输出最初的 x 的值</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>func(x)  </span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'x is still'</span>, x) <span class="co"># Prints original x  </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>x is 50
 Changed local x to 2
 x is still 50</code></pre>
 </div>
 </div>
-<p>第一次在函数体的第一行打印变量 <code>x</code> 的值时，Python 使用在函数定义之前在主块中声明的参数值。</p>
-<p>接下来，我们给函数中的局部变量 <code>x</code> 赋值为2。当我们在函数中改变局部变量 <code>x</code> 的值时，主块中定义的 <code>x</code> 不受影响。</p>
+<p>The first time printing variable <code>x</code> inside the function body, Python uses the value of the parameter declared before the function in the main block.</p>
+<p>Next, we assign the local variable <code>x</code> in the function a value of 2. When we modify the value of local variable <code>x</code> inside the function, the <code>x</code> defined in main block remains unaffected.</p>
 </section>
-<section id="global-语句" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="global-语句"><span class="header-section-number">4.3</span> global 语句</h2>
+<section id="the-global-statement" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="the-global-statement"><span class="header-section-number">4.3</span> The global statement</h2>
 <ul>
-<li>当我们需要对程序整体级别（即不在函数或类等特定作用域内）定义的变量进行赋值时，我们通常会使用全局声明语句（<code>global</code> statement）。</li>
-<li>全局声明语句告诉 Python，我们正在操作的是一个全局变量，而非局部变量。</li>
-<li>注意，如果不使用全局声明，我们是无法在函数内部直接修改函数外部定义的变量的。</li>
-<li>当在函数内部引用一个未经定义的变量时，Python 会尝试在函数外部查找这个变量。</li>
-<li>尽管如此，我们并不推荐这一措施，因为这可能导致代码阅读者在理解这个变量的定义位置上出现困扰。</li>
-<li>如果要在函数内部操作函数外部的变量，推荐使用 <code>global</code> 声明明确指出，表明你在操纵的是在全局范围内定义的变量。</li>
+<li>When we need to assign values to variables defined on a global program level (i.e.&nbsp;not inside a specific scope like functions or classes), we normally use the global declaration statement (<code>global</code> statement).<br>
+</li>
+<li>The global statement tells Python we are working with a global variable instead of a local variable.<br>
+</li>
+<li>Note that without using global, we cannot directly modify variables defined outside functions inside the function.</li>
+<li>When a variable that hasn’t been defined is referenced inside a function, Python will try to find that variable outside the function.<br>
+</li>
+<li>Despite this, we don’t recommend this practice as it can confuse readers when trying to understand where that variable is defined.<br>
+</li>
+<li>If you want to operate on variables outside functions inside the function, it’s recommended to use the <code>global</code> statement to explicitly indicate you are manipulating a globally defined variable.</li>
 </ul>
-<div id="c2317634" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">50</span></span>
+<div id="c5bf9bea" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Code sample from: A Byte of Python</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">50</span>  </span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func():</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> x</span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'x is'</span>, x)  <span class="co"># 输出 x 的值</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="dv">2</span>  <span class="co"># 修改全局变量 x 的值</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Changed global x to'</span>, x)  <span class="co"># 输出修改后的 x 的值</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'x is'</span>, x) <span class="co"># Print x's value   </span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="dv">2</span> <span class="co"># Modify global x's value </span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Changed global x to'</span>, x) <span class="co"># Prints modified x  </span></span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>func()</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Value of x is'</span>, x)  <span class="co"># 输出最终的 x 的值</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>func()</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Value of x is'</span>, x) <span class="co"># Prints final x  </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>x is 50
 Changed global x to 2
 Value of x is 2</code></pre>
 </div>
 </div>
-<p><code>global</code> 语句用于声明 <code>x</code> 是一个全局变量 - 因此，当我们在函数内部给 <code>x</code> 赋值时，当我们在主块中使用 <code>x</code> 的值时，这个变化会反映出来。</p>
-<p>可以使用相同的 <code>global</code> 语句指定多个全局变量，例如 <code>global x, y, z</code>。</p>
+<p>The <code>global</code> statement declares that <code>x</code> is a global variable - therefore, when we assign a value to <code>x</code> inside the function, the change reflects when we use <code>x</code>’s value in main block.</p>
+<p>You can use the same <code>global</code> statement to specify multiple global variables, e.g.&nbsp;<code>global x, y, z</code>.</p>
 </section>
-<section id="默认参数值" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="默认参数值"><span class="header-section-number">4.4</span> 默认参数值</h2>
-<p>我们可以通过设置默认参数值，使得某些函数参数变得可选。当用户没有显式提供参数值时，函数将会采用这些设置的默认值。</p>
-<p>可以通过在函数定义中，在需要设置默认值的参数名后面加上等号（=）及其默认值来实现这一点。</p>
-<div id="90f63573" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
+<section id="default-parameter-values" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="default-parameter-values"><span class="header-section-number">4.4</span> Default Parameter Values</h2>
+<p>We can make some function parameters optional by setting default parameter values. When the user does not explicitly provide argument values, the function will use these set default values.</p>
+<p>This can be achieved by assigning default values after the parameter names in the function definition with an equals sign (=).</p>
+<div id="ddd5fe97" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Code sample from: A Byte of Python</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say(message, times<span class="op">=</span><span class="dv">1</span>):</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(message <span class="op">*</span> times)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>say(<span class="st">'Hello'</span>)  <span class="co"># 输出 "Hello"</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>say(<span class="st">'World'</span>, <span class="dv">5</span>)  <span class="co"># 输出 "WorldWorldWorldWorldWorld"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>say(<span class="st">'Hello'</span>) <span class="co"># Prints "Hello"  </span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>say(<span class="st">'World'</span>, <span class="dv">5</span>) <span class="co"># Prints "WorldWorldWorldWorldWorld"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello
 WorldWorldWorldWorldWorld</code></pre>
 </div>
 </div>
-<p>函数<code>say</code>的功能是按照我们指定的次数重复打印一个字符串。</p>
+<p>The function <code>say</code> repeats printing a string a number of times we specify.</p>
 <ul>
-<li>当我们没有明确指定打印次数时，该函数会默认打印一次该字符串。这是通过设置参数<code>times</code>的默认值为1来实现的。</li>
-<li>在第一种使用情况中，我们仅传入字符串参数，此时函数会默认打印一次该字符串。</li>
-<li>在第二种使用情况中，我们将字符串和一个数值5作为参数传入函数，此数值表示我们希望该字符串被重复打印5次。</li>
+<li>When we don’t explicitly specify print times, the function defaults to printing the string once. This is achieved by setting parameter <code>times</code>’s default value to 1.<br>
+</li>
+<li>In the first usage case, we only pass in the string argument, so the function defaults to printing that string once.<br>
+</li>
+<li>In the second usage case, we pass in the string and a number 5 as arguments, indicating we want the string to print 5 times.</li>
 </ul>
-<p>注意：</p>
+<p>Note:</p>
 <ul>
-<li>只有参数列表末尾的参数才能具有默认参数值。</li>
-<li>即在函数的参数列表中，不能将具有默认参数值的参数放在没有默认参数值的参数之前。这是因为参数是按位置赋值的。</li>
-<li>例如，<code>def func(a, b=5)</code> 是有效的，但 <code>def func(a=5, b)</code> 是无效的。</li>
+<li>Only parameters at the end of the parameter list can have default parameter values.<br>
+</li>
+<li>That is, in the parameter list of a function, parameters with default values cannot occur before parameters without default values. This is because parameters are assigned positionally.<br>
+</li>
+<li>For example, <code>def func(a, b=5)</code> is valid, but <code>def func(a=5, b)</code> is invalid.</li>
 </ul>
 </section>
-<section id="关键字参数" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="关键字参数"><span class="header-section-number">4.5</span> 关键字参数</h2>
+<section id="keyword-arguments" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="keyword-arguments"><span class="header-section-number">4.5</span> Keyword Arguments</h2>
 <ul>
-<li>如果你有一个带有大量参数的函数，并且你只希望指定其中的一部分参数，那么你可以使用命名参数。</li>
-<li>这种参数被称为关键字参数，其中参数值的指定是基于参数名称（关键字），而不是位置（这是我们之前一直使用的方式）。</li>
-<li>利用关键字参数，我们可以更灵活地调用函数，无需按照函数定义时参数的顺序一一对应。</li>
-<li>只要其他参数具有默认参数值，我们可以只给我们想要的参数赋值。</li>
+<li>If you have a function with many parameters and you want to specify only some of them, you can use named arguments.<br>
+</li>
+<li>Such arguments are called keyword arguments, where the specification of parameter values is by parameter names (keywords) instead of positions (which is what we have been using so far).</li>
+<li>Using keyword arguments allows us to call functions more flexibly without needing to match the order of parameters as defined in the function.<br>
+</li>
+<li>As long as the other parameters have default values, we can assign values only to the parameters we want.</li>
 </ul>
-<div id="2dd2fae4" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
+<div id="835f3715" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Code sample from: A Byte of Python  </span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(a, b<span class="op">=</span><span class="dv">5</span>, c<span class="op">=</span><span class="dv">10</span>):</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'a is'</span>, a, <span class="st">'and b is'</span>, b, <span class="st">'and c is'</span>, c)</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>func(<span class="dv">3</span>, <span class="dv">7</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>func(<span class="dv">3</span>, <span class="dv">7</span>)  </span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>func(<span class="dv">25</span>, c<span class="op">=</span><span class="dv">24</span>)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>func(c<span class="op">=</span><span class="dv">50</span>, a<span class="op">=</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>func(c<span class="op">=</span><span class="dv">50</span>, a<span class="op">=</span><span class="dv">100</span>)   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>a is 3 and b is 7 and c is 10
 a is 25 and b is 5 and c is 24
 a is 100 and b is 5 and c is 50</code></pre>
 </div>
 </div>
-<p>名为<code>func</code>的函数有一个参数没有默认参数值，接着是两个带有默认参数值的参数。</p>
+<p>The function named <code>func</code> has one parameter without default value, followed by two parameters with default values.</p>
 <ul>
-<li>在第一种用法中，<code>func(3, 7)</code>，参数<code>a</code>获得值3，参数<code>b</code>获得值7，而<code>c</code>获得默认值10。</li>
-<li>在第二种用法中，变量<code>func(25, c=24)</code>由于参数的位置而获得值25。然后，参数<code>c</code>由于命名即关键字参数而获得值24。变量<code>b</code>获得默认值5。</li>
-<li>在第三种用法中，我们对所有指定的值使用关键字参数。</li>
-<li>需要注意的是，尽管在函数定义中，参数<code>a</code>在参数<code>c</code>之前，我们却可以先为参数<code>c</code>指定值，再为参数<code>a</code>指定值。这是关键字参数的一个特点。</li>
+<li>In the first usage, <code>func(3, 7)</code>, parameter <code>a</code> gets value 3, parameter <code>b</code> gets value 7, and <code>c</code> gets the default value 10.<br>
+</li>
+<li>In the second usage, <code>func(25, c=24)</code>, 25 gets assigned to parameter <code>a</code> due to position. Then parameter <code>c</code> gets value 24 due to named arguments. Parameter <code>b</code> gets the default value 5.<br>
+</li>
+<li>In the third usage, we use keyword arguments for all specified values.<br>
+</li>
+<li>Note that although in the function definition, parameter <code>a</code> comes before parameter <code>c</code>, we can still assign a value to parameter <code>c</code> first before assigning to parameter <code>a</code>. This is a characteristic of keyword arguments.</li>
 </ul>
 </section>
-<section id="可变参数" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="可变参数"><span class="header-section-number">4.6</span> 可变参数</h2>
-<p>可变参数是一种特殊的参数，它可以接收任意数量的参数。这在你预先不知道会有多少参数被传入函数，或者数量会变化的情况下非常有用。</p>
-<p>在Python中，可变参数是通过在参数前面添加星号（*）来表示的。</p>
-<div id="567c2bbf" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> total(a<span class="op">=</span><span class="dv">5</span>, <span class="op">*</span>numbers, <span class="op">**</span>phonebook):</span>
+<section id="variable-arguments" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="variable-arguments"><span class="header-section-number">4.6</span> Variable Arguments</h2>
+<p>Variable arguments are a special kind of parameter that can accept any number of arguments. This is very useful in cases when you don’t know beforehand how many arguments will be passed to the function, or the number varies.</p>
+<p>In Python, variable arguments are indicated by adding an asterisk (*) before the parameter name.</p>
+<div id="2a049e47" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Code sample from: A Byte of Python</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> total(a<span class="op">=</span><span class="dv">5</span>, <span class="op">*</span>numbers, <span class="op">**</span>phonebook):  </span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'a'</span>, a)</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 遍历元组中的所有项</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Traverse through all items in the tuple   </span></span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> single_item <span class="kw">in</span> numbers:</span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'single_item'</span>, single_item)</span>
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 遍历字典中的所有项</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Traverse through all items in the dictionary     </span></span>
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> first_part, second_part <span class="kw">in</span> phonebook.items():</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(first_part, second_part)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(first_part,second_part)</span>
 <span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>total(<span class="dv">10</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, Jack<span class="op">=</span><span class="dv">1123</span>, John<span class="op">=</span><span class="dv">2231</span>, Inge<span class="op">=</span><span class="dv">1560</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>total(<span class="dv">10</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, Jack<span class="op">=</span><span class="dv">1123</span>, John<span class="op">=</span><span class="dv">2231</span>, Inge<span class="op">=</span><span class="dv">1560</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>a 10
 single_item 1
@@ -475,60 +518,65 @@ Inge 1560</code></pre>
 </div>
 </div>
 <ul>
-<li>当我们声明一个带星号的参数，比如 <code>*param</code> ，那么从该位置开始到最后的所有位置参数都会被收集成一个名为’param’的元组。</li>
-<li>同样地，当我们声明一个双星参数，比如 <code>**param</code> ，那么从那个点开始直到结尾的所有关键字参数都会被收集到一个叫做’param’的字典中。</li>
-<li>我们可以在函数的内部，如同访问一个普通的元组或字典一样来访问这些参数。</li>
-<li>一个函数只能有一个可变参数，并且必须放在所有的位置参数和默认参数之后。</li>
+<li>When we declare a starred parameter like <code>*param</code>, all positional arguments from that point till the end will be collected into a tuple named ‘param’.<br>
+</li>
+<li>Similarly, when we declare a double-starred parameter like <code>**param</code>, all keyword arguments from that point till the end will be collected into a dictionary named ‘param’.<br>
+</li>
+<li>We can access these arguments inside the function just like traversing a normal tuple or dictionary.</li>
+<li>A function can only have one variable argument, and it must come after all the positional and default parameters.</li>
 </ul>
 </section>
-<section id="return-语句" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="return-语句"><span class="header-section-number">4.7</span> <code>return</code> 语句</h2>
-<p><code>return</code> 语句用于从函数中返回结果或者结束函数的运行。</p>
-<p>在一个函数中，<code>return</code> 语句后面可以跟一个表达式，此表达式的值就是这个函数的返回值。</p>
-<div id="6287939b" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
+<section id="the-return-statement" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="the-return-statement"><span class="header-section-number">4.7</span> The <code>return</code> Statement</h2>
+<p>The <code>return</code> statement is used to return results from functions or end function execution.</p>
+<p>Inside a function, an expression after a <code>return</code> statement can have a value, and that value gets returned from the function.</p>
+<div id="ec11e701" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Code sample from: A Byte of Python</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> maximum(x, y):</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x <span class="op">&gt;</span> y:</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> x <span class="op">==</span> y:</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x  </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> x <span class="op">==</span> y: </span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'The numbers are equal'</span></span>
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
 <span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> y</span>
 <span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(maximum(<span class="dv">2</span>, <span class="dv">3</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(maximum(<span class="dv">2</span>, <span class="dv">3</span>))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>3</code></pre>
 </div>
 </div>
 <ul>
-<li>在这个函数中，<code>maximum</code> 函数使用一个简单的 <code>if..else</code> 语句来找到较大的值，然后返回该值。</li>
-<li>在这个例子中，如果我们调用<code>maximum(2, 3)</code>，那么这个函数的返回值就是3。</li>
-<li>需要注意的是，一旦 <code>return</code> 语句被执行，函数的运行就会立即结束，后面的代码都不会再被执行。</li>
-<li>请注意，一个没有值的语句等同于 <code>return None</code> 。在Python中， <code>None</code> 是一个特殊类型，表示无值。</li>
-<li>每个函数在结尾处都隐含有一个 <code>return None</code> 语句，除非你自己编写了 <code>return</code> 语句。</li>
-<li>有一个内置函数叫做 <code>max</code> ，已经实现了“查找最大值”的功能。所以尽可能使用这个内置函数。</li>
+<li>In this function, the <code>maximum</code> function uses a simple <code>if..else</code> statement to find the larger value and returns that value.<br>
+</li>
+<li>In this case, if we call <code>maximum(2, 3)</code>, the return value of this function would be 3.</li>
+<li>Note that once a <code>return</code> statement is executed, the function execution immediately stops and the code after it does not get executed.<br>
+</li>
+<li>Note that a statement without a value is equivalent to <code>return None</code>. In Python, <code>None</code> is a special type indicating no value.</li>
+<li>Every function implicitly has a <code>return None</code> at the end unless you have written a <code>return</code> statement yourself.<br>
+</li>
+<li>There is a built-in function called <code>max</code> that already implements “finding maximum value” functionality. So use that built-in function wherever possible.</li>
 </ul>
 </section>
-<section id="文档字符串" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="文档字符串"><span class="header-section-number">4.8</span> 文档字符串</h2>
-<p>文档字符串，英文称为<code>Docstrings</code>，是一种在Python中对函数、方法、类、模块等提供说明的注释方式，具有非常重要的参考价值。</p>
-<p>文档字符串位于函数、方法、类、模块定义的第一行，由一对三引号(“““或’’’)引起来，可以是单行也可以是多行。</p>
-<div id="6fe5e766" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
+<section id="docstrings" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="docstrings"><span class="header-section-number">4.8</span> Docstrings</h2>
+<p>Docstrings refer to documentation strings in Python that are a way of documenting functions, methods, classes, modules etc with an invaluable reference purpose.</p>
+<p>Docstrings are located on the first line of function, method, class and module definitions, enclosed within a pair of triple quotes <code>"""</code> or <code>'''</code>, which can be single line or multi-line.</p>
+<div id="1fd6aedf" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Code sample from: A Byte of Python</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_max(x, y):</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''Prints the maximum of two numbers.</span></span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co">    The two values must be integers.'''</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co">    The two values must be integers.'''</span>  </span>
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># convert to integers, if possible</span></span>
 <span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="bu">int</span>(x)</span>
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> <span class="bu">int</span>(y)</span>
 <span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x <span class="op">&gt;</span> y:</span>
 <span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(x, <span class="st">'is maximum'</span>)</span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>: </span>
 <span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(y, <span class="st">'is maximum'</span>)</span>
 <span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>print_max(<span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>print_max(<span class="dv">3</span>, <span class="dv">5</span>)  </span>
 <span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(print_max.__doc__)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>5 is maximum
@@ -538,11 +586,14 @@ Prints the maximum of two numbers.
 </div>
 </div>
 <ul>
-<li>通行的文档字符串的格式是：使用多行字符串，其中第一行以大写字母开头，以句号结尾。然后第二行为空行，接着从第三行开始提供任何详细的解释。</li>
-<li>强烈建议您在所有非平凡函数的文档字符串中遵循这个约定。</li>
-<li>在这个例子中，我们可以使用函数的 <code>__doc__</code> 属性（注意双下划线）来访问 <code>print_max</code> 函数的文档字符串。</li>
-<li>Python中的 help()的作用即是获取该函数的 <code>__doc__</code> 属性，并以整洁的方式呈现。可以尝试输入 <code>help(print_max)</code> 来查看 <code>print_max</code> 函数的文档字符串。</li>
-<li>自动化工具可以以这种方式从您的程序中检索文档。因此，强烈建议在编写任何非平凡函数时使用文档字符串。</li>
+<li>The convention for docstrings is to have a multi-line string where the first line starts with a capital letter and ends with a dot. Then the second line is blank, followed by any detailed explanation starting from the third line.<br>
+</li>
+<li>It is strongly recommended that you follow this convention for docstrings in all non-trivial functions.<br>
+</li>
+<li>In this example, we can access the docstring of function <code>print_max</code> with the <code>__doc__</code> attribute (note the double underscores) of that function.<br>
+</li>
+<li>The functionality of Python’s help() is to retrieve this <code>__doc__</code> attribute and present it in a neat manner. You can try <code>help(print_max)</code> to view the docstring for <code>print_max</code>.</li>
+<li>Automated tools can retrieve documentation from your programs this way. So it is highly recommended to use docstrings when writing any non-trivial functions.</li>
 </ul>
 
 
@@ -960,13 +1011,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./control_flow.html" class="pagination-link" aria-label="控制流">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">控制流</span></span>
+      <a href="./control_flow.html" class="pagination-link" aria-label="Control Flow">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Control Flow</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./modules.html" class="pagination-link" aria-label="模块">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">模块</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./modules.html" class="pagination-link" aria-label="Modules">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modules</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -975,4 +1026,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

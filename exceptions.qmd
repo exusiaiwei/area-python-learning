@@ -1,4 +1,4 @@
- # Exceptions
+# Exceptions
 
 
 In programming, exceptions are problems that can occur during the execution of a program. In Python, exceptions are designed as special objects that can be "raised" and "caught". When an exception is raised, the program flow will immediately transfer to the nearest exception handler that can handle that exception. If no corresponding handler is found, the program will terminate and display the exception message.

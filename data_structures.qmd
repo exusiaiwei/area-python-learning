@@ -134,7 +134,7 @@ Dictionaries:
 - Can contain elements of any type 
 - Elements are accessed by keys
 
-## Object and Class
+## Object and Class {#sec-objects-and-classes}
 
 Python is an object-oriented programming language. In Python, almost everything is an object with its properties and methods. A class provides a mechanism for defining the kind or type for creating objects.
 
@@ -161,7 +161,7 @@ print(someone.introduce())
 
 ```
 
- ## References
+## References
 
 In Python, whenever you create an object and assign it to a variable, Python does not store the object's value in the variable. Instead, Python simply sets the variable to be a reference that points to the object stored in memory. This is known as binding variable names to objects, or called references.
 

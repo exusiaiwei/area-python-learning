@@ -1,5 +1,5 @@
-# 更多
+# More
 
-这里将用来记载我在实际使用Python中遇到的问题和知识点。
+This section will be used to record issues I encounter and knowledge points when actually using Python.  
 
-（现在，这里还空无一物
+(For now this section is still empty.

@@ -1,4 +1,4 @@
- # Input and Output
+# Input and Output
 
 User interaction is a common and necessary part during programming. Python provides some simple and easy-to-use functions and methods for input/output operations like getting user input, outputting results to screen, generating and handling files etc.  
 
