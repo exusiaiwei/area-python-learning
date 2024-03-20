@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.544">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>My Python Studying - 4&nbsp; Control Flow</title>
+<title>我的Python学习笔记 - 4&nbsp; 控制流</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
+<link href="./functions.html" rel="next">
 <link href="./operators_and_expressions.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./control_flow.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Control Flow</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./control_flow.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">控制流</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -130,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">My Python Studying</a> 
+      <a href="./">我的Python学习笔记</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -143,7 +143,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">前言</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -155,25 +155,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Basic</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">基础</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./operators_and_expressions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Operators and Expressions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">运算符和表达式</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./control_flow.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Control Flow</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">控制流</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">函数</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">模块</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_structures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">数据结构</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./problem_solving.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">问题解决</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./object_oriented_programming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">面向对象编程</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./input_and_output.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">输入和输出</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./exceptions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">异常情况</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -192,11 +234,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#if-statement" id="toc-if-statement" class="nav-link active" data-scroll-target="#if-statement"><span class="header-section-number">4.1</span> <code>if</code> Statement</a></li>
-  <li><a href="#while-statement" id="toc-while-statement" class="nav-link" data-scroll-target="#while-statement"><span class="header-section-number">4.2</span> <code>while</code> Statement</a></li>
-  <li><a href="#for-loop" id="toc-for-loop" class="nav-link" data-scroll-target="#for-loop"><span class="header-section-number">4.3</span> <code>for</code> Loop</a></li>
-  <li><a href="#break-statement" id="toc-break-statement" class="nav-link" data-scroll-target="#break-statement"><span class="header-section-number">4.4</span> <code>break</code> statement</a></li>
-  <li><a href="#continue-statement" id="toc-continue-statement" class="nav-link" data-scroll-target="#continue-statement"><span class="header-section-number">4.5</span> <code>continue</code> statement</a></li>
+  <li><a href="#if-语句" id="toc-if-语句" class="nav-link active" data-scroll-target="#if-语句"><span class="header-section-number">4.1</span> <code>if</code> 语句</a></li>
+  <li><a href="#while语句" id="toc-while语句" class="nav-link" data-scroll-target="#while语句"><span class="header-section-number">4.2</span> <code>while</code>语句</a></li>
+  <li><a href="#for-循环" id="toc-for-循环" class="nav-link" data-scroll-target="#for-循环"><span class="header-section-number">4.3</span> <code>for</code> 循环</a></li>
+  <li><a href="#break-语句" id="toc-break-语句" class="nav-link" data-scroll-target="#break-语句"><span class="header-section-number">4.4</span> <code>break</code> 语句</a></li>
+  <li><a href="#continue-语句" id="toc-continue-语句" class="nav-link" data-scroll-target="#continue-语句"><span class="header-section-number">4.5</span> <code>continue</code> 语句</a></li>
   </ul>
 </nav>
     </div>
@@ -205,7 +247,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Control Flow</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">控制流</span></h1>
 </div>
 
 
@@ -222,236 +264,236 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Control flow is a mechanism in programming languages that controls the order of program execution. It allows programs to decide which code blocks to execute based on conditions or other factors.</p>
-<p>In Python, common control flow structures include:</p>
+<p>控制流是编程语言中用于控制程序执行顺序的机制。它允许程序根据条件或其他因素来决定执行哪些代码块。</p>
+<p>在 Python 中，常见的控制流结构包括：</p>
 <ul>
-<li>Conditional statements (<code>if-else</code> statements)</li>
-<li>Loop statements (<code>for</code> loops and <code>while</code> loops)</li>
-<li>Jump statements (<code>break</code> statements and <code>continue</code> statements)</li>
+<li>条件语句（<code>if-else</code> 语句）</li>
+<li>循环语句（<code>for</code> 循环和 <code>while</code> 循环）</li>
+<li>跳转语句（<code>break</code> 语句和 <code>continue</code> 语句）</li>
 </ul>
-<p><code>if-else</code> statements are used to execute specific code blocks when certain conditions are met.</p>
-<p><code>for</code> loops and <code>while</code> loops are loop structures in Python. <code>for</code> loops are used to iterate over elements in an iterable object, while <code>while</code> loops are used to repeatedly execute a code block as long as a condition is true.</p>
-<p><code>break</code> statements and <code>continue</code> statements are jump statements in Python. <code>break</code> statements are used to exit a loop when a specific condition is met, while <code>continue</code> statements are used to skip the remaining part of the current iteration and move on to the next iteration when a specific condition is met.</p>
-<p>The flexibility of control flow allows programs to perform different operations based on different conditions and requirements, enabling more complex logic and functionality.</p>
-<section id="if-statement" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="if-statement"><span class="header-section-number">4.1</span> <code>if</code> Statement</h2>
-<p>Conditional statements allow different code blocks to be executed based on the truth or falsehood of a condition. The <code>if</code> statement is used to execute a code block when a condition is true, while the <code>else</code> statement is used to execute a code block when a condition is false.</p>
-<div id="0850aa6e" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The sample code comes from A Byte of Python</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Here we define the guess value directly, instead of obtaining it through input</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This is because environments like Quarto and Jupyter Notebook can't handle intermediate input (input function)</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Such environments are designed to execute code in bulk. Once all cells start executing, they can complete all runs without human intervention</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Therefore, we directly set a value here, instead of obtaining it through input</span></span>
+<p><code>if-else</code> 语句用于在满足特定条件时执行特定的代码块。</p>
+<p><code>for</code> 循环和 <code>while</code> 循环是 Python 中的循环结构，<code>for</code> 循环用于遍历可迭代对象中的元素，<code>while</code> 循环用于在条件为真时重复执行代码块。</p>
+<p><code>break</code> 语句和 <code>continue</code> 语句是 Python 的跳转语句，<code>break</code> 语句用于在满足特定条件时结束循环，<code>continue</code> 语句用于在满足特定条件时跳过此次循环的剩余部分，直接进入下一次循环。</p>
+<p>控制流的灵活性使得程序能够根据不同的条件和需求来执行不同的操作，从而实现更复杂的逻辑和功能。</p>
+<section id="if-语句" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="if-语句"><span class="header-section-number">4.1</span> <code>if</code> 语句</h2>
+<p>条件语句允许根据条件的真假来执行不同的代码块。<code>if</code> 语句用于执行条件为真时的代码块，而 <code>else</code> 语句用于执行条件为假时的代码块。</p>
+<div id="7a8305a8" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 我们这里先定义一下猜测的值，而非通过input来获取值</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 这是由于Quarto和Jupyter Notebook这类环境无法处理中间输入（input）</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 这两个环境都被设计为批量执行代码的模式，一旦所有的cell开始执行，它们就能完成所有的运行，无需人工干预</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 所以，我们这里直接设定一个值，而非通过input来获取这个值</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>guess <span class="op">=</span> <span class="dv">20</span>  </span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>number <span class="op">=</span> <span class="dv">23</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Your guess is:'</span>, guess)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'你的猜测是：'</span>, guess)</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> guess <span class="op">==</span> number:</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Congratulations, you guessed it right.'</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'(But you did not win any prize!)'</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'恭喜你，你猜对了。'</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'（但你没有赢得任何奖品！）'</span>)</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> guess <span class="op">&lt;</span> number:</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Another code block</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'No, it is a little bit larger than that.'</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># You can do anything you want to do in the code block...</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 另一个代码块</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'不对，它比那个数稍微大一点'</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 你可以在代码块中做任何你想做的事情...</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'No, it is a little bit smaller than that.'</span>)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># You will only get here if your guess is greater than number</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'不对，它比那个数稍微小一点'</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 你必须猜大于number才能到达这里</span></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Done'</span>)</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># This last statement will always be executed,</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># after if statement.</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'完成'</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 这个最后的语句总是会被执行，</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># 在if语句执行之后。</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># If you want to obtain user input in other environments (such as standard Python environment or IDLE),</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># You can change the fifth line of code to "guess = int(input('Enter an integer:'))".</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co"># This way, you can receive user input as the value of 'guess', and then perform subsequent judgement.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># 如果你想在其他环境（如标准Python环境或IDLE）中获得用户输入，</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># 你可以将第五行的代码改为 "guess = int(input('请输入一个整数：'))"。</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co"># 这样就能接收用户的输入作为 'guess' 的值，然后进行后续的判断。</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Your guess is: 20
-No, it is a little bit larger than that.
-Done</code></pre>
+<pre><code>你的猜测是： 20
+不对，它比那个数稍微大一点
+完成</code></pre>
 </div>
 </div>
-<p>The knowledge points in the example code:</p>
+<p>示例代码中的知识点：</p>
 <ul>
-<li>The <code>input</code> function prints a string to the screen and waits for input. After the input is entered, the <code>input()</code> function returns the input as a string.</li>
-<li><code>int</code> is a class, and here it is used to convert a string to an integer. If you need to convert to a float, you can use <code>float</code>.</li>
-<li>Indentation is used to classify statements into different code blocks. Consistent indentation should be followed.</li>
-<li><code>if</code>, <code>elif</code>, and <code>else</code> statements must have a colon at the end of the logical line, followed by the corresponding code block.</li>
-<li>The <code>elif</code> statement combines two related <code>if</code> <code>else-if</code> <code>else</code> statements into a single <code>if-elif-else</code> statement. It can simplify the program and reduce indentation.</li>
-<li>It is possible to nest one <code>if</code> statement inside another <code>if</code> statement, which is called a nested <code>if</code> statement.</li>
-<li><code>elif</code> and <code>else</code> statements are optional. An <code>if</code> statement can be effective with only the <code>if</code> part.</li>
+<li><code>input</code> 函数会将一个字符串打印到屏幕上并等待输入，在输入内容后，<code>input()</code> 函数会将输入的内容作为一个字符串返回。</li>
+<li><code>int</code> 是一个类，在这里它用于将字符串转换为整数。如果需要转化为浮点数则用 <code>float</code>。</li>
+<li>缩进级别用于将语句分类为不同的代码块。应当遵循一致的缩进原则。</li>
+<li><code>if</code>，<code>elif</code> 和 <code>else</code> 语句在逻辑行的末尾必须有一个冒号，后面跟着对应的代码块。</li>
+<li><code>elif</code> 语句是将两个相关的 <code>if</code> <code>else-if</code> <code>else</code> 合并成一个组合的 <code>if-elif-else</code> 语句。可以简化程序和缩进量。</li>
+<li>可以在一个 <code>if</code> 语句里嵌套另一个 <code>if</code> 语句，这被称为嵌套的 <code>if</code> 语句。</li>
+<li><code>elif</code> 和 <code>else</code> 语句是可选的。一个 <code>if</code> 可以在只有 <code>if</code> 部分的情况下生效。</li>
 </ul>
 </section>
-<section id="while-statement" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="while-statement"><span class="header-section-number">4.2</span> <code>while</code> Statement</h2>
-<p>The <code>while</code> statement allows a set of statements to be repeatedly executed as long as a condition is true. The <code>while</code> statement is a type of loop statement and can include an optional <code>if</code> statement.</p>
-<div id="b596de26" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The sample code comes from A Byte of Python</span></span>
+<section id="while语句" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="while语句"><span class="header-section-number">4.2</span> <code>while</code>语句</h2>
+<p><code>while</code>语句允许在条件为真时重复执行一组语句。<code>while</code>语句是一种循环语句，可以包括一个可选的<code>if</code>语句。</p>
+<div id="57ae80fc" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>number <span class="op">=</span> <span class="dv">23</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>running <span class="op">=</span> <span class="va">True</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># As we can't use input() function in Quarto or Jupyter Notebook, we set up a preset guess list here</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 由于我们无法在Quarto或Jupyter环境中使用input()函数，这里我们设定了一个预设的猜测值列表</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>guesses <span class="op">=</span> [<span class="dv">20</span>, <span class="dv">25</span>, <span class="dv">23</span>]  </span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>guesses_iter <span class="op">=</span> <span class="bu">iter</span>(guesses)  <span class="co"># Create an iterator </span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>guesses_iter <span class="op">=</span> <span class="bu">iter</span>(guesses)  <span class="co"># 创建一个迭代对象 </span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> running:</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># In Quarto and Jupyter Notebook, 'input()' function needs to be rewritten as iterating guess value from preset list</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 在Quarto和Jupyter环境中，'input()' 函数需要改写为从预设列表中迭代猜测值</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    guess <span class="op">=</span> <span class="bu">next</span>(guesses_iter)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Your guess is:'</span>, guess)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'你的猜测是：'</span>, guess)</span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> guess <span class="op">==</span> number:</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># If the guess value equals to set value, it will print that you guess right and end the while loop</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Congratulations! You guess it right.'</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 如果猜测值等于设定值，则输出猜对了，并终止while循环</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'恭喜你，你猜对了。'</span>)</span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        running <span class="op">=</span> <span class="va">False</span></span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> guess <span class="op">&lt;</span> number:</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># It will also show that the preset guess value is too low</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'No, it is a little higher than that.'</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 结果也会显示预设猜测值偏小</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'不对，它比那个数稍微大一点'</span>)</span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># It will also show that the preset guess value is too high</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'No, it is a little lower than that.'</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 结果也会显示预设猜测值偏大</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'不对，它比那个数稍微小一点'</span>)</span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Done'</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'完成'</span>)</span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co"># When the iterator 'guesses_iter' traverse all guesses, the program will end</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># If you are running it in a real Python environment or IDLE, you can comment out the line 'guess = next(guesses_iter)'</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co"># and uncomment the line 'guess = int(input('Enter an integer : '))', and also comment out 'guesses' and 'guesses_iter'</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Then it can achieve the continuous guessing of the user through the user input and continuous while loop</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co"># 迭代器 'guesses_iter' 遍历完所有guesses后，程序就会结束</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># 在实际的Python环境或IDLE中运行时，你可以取消 'guess = next(guesses_iter)' 这一行的注释</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co"># 并将 'guess = int(input('请输入一个整数 : '))' 这一行注释去掉，将 'guesses' 与 'guesses_iter'注释掉</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co"># 这样就能通过用户输入来获取猜测值，并通过持续的while循环来实现用户的持续猜测</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Your guess is: 20
-No, it is a little higher than that.
-Your guess is: 25
-No, it is a little lower than that.
-Your guess is: 23
-Congratulations! You guess it right.
-Done</code></pre>
+<pre><code>你的猜测是： 20
+不对，它比那个数稍微大一点
+你的猜测是： 25
+不对，它比那个数稍微小一点
+你的猜测是： 23
+恭喜你，你猜对了。
+完成</code></pre>
 </div>
 </div>
-<p>The knowledge points in the example code:</p>
+<p>示例代码中的知识点：</p>
 <ul>
-<li>By setting the variable <code>running</code> to <code>True</code> before the <code>while</code> loop, the program checks if the variable <code>running</code> is <code>True</code> before executing the corresponding <code>while</code> block.</li>
-<li>After executing the block, the condition (i.e., the variable <code>running</code>) is checked again.</li>
-<li>If the condition is true, the <code>while</code> block is executed again.</li>
-<li>If the condition is false, the optional <code>else</code> block is executed, and then the next statement is continued.</li>
-<li>If a <code>while</code> loop has an <code>else</code> clause, it will always be executed unless the loop is exited using a <code>break</code> statement.</li>
-<li><code>True</code> and <code>False</code> are called boolean types and can be considered as equivalents of the values 1 and 0, respectively.</li>
+<li>在 <code>while</code> 循环之前将变量 <code>running</code> 设置为 <code>True</code>，程序会先检查变量 <code>running</code> 是否为 <code>True</code>，然后继续执行相应的 <code>while</code> 块。</li>
+<li>执行完块之后，再次检查条件（即变量 <code>running</code>）。</li>
+<li>如果条件为真，则再次执行 <code>while</code> 块。</li>
+<li>如果条件为假，则执行可选的 <code>else</code> 块，然后继续下一条语句。</li>
+<li>如果 <code>while</code> 循环有一个 <code>else</code> 子句，除非使用 <code>break</code> 语句跳出循环，否则它总是会被执行。</li>
+<li><code>True</code> 和 <code>False</code> 被称为布尔类型，可以分别视作值 1 和 0 的等价物。</li>
 </ul>
 </section>
-<section id="for-loop" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="for-loop"><span class="header-section-number">4.3</span> <code>for</code> Loop</h2>
-<p>The <code>for..in</code> statement is another type of loop statement that iterates over an object sequence, i.e., it iterates over each item in the sequence one by one.</p>
-<p>At this point, a sequence can be seen as an ordered collection of items.</p>
-<div id="2686e7f4" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example code from A Byte of Python</span></span>
+<section id="for-循环" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="for-循环"><span class="header-section-number">4.3</span> <code>for</code> 循环</h2>
+<p><code>for..in</code> 语句是另一种循环语句，它遍历一个对象序列，即逐个遍历序列中的每个项目。</p>
+<p>就现在的进度，序列可以被视作一个有序的项目集合。</p>
+<div id="0fc5c56d" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">5</span>):</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The for loop is over'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'for循环结束'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1
 2
 3
 4
-The for loop is over</code></pre>
+for循环结束</code></pre>
 </div>
 </div>
-<p>The knowledge points in the example code are as follows:</p>
+<p>示例代码中的知识点：</p>
 <ul>
-<li>The built-in function <code>range</code> can generate a sequence of numbers.</li>
-<li>By default, the step size of <code>range</code> is 1. The third number provided to <code>range</code> will be the step size, for example, <code>range(1,5,2)</code> gives <code>[1,3]</code>. The second number (i.e., the end number) is not included.</li>
-<li><code>range</code> generates only one number at a time. If you need the complete list of numbers, you need to call <code>list()</code>.</li>
-<li>The <code>else</code> part in a <code>for</code> loop is optional. If included, it will always be executed unless the loop is exited using the <code>break</code> statement.</li>
-<li>Although the example code only demonstrates a list of numbers, the <code>for</code> loop can be used with sequences composed of objects of any type.</li>
+<li>内置函数 <code>range</code> 可以生成数字序列。</li>
+<li>默认情况下，<code>range</code> 的步长为 1。给 <code>range</code> 提供的第三个数字将成为步长，例如 <code>range(1,5,2)</code> 给出了 <code>[1,3]</code>。不包括第二个数字（即结尾数字）。</li>
+<li><code>range</code> 一次只生成一个数字，如果需要完整的数字列表需要调用 <code>list()</code>。</li>
+<li><code>for</code> 循环中的 <code>else</code> 部分是可选的。若包含，除非使用 <code>break</code> 语句跳出循环，否则它总是会被执行。</li>
+<li>尽管示例代码仅演示了数字列表，但 <code>for</code> 循环适用于任何类型的对象构成的序列。</li>
 </ul>
 </section>
-<section id="break-statement" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="break-statement"><span class="header-section-number">4.4</span> <code>break</code> statement</h2>
-<p>The <code>break</code> statement is called a jump statement, which can stop the execution of a loop statement even if the loop condition is not False or the sequence of items has not been fully iterated.</p>
-<p>If a <code>for</code> or <code>while</code> loop is exited using <code>break</code>, the corresponding <code>else</code> block of the loop will not be executed.</p>
-<div id="77186ac4" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The sample code comes from A Byte of Python</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up a preset input list</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>inputs <span class="op">=</span> [<span class="st">'Hello'</span>, <span class="st">'abcdef'</span>, <span class="st">'12345'</span>, <span class="st">'quit'</span>]</span>
+<section id="break-语句" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="break-语句"><span class="header-section-number">4.4</span> <code>break</code> 语句</h2>
+<p><code>break</code> 语句被称为跳转语句，可以停止执行循环语句，即使循环条件尚未为 False 或者项的序列尚未完全迭代完成。</p>
+<p>如果跳出一个 <code>for</code> 或 <code>while</code> 循环，相应的循环 <code>else</code> 块不会被执行。</p>
+<div id="9a10cb1c" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 设定预设的输入列表</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>inputs <span class="op">=</span> [<span class="st">'你好'</span>, <span class="st">'abcdef'</span>, <span class="st">'12345'</span>, <span class="st">'退出'</span>]</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an iterator</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 创建一个迭代器</span></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>inputs_iter <span class="op">=</span> <span class="bu">iter</span>(inputs)</span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get the input from the preset input list</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 从预设的输入列表中获取输入</span></span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> <span class="bu">next</span>(inputs_iter)</span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The input string is: '</span>, s)</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> s <span class="op">==</span> <span class="st">'quit'</span>:</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'输入的字符串是: '</span>, s)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> s <span class="op">==</span> <span class="st">'退出'</span>:</span>
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The length of the string is'</span>, <span class="bu">len</span>(s))</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Done'</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'字符串的长度是'</span>, <span class="bu">len</span>(s))</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'完成'</span>)</span>
 <span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Here we use a preset input list and iterator to simulate user input</span></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co"># In each loop, we get an input from the list and check whether the input is 'quit'. If yes, we break the loop.</span></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise, we print out the length of the input</span></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co"># This way, we can run the code in an environment like Quarto or Jupyter Notebook that does not support input()</span></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co"># If you want to run it in a real Python environment or IDLE,</span></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="co"># you can comment out the line 's = next(inputs_iter)', uncomment the line 's = input('Enter something: ')',</span></span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co"># also comment out 'inputs' and 'inputs_iter', and it will be back to its original state.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co"># 这里我们通过预设的输入列表和迭代器来模拟用户的输入</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co"># 在每次循环中，我们从列表中获取一个输入，并检查这个输入是否等于'退出'，如果是就结束循环</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 否则，我们就输出这个输入的长度</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 这样就可以在Quarto或Jupyter这类不支持`input()`函数的环境中运行，如果在实际的Python环境或IDLE中运行时，</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co"># 可以将 's = next(inputs_iter)' 这一行注释掉，将 's = input('输入点什么: ')' 这一行的注释去掉，</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="co"># 同时将 'inputs' 与 'inputs_iter' 注释，即可恢复到原先的状态。</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>The input string is:  Hello
-The length of the string is 5
-The input string is:  abcdef
-The length of the string is 6
-The input string is:  12345
-The length of the string is 5
-The input string is:  quit
-Done</code></pre>
+<pre><code>输入的字符串是:  你好
+字符串的长度是 2
+输入的字符串是:  abcdef
+字符串的长度是 6
+输入的字符串是:  12345
+字符串的长度是 5
+输入的字符串是:  退出
+完成</code></pre>
 </div>
 </div>
-<p>The knowledge points in the example code are as follows:</p>
+<p>示例代码中的知识点：</p>
 <ul>
-<li>The built-in function <code>len</code> can measure the length of an input string.</li>
-<li>The <code>break</code> statement can also be used with a <code>for</code> loop.</li>
+<li>内置的 <code>len</code> 函数可以测量输入字符串的长度。</li>
+<li><code>break</code> 语句也可以与 <code>for</code> 循环一起使用。</li>
 </ul>
 </section>
-<section id="continue-statement" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="continue-statement"><span class="header-section-number">4.5</span> <code>continue</code> statement</h2>
-<p>The <code>continue</code> statement is used to skip the remaining statements in the current loop block and continue with the next iteration of the loop.</p>
-<div id="49a1517b" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The sample code comes from A Byte of Python</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up a preset input list</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>inputs <span class="op">=</span> [<span class="st">'Hello'</span>, <span class="st">'abcdef'</span>, <span class="st">'12'</span>, <span class="st">'1234'</span>, <span class="st">'quit'</span>]</span>
+<section id="continue-语句" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="continue-语句"><span class="header-section-number">4.5</span> <code>continue</code> 语句</h2>
+<p><code>continue</code> 语句用于跳过当前循环块中的其余语句，并继续下一次循环的迭代。</p>
+<div id="5687fc3c" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 设定预设的输入列表</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>inputs <span class="op">=</span> [<span class="st">'你好'</span>, <span class="st">'abcdef'</span>, <span class="st">'12'</span>, <span class="st">'1234'</span>, <span class="st">'退出'</span>]</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an iterator</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 创建一个迭代器</span></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>inputs_iter <span class="op">=</span> <span class="bu">iter</span>(inputs)</span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get input from the preset input list</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># s = input('Enter something : ')</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 从预设的输入列表中获取输入</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># s = input('输入点什么: ')</span></span>
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> <span class="bu">next</span>(inputs_iter)</span>
 <span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The input string is: '</span>, s)</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> s <span class="op">==</span> <span class="st">'quit'</span>:</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'输入的字符串是: '</span>, s)</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> s <span class="op">==</span> <span class="st">'退出'</span>:</span>
 <span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span>
 <span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(s) <span class="op">&lt;</span> <span class="dv">3</span>:</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Too short'</span>)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'太短了'</span>)</span>
 <span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Input length is sufficient'</span>)</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># You can do anything you want to do in the code block...</span></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Done'</span>)</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'输入长度足够'</span>)</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 你可以在代码块中做任何你想做的事情...</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'完成'</span>)</span>
 <span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="co"># This code can run smoothly in both Quarto and Jupyter environments. In each loop, </span></span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="co"># it will get an input from the preset string list and then perform different operations based on the length of this input:</span></span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. If the input is 'quit', then it will end the entire loop;</span></span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. If the length of the input is less than 3, then it will print 'Too short', and skip the rest of the current loop, and directly start the next loop;</span></span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. If the length of the input is not less than 3, then it will print 'Input length is sufficient'.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="co"># 这段代码在Quarto和Jupyter环境下都能够顺利运行。在每次循环中，它会从预设的字符串列表中获取一个输入，然后根据这个输入的长度执行不同的操作：</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. 如果输入是'退出'，那么它会结束整个循环；</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. 如果输入的长度小于3，那么它会打印'太短了'，并且跳过此次循环剩下的部分，直接开始下一次循环；</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. 如果输入的长度不小于3，那么它会打印'输入长度足够'。</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="co"># 可以将 's = next(inputs_iter)' 这一行注释掉，将 's = input('输入点什么: ')' 这一行的注释去掉，</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="co"># 同时将 'inputs' 与 'inputs_iter' 注释，即可恢复到原先的状态。</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>The input string is:  Hello
-Input length is sufficient
-The input string is:  abcdef
-Input length is sufficient
-The input string is:  12
-Too short
-The input string is:  1234
-Input length is sufficient
-The input string is:  quit
-Done</code></pre>
+<pre><code>输入的字符串是:  你好
+太短了
+输入的字符串是:  abcdef
+输入长度足够
+输入的字符串是:  12
+太短了
+输入的字符串是:  1234
+输入长度足够
+输入的字符串是:  退出
+完成</code></pre>
 </div>
 </div>
 
@@ -538,6 +580,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -572,7 +632,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -848,13 +912,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./operators_and_expressions.html" class="pagination-link  aria-label=" &lt;span="" and="" expressions&lt;="" span&gt;"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Operators and Expressions</span></span>
+      <a href="./operators_and_expressions.html" class="pagination-link" aria-label="运算符和表达式">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">运算符和表达式</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="<span class='chapter-number'>5</span>&nbsp; <span class='chapter-title'>Summary</span>">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./functions.html" class="pagination-link" aria-label="函数">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">函数</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
