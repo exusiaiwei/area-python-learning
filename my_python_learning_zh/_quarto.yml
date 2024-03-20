@@ -1,0 +1,42 @@
+project:
+  type: book
+  output-dir: docs
+
+
+book:
+  title: "我的Python学习笔记"
+  author: "魏子超"
+  date: "2024/1/22"
+  chapters:
+    - index.qmd
+    - basic.qmd
+    - operators_and_expressions.qmd
+    - control_flow.qmd
+    - functions.qmd
+    - modules.qmd
+    - data_structures.qmd
+    - problem_solving.qmd
+    - object_oriented_programming.qmd
+    - input_and_output.qmd
+    - exceptions.qmd
+    - standard_library.qmd
+    - more.qmd
+    - references.qmd
+
+jupyter:
+  path: "C://Conda_data//envs//main"
+  kernelspec:
+    name: python3
+    display_name: Python 3
+    language: python
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+

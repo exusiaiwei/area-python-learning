@@ -1,0 +1,33 @@
+project:
+  type: book
+
+book:
+  title: "My Python Studying"
+  author: "Zichao Wei"
+  date: "2024/1/22"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - basic.qmd
+    - operators_and_expressions.qmd
+    - control_flow.qmd
+    - summary.qmd
+    - references.qmd
+
+jupyter:
+  path: "C://Conda_data//envs//main"
+  kernelspec:
+    name: python3
+    display_name: Python 3
+    language: python
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+
