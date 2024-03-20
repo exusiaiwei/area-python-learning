@@ -1,112 +1,112 @@
-# 数据结构
+# Data Structures
 
+## Sequence
 
-## 序列（Sequence）
+In Python, the sequence is the most basic data structure. Each element in the sequence is assigned a number - its position, or index, with the first index being 0, the second index being 1, and so on.
 
-在Python中，序列(Sequence)是最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推。
+Python has three common types of sequences:
 
-Python有三种常见的序列类型：
+- List
+- Tuple
+- String
 
-- 列表（List）
-- 元组（Tuple）
-- 字符串（String）
+The other three non-sequence data structures are:
 
-另外三种非序列的数据结构是：
+- Set
+- Dictionary
+- Frozenset
 
-- 集合（Set）
-- 字典（Dictionary）
-- 冰冻集合（frozenset）
-  
-这三种类型并非有序，也不能通过索引访问元素。
+These three types are not ordered and cannot be accessed via indexes.
 
-## 列表（List）
+## List
 
-Python 的列表类似于其他编程语言中的数组，但是比这些数组更灵活。列表中的元素不一定要是相同的数据类型。
+Python's list is similar to arrays in other programming languages, but they are more flexible. The elements in the list don't need to be of the same data type.
 
-列表用方括号 `[]` 包围元素，并用逗号 `,` 分割。
+Lists are characterized by elements being surrounded by square brackets `[]` and separated by commas `,`.
+
 
 ```{python}
-my_list = [1, "apple", 3.14]
-print(my_list[0]) # prints: 1
+mylist = [1, "apple", 3.14]
+print(mylist[0]) # prints: 1
 ```
+List:
 
-列表：
-
-- 是有序的
-- 是可变的
-- 可以包含任何类型的元素
-- 可以通过索引访问元素，索引从0开始
+- Is ordered
+- Is mutable
+- Can contain elements of any type 
+- Elements can be accessed by index, with indexes starting from 0
 
 ::: {.callout-tip}
-注意, Python的索引是从0开始。这意味着在使用索引访问列表元素时，列表中的第一个元素是 `list[0]`，第二个元素是 `list[1]`，以此类推。
+Note, Python's indexing starts from 0. This means that when accessing list elements using indexes, the first element in the list is `list[0]`, the second element is `list[1]`, and so on.
 :::
 
+## Tuple
 
-## 元组（Tuple）
+A tuple is an ordered, immutable list. It can be understood as a "read-only" version of a list.
 
-元组是有序的、不可变的列表。可以理解为一种“只读”版本的列表。
-
-元组用括号 `()` 包围元素，并用逗号 `,` 分割。
+Tuples use parentheses `()` to enclose elements and are separated by commas `,`.
 
 ```{python}
 my_tuple = (1, "apple", 3.14)
 print(my_tuple[0]) # prints: 1
 ```
 
-元组：
+Tuples:
 
-- 是有序的
-- 是不可变的
-- 可以包含任何类型的元素
-- 可以通过索引访问元素，索引从0开始
+- Are ordered
+- Are immutable
+- Can contain elements of any type 
+- Elements can be accessed by index, with indexes starting from 0
 
-下面是一个体现元组和列表的差别的代码示例
+Below is a code example illustrating the difference between tuples and lists.
+
 ```{python}
-# 创建一个列表
+# Create a list
 my_list = [1, 2, 3]
-# 在列表末尾添加一个元素
+# Add an element to the end of the list
 my_list.append(4)
 print(my_list[3])
-# 创建一个元组
+# Create a tuple
 my_tuple = (1, 2, 3)
-# 不能修改元组
-# my_tuple.append(4)  # 这样会报错
+# You can't modify a tuple
+# my_tuple.append(4)  # This would throw an error
 ```
 
-## 集合（Set）
+## Set
 
-集合是非有序的数据结构，它不允许重复元素。
+A set is a non-ordered data structure that does not allow duplicate elements.
 
-集合用花括号`{}`包围元素，并用逗号 `,` 分割。
-
+Sets enclose elements with curly braces `{}` and separate them with commas `,`.
 
 ```{python}
 my_set = {1, "apple", 3.14, "apple"}
 print(my_set) # prints: {1, "apple", 3.14}
 ```
 
-集合:
+Set:
 
-- 是无序的
-- 集合中元素不能重复
-- 可以包含任何类型的元素
-- 不能通过索引访问元素
+- Is unordered
+- Does not allow duplicate elements
+- Can contain elements of any type 
+- Can not be accessed by indexes
 
-## 字典（Dictionary）
 
-字典是一个无序的键值对集合。
+## Dictionary
 
-"键值对"（Key-Value Pair）指的是两个关联的部分：一个是唯一的键（Key），另一个是值（Value）。每个键都有一个关联的值。这种关联叫做"映射"。
+A dictionary is an unordered set of key-value pairs.
 
-字典使用花括号`{}`包围元素，键值之间用冒号`:`分隔，而键值对之间用逗号`,`分隔。
+A "key-value pair" refers to two associated parts: one is a unique key, and the other is its value. Each key has an associated value. This association is called "mapping".
+
+Dictionaries enclose elements with curly braces `{}`, separate keys and values with colons `:`, and key-value pairs with commas `,`.
 
 ::: {.callout-tip}
-# 为什么叫字典
+# Why called Dictionary
 
-在一本实体字典中，你可以根据词条（对应于计算机中的“键”）找到对应的解释或者翻译（对应于计算机中的“值”）。这构成了一个"词条-解释"对，与计算机科学中的"键-值对"类似。
+In a physical dictionary, you can find a corresponding explanation or translation (corresponding to the "value" in the computer) based on the entry (corresponding to the "key" in the computer). This constitutes an "entry-explanation" pair, similar to the "key-value pair" in computer science.
 
-因此，考虑到这种映射关系，计算机科学中的这种包含"键-值对"的数据结构，就被命名为字典（Dictionary）。
+Therefore, considering this mapping relationship, this data structure containing "key-value pairs" in computer science is named Dictionary.
 :::
+
 
 ```{python}
 my_dict = {
@@ -121,33 +121,30 @@ ages = {
     "Bob": 27
 }
 
-print(ages["Alice"]) # 输出：25
-ages["Tom"] = 31  # 将Tom的年龄改为31
-print(ages["Tom"]) # 输出：31
+print(ages["Alice"]) # prints：25
+ages["Tom"] = 31
+print(ages["Tom"]) # prints：31
 
 ```
 
+Dictionaries:
 
-字典:
+- Are unordered
+- In key-value pairs, the key is unique, but the value can be duplicated
+- Can contain elements of any type 
+- Elements are accessed by keys
 
-- 是无序的
-- 键值对中的键是唯一的,但值可以重复
-- 可以包含任何类型的元素
-- 通过键来访问元素
+## Object and Class
 
-## 对象（Object）和类（Class）{#sec-objects-and-classes}
+Python is an object-oriented programming language. In Python, almost everything is an object with its properties and methods. A class provides a mechanism for defining the kind or type for creating objects.
 
-Python是一种面向对象的编程语言。在Python中，几乎所有的东西都是对象，拥有其属性和方法。类(Class)就是为创建对象的种类或类型提供了定义的一种机制。
+Object: In Python, an object is a core unit of data. Each object has a type (such as a string, list, dictionary, etc.), and a unique identity (or address in memory). An object can contain various data (i.e., attributes) and functionalities (i.e., methods). It can be seen as an objective entity in the real world, such as a table, a circle, a person, etc.
 
-对象(Object)：在Python中，对象是数据的核心单元。每个对象都具有一个类型（例如，字符串，列表，字典等），以及一个独一无二的身份（在内存中的地址）。对象可以包含包含多种数据（即属性）和功能（即方法）。它可以视为现实世界中的客观实体，比如一张桌子、一个圆形、一个人等。
+For instance, a person (object) has a name (attribute) and can conduct various activities (methods) such as running, studying, etc.
 
-举例来说，一个人（对象）有姓名（属性）和能进行各种活动（方法）如跑步、学习等。
+Class: A class is a template or blueprint for objects. It defines the basic structure of an object and encapsulates the behaviors (methods) that an object needs to perform. You can define a class to create objects that belong to this class. A class is like a factory for making objects, responsible for specifying what features its products should have.
 
-
-类(Class)：类是对象的模板或蓝图。它定义了对象的基本结构，并封装了对象需要执行的行为（方法）。你可以定义一个类来创建属于这个类的对象。类就相当于制造物件的工厂，负责规定其生产出的对象应该拥有哪些特性。
-
-
-举例来说，你可以定义一个“人”的类（class），它有名字和年龄等属性，也有吃饭，睡觉等方法。然后根据这个“人”类，我们可以创建不同的人对象，比如创建一个名叫“张三”、年龄25岁的人对象。
+For example, you can define a class "Person" that has attributes like name and age, and methods like eating, sleeping, etc. Then based on this "Person" class, we can create different person objects, such as creating a person object named "Tom" that is 25 years old.
 
 ```{python}
 class Person:
@@ -158,10 +155,8 @@ class Person:
     def introduce(self):
         return f"Hello, my name is {self.name} and I am {self.age} years old."
 
-# 创建一个属于Person类的对象
-someone = Person('张三', 25)
+someone = Person('Tom', 25)
 
-# 调用对象的方法
 print(someone.introduce())
 
 ```
@@ -170,7 +165,7 @@ print(someone.introduce())
 
 在Python中，每当你创建一个对象并将其赋值给一个变量时，Python并不会将对象的值存储在变量中。相反，Python仅仅是将变量设置为一个引用，指向存储在内存中的对象。这种方式被称为绑定变量名到对象，或者叫做引用。
 
-1. 创建对象和引用
+### 创建对象和引用
 
 
 举个例子，当你创建一个列表并赋值给某个变量：
@@ -188,7 +183,7 @@ list2 = list1
 此时你有两个引用——list1和list2，它们同时指向同一个对象。
 
 
-2. 修改可变类型的对象
+### 修改可变类型的对象
 
 
 如果你通过其中一个引用去修改这个对象，例如你通过list1去删除第一个元素：
@@ -199,13 +194,13 @@ del list1[0]
 那么无论你是通过list1还是list2来访问这个列表对象，你都会发现的此对象的内容已经发生了变化：
 
 ```{python}
-print(list1)  # 输出: [2, 3]
-print(list2)  # 输出: [2, 3]
+print(list1)  # print: [2, 3]
+print(list2)  # print: [2, 3]
 ```
 这是因为list1和list2都只是引用，它们并不包含实际的列表内容，而只是指向内存中的一个位置，即同一个列表对象的地址。
 
 
-3. 对象的复制
+### 对象的复制
 
 
 然而，有时你可能需要创建一个对象的副本，这样你就可以修改这个副本，而不影响原来的对象。例如，通过切片操作可以创建一个列表的副本：

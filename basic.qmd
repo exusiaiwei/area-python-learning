@@ -1,136 +1,138 @@
-# 基础
+# Basic
 
+## Literal Constants
 
-## 字面常量
+Literal constants are fixed values that are directly written in the code and do not change during program execution.
 
-字面常量是在代码中直接写入且在程序执行过程中不会改变的固定值。
+In Python, there are several types of literal constants, including:
 
-在Python中，有几种类型的字面常量，包括：
+- Numeric literals: integers, floating-point numbers, and complex numbers.
+- String literals: sequences of characters enclosed in single quotes ('') or double quotes ("").
+- Boolean literals: True and False.
+- None: a special constant that represents the absence of a value.
 
-- 数值字面常量：整数、浮点数和复数。
-- 字符串字面常量：用单引号（''）或双引号（""）括起来的字符序列。
-- 布尔字面常量：True和False。
-- None：表示缺少值的特殊常量。
+Literal constants are used to assign values to variables, perform calculations, and define conditions in Python programs.
 
- 字面常量用于给变量赋值、进行计算和定义Python程序中的条件。
-
- 它们提供了一种直接在代码中表示固定值的方式，使程序更易于理解和维护。
+They provide a way to represent fixed values directly in the code, making the program more understandable and maintainable.
 
 ```{python}
-x = 10  # 将整数字面常量赋值给变量
-y = 3.14  # 将浮点数字面常量赋值给变量
-name = 'John'  # 使用单引号括起来的字符串
-message = "Hello, world!"  # 使用双引号括起来的字符串
-is_active = True  # 将布尔字面常量赋值给变量
-empty_value = None  # 将None字面常量赋值给变量
+x = 10  # Assign an integer literal to the variable
+y = 3.14  # Assign a float literal to the variable
+name = 'John'  # String enclosed in single quotes
+message = "Hello, world!"  # String enclosed in double quotes
+is_active = True  # Assign a boolean literal to the variable
+empty_value = None  # Assign a None literal to the variable
 ```
 
-## 字符串
+## String
 
-字符串是用于表示文本数据的数据类型。
+The string is a data type used to represent text data.
 
-特性：
+Features:
 
-- 在python中，可以用单引号和双引号指定字符串。
-- 三引号可以指定多行字符串。
-- 字符串的值不可以修改。
+- In Python, you can specify a string with single or double quotes.
+- Triple quotes can be used to specify a multi-line string.
+- The value of a string cannot be modified.
 
 ```{python}
-# 创建字符串
+# Create a string
 name = "Alice"
 
-# 连接字符串
+# Concatenate strings
 greeting = "Hello, " + name + "!"
 
-# 输出字符串
-print(greeting)  # 输出：Hello, Alice!
+# Print the string
+print(greeting)  # Output: Hello, Alice!
 
-# 获取字符串长度
+# Get the length of the string
 length = len(name)
-print(length)  # 输出：5
+print(length)  # Output: 5
 
-# 截取字符串
+# Slice the string
 substring = name[1:3]
-print(substring)  # 输出：li
+print(substring)  # Output: li
 
-# 替换字符串
+# Replace in the string
 new_name = name.replace("A", "B")
-print(new_name)  # 输出：Blice
+print(new_name)  # Output: Blice
 ```
 
-### 字符串的格式化函数
+### String formatting function
 
-字符串的format函数可以将相应参数传入字符串中。
+The format function of a string can pass the corresponding parameters into the string.
 
-- 占位符为{}
-- 可以通过索引指定插入顺序，python从0开始计数。
-- 可以命名参数。
+- The placeholder is `{}`
+- Can specify the insertion order by index, python counts from 0.
+- Parameters can be named.
+
 
 ```{python}
 name = "Alice"
 age = 25
 
-# 使用占位符插入变量
+# Use placeholders to insert variables
 greeting = "Hello, my name is {} and I am {} years old.".format(name, age)
-print(greeting)  # 输出：Hello, my name is Alice and I am 25 years old.
+print(greeting)  # Output: Hello, my name is Alice and I am 25 years old.
 
-# 可以通过索引指定插入的顺序
+# You can specify the order of insertion by index
 greeting2 = "Hello, my name is {1} and I am {0} years old.".format(age, name)
-print(greeting2)  # 输出：Hello, my name is Alice and I am 25 years old.
+print(greeting2)  # Output: Hello, my name is Alice and I am 25 years old.
 
-# 可以使用关键字参数指定插入的值
+# You can use keyword parameters to specify the value to be inserted
 greeting3 = "Hello, my name is {name} and I am {age} years old.".format(name="Alice", age=25)
-print(greeting3)  # 输出：Hello, my name is Alice and I am 25 years old.
+print(greeting3)  # Output: Hello, my name is Alice and I am 25 years old.
 ```
 
+## Escape Sequences
 
-## 转义序列
+Escape sequences are a special sequence of characters that start with a backslash (`\`) and are followed by one or more characters. They are used to represent non-printing characters, special characters, or characters with special meanings.
 
-转义序列是一种特殊的字符序列，以反斜杠（\）开头，并在其后跟着一个或多个字符。用于表示非打印字符、特殊字符或具有特殊含义的字符。
+Escape sequences start with a backslash (`\`) and are followed by one or more characters to represent a specific character or operation. By using escape sequences, we can insert these special characters into strings, rather than interpreting them as ordinary characters.
 
-转义序列以反斜杠（\）开头，后跟一个或多个字符，用于表示特定的字符或操作。通过使用转义序列，我们可以在字符串中插入这些特殊字符，而不是将它们解释为普通字符。
+Definition and Characteristics of Escape Sequences:
 
-转义序列的定义和特性：
+- Escape sequences start with a backslash (`\`).
+- Escape sequences are formed by one or more characters.
+- Escape sequences are used to represent non-printing characters, special characters, or characters with special meanings.
+- Escape sequences can be used in strings, character constants, regular expressions, and other contexts.
 
-- 转义序列以反斜杠（\）开头。
-- 转义序列由一个或多个字符组成。
-- 转义序列用于表示非打印字符、特殊字符或具有特殊含义的字符。
-- 转义序列可以在字符串、字符常量、正则表达式和其他上下文中使用。
+Here are some common escape sequences and what they represent:
 
-以下是一些常见的转义序列及其含义：
+- `\n`: newline
+- `\t`: tab
+- `\r`: carriage return
+- `\'`: single quote
+- `\"`: double quote
+- `\\`: backslash
 
-- \n：换行符
-- \t：制表符
-- \r：回车符
-- \\'：单引号
-- \\"：双引号
-- \\：反斜杠
 
 ```{python}
-# 在字符串中使用转义序列来表示特殊字符：
-print("Hello\tWorld")  # 输出：Hello    World
-print("I\'m a programmer")  # 输出：I'm a programmer
-print("She said, \"Hello!\"")  # 输出：She said, "Hello!"
+# Using escape sequences to represent special characters in strings:
+print("Hello\tWorld")  # Output: Hello    World
+print("I\'m a programmer")  # Output: I'm a programmer
+print("She said, \"Hello!\"")  # Output: She said, "Hello!"
 print("\"I love you.\" \n \"Me too.\"")
-# 在正则表达式中使用转义序列来匹配特殊字符：
+
+# Using escape sequences to match special characters in regular expressions:
 import re
-pattern = r"\d+"  # 匹配一个或多个数字
+pattern = r"\d+"  # Matches one or more digits
 result = re.findall(pattern, "12345")
-print(result)  # 输出：['12345']
+print(result)  # Output: ['12345']
 ```
 
 
-## 变量
+## Variables
 
-变量是 Python 中的一个概念，用于存储和操作数据。它可以存储各种类型的数据，例如整数、浮点数、字符串等。
+A variable is a concept in Python that is used to store and manipulate data. It can store various types of data, such as integers, floating-point numbers, strings, etc.
 
-特性：
+Features:
 
-- 可以通过赋值操作将数据存储到变量中。
-- 可以使用变量名来访问变量中存储的数据。
-- 变量的值可以随时修改。
-- 变量可以在程序的不同位置使用和传递。
-- 变量的作用域可以限定在特定的代码块中。
+- You can store data in a variable via an assignment operation.
+- You can use the variable name to access the data stored in the variable.
+- The value of a variable can be modified at any time.
+- Variables can be used and passed at different locations in a program.
+- The scope of a variable can be limited within a specific block of code.
+
 
 ```{python}
 i = 5
@@ -146,37 +148,37 @@ This is the second line.'''
 print(s)
 ```
 
-## 运行逻辑
+## Execution Logic
 
-### 逻辑行和物理行
+### Logical Lines and Physical Lines
 
-逻辑行是指在代码中表示一个语句或命令的行，而物理行是指在代码文件中实际占据一行的文本。
+A logical line refers to a line in the code that represents a statement or command, while a physical line refers to the text that actually occupies a line in the code file.
 
-逻辑行可以跨越多个物理行，通过使用行连接符（\）将多个物理行连接成一个逻辑行。
-物理行则是代码文件中的实际行数，每个物理行都以换行符（\n）结尾。
+A logical line can span multiple physical lines by connecting multiple physical lines into one logical line using line connectors (`\`). A physical line is the actual number of lines in the code file, with each physical line ending with a newline character (`\n`).
 
-逻辑行的特征：
+Features of Logical Lines:
 
-- 一个逻辑行可以包含一个或多个语句或命令。
-- 逻辑行可以跨越多个物理行。
-- 逻辑行以换行符（\n）结尾。
+- A logical line can contain one or more statements or commands.
+- Logical lines can span multiple physical lines.
+- A logical line ends with a newline character (`\n`).
 
-物理行的特征：
+Features of Physical Lines:
 
-- 物理行是代码文件中的实际行数。
-- 每个物理行都以换行符（\n）结尾。
+- Physical lines are the actual number of lines in the code file.
+- Each physical line ends with a newline character (`\n`).
 
-Python鼓励每个物理行对应一个逻辑行，即每行一个语句，以保证代码的可读性。
+Python encourages each physical line to correspond to one logical line, that is, one statement per line, to ensure code readability.
+
 
 ```{python}
-# 逻辑行跨越多个物理行的示例
+# Example of a logical line spanning multiple physical lines
 x = 1 + \
     2 + \
     3
 
 print(x)
 
-# 逻辑行和物理行相同的示例
+# Example of logical lines being the same as physical lines
 y = 5
 print(y)
 
@@ -189,24 +191,24 @@ y = 5; print(y)
 
 ```
 
-### 缩进
+### Indentation
 
-缩进是 Python 中的一种语法规则，用于表示代码块的层次结构。在 Python 中，缩进是强制性的，它决定了代码的执行顺序和逻辑关系。逻辑行的缩进级别决定了语句的分组，同组的语句构成一个代码块。
+Indentation is a syntax rule in Python used to represent the hierarchical structure of the code blocks. In Python, the indentation is mandatory and it determines the execution order and logical relations of the code. The level of indentation of the logical lines determines the grouping of the statements. Statements in the same group form a block of code.
 
-基本概念：
+Basic Concepts:
 
-- 缩进是通过使用空格或制表符来实现的。
-- 缩进的数量和方式必须保持一致，通常建议使用四个空格进行缩进。
-- 缩进的层次结构决定了代码块的嵌套关系。
+- Indentation is achieved through the use of spaces or tabs.
+- The amount and style of indentation must remain consistent, typically four spaces are recommended for indentation.
+- The hierarchal structure of the indentation determines the nesting relation of the code blocks.
 
-特性：
+Features:
 
-- 缩进用于定义函数、循环、条件语句等代码块。
-- 缩进可以提高代码的可读性和可维护性。
-- 缩进错误会导致语法错误或逻辑错误。
+- Indentation is used to define code blocks for functions, loops, conditional statements, and more.
+- Indentation can enhance the readability and maintainability of the code.
+- Indentation errors can lead to syntax errors or logical errors.
 
-代码示例：
-以下是一个缩进构成代码块的示例：
+Code Example:
+Here is one example where indentation forms blocks of code:
 
 ```{python}
 def greet(name):
