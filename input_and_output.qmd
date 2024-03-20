@@ -1,107 +1,110 @@
-# 输入和输出
-在编程过程中，用户交互是常见而且必要的一部分。Python提供了一些简单易用的函数和方法，使我们能够进行输入和输出操作，比如获取用户的输入，输出结果到屏幕，生成和处理文件等。
+ # Input and Output
 
-## 用户输入
-`input()` 函数接受一个字符串作为参数，并将其显示给用户。然后它等待用户输入并按下回车键。一旦用户输入并按下回车键， `input()` 函数将返回用户输入的文本。
+User interaction is a common and necessary part during programming. Python provides some simple and easy-to-use functions and methods for input/output operations like getting user input, outputting results to screen, generating and handling files etc.  
 
-一些注意事项：
+## User Input  
+The `input()` function accepts a string as argument which it prints out for the user, then waits for user input and hitting enter. Once the user inputs something and hits enter, the `input()` function returns the text input by the user.  
 
-- `input()` 函数总是返回一个字符串。如果你需要一个整数，你需要使用 `int()` 函数将返回的字符串转换为整数。
-- `input()` 函数总是返回一个字符串。如果你需要一个浮点数，你需要使用 `float()` 函数将返回的字符串转换为浮点数。
-- `input()` 函数可以不带参数直接使用，这时它将只显示一个简单的冒号提示符，等待用户输入。也可以带一个字符串作为参数，这个字符串将作为提示信息显示给用户。
-- 使用 `input()` 函数时，在用户输入内容并按下回车键之前，程序会暂停运行，也就是被阻塞。
-  - 如果你要输入密码或其他敏感信息，可能希望用户输入的内容不被显示出来。这时可以使用 `getpass` 模块中的 `getpass()` 函数。
+Some notes:  
 
-下面是一些示例代码：
+- The `input()` function always returns the input as string. If you need an integer, you need to use the `int()` function to convert the returned string to integer.  
+- The `input()` function always returns a string. If you need a float number, you need to use the `float()` function to convert the returned string to float.   
+- The `input()` function can be used without arguments, in which case it just shows a simple colon prompt waiting for user input. It can also take a string argument which will be printed out as a prompt message for the user.  
+- When using the `input()` function, the program execution pauses and blocks before the user inputs something and hits enter. 
+  - If you want to input passwords or other sensitive information, you may want the input content to not be shown. In this case you can use the `getpass()` function from the `getpass` module.  
+
+Below are some sample code:
 
 
 ```python
-# 例子1
-name = input("What is your name? ")
+# Example 1  
+name = input("What is your name? ")  
 print("Hello, " + name + "!")
-```
+```  
 
-```python
-# 例子2
+```python  
+# Example 2
 def reverse(text):
     return text[::-1]
 
 def is_palindrome(text):
     return text == reverse(text)
+
 something = input("Enter text: ")
 if is_palindrome(something):
     print("Yes, it is a palindrome")
 else:
-    print("No, it is not a palindrome")
-```
+    print("No, it is not a palindrome") 
+```  
 
 ```python
-# 例子3
+# Example 3  
 import getpass
 password = getpass.getpass("Enter your password: ")
 if password == "12345":
     print("Access granted")
 else:
-    print("Access denied")
+    print("Access denied")  
 ```
 
 
-```python
-# 例子4
+```python  
+# Example 4
 def reverse(text):
     return text[::-1]
 def is_palindrome(text):
     return text == reverse(text)
     
 something = input("Enter text: ")
-filtered_something = ''.join(c for c in something if c.isalnum()).lower()
+filtered_something = ''.join(c for c in something if c.isalnum()).lower() 
 if is_palindrome(filtered_something):
     print("Yes, it is a palindrome")
 else:
     print("No, it is not a palindrome")
 ```
-以上的示例代码中有以下几个要点：
 
-- 例子1中，`input()` 函数带有一个字符串参数，这个字符串作为提示信息显示给用户。
-- 例子2中，`input()` 函数带有一个字符串参数，这个字符串作为提示信息显示给用户。用户输入的内容被传递给 `reverse()` 函数和 `is_palindrome()` 函数。
-- 例子2中，我们使用切片功能来反转字符串。`text[::-1]` 返回一个反转的字符串。切片的语法是 `text[start:end:step]`。默认值是 `start=0`，`end=len(text)`，`step=1`。给定一个负的 `step` 值，意味着从右向左切片，也即反转字符串。
-- 例子3中，我们使用 `getpass` 模块中的 `getpass()` 函数来获取用户输入的密码。这个函数不会显示用户输入的内容。
-- 例子4中，我们使用了 `isalnum()` 方法来检查字符串中是否只包含字母和数字。`isalnum()` 方法返回 `True` 如果字符串中只包含字母和数字，否则返回 `False`。`join()` 方法将一个字符串列表连接起来，返回一个新的字符串。
+The following are some key points about the sample code above:
 
-## 文件
+- In Example 1, the `input()` function has a string argument that gets printed out as prompt for the user.  
+- In Example 2, the `input()` function has a string argument that gets printed out as prompt for the user. The input content is passed to the `reverse()` and `is_palindrome()` functions.  
+- In Example 2, we use slice notation to reverse the string. `text[::-1]` returns a reversed string. Slice notation syntax is `text[start:end:step]`. Default values are `start=0`, `end=len(text)`, `step=1`. A negative `step` value means slicing from right to left, reversing a string.  
+- In Example 3, we use the `getpass()` function from the `getpass` module to get password input from the user. This function does not show the user input.
+- In Example 4, we use the `isalnum()` method to check if the string only contains letters and numbers. The `isalnum()` method returns `True` if the string only contains letters and numbers, otherwise returns `False`. The `join()` method joins a list of strings into a new string.  
 
-Python提供了一些内置的函数和方法，使我们能够创建、打开、读写文件。这些操作主要通过内置的 `open()` 函数和文件对象的方法来实现。
+## Files  
 
-以下是一些常见的文件操作：
+Python provides some built-in functions and methods to allow us to create, open, read and write files. These operations are mainly achieved through the built-in `open()` function and methods of the file object.  
 
-1. `open` 函数：这事一个内建函数，用于打开一个文件，并返回一个文件对象。
-   1. `open` 函数接受两个参数：文件名（必须）和模式（可选）。
-   2. 模式参数是一个字符串，用于指定文件的打开模式。默认值是 `r`，表示只读模式。还包括 `w`（写入模式）、`a`（追加模式）、`r+`（读写模式）等。
-   3. `w` 模式会创建一个新文件，如果文件已经存在，它将被覆盖。
-   4. 在`r`模式下，文件对象的方法只能用于读取文件内容。在`w`模式下，文件对象的方法只能用于写入文件内容。在`a`模式下，文件对象的方法只能用于追加文件内容。
-   5. 如果想要在写入一些内容之后立即读取，需要以读写模式（如`r+`或`w+`）打开文件。
-2. `read` 方法：用于读取文件内容。
-   1. `read` 方法接受一个整数作为参数，用于指定要读取的字节数。如果没有指定参数，`read()` 方法将读取整个文件。
-   2. 在读取或写入文件内容后，文件对象的指针将移动到文件的末尾。如果要再次读取文件内容，需要使用 `seek` 方法将文件指针移动到文件的开头。
-3. `write` 方法：用于写入文件内容。这个方法接受一个字符串作为参数，将这个字符串写入文件。
-4. `close` 方法：用于关闭文件。关闭文件后，任何对文件对象的操作都将失败。
+Below are some common file operations:  
 
-以下是一些示例代码：
+1. The `open` function: This is a built-in function used to open a file and return a file object.
+   1. The `open` function takes two arguments: file name (required) and mode (optional).  
+   2. The mode argument is a string indicating file open mode. Default value is `r` indicating read-only mode. Other options include `w` (write mode), `a` (append mode), `r+` (read and write mode) etc.  
+   3. `w` mode will create a new file, overwriting existing file if it already exists.  
+   4. In `r` mode, a file object's methods can only be used to read file content. In `w` mode, methods can only write content. In `a` mode, methods can only append content.   
+   5. To be able to read right after writing some content, need to open file in read and write mode (e.g. `r+` or `w+`).
+2. `read` method: Used to read file content.  
+   1. The `read` method takes an integer argument to specify number of bytes to read. If no argument is passed, `read()` reads entire file.
+   2. After reading/writing file content, the file object's pointer moves to end of file. To read content again, need to use `seek` method to move pointer back to start of file.  
+3. `write` method: Used to write content to the file. This method takes a string argument which gets written to the file.  
+4. `close` method: Used to close the file. After closing, any operations on the file object will fail.  
+
+Below are some sample code:  
 
 ```{python}
 file1 = open(r"practical_code\input_and_output\myfile.txt", "r")
 content = file1.read()
-print(content)
+print(content) 
 file1.close()
 ```
 
-```{python}
+```{python} 
 file2 = open(r"practical_code\input_and_output\myfile2.txt", "w")
 file2.write("This is a test")
 file2.close()
 ```
 
-当进行文件操作时，应始终注意在操作结束后关闭文件。为了更有效地管理文件资源，Python提供了 `with` 语句，它可以自动关闭文件。以下是一个示例：
+When doing file operations, should always remember to close the file after finishing operation. To better manage file resources, Python provides the `with` statement that closes file automatically:  
 
 ```{python}
 with open(r"practical_code\input_and_output\myfile.txt", "r") as file:
@@ -109,16 +112,16 @@ with open(r"practical_code\input_and_output\myfile.txt", "r") as file:
     print(content)
 ```
 
-以下是一个更复杂的示例：
+Below is a more complex example:  
 
 ```{python}
-poem = '''\
+poem = '''\  
 Programming is fun
-When the work is done
+When the work is done  
 if you wanna make your work also fun:
-    use Python!
+    use Python!  
 '''
-f = open(r"practical_code\input_and_output\poem.txt", "w")
+f = open(r"practical_code\input_and_output\poem.txt", "w") 
 f.write(poem)
 f.close()
 
@@ -128,35 +131,36 @@ while True:
     if len(line) == 0:
         break
     print(line, end='')
-f.close()
+f.close() 
 ```
+In this sample code:
 
-在这个示例代码中：
+- We first use the `open` function to create a file object, then use the `write` method to write some content.
+- Use the `readline` method to read file content. `readline` reads one line each time, returning a string. When reaching end of file, `readline` returns an empty string, i.e. `len(line) == 0`. We then use a `break` statement to exit the loop.
+- We use the `end=''` parameter to avoid adding a new line at the end of each line.
 
-- 我们首先使用 `open` 函数创建一个文件对象，然后使用 `write` 方法写入一些内容。
-- 使用`readline` 方法读取文件内容。`readline` 方法每次读取一行内容，并返回一个字符串。当到达文件末尾时，`readline` 方法将返回一个空字符串，即 `len(line) == 0`。这时我们使用 `break` 语句退出循环。
-- 我们使用 `end=''` 参数来避免在每行的末尾添加一个新的空行。
+## Pickle Module
 
-## Pickle模块
-Pickle是一个Python标准模块，它是Python中用于对象序列化和反序列化的一个重要模块。
+Pickle is a standard Python module that is an important module in Python used for serializing and deserializing Python object structures.  
 
-通过Pickle模块，Python对象结构可以转化为一个字节流，这个字节流包含了重建原来对象的所有必要信息。转化为字节流的过程被称为"pickling"，而从字节流恢复对象的过程被称为"unpickling"。
+Through the Pickle module, Python object structures can be converted to a byte stream that contains all necessary information for reconstructing the original object. The process of converting to a byte stream is called "pickling", while the process of restoring the object from the byte stream is called "unpickling".  
 
-`Pickle`可以处理几乎所有的Python对象，包括函数、类、甚至是用户自定义的对象。
+`Pickle` can handle almost all Python objects, including functions, classes, and even user-defined objects.
 
-"持久化存储对象"这个概念，通常指的是将内存中的对象状态保存到持久化存储媒介，如硬盘、数据库或者远程服务器等，然后在稍后的时间，即使原程序已经停止，也可以将这些数据重新读取到内存中，恢复为对象。
+The concept of "persistently storing objects" generally refers to saving the state of objects in memory to persistent storage media such as hard drives, databases, or remote servers, etc. Then at a later time, even if the original program has stopped, this data can be read back into memory and restored as objects.
+
+The functionality of the Pickle module is one important means of persistently storing objects. Through the pickle module, we can convert Python objects in memory into byte streams, then store these byte streams in files, databases, or send them over networks to other places. When we need them, we can convert these byte streams back into Python objects through unpickling operations.
+
+The main methods for pickling and unpickling using the pickle module are:
+
+- `pickle.dumps(obj)`: Converts a Python object to a byte stream.  
+- `pickle.dump(obj, file)`: Converts a Python object to a byte stream and writes that byte stream to a file.
+- `pickle.loads(bytes_object)`: Restores an object from a byte string.
+- `pickle.load(file)`: Reads byte streams from a file and converts them to Python objects.
 
 
-Pickle模块的功能就是持久化存储对象的重要手段之一。通过pickle模块，我们可以将内存中的Python对象转化为字节流，然后将这些字节流存储在文件，数据库或通过网络发送到其他地方。当我们需要的时候，可以通过unpickling操作，重新将这些字节流转化回Python对象。
+Below is a basic usage example of this module:
 
-使用pickle模块进行pickling和unpickling的主要方法有：
-
-- `pickle.dumps(obj)`：将Python对象转化为字节流。
-- `pickle.dump(obj, file)`：将Python对象转化为字节流，并将这些字节流写入文件。
-- `pickle.loads(bytes_object)`：从一个字节字符串中恢复对象。
-- `pickle.load(file)`：从文件中读取字节流，并将这些字节流转化为Python对象。
-
-下面是这个模块一些基本使用示例：
 
 ```{python}
 import pickle
@@ -172,40 +176,40 @@ with open(r"practical_code\input_and_output\data.pkl", "wb") as f:
 
 with open(r"practical_code\input_and_output\data.pkl", "rb") as f:
     restored_data = pickle.load(f)
-print(restored_data)
+print(restored_data) 
 ```
 
-在这个示例中，我们首先使用 `pickle.dump` 方法将一个Python对象转化为字节流，并将这些字节流写入文件。然后我们使用 `pickle.load` 方法从文件中读取字节流，并将这些字节流转化为Python对象。
+In this example, we first use the `pickle.dump` method to convert a Python object to a byte stream and write that byte stream to a file. We then use the `pickle.load` method to read the byte stream from the file and convert it back to a Python object.
 
-## Unicoin字符和编码
+## Unicode Characters and Encoding  
 
-在Python 3中，字符串是Unicode字符串。Unicode是一个标准，它定义了世界上所有文字的字符集。Unicode字符集包含了世界上所有的文字，包括中文、日文、希腊文、西里尔文等。每个字符都有一个唯一的Unicode码点，这个码点是一个整数。
+In Python 3, strings are Unicode strings. Unicode is a standard that defines the character set for text in all languages of the world. The Unicode character set covers all characters for all text in the world's writing systems, including Chinese, Japanese, Greek, Cyrillic characters etc. Each character has a unique Unicode code point which is an integer.   
 
-编码和解码：
+Encoding and decoding:  
 
-- 将Unicode字符转化为字节流的过程被称为编码。在Python中，我们可以使用 `encode` 方法将Unicode字符串编码为字节流
-- 将字节流转化为Unicode字符的过程被称为解码。可以使用 `decode` 方法将字节流解码为Unicode字符串。
-- 一种常见的编码方式是UTF-8编码。
-- 在编程时，如果我们需要处理非ASCII字符，我们应该始终使用Unicode字符串。这样，只有在需要将Unicode字符串转化为字节流时，我们才需要使用编码。
+- The process of converting Unicode characters to byte streams is called encoding. In Python we can use the `encode` method to encode a Unicode string into a byte stream.
+- The process of converting byte streams back to Unicode characters is called decoding. We can use the `decode` method to decode a byte stream back into a Unicode string.  
+- A common encoding method is UTF-8 encoding.
+- When programming, if we need to deal with non-ASCII characters, we should always use Unicode strings. Only when we need to convert the Unicode string to a byte stream do we need to use encoding.  
 
-当我们编写一个使用Unicode字符的程序时，我们应该确保程序使用UTF-8编码。这样，我们的程序可以处理世界上所有的文字。
+When writing a program using Unicode characters, we should ensure the program uses UTF-8 encoding. This way our program can handle text in all languages of the world.
 
 
-下面是一个处理Unicode字符的示例：
+Below is an example handling Unicode characters:  
 
 ```{python}
 import io
 
-f = io.open(r"practical_code\input_and_output\zh_CN.txt", "wt", encoding="utf-8")
-f.write(u"你好，世界！")
+f = io.open(r"practical_code\input_and_output\zh_CN.txt", "wt", encoding="utf-8") 
+f.write(u"你好,世界!")  
 f.close()
 
 text = io.open(r"practical_code\input_and_output\zh_CN.txt", encoding="utf-8").read()
 print(text)
 ```
 
-在这个示例代码中：
+In this sample code:   
 
-- 在Python 3中，`io.open` 函数的用法和 `open` 函数完全一样。
-- 但是在Python 2中，`open` 函数不支持指定编码。在Python 2中，我们应该使用 `io.open` 函数来打开文件。
-- 如果需要程序能同时兼容Python 2和Python 3，我们应该使用 `io.open` 函数来打开文件。但如果我们只需要兼容Python 3，出于简洁的考虑，我们可以只使用 `open` 函数。
+- In Python 3, the `io.open` function works exactly the same as the `open` function.  
+- But in Python 2, the `open` function does not support specifying encoding. In Python 2 we should use the `io.open` function to open files.
+- If we want the program to be compatible with both Python 2 and Python 3, we should use the `io.open` function to open files. But if we only need Python 3 compatibility, for simplicity we can just use the `open` function.
