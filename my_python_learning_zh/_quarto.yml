@@ -1,5 +1,7 @@
 project:
   type: book
+  output-dir: docs
+
 
 book:
   title: "我的Python学习笔记"
