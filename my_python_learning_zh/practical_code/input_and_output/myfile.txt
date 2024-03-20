@@ -1,2 +1,0 @@
-# This is a example of Python IO.
-And this is the second line.
