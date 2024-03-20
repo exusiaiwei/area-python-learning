@@ -1,0 +1,56 @@
+project:
+  type: book
+  output-dir: docs
+
+
+book:
+  title: "My Python Studying"
+  author: "Zichao Wei"
+  date: "2024/1/22"
+  favicon: python-logo-only.svg
+  cover-image: python-logo-only.svg
+  repo-url: https://github.com/exusiaiwei/My-Python-Learning
+  repo-actions: [edit]
+  search: true
+  sidebar:
+    style: docked
+    background: light
+  chapters:
+    - index.qmd
+    - basic.qmd
+    - operators_and_expressions.qmd
+    - control_flow.qmd
+    - functions.qmd
+    - modules.qmd
+    - data_structures.qmd
+    - problem_solving.qmd
+    - object_oriented_programming.qmd
+    - input_and_output.qmd
+    - exceptions.qmd
+    - standard_library.qmd
+    - more.qmd
+    - references.qmd
+
+comments:
+  hypothesis: true
+
+
+
+jupyter:
+  path: "C://Conda_data//envs//main"
+  kernelspec:
+    name: python3
+    display_name: Python 3
+    language: python
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: journal
+    code-copy: true
+  pdf:
+    documentclass: scrreprt
+  epub:
+    cover-image: python-logo-only.svg
+

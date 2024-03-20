@@ -1,0 +1,110 @@
+# Problem Solving  
+
+The ultimate goal of programming is to utilize programs to solve specific problems.  
+
+## Software Development Process   
+A basic software development process is:  
+
+1. Analysis (What): Define the problem we want to solve  
+2. Design (How): Determine methods to achieve goals 
+3. Implementation (Do It): Start from a simple version first, implement core functionalities  
+4. Testing and Debugging (Test): Verify program runs as expected, identify and fix errors  
+5. Operation or Deployment: Observe program behavior through actual usage   
+6. Maintenance: Optimize and upgrade program based on feedback from usage stage  
+
+::: {.callout}
+Software is grown, not built. -- Bill de hÓra
+
+软件是成长的,而不是建造的。-- Bill de hÓra  
+:::  
+
+## Problem Example: Backup Program  
+
+The problem presented in "A Byte of Python" is:  
+
+::: {.callout} 
+I want a program which creates a backup of all my important files.  
+
+我想要一个能够备份我所有重要文件的程序。
+:::  
+
+The design idea is:  
+
+- Backup files and directories are specified in a list. 
+- Backups must be stored in a main backup directory.   
+- Files are backed up into a zip file.  
+- Zip file name is current date and time.
+- Uses standard Linux/Unix zip command which is default available in any standard GNU/Linux or Unix distribution. Note you can use any archiving command if you have a CLI.  
+
+## Knowledge Points  
+
+Some key knowledge points from the sample code in this A Byte of Python chapter:  
+
+### Python String Formatting
+#### The `.format()` Method
+The `.format()` method is a way of formatting strings where we can insert values into string template placeholders. For example:   
+
+```{python}
+name = "Alice"
+print("Hello, {}".format(name)) # Prints: Hello, Alice
+```
+In this code, `{}` is a placeholder where variable `name` can be passed into `.format()` method and automatically replaces the placeholder.  
+
+We can also add numbers inside `{}` to specify positions of `.format()` method arguments:   
+
+```{python}  
+firstname = "Alice"
+lastname = "Bob"
+print("Hello, {0} {1}".format(firstname, lastname)) # Prints: Hello, Alice Bob
+```
+Here `{0}` and `{1}` correspond to first and second arguments of `.format()` method respectively.  
+
+### f-strings (Formatted String Literals)
+In Python 3.6 and later, we usually use f-strings for string formatting, which makes formatting more concise and efficient. F-strings work by prefixing `f` or `F` before the string, then write variables or expressions to insert inside `{}`, Python automatically replaces them with values. For example:   
+
+```{python}
+name = "Alice" 
+print(f"Hello, {name}") # Prints: Hello, Alice
+```
+We can write simple Python expressions inside `{}`, Python executes them and replaces `{}` with the result:   
+
+```{python}   
+a = 5
+b = 10
+print(f"Five plus ten is {a + b}, not {2 * (a + b)}.") # Prints: Five plus ten is 15, not 30.  
+```
+### Using OS Path Separators in Python  
+File path representations differ across operating systems. On Windows systems we use backslash `\` for paths like `C:\Users\Admin\Documents`. On UNIX systems (Linux, MacOS) forward slash `/` is used instead, e.g. `/home/admin/Documents`.   
+
+However in Python strings, backslash `\` is a special character used as the escape character for introducing special character sequences. E.g. `\n` for newline, `\t` for tab. For example:  
+```{python} 
+print("Hello\nWorld") # Prints:  
+# Hello
+# World
+```  
+
+So if we want to use Windows paths like `C:\Users\Admin\Documents` in Python strings, we need to escape with double backslashes `\\` like `C:\\Users\\Admin\\Documents`. Code sample:   
+
+```{python}
+path = "C:\\Users\\Admin\\Documents" 
+print(path) # Prints: C:\Users\Admin\Documents
+```  
+
+Additionally, we can use Python raw strings that treat backslashes `\` literally instead of escape characters. Just prefix string with `r`:   
+
+```{python}
+path = r"C:\Users\Admin\Documents"
+print(path) # Prints: C:\Users\Admin\Documents 
+```
+However it's not recommended to directly use single backslashes `\` for Windows paths in strings, as unwanted escape sequences can easily be introduced, e.g. `\U` starts a Unicode escape sequence, if this happens to appear in a path, Python tries to interpret it as special character sequence leading to errors. So best avoid paths like `C:\Users`.   
+
+Note: In most cases, we recommend using the `os.path` module to handle paths for cross-platform portability.  
+
+## Other Problems  
+
+Other beginner-friendly problems with similar difficulty:  
+
+- A program that organizes my documents in multiple folders into types (.doc, .pdf etc) stored neatly into separate folders  
+- A program that resizes all my images to specified sizes
+- A program that counts word frequency for each word in an English article  
+- A program that finds identical files across two folders and lists them out
