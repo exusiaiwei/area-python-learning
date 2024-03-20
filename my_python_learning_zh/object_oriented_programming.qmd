@@ -1,0 +1,292 @@
+# 面向对象编程
+
+面向对象编程（Object-Oriented Programming，OOP）是一种程序设计范型，其主要思想是将数据及对数据的操作封装在一起形成对象，对相同类型的对象进行抽象形成类，通过类的封装、继承和多态性实现代码的复用和模块化。
+
+
+## 对象和类的回顾
+
+在 @sec-objects-and-classes 中我们已经介绍了对象和类的概念，我们可以总结如下：
+
+- 类（Class）：类是对一类事物的抽象描述，它定义了这种事物的静态特性（字段）和动态行为（方法）。类是创建对象的模板，对象是类的实例。
+- 对象（Object）：对象是类的实例，即根据类的定义创建的实体。每个对象都有自己的属性（类变量和实例变量）和行为（方法）。
+- 属性（Attribute）：属性是类或对象的特性，包括静态特性（字段）和动态行为（方法）。
+- 方法（Method）：方法是类定义的一部分。方法定义了对象的动态行为，描述了对象如何响应外部的请求或如何完成某些具体的任务。
+
+::: {.callout-tip}
+类似结构功能主义——在面向对象编程中，对象的字段就像是他的“结构”，而方法则如同他的“功能”。
+:::
+
+## 类的构建（功能部分）
+
+一个最简单的类如下所示：
+```{python}
+class Person:
+    pass  # An empty block
+
+p = Person()
+print(p)
+```
+我们使用`class`语句和类的名称创建一个新的类，然后是一个缩进的语句块，构成类的主体。在这里，用`pass`语句表示一个空的语句块，因为Python中的语句块不能为空。
+
+类的名称后跟一对括号可以创建一个对象/实例。在实例代码中，我们通过`print(p)`语句来确认这个对象已经被创建。打印的结果说明这个对象是一个在 `__main__` 模块中的`Person`类的实例。
+
+类的构建主要是通过定义类的方法实现的。方法描述了类或其实例可以进行的操作。在Python中，我们常常在类的内部定义方法，就像定义普通的函数那样。
+
+
+### 方法: 类的功能实现
+
+类和对象可以和函数一样拥有方法，唯一的不同之处在于方法的第一个参数是`self`。
+
+以下是一个简单的类的方法例子：
+
+```{python}
+class Person:
+    def say_hi(self):
+        print('Hello, how are you?')
+
+p = Person()
+p.say_hi()
+```
+### `self`在类方法中的作用
+
+在Python中，类方法的第一个参数通常会是一个名为`self`的特殊参数，这个`self`参数代表方法的所属实例，或者说，将会调用这个方法的实例。通过self参数，方法可以自由地访问和修改对象的字段和其他方法。
+
+::: {.callout-tip}
+在定义类的方法时，我们并不知道这个方法将来会被哪个实例对象调用。所以我们需要一个参数（习惯上叫做`self`）来接收运行时传入的实例对象，这样这个方法才能访问到实例的属性或者调用实例的其他方法。
+:::
+
+```{python}
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        return f"{self.name} says woof!"
+
+d1 = Dog("Fido")
+d2 = Dog("Rex")
+
+print(d1.bark())  # 输出 "Fido says woof!"
+print(d2.bark())  # 输出 "Rex says woof!"
+
+```
+
+当一个实例调用其方法时，Python 解释器会自动将实例本身传入方法的`self`参数。通过`self`，我们可以在方法内部访问和修改实例的属性。
+
+在这个例子中，`bark()`方法在`d1`和`d2`两个不同的实例中调用，`self`就代表了调用这个方法的实例，因此`self.name`会分别返回`d1`和`d2`的`name`属性。在每一次方法的调用中，Python都会自动地将当前的对象实例作为第一个参数传递进去。
+
+::: {.callout-caution}
+
+```
+rex.bark()
+```
+
+在这里，当我们调用`rex.bark()`时，从表面看，我们并没有给`bark`方法提供任何参数。但实际上，Python解释器会自动把`rex`这个实例传递给`bark`方法的`self`参数。这就是为何在类的方法最开始位置总会有一个`self`参数，而在调用方法时，我们通常并不需要显式地提供这个参数。
+
+同理，这也意味着哪怕是一个不带参数的方法，他也仍然需要一个参数- `self` 
+:::
+
+
+### `__init__`方法：类的构造函数
+
+在Python中，我们通常会在类中定义一个特殊的方法`__init__`，这个方法称为类的构造函数。当我们根据类创建一个新的实例时，Python解释器会自动调用`__init__`方法对新创建的实例进行初始化。
+
+::: {.callout-tip}
+# 魔术方法
+`__init__`方法的名称前后都有两个下划线，这代表它是一个特殊的方法，有特别的含义。
+
+在Python中，这种双下划线开头和结尾的方法通常被称为“魔术方法”。这些方法是由Python解释器自动调用的，我们通常不需要显式地调用它们。
+:::
+
+`__init__`方法的第一个参数总是`self`，即这个对象本身的引用。在`__init__`方法中，我们可以设置实例的初始状态，比如添加一些初始的属性值。
+
+以下是一个包含有`__init__`方法的类的例子：
+
+```{python}
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+my_dog = Dog('Willy', 5)
+
+```
+在这个例子中，`Dog`类有一个`__init__`方法，这个方法接收三个参数：`self`、`name`和`age`。对于`self`参数，我们已经知道，当我们创建类的实例时，Python会自动为我们提供。其它的参数（`name`和`age`），我们需要在创建对象时提供。
+
+`__init__`方法通常用于在创建对象时初始化对象的状态。通过在`__init__`方法中设置对象的属性，可以确保对象一旦被创建，就具有一定的初始状态。
+
+
+## 字段（结构部分）
+
+
+在类或对象中定义的变量被称为字段，用于描述对象的状态或性质。上述的静态特性就是指类或对象的字段。
+
+::: {.callout-caution}
+**属性 = 字段+ 方法**
+:::
+
+字段是绑定到类或对象的命名空间中的变量，因此，这些名称只在类和对象的上下文中有效。
+
+字段有两种类型：
+
+- 类变量：属于类，所有的对象实例共享这一个变量，一个对象修改了它，会影响到所有的对象。
+- 实例变量：属于对象，每个对象实例都有自己的一份副本，一个对象修改了它，不会影响其他的对象。
+
+下面是一个用于理解类变量和实例变量的例子：
+
+```{python}
+class Robot:
+    """Represents a robot, with a name."""
+
+    # A class variable, counting the number of robots
+    population = 0
+
+    def __init__(self, name):
+        """Initializes the data."""
+        self.name = name
+        print("(Initializing {})".format(self.name))
+
+        # When this person is created, the robot
+        # adds to the population
+        Robot.population += 1
+
+    def die(self):
+        """I am dying."""
+        print("{} is being destroyed!".format(self.name))
+
+        Robot.population -= 1
+
+        if Robot.population == 0:
+            print("{} was the last one.".format(self.name))
+        else:
+            print("There are still {:d} robots working.".format(
+                Robot.population))
+
+    def say_hi(self):
+        """Greeting by the robot.
+
+        Yeah, they can do that."""
+        print("Greetings, my masters call me {}.".format(self.name))
+
+    @classmethod
+    def how_many(cls):
+        """Prints the current population."""
+        print("We have {:d} robots.".format(cls.population))
+
+
+droid1 = Robot("R2-D2")
+droid1.say_hi()
+Robot.how_many()
+
+droid2 = Robot("C-3PO")
+droid2.say_hi()
+Robot.how_many()
+
+print("\nRobots can do some work here.\n")
+
+print("Robots have finished their work. So let's destroy them.")
+droid1.die()
+droid2.die()
+
+Robot.how_many()
+```
+
+在这个例子中：
+
+- `population`是一个类变量，用于跟踪机器人的数量。
+- `name`是一个实例变量，用于存储机器人的名字。
+- `__init__`方法是一个特殊的方法，用于初始化机器人的名字。 
+- `how_many`是一个类方法，用于打印当前机器人的数量。我们使用装饰器将`how_many`方法标记为类方法。
+- `die`是一个实例方法，用于表示机器人的销毁。
+- 所有的类成员都是公有的。一个下划线开头的名称（例如`_name`）表示这个名称是受保护的，不应该被外部访问。两个下划线开头的名称（例如`__name`）表示这个名称是私有的，不应该被外部访问。
+
+## 继承
+
+继承是面向对象编程的一个重要特性，它允许我们定义一个新的类，这个类可以继承一个或多个已经存在的类的属性和方法。被继承的类称为父类（或基类），继承的类称为子类（或派生类）。
+
+继承的主要作用是实现代码的复用，通过继承，子类可以继承父类的属性和方法，从而不需要重复编写相同的代码。
+
+在Python中，继承是通过在类定义时在类名后面的括号中指定父类来实现的。下面是一个简单的继承的例子：
+
+```{python}
+class SchoolMember:
+    '''Represents any school member.'''
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        print('(Initialized SchoolMember: {})'.format(self.name))
+
+    def tell(self):
+        '''Tell my details.'''
+        print('Name:"{}" Age:"{}"'.format(self.name, self.age), end=" ")
+
+
+class Teacher(SchoolMember):
+    '''Represents a teacher.'''
+    def __init__(self, name, age, salary):
+        SchoolMember.__init__(self, name, age)
+        self.salary = salary
+        print('(Initialized Teacher: {})'.format(self.name))
+
+    def tell(self):
+        SchoolMember.tell(self)
+        print('Salary: "{:d}"'.format(self.salary))
+
+
+class Student(SchoolMember):
+    '''Represents a student.'''
+    def __init__(self, name, age, marks):
+        SchoolMember.__init__(self, name, age)
+        self.marks = marks
+        print('(Initialized Student: {})'.format(self.name))
+
+    def tell(self):
+        SchoolMember.tell(self)
+        print('Marks: "{:d}"'.format(self.marks))
+
+t = Teacher('Mrs. Shrividya', 40, 30000)
+s = Student('Swaroop', 25, 75)
+
+# prints a blank line
+print()
+
+members = [t, s]
+for member in members:
+    # Works for both Teachers and Students
+    member.tell()
+```
+
+在这个例子中：
+
+- 使用继承时，在类定义中的类名后面的元组中指定基类名（例如，`class Teacher(SchoolMember):`）。
+- 基类的`__init__`方法是通过调用`SchoolMember.__init__(self, name, age)`来显式调用的。 
+  - 这是因为子类的`__init__`方法会覆盖父类的`__init__`方法。
+  - 如果我们想要在子类的`__init__`方法中调用父类的`__init__`方法，我们需要显式地调用它。
+- `Teacher`和`Student`类都继承了`SchoolMember`类。这意味着`Teacher`和`Student`类都可以访问`SchoolMember`类的属性和方法。
+- 对于每一个子类，我们都定义了一个`tell`方法，这个方法会覆盖父类的`tell`方法。这就是所谓的多态性，即不同的类可以对相同的方法做出不同的响应。
+  - 如果子类中没有定义`tell`方法，那么子类会继承父类的`tell`方法。
+  - Python始终会优先调用子类的方法，如果找不到这个方法，则开始按照继承链向上查找。
+
+## 总结
+
+### 面向对象编程的主要特点
+
+面向对象编程（OOP）的主要特点是：
+
+- 模块化：每一个对象都可以看作是一个独立的模块，它拥有自己的属性（也称为数据成员）和方法（也称为成员函数）。
+- 可复用性：对象的代码可以在需要的地方复用，可以通过继承、封装、多态这些机制实现代码的重用。
+- 扩展性：继承和多态性的机制提高了程序的可扩展性。
+
+::: {.callout-tip}
+# 其他常见的编程范型
+
+面向过程编程（Procedural programming）：是最早的编程范型之一，它的主要思想是将程序分解为一步一步的过程或者函数，通过定义数据和函数的执行步骤来解决问题。
+
+
+函数式编程（Functional Programming）：倡导编写纯函数，避免程序状态改变和数据可变性，以求更高的可理解性和更低的bug产生率。
+
+
+逻辑编程（Logic Programming） ：通过描述问题的逻辑来编写程序，程序会自动推导出解决问题的答案。Prolog就是一种逻辑编程语言。
+:::
+
+
