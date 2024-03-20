@@ -1,149 +1,156 @@
-# 异常情况
+ # Exceptions
 
 
-在编程中，异常是程序运行时可能遇到的问题。在Python中，异常被设计为一个特殊的对象，可以被"抛出"并且"捕获"。当一个异常被抛出时，程序的控制流将立即转移到最近的能处理该异常的异常处理代码块。如果没有找到相应的处理代码，那么程序将终止并显示异常消息。
+In programming, exceptions are problems that can occur during the execution of a program. In Python, exceptions are designed as special objects that can be "raised" and "caught". When an exception is raised, the program flow will immediately transfer to the nearest exception handler that can handle that exception. If no corresponding handler is found, the program will terminate and display the exception message.
 
 
 
 
-## 处理异常
+## Handling Exceptions
 
-我们可以使用`try..except`语句来捕获异常。`try`语句包含了可能会引发异常的代码块，以及对这些异常的处理代码块。`except`块中包含了所有的错误处理程序。
+We can use `try..except` statements to catch exceptions. The `try` statement contains the block of code that may raise an exception, as well as the exception handlers that handle those exceptions. The `except` block contains all the error handlers.  
 
-`try..except`语句的基本语法如下：
+The basic syntax of a `try..except` statement is:  
 
 ```{python}
 try:
-    # 这里是可能抛出异常的代码
-    x = 1 / 0
+    # Code that may raise exception
+    x = 1 / 0  
 except ZeroDivisionError:
     print("Cannot divide by zero")
 ```
 
-在上述代码示例中：
+In the above code example:
 
-- `try`语句包含了可能抛出异常的代码块，即`x = 1 / 0`。
-- `except`语句包含了对异常的处理代码块，即`print("Cannot divide by zero")`。
-- `except`语句可以处理单个指定的异常，也可以处理一个括号内的异常元组。
-- 如果没有指定异常类型，那么`except`语句将捕获所有类型的异常。
-- 在代码示例中，`except ZeroDivisionError`指定了只捕获`ZeroDivisionError`异常。这是一个特定的异常类型，用于处理除零错误。
-- 每个`try`语句都可以包含多个`except`语句，用于处理不同类型的异常。但是，只有一个`except`语句会被执行。
-- 每个`try`语句都至少包含一个`except`语句或`finally`语句，用于处理异常。
+- The `try` statement contains code that may raise an exception, i.e. `x = 1 / 0`.  
+- The `except` statement contains the code to handle exceptions, i.e. `print("Cannot divide by zero")`.
+- The `except` statement can handle a single specified exception or a tuple of exceptions inside parentheses.  
+- If no exception type is specified, the `except` statement will catch all types of exceptions.
+- In the code sample, `except ZeroDivisionError` specifies to only catch `ZeroDivisionError` exceptions. This is a specific exception type for handling divide by zero errors.
+- Each `try` statement can have multiple `except` statements to handle different types of exceptions. However, only one `except` statement will be executed.  
+- Each `try` statement must have at least one `except` statement or `finally` statement to handle exceptions.
 
-### `else`语句
 
-`else`语句用于指定只有在没有发生异常时才会执行的代码块。`else`语句的基本语法如下：
+### The `else` Statement  
+
+The `else` statement is used to specify a block of code to execute if no exception occurs. The basic syntax of the `else` statement is:
 
 ```{python}
 try:
-    # 这里是可能抛出异常的代码
-    x = 1 / 1
+    # Code that may raise exception  
+    x = 1 / 1   
 except ZeroDivisionError:
     print("Cannot divide by zero")
 else:
-    # 这里是只有在没有发生异常时才会执行的代码
-    print("No exceptions occurred")
+    # Code to execute if no exception occurs
+    print("No exceptions occurred") 
 ```
 
-在上述代码示例中：
+In the above code example:
 
-- `else`语句包含了只有在没有发生异常时才会执行的代码块，即`print("No exceptions occurred")`。
-- `else`语句通常用于在没有发生异常时执行一些清理操作。
-- `else`语句必须在所有的`except`语句之后，但在`finally`语句之前。
+- The `else` statement contains code to execute if no exception occurs, i.e. `print("No exceptions occurred")`.
+- The `else` statement is usually used to perform some clean-up operations when no exception occurs.
+- The `else` statement must appear after all `except` statements but before the `finally` statement.
 
-### `finally`语句
 
-`finally`语句用于指定无论是否发生异常都要执行的代码块。`finally`语句通常用于释放资源或执行清理操作。`finally`语句的基本语法如下：
+### The `finally` Statement
+
+The `finally` statement is used to specify a block of code to execute regardless of whether an exception occurs or not. The `finally` statement is usually used to release resources or perform clean-up operations. The basic syntax of the `finally` statement is:  
 
 ```{python}
 
 try:
-    # 这里是可能抛出异常的代码
-    x = 1 / 0
+    # Code that may raise exception
+    x = 1 / 0   
 except ZeroDivisionError:
-    print("Cannot divide by zero")
+    print("Cannot divide by zero")  
 else:
-    # 这里是只有在没有发生异常时才会执行的代码
+    # Code to execute if no exception occurs
     print("No exceptions occurred")
 finally:
-    # 这里是无论是否发生异常都要执行的代码
+    # Code to execute regardless of exception 
     print("This is always executed")
 ```
 
-在上述代码示例中：
+In the above code example:  
 
-- `finally`语句包含了无论是否发生异常都要执行的代码块，即`print("This is always executed")`。
-- `finally`语句通常用于释放资源或执行清理操作。例如，我们可以在`finally`语句中关闭文件、释放锁、关闭数据库连接等。
+- The `finally` statement contains code to always execute regardless if an exception occurs or not, i.e. `print("This is always executed")`.
+- The `finally` statement is usually used to release resources or perform clean-up operations. For example, we can close files, release locks, close database connections etc. in a `finally` statement.
 
-### `with`语句
 
-在Python中，`with`语句是一种语法糖，主要用于简化资源管理相关的代码。对于文件操作、网络连接、数据库连接这类需要在使用结束后显式释放的资源，可以通过`with`语句来自动处理资源的释放，使得代码更加简洁，避免了资源泄露的可能性。
+### The `with` Statement  
+
+In Python, the `with` statement is syntactic sugar that is mainly used to simplify resource management related code. For resources like file operations, network connections, database connections etc. that require explicit release after use, we can use the `with` statement to automatically manage the release of resources, making the code more concise and avoiding potential resource leaks.
 
 
 ::: {.callout-tip}
-# 什么是语法糖
+# What is Syntactic Sugar  
 
-语法糖（Syntactic Sugar）指的是一种设计使得某些编程任务更易读或者可表现性更强的语法。其主要目的是提高程序的可读性，使代码更简洁，或者语义更明显。
+Syntactic sugar refers to syntax designed to make certain programming tasks easier to read or more expressive. Its main purpose is to improve readability of programs, make code more concise, or make semantics more explicit.  
 
-"语法糖"这个术语的含义最早源于 Peter J. Landin（一位计算机科学家）在1964年创造的，该术语是用来形象地描述那些没有给计算机语言添加新功能，但是使人们用更舒适的方式编写或读代码的特性。
+The term "syntactic sugar" was originally coined by Peter J. Landin (a computer scientist) in 1964, and is used figuratively to describe features that don't add new functionality to a computer language but make it more pleasant for humans to write or read code.  
 
-这个名词的形象含义是，这种语法就像是在给代码增加了一些“糖”，让原本可能枯燥乏味、硬邦邦的代码变得更加甜美，更具美感，给编程带来了乐趣。就像糖改善了食物的口感，但是并没有增加食物的营养，语法糖使代码写起来更加愉快、更容易理解，但并没有改变编程语言的核心功能或语义。
+The figurative meaning of this noun is that such syntax is like adding some "sugar" to code, making the code that may otherwise be dull and rigid become sweeter and more aesthetic, bringing fun to programming. Just like sugar improves the taste of food without adding nutrition, syntactic sugar makes code more pleasant and easier to understand without changing the core functionality or semantics of the programming language.  
 
-比如在Python中的装饰器、列表推导式等，它们并没有为Python语言增加什么新的功能，只是让我们在编写相同功能代码的时候，代码显得更加清晰，可阅读性更强，让编程更具有乐趣。所以称其为"语法糖"。
+For example, decorators and list comprehensions in Python don't add any new functionality to the language, they just make it clearer to write code with the same functionality, making programming more enjoyable. So they are called "syntactic sugar".
 :::
 
-`with`语句的基本语法如下：
+
+The basic syntax of a `with` statement is:  
 
 ```python
 with expression as variable:
     # code block
 ```
-其中`expression`必须是一个对象，它必须实现了`__enter__`和`__exit__`方法。
 
-- `__enter__`方法在代码块开始执行前调用，用于返回一个资源对象。
-- `__exit__`方法在代码块结束后调用，负责清理或释放资源。
+Where `expression` must be an object that implements the `__enter__` and `__exit__` methods.  
 
-一个使用`with`语句的示例如下：
+- The `__enter__` method is invoked before executing the code block, used to return a resource object.
+- The `__exit__` method is invoked after finishing executing the code block, responsible for cleaning up or releasing resources.
+
+
+An example of using a `with` statement is:  
 
 ```python
 with open(r"practical_code\input_and_output\data.pkl", "wb") as f:
-    pickle.dump(data, f)
+    pickle.dump(data, f) 
 ```
 
-在上述代码示例中：
+In the above code example:  
 
-- `with`语句首先调用文件对象的`__enter__`方法打开文件，然后将返回的文件对象赋值给`f`。
-- 之后，`with`语句执行代码块，即`pickle.dump(data, f)`。
-- 无论这个代码块是否发生异常，`with`语句都会调用文件对象的`__exit__`方法关闭文件。这样，我们就不需要显式地调用`f.close()`方法来关闭文件了。
+- The `with` statement first invokes the `__enter__` method of the file object to open the file, and then assigns the returned file object to `f`.
+- Next, the `with` statement executes the code block, i.e. `pickle.dump(data, f)`.  
+- Regardless if this code block raises exceptions or not, the `with` statement invokes the `__exit__` method of the file object to close the file. So we don't need to explicitly call `f.close()` to close the file.  
 
-在处理异常时，如果不使用`with`语句，我们需要在`try`语句的`finally`语句中显式地调用`f.close()`方法来关闭文件。而使用`with`语句，我们就不需要这样做了。
+When handling exceptions without using `with` statements, we would need to explicitly call `f.close()` in a `finally` statement of the `try` block to close the file. By using `with` statements, we don't need to do this.
 
-## 异常类
+## Exception Classes  
 
-Python提供了一些内置的异常类，用于表示不同类型的错误情况。常见的异常类包括：
+Python provides some built-in exception classes to represent different types of error conditions. Common exception classes include:  
 
-- `Exception`：所有异常类的基类。
-- `NameError`：名称错误，当尝试访问不存在的变量或函数时引发。
-- `TypeError`：类型错误，当操作或函数应用于不兼容的类型时引发。
-- `ValueError`：值错误，当操作或函数应用于具有正确类型但具有无效值的对象时引发。
-- `IndexError`：索引错误，当尝试访问列表、元组或字符串中不存在的索引时引发。
-- `KeyError`：键错误，当尝试访问字典中不存在的键时引发。
-- `FileNotFoundError`：文件未找到错误，当尝试打开不存在的文件时引发。
+- `Exception`: Base class for all exception classes.  
+- `NameError`: Name error, raised when trying to access a variable or function that does not exist.
+- `TypeError`: Type error, raised when an operation or function is applied to an incompatible type.   
+- `ValueError`: Value error, raised when an operation or function is applied to an object with the correct type but invalid value.  
+- `IndexError`: Index error, raised when trying to access an index of a list, tuple or string that does not exist.  
+- `KeyError`: Key error, raised when trying to access a key in a dictionary that does not exist.   
+- `FileNotFoundError`: File not found error, raised when trying to open a file that does not exist.
 
-## 引发异常
 
-我们可以使用`raise`语句来引发异常。`raise`语句用于引发指定的异常。
+## Raising Exceptions  
 
-可以被引发的异常可以是任何类的实例，但通常是内置的异常类的实例。`raise`语句的基本语法如下：
+We can use the `raise` statement to raise exceptions. The `raise` statement is used to raise a specified exception.  
+
+The exception that can be raised can be an instance of any class, but is usually an instance of built-in exception classes. The basic syntax of a `raise` statement is:  
 
 ```python
-raise ValueError("Invalid value")
+raise ValueError("Invalid value") 
 ```
-这行代码将引发一个`ValueError`异常，异常消息为`Invalid value`。一般来说，我们用这种方式引发异常来通知调用者发生了一些特定的错误情况，这种时候我们可以自定义异常类。
+This line of code raises a `ValueError` exception with the error message `Invalid value`. In general, we raise exceptions this way to notify callers that some specific error condition has occurred, and we can define custom exception classes for such cases.
 
-## 自定义异常类
+## Custom Exception Classes  
 
-自定义异常类是一个继承自`Exception`类的类。我们可以通过继承`Exception`类来创建自定义的异常类。自定义异常类的基本语法如下：
+A custom exception class is a class that inherits from the `Exception` class. We can create custom exception classes by inheriting from the `Exception` class. The basic syntax of a custom exception class is:   
 
 ```python
 class ShortInputException(Exception):
@@ -153,7 +160,7 @@ class ShortInputException(Exception):
 try:
     text = input("Enter something --> ")
     if len(text) < 3:
-        raise ShortInputException(len(text), 3)
+        raise ShortInputException(len(text), 3)  
 except EOFError:
     print("Why did you do an EOF on me?")
 except ShortInputException as e:
@@ -163,11 +170,10 @@ else:
     print("No exception was raised")
 ```
 
-在上述代码示例中：
+In the above code example:  
 
-- `ShortInputException`是一个自定义的异常类，它继承自`Exception`类。
-- `raise ShortInputException(len(text), 3)`语句引发了一个`ShortInputException`异常。
-- 当`except`语句捕获到一个异常时，它会生成一个异常实例。这个异常实例包括了异常的详细信息。我们可以使用`as`关键字来给这个异常实例指定一个变量名，然后在`except`语句中使用这个变量名来访问异常的详细信息。
-- `%d`是一个占位符，用于格式化字符串。`%`运算符用于格式化字符串。在这个例子中，`%d`表示将一个整数插入到字符串中。
-- 在Python 3.6及以后的版本中，我们可以使用`f`字符串来格式化字符串。`f`字符串是一种新的字符串格式化语法，它允许我们在字符串中使用变量名，而不是占位符。这种方式更为直观灵活。
-
+- `ShortInputException` is a custom exception class that inherits from the `Exception` class.
+- The statement `raise ShortInputException(len(text), 3)` raises a `ShortInputException` exception.  
+- When an `except` statement catches an exception, it generates an exception instance containing the details. We can use the `as` keyword to assign the instance a variable name that we can then access in the except block for the exception details.
+- `%d` is a placeholder for formatting strings. The `%` operator is used for string formatting. In this case, `%d` indicates inserting an integer into the string.  
+- In Python 3.6 and later, we can use f-strings for string formatting. F-strings provide a new way to format strings where variables can be directly inserted using variable names instead of placeholders, making it more intuitive and flexible.

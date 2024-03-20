@@ -161,57 +161,59 @@ print(someone.introduce())
 
 ```
 
-## 引用
+ ## References
 
-在Python中，每当你创建一个对象并将其赋值给一个变量时，Python并不会将对象的值存储在变量中。相反，Python仅仅是将变量设置为一个引用，指向存储在内存中的对象。这种方式被称为绑定变量名到对象，或者叫做引用。
+In Python, whenever you create an object and assign it to a variable, Python does not store the object's value in the variable. Instead, Python simply sets the variable to be a reference that points to the object stored in memory. This is known as binding variable names to objects, or called references.
 
-### 创建对象和引用
+### Creating Objects and References
 
 
-举个例子，当你创建一个列表并赋值给某个变量：
+For example, when you create a list and assign it to a variable:
 
 ```{python}
 list1 = [1, 2, 3]
 ```
 
-此时，list1只是一个引用，它指向存储在内存中的一个列表对象，此对象包含元素1, 2, 3。如果你再创建一个引用，并指向同样的对象：
+At this point, list1 is just a reference that points to a list object stored in memory, which contains the elements 1, 2, 3. If you create another reference that points to the same object: 
 
-```{python}
+```{python} 
 list2 = list1
 ```
 
-此时你有两个引用——list1和list2，它们同时指向同一个对象。
+Now you have two references - list1 and list2, both pointing to the same object.
 
 
-### 修改可变类型的对象
+### Modifying Mutable Type Objects
 
 
-如果你通过其中一个引用去修改这个对象，例如你通过list1去删除第一个元素：
+If you modify the object through one of the references, for example deleting the first element through list1:
 
 ```{python}
-del list1[0]
+del list1[0]  
 ```
-那么无论你是通过list1还是list2来访问这个列表对象，你都会发现的此对象的内容已经发生了变化：
+Then no matter whether you access this list object through list1 or list2, you will find that the content of this object has changed:
 
 ```{python}
-print(list1)  # print: [2, 3]
-print(list2)  # print: [2, 3]
+print(list1)  # prints: [2, 3]  
+print(list2)  # prints: [2, 3]
 ```
-这是因为list1和list2都只是引用，它们并不包含实际的列表内容，而只是指向内存中的一个位置，即同一个列表对象的地址。
+
+This is because list1 and list2 are just references, they do not contain the actual list content themselves, but only point to a location in memory, which is the address of the same list object.
 
 
-### 对象的复制
+### Copying Objects
 
 
-然而，有时你可能需要创建一个对象的副本，这样你就可以修改这个副本，而不影响原来的对象。例如，通过切片操作可以创建一个列表的副本：
+However, sometimes you may need to create a copy of an object, so that you can modify the copy without affecting the original object. For example, you can create a copy of a list through slice operation:
 
-```{python}
+```{python} 
 list3 = list2[:]
 ```
-此时list3引用的是一个完全新的列表对象，这个对象的内容是list2所指向的列表的一个完全的拷贝。所以，当你更改list3的内容时，list2指向的列表内容不会被修改：
+
+Now list3 references a completely new list object, whose content is a complete copy of the list that list2 points to. So when you change the content of list3, the content of the list that list2 points to will not be modified:
 
 ```{python}
 del list3[0]
-print(list2)  # 输出: [2, 3]
-print(list3)  # 输出: [3]
+print(list2) # prints: [2, 3]   
+print(list3) # prints: [3]
 ```
