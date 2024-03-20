@@ -7,6 +7,15 @@ book:
   title: "我的Python学习笔记"
   author: "魏子超"
   date: "2024/1/22"
+  favicon: python-logo-only.svg
+  cover-image: python-logo-only.svg
+  repo-url: https://github.com/exusiaiwei/My-Python-Learning
+  repo-actions: [edit]
+  search: true
+  downloads: [pdf, epub]
+  sidebar:
+    style: docked
+    background: light
   chapters:
     - index.qmd
     - basic.qmd
@@ -23,6 +32,11 @@ book:
     - more.qmd
     - references.qmd
 
+comments:
+  hypothesis: true
+
+
+
 jupyter:
   path: "C://Conda_data//envs//main"
   kernelspec:
@@ -34,9 +48,10 @@ bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme: journal
+    code-copy: true
   pdf:
     documentclass: scrreprt
-
-
+  epub:
+    cover-image: python-logo-only.svg
 
