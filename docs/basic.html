@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <link href="./operators_and_expressions.html" rel="next">
 <link href="./index.html" rel="prev">
+<link href="./python-logo-only.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -102,11 +103,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -127,10 +134,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">我的Python学习笔记</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/exusiaiwei/My-Python-Learning" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -247,7 +257,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#缩进" id="toc-缩进" class="nav-link" data-scroll-target="#缩进"><span class="header-section-number">1.5.2</span> 缩进</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/basic.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -283,14 +293,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>字面常量用于给变量赋值、进行计算和定义Python程序中的条件。</p>
 <p>它们提供了一种直接在代码中表示固定值的方式，使程序更易于理解和维护。</p>
-<div id="c7c5e67f" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span>  <span class="co"># 将整数字面常量赋值给变量</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span>  <span class="co"># 将整数字面常量赋值给变量</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">3.14</span>  <span class="co"># 将浮点数字面常量赋值给变量</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">'John'</span>  <span class="co"># 使用单引号括起来的字符串</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> <span class="st">"Hello, world!"</span>  <span class="co"># 使用双引号括起来的字符串</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>is_active <span class="op">=</span> <span class="va">True</span>  <span class="co"># 将布尔字面常量赋值给变量</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>empty_value <span class="op">=</span> <span class="va">None</span>  <span class="co"># 将None字面常量赋值给变量</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
 <section id="字符串" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="字符串"><span class="header-section-number">1.2</span> 字符串</h2>
@@ -301,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>三引号可以指定多行字符串。</li>
 <li>字符串的值不可以修改。</li>
 </ul>
-<div id="45816ccf" class="cell" data-execution_count="2">
+<div id="67283928" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 创建字符串</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Alice"</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -337,7 +345,7 @@ Blice</code></pre>
 <li>可以通过索引指定插入顺序，python从0开始计数。</li>
 <li>可以命名参数。</li>
 </ul>
-<div id="97c91359" class="cell" data-execution_count="3">
+<div id="95f31803" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Alice"</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">25</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -380,7 +388,7 @@ Hello, my name is Alice and I am 25 years old.</code></pre>
 <li>\“：双引号</li>
 <li>\：反斜杠</li>
 </ul>
-<div id="8f78a443" class="cell" data-execution_count="4">
+<div id="5fe6bdfa" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 在字符串中使用转义序列来表示特殊字符：</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello</span><span class="ch">\t</span><span class="st">World"</span>)  <span class="co"># 输出：Hello    World</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"I</span><span class="ch">\'</span><span class="st">m a programmer"</span>)  <span class="co"># 输出：I'm a programmer</span></span>
@@ -412,7 +420,7 @@ She said, "Hello!"
 <li>变量可以在程序的不同位置使用和传递。</li>
 <li>变量的作用域可以限定在特定的代码块中。</li>
 </ul>
-<div id="b7481cea" class="cell" data-execution_count="5">
+<div id="267bf7ae" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -450,7 +458,7 @@ This is the second line.</code></pre>
 <li>每个物理行都以换行符（）结尾。</li>
 </ul>
 <p>Python鼓励每个物理行对应一个逻辑行，即每行一个语句，以保证代码的可读性。</p>
-<div id="7f03dde9" class="cell" data-execution_count="6">
+<div id="530802aa" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 逻辑行跨越多个物理行的示例</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="dv">2</span> <span class="op">+</span> <span class="op">\</span></span>
@@ -493,7 +501,7 @@ This is the second line.</code></pre>
 <li>缩进错误会导致语法错误或逻辑错误。</li>
 </ul>
 <p>代码示例： 以下是一个缩进构成代码块的示例：</p>
-<div id="579fa1df" class="cell" data-execution_count="7">
+<div id="0e2d4482" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> greet(name):</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> name <span class="op">==</span> <span class="st">"Alice"</span>:</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Hello, Alice!"</span>)</span>
@@ -937,4 +945,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/basic.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

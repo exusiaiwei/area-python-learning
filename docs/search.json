@@ -4,7 +4,7 @@
     "href": "basic.html",
     "title": "1  基础",
     "section": "",
-    "text": "1.1 字面常量\n字面常量是在代码中直接写入且在程序执行过程中不会改变的固定值。\n在Python中，有几种类型的字面常量，包括：\n字面常量用于给变量赋值、进行计算和定义Python程序中的条件。\n它们提供了一种直接在代码中表示固定值的方式，使程序更易于理解和维护。\nx = 10  # 将整数字面常量赋值给变量\ny = 3.14  # 将浮点数字面常量赋值给变量\nname = 'John'  # 使用单引号括起来的字符串\nmessage = \"Hello, world!\"  # 使用双引号括起来的字符串\nis_active = True  # 将布尔字面常量赋值给变量\nempty_value = None  # 将None字面常量赋值给变量",
+    "text": "1.1 字面常量\n字面常量是在代码中直接写入且在程序执行过程中不会改变的固定值。\n在Python中，有几种类型的字面常量，包括：\n字面常量用于给变量赋值、进行计算和定义Python程序中的条件。\n它们提供了一种直接在代码中表示固定值的方式，使程序更易于理解和维护。",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>基础</span>"
     ]
@@ -14,7 +14,7 @@
     "href": "basic.html#字面常量",
     "title": "1  基础",
     "section": "",
-    "text": "数值字面常量：整数、浮点数和复数。\n字符串字面常量：用单引号（’’）或双引号（““）括起来的字符序列。\n布尔字面常量：True和False。\nNone：表示缺少值的特殊常量。",
+    "text": "数值字面常量：整数、浮点数和复数。\n字符串字面常量：用单引号（’’）或双引号（““）括起来的字符序列。\n布尔字面常量：True和False。\nNone：表示缺少值的特殊常量。\n\n\n\nx = 10  # 将整数字面常量赋值给变量\ny = 3.14  # 将浮点数字面常量赋值给变量\nname = 'John'  # 使用单引号括起来的字符串\nmessage = \"Hello, world!\"  # 使用双引号括起来的字符串\nis_active = True  # 将布尔字面常量赋值给变量\nempty_value = None  # 将None字面常量赋值给变量",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>基础</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "operators_and_expressions.html#运算符",
     "title": "2  运算符和表达式",
     "section": "",
-    "text": "2.1.1 1. 算术运算符：\n\n加法运算符（+）：用于将两个值相加。可以处理数值，字符串和列表等类型。\n减法运算符（-）：用于将一个值减去另一个值。如果第一个操作数缺失，默认为0。\n乘法运算符（*）：用于将两个值相乘。用于处理字符串时，则返回重复固定次数的字符串。\n除法运算符（/）：用于将一个值除以另一个值。\n取模运算符（%）：用于计算两个值相除的余数。\n幂运算符（**）：用于计算一个值的指数。\n整除运算符（//）：用于计算两个值相除的整数部分。答案会向下取整到最近的整数值；如果其中有操作数是浮点数，则答案会是浮点数。\n\n\n# 加法运算符\nx1 = 2 + 3\nprint(x1)\nx2 = \"a\" + \"b\"\nprint(x2)\n# 减法运算符\ny1 = 3 - 2\nprint(y1)\ny2 = - 2\nprint(y2)\n# 乘法运算符\na1 = 5 * 6\nprint(a1)\na2 = \"my\" * 6\nprint(a2)\n# 除法运算符\nb = 50 / 25\nprint(b)\n# 取模运算符\nc1 = 26 % 3\nprint(c1)\nc2 = -25.5 % 2.25\nprint(c2)\n# 幂运算符\nd= 2 ** 3\nprint(d)\n# 整除运算符\ne1 = 28 // 3\nprint(e1)\ne2 = 9//1.8\nprint(e2)\n\n5\nab\n1\n-2\n30\nmymymymymymy\n2.0\n2\n1.5\n8\n9\n4.0\n\n\n\n\n2.1.2 2. 比较运算符：\n\n等于运算符（==）：用于检查两个值是否相等。\n不等于运算符（!=）：用于检查两个值是否不相等。\n大于运算符（&gt;）：用于检查一个值是否大于另一个值。\n小于运算符（&lt;）：用于检查一个值是否小于另一个值。\n大于等于运算符（&gt;=）：用于检查一个值是否大于或等于另一个值。\n小于等于运算符（&lt;=）：用于检查一个值是否小于或等于另一个值。\n\n\na = 1 == 1\nprint(a)\nb = 1 != 1\nprint(b)\nc = 2 &gt; 1\nprint(c)\nd = 2 &lt; 1\nprint(d)\ne = 2 &gt;= 2\nprint(e)\nf = 1 &lt;= 2\nprint(f)\n\nTrue\nFalse\nTrue\nFalse\nTrue\nTrue\n\n\n\n\n2.1.3 3. 逻辑运算符（布尔运算符）：\n\n与运算符（and）：用于检查多个条件是否同时为真。只有当所有条件都为真时，结果才为真。\n或运算符（or）：用于检查多个条件是否至少有一个为真。只要有一个条件为真，结果就为真。\n非运算符（not）：用于对条件进行取反。\n\n\n# 与运算符（and）：只有当所有条件都为真时，结果才为真\na = True and True\nprint(a)  # 输出：True\n\nb = True and False\nprint(b)  # 输出：False\n\n# 或运算符（or）：只要有一个条件为真，结果就为真\nc = True or False\nprint(c)  # 输出：True\n\nd = False or False\nprint(d)  # 输出：False\n\n# 非运算符（not）：对条件进行取反\ne = not True\nprint(e)  # 输出：False\n\nf = not False\nprint(f)  # 输出：True\n\nTrue\nFalse\nTrue\nFalse\nFalse\nTrue\n\n\n\n2.1.3.1 短路评估：\n当使用逻辑运算符（如and和or）连接多个条件表达式时，Python会根据运算符的特性来决定是否对所有条件进行求值。 - and运算中，只要任意一个条件为False，则整个表达式必然为False，此时Python会停止计算后面的值并立刻返回False。 - or运算中，只要任意一个条件为True，则整个表达式必然为True，此时Python会停止计算后面的值并立刻返回True。 - 短路评估可以提高代码的效率和性能，避免了不必要的运算和求值。\n\n# 短路评估的示例\na = 4\nb = 0\n\nif b != 0 and a / b &lt; 1:\n    print(\"条件满足\")\nelse:\n    print(\"条件不满足\")    \n\n条件不满足\n\n\n在上面的示例中，通过短路评估，在b != 0这一步判断整体结果为False，进而跳过执行后面的a / b的除以0运算，避免了出现错误。如果不适用短路评估，会先判断b != 0为False，进而执行除法运算，会出现除以0错误。\n\n\n\n2.1.4 4. 位运算符：\n位（bit）：存储、处理数据的最小单位。一位只能存储0或1这两个可能的值。计算机中的数字以二进制（即由0和1组成）的方式储存。\n位移：位移是用来修改数字位值的操作。位移分为左移和右移，左移是在原数右边添加一个0，右移是把最右边一位去掉。\n\n在十进制中，向左移动一位（即在尾部添加一个0）表示乘以10，向右移动一位（即去掉尾部的数字）表示除以10。\n在二进制中，向左移动一位（即在尾部添加一个0）表示乘以2，向右移动一位（即去掉尾部的数字）表示除以2。\n\n位运算符\n\n按位与运算符（&）：用于对两个值进行按位与操作。如果对应的两个二进制位都为1，则该位的结果值为1，否则0。\n按位或运算符（|）：用于对两个值进行按位或操作。如果对应的两个二进制位有一个为1，则该位的结果值为1，否则0。\n按位异或运算符（^）：用于对两个值进行按位异或操作。如果对应的两个二进制位一个为1，另一个为0，则该位结果值为1，否则0（即同为0或者同为1则结果为0）\n按位取反运算符（~）：用于对一个值进行按位取反操作。对一个二进制数按位取反，即将0变1，1变0。x的按位取反是-(x+1)。\n左移运算符（&lt;&lt;）：用于将一个值向左移动指定的位数。\n右移运算符（&gt;&gt;）：用于将一个值向右移动指定的位数。\n\n位运算符是操作二进制位的，不过在实际的编程过程中，使用并不频繁，所以在此处我只给出了简单的解释和例子。\n\n# 定义两个变量\na = 60  # 60的二进制表示为0011 1100\nb = 13  # 13的二进制表示为0000 1101\n\nprint(a, \"的二进制表示为\", bin(a))\nprint(b, \"的二进制表示为\", bin(b))\n\nprint(\"a & b =\", a & b)  # 按位与运算。二进制结果0000 1100，对应十进制为12\nprint(\"a | b =\", a | b)  # 按位或运算。二进制结果0011 1101，对应十进制为61\nprint(\"a ^ b =\", a ^ b)  # 按位异或运算。二进制结果0011 0001，对应十进制为49\nprint(\"~a =\", ~a)  # 按位取反运算。二进制结果1100 0011，对应十进制为-61（注意：是负数）\n\nprint(\"a &lt;&lt; 2 =\", a &lt;&lt; 2)  # 左移2位运算。二进制结果1111 0000，对应十进制为240\nprint(\"a &gt;&gt; 2 =\", a &gt;&gt; 2)  # 右移2位运算。二进制结果0000 1111，对应十进制为15\n\n60 的二进制表示为 0b111100\n13 的二进制表示为 0b1101\na & b = 12\na | b = 61\na ^ b = 49\n~a = -61\na &lt;&lt; 2 = 240\na &gt;&gt; 2 = 15\n\n\n\n\n2.1.5 5. 赋值运算符：\n\n简单赋值运算符（=）：用于将一个值赋给一个变量。\n加法赋值运算符（+=）：用于将一个值与一个变量相加，并将结果赋给该变量。\n减法赋值运算符（-=）：用于将一个值从一个变量中减去，并将结果赋给该变量。\n乘法赋值运算符（*=）：用于将一个值与一个变量相乘，并将结果赋给该变量。\n除法赋值运算符（/=）：用于将一个值除以一个变量，并将结果赋给该变量。\n取模赋值运算符（%=）：用于计算两个值相除的余数，并将结果赋给一个变量。\n幂赋值运算符（**=）：用于计算一个值的指数，并将结果赋给一个变量。\n整除赋值运算符（//=）：用于计算两个值相除的整数部分，并将结果赋给一个变量。\n\n\n# 简单赋值运算符（=）\na = 10\nprint(\"a =\", a)  # 输出：a = 10\n\n# 加法赋值运算符（+=）\na += 2\nprint(\"a =\", a)  # 输出：a = 12\n\n# 减法赋值运算符（-=）\na -= 2\nprint(\"a =\", a)  # 输出：a = 10\n\n# 乘法赋值运算符（*=）\na *= 2\nprint(\"a =\", a)  # 输出：a = 20\n\n# 除法赋值运算符（/=）\na /= 2\nprint(\"a =\", a)  # 输出：a = 10.0\n\n# 取模赋值运算符（%=）\na %= 3\nprint(\"a =\", a)  # 输出：a = 1.0\n\n# 幂赋值运算符（**=）\na **= 3\nprint(\"a =\", a)  # 输出：a = 1.0\n\n# 整除赋值运算符（//=）\na = 10\na //= 3\nprint(\"a =\", a)  # 输出：a = 3\n\na = 10\na = 12\na = 10\na = 20\na = 10.0\na = 1.0\na = 1.0\na = 3",
+    "text": "2.1.1 算术运算符：\n\n加法运算符（+）：用于将两个值相加。可以处理数值，字符串和列表等类型。\n减法运算符（-）：用于将一个值减去另一个值。如果第一个操作数缺失，默认为0。\n乘法运算符（*）：用于将两个值相乘。用于处理字符串时，则返回重复固定次数的字符串。\n除法运算符（/）：用于将一个值除以另一个值。\n取模运算符（%）：用于计算两个值相除的余数。\n幂运算符（**）：用于计算一个值的指数。\n整除运算符（//）：用于计算两个值相除的整数部分。答案会向下取整到最近的整数值；如果其中有操作数是浮点数，则答案会是浮点数。\n\n\n# 加法运算符\nx1 = 2 + 3\nprint(x1)\nx2 = \"a\" + \"b\"\nprint(x2)\n# 减法运算符\ny1 = 3 - 2\nprint(y1)\ny2 = - 2\nprint(y2)\n# 乘法运算符\na1 = 5 * 6\nprint(a1)\na2 = \"my\" * 6\nprint(a2)\n# 除法运算符\nb = 50 / 25\nprint(b)\n# 取模运算符\nc1 = 26 % 3\nprint(c1)\nc2 = -25.5 % 2.25\nprint(c2)\n# 幂运算符\nd= 2 ** 3\nprint(d)\n# 整除运算符\ne1 = 28 // 3\nprint(e1)\ne2 = 9//1.8\nprint(e2)\n\n5\nab\n1\n-2\n30\nmymymymymymy\n2.0\n2\n1.5\n8\n9\n4.0\n\n\n\n\n2.1.2 比较运算符：\n\n等于运算符（==）：用于检查两个值是否相等。\n不等于运算符（!=）：用于检查两个值是否不相等。\n大于运算符（&gt;）：用于检查一个值是否大于另一个值。\n小于运算符（&lt;）：用于检查一个值是否小于另一个值。\n大于等于运算符（&gt;=）：用于检查一个值是否大于或等于另一个值。\n小于等于运算符（&lt;=）：用于检查一个值是否小于或等于另一个值。\n\n\na = 1 == 1\nprint(a)\nb = 1 != 1\nprint(b)\nc = 2 &gt; 1\nprint(c)\nd = 2 &lt; 1\nprint(d)\ne = 2 &gt;= 2\nprint(e)\nf = 1 &lt;= 2\nprint(f)\n\nTrue\nFalse\nTrue\nFalse\nTrue\nTrue\n\n\n\n\n2.1.3 逻辑运算符（布尔运算符）：\n\n与运算符（and）：用于检查多个条件是否同时为真。只有当所有条件都为真时，结果才为真。\n或运算符（or）：用于检查多个条件是否至少有一个为真。只要有一个条件为真，结果就为真。\n非运算符（not）：用于对条件进行取反。\n\n\n# 与运算符（and）：只有当所有条件都为真时，结果才为真\na = True and True\nprint(a)  # 输出：True\n\nb = True and False\nprint(b)  # 输出：False\n\n# 或运算符（or）：只要有一个条件为真，结果就为真\nc = True or False\nprint(c)  # 输出：True\n\nd = False or False\nprint(d)  # 输出：False\n\n# 非运算符（not）：对条件进行取反\ne = not True\nprint(e)  # 输出：False\n\nf = not False\nprint(f)  # 输出：True\n\nTrue\nFalse\nTrue\nFalse\nFalse\nTrue\n\n\n\n2.1.3.1 短路评估：\n当使用逻辑运算符（如and和or）连接多个条件表达式时，Python会根据运算符的特性来决定是否对所有条件进行求值。 - and运算中，只要任意一个条件为False，则整个表达式必然为False，此时Python会停止计算后面的值并立刻返回False。 - or运算中，只要任意一个条件为True，则整个表达式必然为True，此时Python会停止计算后面的值并立刻返回True。 - 短路评估可以提高代码的效率和性能，避免了不必要的运算和求值。\n\n# 短路评估的示例\na = 4\nb = 0\n\nif b != 0 and a / b &lt; 1:\n    print(\"条件满足\")\nelse:\n    print(\"条件不满足\")    \n\n条件不满足\n\n\n在上面的示例中，通过短路评估，在b != 0这一步判断整体结果为False，进而跳过执行后面的a / b的除以0运算，避免了出现错误。如果不适用短路评估，会先判断b != 0为False，进而执行除法运算，会出现除以0错误。\n\n\n2.1.3.2 优先级\n每个运算符都有不同的优先级，其中 not 在 and 和 or 之前进行评估。括号可以用来在其他部分之前评估表达式的一部分。\n在Python中，所有的布尔运算符的优先级都低于比较运算符，比较运算符的优先级低于算术运算符。\n\n\n\n2.1.4 位运算符：\n位（bit）：存储、处理数据的最小单位。一位只能存储0或1这两个可能的值。计算机中的数字以二进制（即由0和1组成）的方式储存。\n位移：位移是用来修改数字位值的操作。位移分为左移和右移，左移是在原数右边添加一个0，右移是把最右边一位去掉。\n\n在十进制中，向左移动一位（即在尾部添加一个0）表示乘以10，向右移动一位（即去掉尾部的数字）表示除以10。\n在二进制中，向左移动一位（即在尾部添加一个0）表示乘以2，向右移动一位（即去掉尾部的数字）表示除以2。\n\n位运算符\n\n按位与运算符（&）：用于对两个值进行按位与操作。如果对应的两个二进制位都为1，则该位的结果值为1，否则0。\n按位或运算符（|）：用于对两个值进行按位或操作。如果对应的两个二进制位有一个为1，则该位的结果值为1，否则0。\n按位异或运算符（^）：用于对两个值进行按位异或操作。如果对应的两个二进制位一个为1，另一个为0，则该位结果值为1，否则0（即同为0或者同为1则结果为0）\n按位取反运算符（~）：用于对一个值进行按位取反操作。对一个二进制数按位取反，即将0变1，1变0。x的按位取反是-(x+1)。\n左移运算符（&lt;&lt;）：用于将一个值向左移动指定的位数。\n右移运算符（&gt;&gt;）：用于将一个值向右移动指定的位数。\n\n位运算符是操作二进制位的，不过在实际的编程过程中，使用并不频繁，所以在此处我只给出了简单的解释和例子。\n\n# 定义两个变量\na = 60  # 60的二进制表示为0011 1100\nb = 13  # 13的二进制表示为0000 1101\n\nprint(a, \"的二进制表示为\", bin(a))\nprint(b, \"的二进制表示为\", bin(b))\n\nprint(\"a & b =\", a & b)  # 按位与运算。二进制结果0000 1100，对应十进制为12\nprint(\"a | b =\", a | b)  # 按位或运算。二进制结果0011 1101，对应十进制为61\nprint(\"a ^ b =\", a ^ b)  # 按位异或运算。二进制结果0011 0001，对应十进制为49\nprint(\"~a =\", ~a)  # 按位取反运算。二进制结果1100 0011，对应十进制为-61（注意：是负数）\n\nprint(\"a &lt;&lt; 2 =\", a &lt;&lt; 2)  # 左移2位运算。二进制结果1111 0000，对应十进制为240\nprint(\"a &gt;&gt; 2 =\", a &gt;&gt; 2)  # 右移2位运算。二进制结果0000 1111，对应十进制为15\n\n60 的二进制表示为 0b111100\n13 的二进制表示为 0b1101\na & b = 12\na | b = 61\na ^ b = 49\n~a = -61\na &lt;&lt; 2 = 240\na &gt;&gt; 2 = 15\n\n\n\n\n2.1.5 赋值运算符：\n\n简单赋值运算符（=）：用于将一个值赋给一个变量。\n加法赋值运算符（+=）：用于将一个值与一个变量相加，并将结果赋给该变量。\n减法赋值运算符（-=）：用于将一个值从一个变量中减去，并将结果赋给该变量。\n乘法赋值运算符（*=）：用于将一个值与一个变量相乘，并将结果赋给该变量。\n除法赋值运算符（/=）：用于将一个值除以一个变量，并将结果赋给该变量。\n取模赋值运算符（%=）：用于计算两个值相除的余数，并将结果赋给一个变量。\n幂赋值运算符（**=）：用于计算一个值的指数，并将结果赋给一个变量。\n整除赋值运算符（//=）：用于计算两个值相除的整数部分，并将结果赋给一个变量。\n\n\n# 简单赋值运算符（=）\na = 10\nprint(\"a =\", a)  # 输出：a = 10\n\n# 加法赋值运算符（+=）\na += 2\nprint(\"a =\", a)  # 输出：a = 12\n\n# 减法赋值运算符（-=）\na -= 2\nprint(\"a =\", a)  # 输出：a = 10\n\n# 乘法赋值运算符（*=）\na *= 2\nprint(\"a =\", a)  # 输出：a = 20\n\n# 除法赋值运算符（/=）\na /= 2\nprint(\"a =\", a)  # 输出：a = 10.0\n\n# 取模赋值运算符（%=）\na %= 3\nprint(\"a =\", a)  # 输出：a = 1.0\n\n# 幂赋值运算符（**=）\na **= 3\nprint(\"a =\", a)  # 输出：a = 1.0\n\n# 整除赋值运算符（//=）\na = 10\na //= 3\nprint(\"a =\", a)  # 输出：a = 3\n\na = 10\na = 12\na = 10\na = 20\na = 10.0\na = 1.0\na = 1.0\na = 3",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>运算符和表达式</span>"
     ]
@@ -464,7 +464,7 @@
     "href": "object_oriented_programming.html",
     "title": "8  面向对象编程",
     "section": "",
-    "text": "8.1 对象和类的回顾\n在 Section 6.6 中我们已经介绍了对象和类的概念，我们可以总结如下：",
+    "text": "8.1 对象和类的回顾\n在 ?sec-objects-and-classes 中我们已经介绍了对象和类的概念，我们可以总结如下：",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>面向对象编程</span>"
     ]
@@ -484,7 +484,7 @@
     "href": "object_oriented_programming.html#类的构建功能部分",
     "title": "8  面向对象编程",
     "section": "8.2 类的构建（功能部分）",
-    "text": "8.2 类的构建（功能部分）\n一个最简单的类如下所示：\n\nclass Person:\n    pass  # An empty block\n\np = Person()\nprint(p)\n\n&lt;__main__.Person object at 0x00000223C834AD90&gt;\n\n\n我们使用class语句和类的名称创建一个新的类，然后是一个缩进的语句块，构成类的主体。在这里，用pass语句表示一个空的语句块，因为Python中的语句块不能为空。\n类的名称后跟一对括号可以创建一个对象/实例。在实例代码中，我们通过print(p)语句来确认这个对象已经被创建。打印的结果说明这个对象是一个在 __main__ 模块中的Person类的实例。\n类的构建主要是通过定义类的方法实现的。方法描述了类或其实例可以进行的操作。在Python中，我们常常在类的内部定义方法，就像定义普通的函数那样。\n\n8.2.1 方法: 类的功能实现\n类和对象可以和函数一样拥有方法，唯一的不同之处在于方法的第一个参数是self。\n以下是一个简单的类的方法例子：\n\nclass Person:\n    def say_hi(self):\n        print('Hello, how are you?')\n\np = Person()\np.say_hi()\n\nHello, how are you?\n\n\n\n\n8.2.2 self在类方法中的作用\n在Python中，类方法的第一个参数通常会是一个名为self的特殊参数，这个self参数代表方法的所属实例，或者说，将会调用这个方法的实例。通过self参数，方法可以自由地访问和修改对象的字段和其他方法。\n\n\n\n\n\n\nTip\n\n\n\n在定义类的方法时，我们并不知道这个方法将来会被哪个实例对象调用。所以我们需要一个参数（习惯上叫做self）来接收运行时传入的实例对象，这样这个方法才能访问到实例的属性或者调用实例的其他方法。\n\n\n\nclass Dog:\n    def __init__(self, name):\n        self.name = name\n\n    def bark(self):\n        return f\"{self.name} says woof!\"\n\nd1 = Dog(\"Fido\")\nd2 = Dog(\"Rex\")\n\nprint(d1.bark())  # 输出 \"Fido says woof!\"\nprint(d2.bark())  # 输出 \"Rex says woof!\"\n\nFido says woof!\nRex says woof!\n\n\n当一个实例调用其方法时，Python 解释器会自动将实例本身传入方法的self参数。通过self，我们可以在方法内部访问和修改实例的属性。\n在这个例子中，bark()方法在d1和d2两个不同的实例中调用，self就代表了调用这个方法的实例，因此self.name会分别返回d1和d2的name属性。在每一次方法的调用中，Python都会自动地将当前的对象实例作为第一个参数传递进去。\n\n\n\n\n\n\nCaution\n\n\n\nrex.bark()\n在这里，当我们调用rex.bark()时，从表面看，我们并没有给bark方法提供任何参数。但实际上，Python解释器会自动把rex这个实例传递给bark方法的self参数。这就是为何在类的方法最开始位置总会有一个self参数，而在调用方法时，我们通常并不需要显式地提供这个参数。\n同理，这也意味着哪怕是一个不带参数的方法，他也仍然需要一个参数- self\n\n\n\n\n8.2.3 __init__方法：类的构造函数\n在Python中，我们通常会在类中定义一个特殊的方法__init__，这个方法称为类的构造函数。当我们根据类创建一个新的实例时，Python解释器会自动调用__init__方法对新创建的实例进行初始化。\n\n\n\n\n\n\n魔术方法\n\n\n\n__init__方法的名称前后都有两个下划线，这代表它是一个特殊的方法，有特别的含义。\n在Python中，这种双下划线开头和结尾的方法通常被称为“魔术方法”。这些方法是由Python解释器自动调用的，我们通常不需要显式地调用它们。\n\n\n__init__方法的第一个参数总是self，即这个对象本身的引用。在__init__方法中，我们可以设置实例的初始状态，比如添加一些初始的属性值。\n以下是一个包含有__init__方法的类的例子：\n\nclass Dog:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\nmy_dog = Dog('Willy', 5)\n\n在这个例子中，Dog类有一个__init__方法，这个方法接收三个参数：self、name和age。对于self参数，我们已经知道，当我们创建类的实例时，Python会自动为我们提供。其它的参数（name和age），我们需要在创建对象时提供。\n__init__方法通常用于在创建对象时初始化对象的状态。通过在__init__方法中设置对象的属性，可以确保对象一旦被创建，就具有一定的初始状态。",
+    "text": "8.2 类的构建（功能部分）\n一个最简单的类如下所示：\n\nclass Person:\n    pass  # An empty block\n\np = Person()\nprint(p)\n\n&lt;__main__.Person object at 0x000001E1F50CDB50&gt;\n\n\n我们使用class语句和类的名称创建一个新的类，然后是一个缩进的语句块，构成类的主体。在这里，用pass语句表示一个空的语句块，因为Python中的语句块不能为空。\n类的名称后跟一对括号可以创建一个对象/实例。在实例代码中，我们通过print(p)语句来确认这个对象已经被创建。打印的结果说明这个对象是一个在 __main__ 模块中的Person类的实例。\n类的构建主要是通过定义类的方法实现的。方法描述了类或其实例可以进行的操作。在Python中，我们常常在类的内部定义方法，就像定义普通的函数那样。\n\n8.2.1 方法: 类的功能实现\n类和对象可以和函数一样拥有方法，唯一的不同之处在于方法的第一个参数是self。\n以下是一个简单的类的方法例子：\n\nclass Person:\n    def say_hi(self):\n        print('Hello, how are you?')\n\np = Person()\np.say_hi()\n\nHello, how are you?\n\n\n\n\n8.2.2 self在类方法中的作用\n在Python中，类方法的第一个参数通常会是一个名为self的特殊参数，这个self参数代表方法的所属实例，或者说，将会调用这个方法的实例。通过self参数，方法可以自由地访问和修改对象的字段和其他方法。\n\n\n\n\n\n\nTip\n\n\n\n在定义类的方法时，我们并不知道这个方法将来会被哪个实例对象调用。所以我们需要一个参数（习惯上叫做self）来接收运行时传入的实例对象，这样这个方法才能访问到实例的属性或者调用实例的其他方法。\n\n\n\nclass Dog:\n    def __init__(self, name):\n        self.name = name\n\n    def bark(self):\n        return f\"{self.name} says woof!\"\n\nd1 = Dog(\"Fido\")\nd2 = Dog(\"Rex\")\n\nprint(d1.bark())  # 输出 \"Fido says woof!\"\nprint(d2.bark())  # 输出 \"Rex says woof!\"\n\nFido says woof!\nRex says woof!\n\n\n当一个实例调用其方法时，Python 解释器会自动将实例本身传入方法的self参数。通过self，我们可以在方法内部访问和修改实例的属性。\n在这个例子中，bark()方法在d1和d2两个不同的实例中调用，self就代表了调用这个方法的实例，因此self.name会分别返回d1和d2的name属性。在每一次方法的调用中，Python都会自动地将当前的对象实例作为第一个参数传递进去。\n\n\n\n\n\n\nCaution\n\n\n\nrex.bark()\n在这里，当我们调用rex.bark()时，从表面看，我们并没有给bark方法提供任何参数。但实际上，Python解释器会自动把rex这个实例传递给bark方法的self参数。这就是为何在类的方法最开始位置总会有一个self参数，而在调用方法时，我们通常并不需要显式地提供这个参数。\n同理，这也意味着哪怕是一个不带参数的方法，他也仍然需要一个参数- self\n\n\n\n\n8.2.3 __init__方法：类的构造函数\n在Python中，我们通常会在类中定义一个特殊的方法__init__，这个方法称为类的构造函数。当我们根据类创建一个新的实例时，Python解释器会自动调用__init__方法对新创建的实例进行初始化。\n\n\n\n\n\n\n魔术方法\n\n\n\n__init__方法的名称前后都有两个下划线，这代表它是一个特殊的方法，有特别的含义。\n在Python中，这种双下划线开头和结尾的方法通常被称为“魔术方法”。这些方法是由Python解释器自动调用的，我们通常不需要显式地调用它们。\n\n\n__init__方法的第一个参数总是self，即这个对象本身的引用。在__init__方法中，我们可以设置实例的初始状态，比如添加一些初始的属性值。\n以下是一个包含有__init__方法的类的例子：\n\nclass Dog:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\nmy_dog = Dog('Willy', 5)\n\n在这个例子中，Dog类有一个__init__方法，这个方法接收三个参数：self、name和age。对于self参数，我们已经知道，当我们创建类的实例时，Python会自动为我们提供。其它的参数（name和age），我们需要在创建对象时提供。\n__init__方法通常用于在创建对象时初始化对象的状态。通过在__init__方法中设置对象的属性，可以确保对象一旦被创建，就具有一定的初始状态。",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>面向对象编程</span>"
     ]
@@ -674,7 +674,7 @@
     "href": "more.html",
     "title": "12  更多",
     "section": "",
-    "text": "这里将用来记载我在实际使用Python中遇到的问题和知识点。\n（现在，这里还空无一物",
+    "text": "12.1 字符串方法\n字符串实现了所有常见的序列操作，如索引、切片、连接、重复、成员资格检查等。此外，字符串还提供了一些特有的方法，用于查找、替换、大小写转换等。\n在Python中，常用的字符串方法有：",
     "crumbs": [
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>更多</span>"
     ]
@@ -697,6 +697,46 @@
     "text": "CH, Swaroop. 2024. “Swaroopch/Byte-of-Python.”\nhttps://github.com/swaroopch/byte-of-python.",
     "crumbs": [
       "参考文献"
+    ]
+  },
+  {
+    "objectID": "more.html#字符串方法",
+    "href": "more.html#字符串方法",
+    "title": "12  更多",
+    "section": "",
+    "text": "str.startswith(prefix[, start[, end]])：检查字符串是否以指定的前缀开头。\nstr.endswith(suffix[, start[, end]])：检查字符串是否以指定的后缀结尾。\nstr.title()：将字符串中的每个单词的首字母大写。\nstr.upper()：将字符串中的所有字母大写。\nstr.lower()：将字符串中的所有字母小写。\nstr.strip([chars])：去除字符串首尾的指定字符。如果不指定参数，则默认去除空白字符。\nstr.lstrip([chars])：去除字符串开头的指定字符。如果不指定参数，则默认去除空白字符。\nstr.rstrip([chars])：去除字符串结尾的指定字符。如果不指定参数，则默认去除空白字符。\nstr.replace(old, new[, count])：将字符串中的指定子串替换为新的子串。\nstr.removeprefix(prefix)：去除字符串开头的指定前缀。\nstr.removesuffix(suffix)：去除字符串结尾的指定后缀。",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>更多</span>"
+    ]
+  },
+  {
+    "objectID": "more.html#python-推导式comprehensions",
+    "href": "more.html#python-推导式comprehensions",
+    "title": "12  更多",
+    "section": "12.2 Python 推导式（Comprehensions）",
+    "text": "12.2 Python 推导式（Comprehensions）\nPython 推导式是一种简洁且功能强大的语法，用于创建新的序列（如列表、集合、字典）或生成器。推导式允许你在一行代码中将循环和条件语句组合起来，提高代码的可读性和效率。\nPython 提供了四种类型的推导式：\n\n列表推导式（List Comprehension）\n集合推导式（Set Comprehension）\n字典推导式（Dictionary Comprehension）\n生成器表达式（Generator Expression）\n\n\n12.2.1 列表推导式（List Comprehension）\n列表推导式用于创建新的列表。其语法如下：\n[expression for item in iterable if condition]\n\nexpression：表达式，用于对每个元素进行操作或转换。\nitem：迭代器变量，表示当前迭代的元素。\niterable：可迭代对象，如列表、元组、字符串等。\nif condition：可选的条件语句，用于过滤元素。\n\n示例：\n\nsquares = [x ** 2 for x in range(1, 6)]\n# 输出：[1, 4, 9, 16, 25]\n\n\n\n12.2.2 集合推导式（Set Comprehension）\n集合推导式用于创建新的集合。其语法与列表推导式类似，但使用大括号 {} 而不是方括号 []。\nunique_squares = {x ** 2 for x in [1, 1, 2, 3, 3, 4]}\n# 输出：{1, 4, 9, 16}",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>更多</span>"
+    ]
+  },
+  {
+    "objectID": "more.html#字典推导式dictionary-comprehension",
+    "href": "more.html#字典推导式dictionary-comprehension",
+    "title": "12  更多",
+    "section": "12.3 字典推导式（Dictionary Comprehension）",
+    "text": "12.3 字典推导式（Dictionary Comprehension）\n字典推导式用于创建新的字典。其语法如下：\n{key_expression: value_expression for item in iterable if condition}\n\nkey_expression：表达式，用于生成字典的键。\nvalue_expression：表达式，用于生成字典的值。\nitem、iterable 和 if condition 的含义与列表推导式相同。\n\n示例：\n\nsquare_dict = {x: x ** 2 for x in range(1, 6)}\n# 输出：{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>更多</span>"
+    ]
+  },
+  {
+    "objectID": "more.html#生成器表达式generator-expression",
+    "href": "more.html#生成器表达式generator-expression",
+    "title": "12  更多",
+    "section": "12.4 生成器表达式（Generator Expression）",
+    "text": "12.4 生成器表达式（Generator Expression）\n生成器表达式用于创建生成器对象。其语法与列表推导式类似，但使用圆括号 () 而不是方括号 []。生成器表达式是延迟计算的，只有在需要时才会生成数值，因此对于大型数据集或无限序列非常有用。\n\nsquare_generator = (x ** 2 for x in range(1, 6))\nfor square in square_generator:\n    print(square)\n# 输出：\n# 1\n# 4\n# 9\n# 16\n# 25\n\n1\n4\n9\n16\n25\n\n\n\n12.4.1 嵌套推导式\n推导式还可以嵌套使用，以生成更复杂的结构。例如，你可以使用嵌套的列表推导式来创建矩阵：\n\nmatrix = [[i * j for j in range(1, 4)] for i in range(1, 4)]\n# 输出：[[1, 2, 3], [2, 4, 6], [3, 6, 9]]\n\n\n\n12.4.2 总结\n推导式是 Python 中一种强大且表达力强的特性，可以简化代码并提高可读性。它们允许你在一行代码中将循环和条件语句组合起来，用于创建新的列表、集合、字典或生成器。\n理解和使用推导式是编写 Pythonic 代码的重要部分。合理运用推导式可以使你的代码更加简洁、优雅和高效。",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>更多</span>"
     ]
   }
 ]

@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -32,6 +66,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./references.html" rel="next">
 <link href="./standard_library.html" rel="prev">
+<link href="./python-logo-only.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,11 +103,17 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -93,10 +134,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">我的Python学习笔记</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/exusiaiwei/My-Python-Learning" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -187,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">参考文献</span></a>
   </div>
 </li>
     </ul>
@@ -196,7 +240,24 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#字符串方法" id="toc-字符串方法" class="nav-link active" data-scroll-target="#字符串方法"><span class="header-section-number">12.1</span> 字符串方法</a></li>
+  <li><a href="#python-推导式comprehensions" id="toc-python-推导式comprehensions" class="nav-link" data-scroll-target="#python-推导式comprehensions"><span class="header-section-number">12.2</span> Python 推导式（Comprehensions）</a>
+  <ul class="collapse">
+  <li><a href="#列表推导式list-comprehension" id="toc-列表推导式list-comprehension" class="nav-link" data-scroll-target="#列表推导式list-comprehension"><span class="header-section-number">12.2.1</span> 列表推导式（List Comprehension）</a></li>
+  <li><a href="#集合推导式set-comprehension" id="toc-集合推导式set-comprehension" class="nav-link" data-scroll-target="#集合推导式set-comprehension"><span class="header-section-number">12.2.2</span> 集合推导式（Set Comprehension）</a></li>
+  </ul></li>
+  <li><a href="#字典推导式dictionary-comprehension" id="toc-字典推导式dictionary-comprehension" class="nav-link" data-scroll-target="#字典推导式dictionary-comprehension"><span class="header-section-number">12.3</span> 字典推导式（Dictionary Comprehension）</a></li>
+  <li><a href="#生成器表达式generator-expression" id="toc-生成器表达式generator-expression" class="nav-link" data-scroll-target="#生成器表达式generator-expression"><span class="header-section-number">12.4</span> 生成器表达式（Generator Expression）</a>
+  <ul class="collapse">
+  <li><a href="#嵌套推导式" id="toc-嵌套推导式" class="nav-link" data-scroll-target="#嵌套推导式"><span class="header-section-number">12.4.1</span> 嵌套推导式</a></li>
+  <li><a href="#总结" id="toc-总结" class="nav-link" data-scroll-target="#总结"><span class="header-section-number">12.4.2</span> 总结</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/more.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -222,8 +283,109 @@ ul.task-list li input[type="checkbox"] {
 
 <p>这里将用来记载我在实际使用Python中遇到的问题和知识点。</p>
 <p>（现在，这里还空无一物</p>
+<section id="字符串方法" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="字符串方法"><span class="header-section-number">12.1</span> 字符串方法</h2>
+<p>字符串实现了所有常见的序列操作，如索引、切片、连接、重复、成员资格检查等。此外，字符串还提供了一些特有的方法，用于查找、替换、大小写转换等。</p>
+<p>在Python中，常用的字符串方法有：</p>
+<ul>
+<li><code>str.startswith(prefix[, start[, end]])</code>：检查字符串是否以指定的前缀开头。</li>
+<li><code>str.endswith(suffix[, start[, end]])</code>：检查字符串是否以指定的后缀结尾。</li>
+<li><code>str.title()</code>：将字符串中的每个单词的首字母大写。</li>
+<li><code>str.upper()</code>：将字符串中的所有字母大写。</li>
+<li><code>str.lower()</code>：将字符串中的所有字母小写。</li>
+<li><code>str.strip([chars])</code>：去除字符串首尾的指定字符。如果不指定参数，则默认去除空白字符。</li>
+<li><code>str.lstrip([chars])</code>：去除字符串开头的指定字符。如果不指定参数，则默认去除空白字符。</li>
+<li><code>str.rstrip([chars])</code>：去除字符串结尾的指定字符。如果不指定参数，则默认去除空白字符。</li>
+<li><code>str.replace(old, new[, count])</code>：将字符串中的指定子串替换为新的子串。</li>
+<li><code>str.removeprefix(prefix)</code>：去除字符串开头的指定前缀。</li>
+<li><code>str.removesuffix(suffix)</code>：去除字符串结尾的指定后缀。</li>
+</ul>
+</section>
+<section id="python-推导式comprehensions" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="python-推导式comprehensions"><span class="header-section-number">12.2</span> Python 推导式（Comprehensions）</h2>
+<p>Python 推导式是一种简洁且功能强大的语法，用于创建新的序列（如列表、集合、字典）或生成器。推导式允许你在一行代码中将循环和条件语句组合起来，提高代码的可读性和效率。</p>
+<p>Python 提供了四种类型的推导式：</p>
+<ol type="1">
+<li>列表推导式（List Comprehension）</li>
+<li>集合推导式（Set Comprehension）</li>
+<li>字典推导式（Dictionary Comprehension）</li>
+<li>生成器表达式（Generator Expression）</li>
+</ol>
+<section id="列表推导式list-comprehension" class="level3" data-number="12.2.1">
+<h3 data-number="12.2.1" class="anchored" data-anchor-id="列表推导式list-comprehension"><span class="header-section-number">12.2.1</span> 列表推导式（List Comprehension）</h3>
+<p>列表推导式用于创建新的列表。其语法如下：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[expression <span class="cf">for</span> item <span class="kw">in</span> iterable <span class="cf">if</span> condition]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><code>expression</code>：表达式，用于对每个元素进行操作或转换。</li>
+<li><code>item</code>：迭代器变量，表示当前迭代的元素。</li>
+<li><code>iterable</code>：可迭代对象，如列表、元组、字符串等。</li>
+<li><code>if condition</code>：可选的条件语句，用于过滤元素。</li>
+</ul>
+<p>示例：</p>
+<div id="5d5b25ee" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>squares <span class="op">=</span> [x <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>)]</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 输出：[1, 4, 9, 16, 25]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="集合推导式set-comprehension" class="level3" data-number="12.2.2">
+<h3 data-number="12.2.2" class="anchored" data-anchor-id="集合推导式set-comprehension"><span class="header-section-number">12.2.2</span> 集合推导式（Set Comprehension）</h3>
+<p>集合推导式用于创建新的集合。其语法与列表推导式类似，但使用大括号 <code>{}</code> 而不是方括号 <code>[]</code>。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>unique_squares <span class="op">=</span> {x <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>]}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 输出：{1, 4, 9, 16}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="字典推导式dictionary-comprehension" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="字典推导式dictionary-comprehension"><span class="header-section-number">12.3</span> 字典推导式（Dictionary Comprehension）</h2>
+<p>字典推导式用于创建新的字典。其语法如下：</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>{key_expression: value_expression <span class="cf">for</span> item <span class="kw">in</span> iterable <span class="cf">if</span> condition}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><code>key_expression</code>：表达式，用于生成字典的键。</li>
+<li><code>value_expression</code>：表达式，用于生成字典的值。</li>
+<li><code>item</code>、<code>iterable</code> 和 <code>if condition</code> 的含义与列表推导式相同。</li>
+</ul>
+<p>示例：</p>
+<div id="11117be1" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>square_dict <span class="op">=</span> {x: x <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>)}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 输出：{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="生成器表达式generator-expression" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="生成器表达式generator-expression"><span class="header-section-number">12.4</span> 生成器表达式（Generator Expression）</h2>
+<p>生成器表达式用于创建生成器对象。其语法与列表推导式类似，但使用圆括号 <code>()</code> 而不是方括号 <code>[]</code>。生成器表达式是延迟计算的，只有在需要时才会生成数值，因此对于大型数据集或无限序列非常有用。</p>
+<div id="4327df34" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>square_generator <span class="op">=</span> (x <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>))</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> square <span class="kw">in</span> square_generator:</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(square)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 输出：</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 4</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 9</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 16</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 25</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1
+4
+9
+16
+25</code></pre>
+</div>
+</div>
+<section id="嵌套推导式" class="level3" data-number="12.4.1">
+<h3 data-number="12.4.1" class="anchored" data-anchor-id="嵌套推导式"><span class="header-section-number">12.4.1</span> 嵌套推导式</h3>
+<p>推导式还可以嵌套使用，以生成更复杂的结构。例如，你可以使用嵌套的列表推导式来创建矩阵：</p>
+<div id="27780f2e" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> [[i <span class="op">*</span> j <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">4</span>)] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">4</span>)]</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 输出：[[1, 2, 3], [2, 4, 6], [3, 6, 9]]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="总结" class="level3" data-number="12.4.2">
+<h3 data-number="12.4.2" class="anchored" data-anchor-id="总结"><span class="header-section-number">12.4.2</span> 总结</h3>
+<p>推导式是 Python 中一种强大且表达力强的特性，可以简化代码并提高可读性。它们允许你在一行代码中将循环和条件语句组合起来，用于创建新的列表、集合、字典或生成器。</p>
+<p>理解和使用推导式是编写 Pythonic 代码的重要部分。合理运用推导式可以使你的代码更加简洁、优雅和高效。</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -642,8 +804,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="参考文献">
+        <span class="nav-page-text">参考文献</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -652,4 +814,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/more.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
