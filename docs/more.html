@@ -249,12 +249,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#列表推导式list-comprehension" id="toc-列表推导式list-comprehension" class="nav-link" data-scroll-target="#列表推导式list-comprehension"><span class="header-section-number">12.2.1</span> 列表推导式（List Comprehension）</a></li>
   <li><a href="#集合推导式set-comprehension" id="toc-集合推导式set-comprehension" class="nav-link" data-scroll-target="#集合推导式set-comprehension"><span class="header-section-number">12.2.2</span> 集合推导式（Set Comprehension）</a></li>
-  </ul></li>
-  <li><a href="#字典推导式dictionary-comprehension" id="toc-字典推导式dictionary-comprehension" class="nav-link" data-scroll-target="#字典推导式dictionary-comprehension"><span class="header-section-number">12.3</span> 字典推导式（Dictionary Comprehension）</a></li>
-  <li><a href="#生成器表达式generator-expression" id="toc-生成器表达式generator-expression" class="nav-link" data-scroll-target="#生成器表达式generator-expression"><span class="header-section-number">12.4</span> 生成器表达式（Generator Expression）</a>
-  <ul class="collapse">
-  <li><a href="#嵌套推导式" id="toc-嵌套推导式" class="nav-link" data-scroll-target="#嵌套推导式"><span class="header-section-number">12.4.1</span> 嵌套推导式</a></li>
-  <li><a href="#总结" id="toc-总结" class="nav-link" data-scroll-target="#总结"><span class="header-section-number">12.4.2</span> 总结</a></li>
+  <li><a href="#字典推导式dictionary-comprehension" id="toc-字典推导式dictionary-comprehension" class="nav-link" data-scroll-target="#字典推导式dictionary-comprehension"><span class="header-section-number">12.2.3</span> 字典推导式（Dictionary Comprehension）</a></li>
+  <li><a href="#生成器表达式generator-expression" id="toc-生成器表达式generator-expression" class="nav-link" data-scroll-target="#生成器表达式generator-expression"><span class="header-section-number">12.2.4</span> 生成器表达式（Generator Expression）</a></li>
+  <li><a href="#嵌套推导式" id="toc-嵌套推导式" class="nav-link" data-scroll-target="#嵌套推导式"><span class="header-section-number">12.2.5</span> 嵌套推导式</a></li>
+  <li><a href="#总结" id="toc-总结" class="nav-link" data-scroll-target="#总结"><span class="header-section-number">12.2.6</span> 总结</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/more.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -322,7 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>if condition</code>：可选的条件语句，用于过滤元素。</li>
 </ul>
 <p>示例：</p>
-<div id="58e16f0d" class="cell" data-execution_count="1">
+<div id="bb34e7ae" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>squares <span class="op">=</span> [x <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>)]</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 输出：[1, 4, 9, 16, 25]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -333,9 +331,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>unique_squares <span class="op">=</span> {x <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>]}</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 输出：{1, 4, 9, 16}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-</section>
-<section id="字典推导式dictionary-comprehension" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="字典推导式dictionary-comprehension"><span class="header-section-number">12.3</span> 字典推导式（Dictionary Comprehension）</h2>
+<section id="字典推导式dictionary-comprehension" class="level3" data-number="12.2.3">
+<h3 data-number="12.2.3" class="anchored" data-anchor-id="字典推导式dictionary-comprehension"><span class="header-section-number">12.2.3</span> 字典推导式（Dictionary Comprehension）</h3>
 <p>字典推导式用于创建新的字典。其语法如下：</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>{key_expression: value_expression <span class="cf">for</span> item <span class="kw">in</span> iterable <span class="cf">if</span> condition}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
@@ -344,15 +341,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>item</code>、<code>iterable</code> 和 <code>if condition</code> 的含义与列表推导式相同。</li>
 </ul>
 <p>示例：</p>
-<div id="f07e279e" class="cell" data-execution_count="2">
+<div id="e0df0f6d" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>square_dict <span class="op">=</span> {x: x <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>)}</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 输出：{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="生成器表达式generator-expression" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="生成器表达式generator-expression"><span class="header-section-number">12.4</span> 生成器表达式（Generator Expression）</h2>
+<section id="生成器表达式generator-expression" class="level3" data-number="12.2.4">
+<h3 data-number="12.2.4" class="anchored" data-anchor-id="生成器表达式generator-expression"><span class="header-section-number">12.2.4</span> 生成器表达式（Generator Expression）</h3>
 <p>生成器表达式用于创建生成器对象。其语法与列表推导式类似，但使用圆括号 <code>()</code> 而不是方括号 <code>[]</code>。生成器表达式是延迟计算的，只有在需要时才会生成数值，因此对于大型数据集或无限序列非常有用。</p>
-<div id="7e275a3c" class="cell" data-execution_count="3">
+<div id="82555ab8" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>square_generator <span class="op">=</span> (x <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>))</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> square <span class="kw">in</span> square_generator:</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(square)</span>
@@ -370,16 +367,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 25</code></pre>
 </div>
 </div>
-<section id="嵌套推导式" class="level3" data-number="12.4.1">
-<h3 data-number="12.4.1" class="anchored" data-anchor-id="嵌套推导式"><span class="header-section-number">12.4.1</span> 嵌套推导式</h3>
+<p>值得注意的是，生成器表达式并不局限于生成特定的值序列。它可以根据需求生成任意类型的对象，如字符串、元组、集合等，甚至是常量值。</p>
+<p>下面是一个例子：</p>
+<div id="8fb7c4e4" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_failed_students(student_scores):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Count the number of failing students out of the group provided.</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">    :param student_scores: list - containing int student scores.</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">    :return: int - count of student scores at or below 40.</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(<span class="dv">1</span> <span class="cf">for</span> score <span class="kw">in</span> student_scores <span class="cf">if</span> score <span class="op">&lt;=</span> <span class="dv">40</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>在这个函数里，我们需要统计学生成绩中不及格的人数。我们使用了生成器表达式 <code>sum(1 for score in student_scores if score &lt;= 40)</code> 来计算不及格的学生人数。这里的生成器表达式返回的是一个生成器对象，它会在迭代时逐个生成值 1，最终通过 <code>sum()</code> 函数将这些值相加得到不及格的学生人数。</p>
+<p>这种用法可能不太常见，但它展示了生成器表达式的灵活性。它不仅可以生成基于表达式的值序列，还可以根据条件生成常量值，用于计数、过滤或其他目的。</p>
+</section>
+<section id="嵌套推导式" class="level3" data-number="12.2.5">
+<h3 data-number="12.2.5" class="anchored" data-anchor-id="嵌套推导式"><span class="header-section-number">12.2.5</span> 嵌套推导式</h3>
 <p>推导式还可以嵌套使用，以生成更复杂的结构。例如，你可以使用嵌套的列表推导式来创建矩阵：</p>
-<div id="921047ea" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> [[i <span class="op">*</span> j <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">4</span>)] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">4</span>)]</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 输出：[[1, 2, 3], [2, 4, 6], [3, 6, 9]]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="4e4f5eb5" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> [[i <span class="op">*</span> j <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">4</span>)] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">4</span>)]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 输出：[[1, 2, 3], [2, 4, 6], [3, 6, 9]]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="总结" class="level3" data-number="12.4.2">
-<h3 data-number="12.4.2" class="anchored" data-anchor-id="总结"><span class="header-section-number">12.4.2</span> 总结</h3>
+<section id="总结" class="level3" data-number="12.2.6">
+<h3 data-number="12.2.6" class="anchored" data-anchor-id="总结"><span class="header-section-number">12.2.6</span> 总结</h3>
 <p>推导式是 Python 中一种强大且表达力强的特性，可以简化代码并提高可读性。它们允许你在一行代码中将循环和条件语句组合起来，用于创建新的列表、集合、字典或生成器。</p>
 <p>理解和使用推导式是编写 Pythonic 代码的重要部分。合理运用推导式可以使你的代码更加简洁、优雅和高效。</p>
 

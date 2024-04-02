@@ -63,7 +63,7 @@ unique_squares = {x ** 2 for x in [1, 1, 2, 3, 3, 4]}
 # 输出：{1, 4, 9, 16}
 ```
 
-## 字典推导式（Dictionary Comprehension）
+### 字典推导式（Dictionary Comprehension）
 
 字典推导式用于创建新的字典。其语法如下：
 
@@ -82,7 +82,7 @@ square_dict = {x: x ** 2 for x in range(1, 6)}
 # 输出：{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
 ```
 
-## 生成器表达式（Generator Expression）
+### 生成器表达式（Generator Expression）
 
 生成器表达式用于创建生成器对象。其语法与列表推导式类似，但使用圆括号 `()` 而不是方括号 `[]`。生成器表达式是延迟计算的，只有在需要时才会生成数值，因此对于大型数据集或无限序列非常有用。
 
@@ -97,6 +97,23 @@ for square in square_generator:
 # 16
 # 25
 ```
+
+值得注意的是，生成器表达式并不局限于生成特定的值序列。它可以根据需求生成任意类型的对象，如字符串、元组、集合等，甚至是常量值。
+
+下面是一个例子：
+
+```{python}
+def count_failed_students(student_scores):
+    """Count the number of failing students out of the group provided.
+
+    :param student_scores: list - containing int student scores.
+    :return: int - count of student scores at or below 40.
+    """
+    return sum(1 for score in student_scores if score <= 40)
+```
+在这个函数里，我们需要统计学生成绩中不及格的人数。我们使用了生成器表达式 `sum(1 for score in student_scores if score <= 40)` 来计算不及格的学生人数。这里的生成器表达式返回的是一个生成器对象，它会在迭代时逐个生成值 1，最终通过 `sum()` 函数将这些值相加得到不及格的学生人数。
+
+这种用法可能不太常见，但它展示了生成器表达式的灵活性。它不仅可以生成基于表达式的值序列，还可以根据条件生成常量值，用于计数、过滤或其他目的。
 
 ### 嵌套推导式
 
