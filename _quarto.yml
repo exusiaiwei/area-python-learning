@@ -54,5 +54,3 @@ format:
   epub:
     cover-image: python-logo-only.svg
 
-execute:
-  debug: true

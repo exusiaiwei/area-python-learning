@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <link href="./modules.html" rel="next">
 <link href="./control_flow.html" rel="prev">
+<link href="./python-logo-only.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -102,11 +103,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -127,10 +134,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">我的Python学习笔记</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/exusiaiwei/My-Python-Learning" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -221,7 +231,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">参考文献</span></a>
   </div>
 </li>
     </ul>
@@ -242,8 +252,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#可变参数" id="toc-可变参数" class="nav-link" data-scroll-target="#可变参数"><span class="header-section-number">4.6</span> 可变参数</a></li>
   <li><a href="#return-语句" id="toc-return-语句" class="nav-link" data-scroll-target="#return-语句"><span class="header-section-number">4.7</span> <code>return</code> 语句</a></li>
   <li><a href="#文档字符串" id="toc-文档字符串" class="nav-link" data-scroll-target="#文档字符串"><span class="header-section-number">4.8</span> 文档字符串</a></li>
+  <li><a href="#装饰器" id="toc-装饰器" class="nav-link" data-scroll-target="#装饰器"><span class="header-section-number">4.9</span> 装饰器</a>
+  <ul class="collapse">
+  <li><a href="#基本使用" id="toc-基本使用" class="nav-link" data-scroll-target="#基本使用"><span class="header-section-number">4.9.1</span> 基本使用</a></li>
+  <li><a href="#带参数的函数装饰器" id="toc-带参数的函数装饰器" class="nav-link" data-scroll-target="#带参数的函数装饰器"><span class="header-section-number">4.9.2</span> 带参数的函数装饰器</a></li>
+  <li><a href="#带参数的装饰器" id="toc-带参数的装饰器" class="nav-link" data-scroll-target="#带参数的装饰器"><span class="header-section-number">4.9.3</span> 带参数的装饰器</a></li>
+  <li><a href="#装饰器的实际应用" id="toc-装饰器的实际应用" class="nav-link" data-scroll-target="#装饰器的实际应用"><span class="header-section-number">4.9.4</span> 装饰器的实际应用</a></li>
+  </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -270,7 +287,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>函数是编程中的基本构建块，允许我们将一段代码命名，并在需要的地方反复使用。运行这些语句的操作被称为调用函数。</p>
 <p>在我们的学习过程中，已经接触和使用了许多 Python 的内置函数，比如 <code>len</code> 和 <code>range</code> 函数。</p>
 <p>我们使用 <code>def</code> 关键字来定义函数。关键字 <code>def</code> 后面紧跟着的是函数的名字，然后是一对括号。括号内可以包含一些参数（即预设的变量名），此行语句以冒号结束。</p>
-<div id="14c1dfe0" class="cell" data-execution_count="1">
+<div id="84caa6cf" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello():</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 属于函数的代码块</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'hello world'</span>)</span>
@@ -299,7 +316,7 @@ hello world</code></pre>
 <li>实参是赋予函数中定义的参数的具体值。同样用逗号分隔。</li>
 </ul>
 <p>这个概念类似于食谱和做饭。食谱上的材料列表（比如说需要多少克的面粉，多少克的糖）就像是参数列表，而你实际使用的面粉和糖的数量就像实参。</p>
-<div id="f992cea0" class="cell" data-execution_count="2">
+<div id="e2627255" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_max(a, b):</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a <span class="op">&gt;</span> b:</span>
@@ -333,7 +350,7 @@ hello world</code></pre>
 <li>变量的作用域从其声明的位置开始，直到该代码块或函数的结束。</li>
 <li>即使在函数外部存在同名变量，局部变量也被视为独立的变量。无论名称是否相同，函数内部的局部变量与函数外部的变量不会有任何关联。</li>
 </ul>
-<div id="5bbb9f29" class="cell" data-execution_count="3">
+<div id="6cb70498" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">50</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -364,7 +381,7 @@ x is still 50</code></pre>
 <li>尽管如此，我们并不推荐这一措施，因为这可能导致代码阅读者在理解这个变量的定义位置上出现困扰。</li>
 <li>如果要在函数内部操作函数外部的变量，推荐使用 <code>global</code> 声明明确指出，表明你在操纵的是在全局范围内定义的变量。</li>
 </ul>
-<div id="c2317634" class="cell" data-execution_count="4">
+<div id="82688c8d" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">50</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -391,7 +408,7 @@ Value of x is 2</code></pre>
 <h2 data-number="4.4" class="anchored" data-anchor-id="默认参数值"><span class="header-section-number">4.4</span> 默认参数值</h2>
 <p>我们可以通过设置默认参数值，使得某些函数参数变得可选。当用户没有显式提供参数值时，函数将会采用这些设置的默认值。</p>
 <p>可以通过在函数定义中，在需要设置默认值的参数名后面加上等号（=）及其默认值来实现这一点。</p>
-<div id="90f63573" class="cell" data-execution_count="5">
+<div id="70c84443" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say(message, times<span class="op">=</span><span class="dv">1</span>):</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(message <span class="op">*</span> times)</span>
@@ -424,7 +441,7 @@ WorldWorldWorldWorldWorld</code></pre>
 <li>利用关键字参数，我们可以更灵活地调用函数，无需按照函数定义时参数的顺序一一对应。</li>
 <li>只要其他参数具有默认参数值，我们可以只给我们想要的参数赋值。</li>
 </ul>
-<div id="2dd2fae4" class="cell" data-execution_count="6">
+<div id="23466e57" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(a, b<span class="op">=</span><span class="dv">5</span>, c<span class="op">=</span><span class="dv">10</span>):</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'a is'</span>, a, <span class="st">'and b is'</span>, b, <span class="st">'and c is'</span>, c)</span>
@@ -450,7 +467,7 @@ a is 100 and b is 5 and c is 50</code></pre>
 <h2 data-number="4.6" class="anchored" data-anchor-id="可变参数"><span class="header-section-number">4.6</span> 可变参数</h2>
 <p>可变参数是一种特殊的参数，它可以接收任意数量的参数。这在你预先不知道会有多少参数被传入函数，或者数量会变化的情况下非常有用。</p>
 <p>在Python中，可变参数是通过在参数前面添加星号（*）来表示的。</p>
-<div id="567c2bbf" class="cell" data-execution_count="7">
+<div id="8a14f3da" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> total(a<span class="op">=</span><span class="dv">5</span>, <span class="op">*</span>numbers, <span class="op">**</span>phonebook):</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'a'</span>, a)</span>
@@ -485,7 +502,7 @@ Inge 1560</code></pre>
 <h2 data-number="4.7" class="anchored" data-anchor-id="return-语句"><span class="header-section-number">4.7</span> <code>return</code> 语句</h2>
 <p><code>return</code> 语句用于从函数中返回结果或者结束函数的运行。</p>
 <p>在一个函数中，<code>return</code> 语句后面可以跟一个表达式，此表达式的值就是这个函数的返回值。</p>
-<div id="6287939b" class="cell" data-execution_count="8">
+<div id="6002c5ad" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> maximum(x, y):</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x <span class="op">&gt;</span> y:</span>
@@ -513,7 +530,7 @@ Inge 1560</code></pre>
 <h2 data-number="4.8" class="anchored" data-anchor-id="文档字符串"><span class="header-section-number">4.8</span> 文档字符串</h2>
 <p>文档字符串，英文称为<code>Docstrings</code>，是一种在Python中对函数、方法、类、模块等提供说明的注释方式，具有非常重要的参考价值。</p>
 <p>文档字符串位于函数、方法、类、模块定义的第一行，由一对三引号(“““或’’’)引起来，可以是单行也可以是多行。</p>
-<div id="6fe5e766" class="cell" data-execution_count="9">
+<div id="76862c78" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 示例代码来源： A Byte of Python</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_max(x, y):</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''Prints the maximum of two numbers.</span></span>
@@ -544,8 +561,101 @@ Prints the maximum of two numbers.
 <li>Python中的 help()的作用即是获取该函数的 <code>__doc__</code> 属性，并以整洁的方式呈现。可以尝试输入 <code>help(print_max)</code> 来查看 <code>print_max</code> 函数的文档字符串。</li>
 <li>自动化工具可以以这种方式从您的程序中检索文档。因此，强烈建议在编写任何非平凡函数时使用文档字符串。</li>
 </ul>
+</section>
+<section id="装饰器" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="装饰器"><span class="header-section-number">4.9</span> 装饰器</h2>
+<p>装饰器（Decorators）是Python中一个非常强大且有用的特性，它允许程序员修改或增强一个函数、方法或类的行为，而不需要直接修改其本身的代码。装饰器本质上是一个函数，它接受一个函数作为参数并返回一个新的函数。通过这种方式，装饰器提供了一种灵活的方法来“装饰”或“包装”另一个函数，以便在调用原始函数之前或之后执行额外的代码。</p>
+<section id="基本使用" class="level3" data-number="4.9.1">
+<h3 data-number="4.9.1" class="anchored" data-anchor-id="基本使用"><span class="header-section-number">4.9.1</span> 基本使用</h3>
+<p>装饰器的基本语法如下：</p>
+<div id="86f1f9a4" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_decorator(func):</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> wrapper():</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 在func被调用前可以执行一些代码</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Something is happening before the function is called."</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>        func()</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 在func被调用后可以执行一些代码</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Something is happening after the function is called."</span>)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> wrapper</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 使用装饰器</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="at">@my_decorator</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello():</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hello!"</span>)</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 调用函数</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>say_hello()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Something is happening before the function is called.
+Hello!
+Something is happening after the function is called.</code></pre>
+</div>
+</div>
+<p>在这个例子中，<code>my_decorator</code> 是一个装饰器，它接受一个函数 <code>func</code> 作为参数，并返回一个新的函数 <code>wrapper</code>。<code>wrapper</code> 函数在调用 <code>func</code> 前后添加了额外的行为。使用 <code>@my_decorator</code> 语法，我们“装饰”了 <code>say_hello</code> 函数，使得在调用 <code>say_hello</code> 时，实际上是调用了 <code>wrapper</code> 函数。</p>
+</section>
+<section id="带参数的函数装饰器" class="level3" data-number="4.9.2">
+<h3 data-number="4.9.2" class="anchored" data-anchor-id="带参数的函数装饰器"><span class="header-section-number">4.9.2</span> 带参数的函数装饰器</h3>
+<p>如果原始函数需要接受参数，装饰器可以通过在 <code>wrapper</code> 函数中使用 <code>*args</code> 和 <code>**kwargs</code> 来接受任意数量的位置参数和关键字参数：</p>
+<div id="4b7516e7" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_decorator(func):</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> wrapper(<span class="op">*</span>args, <span class="op">**</span>kwargs):</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Something is happening before the function is called."</span>)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> func(<span class="op">*</span>args, <span class="op">**</span>kwargs)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Something is happening after the function is called."</span>)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> wrapper</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="at">@my_decorator</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say(message):</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(message)</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>say(<span class="st">"Hello with decorator!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Something is happening before the function is called.
+Hello with decorator!
+Something is happening after the function is called.</code></pre>
+</div>
+</div>
+</section>
+<section id="带参数的装饰器" class="level3" data-number="4.9.3">
+<h3 data-number="4.9.3" class="anchored" data-anchor-id="带参数的装饰器"><span class="header-section-number">4.9.3</span> 带参数的装饰器</h3>
+<p>有时候，我们希望装饰器本身能够接受参数。这需要我们创建一个“返回装饰器的装饰器”的函数：</p>
+<div id="b70fcb34" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> repeat(number_of_times):</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> decorator_repeat(func):</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> wrapper(<span class="op">*</span>args, <span class="op">**</span>kwargs):</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(number_of_times):</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>                result <span class="op">=</span> func(<span class="op">*</span>args, <span class="op">**</span>kwargs)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> result</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> wrapper</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> decorator_repeat</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="at">@repeat</span>(number_of_times<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> greet(name):</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Hello </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>greet(<span class="st">"World"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello World
+Hello World
+Hello World</code></pre>
+</div>
+</div>
+<p>在这个例子中，<code>repeat</code> 函数是一个接受参数 <code>number_of_times</code> 的装饰器。它内部定义了装饰器 <code>decorator_repeat</code>，<code>decorator_repeat</code> 又定义了 <code>wrapper</code> 函数。这样，我们就可以控制 <code>greet</code> 函数被重复执行的次数。</p>
+</section>
+<section id="装饰器的实际应用" class="level3" data-number="4.9.4">
+<h3 data-number="4.9.4" class="anchored" data-anchor-id="装饰器的实际应用"><span class="header-section-number">4.9.4</span> 装饰器的实际应用</h3>
+<p>装饰器在实际编程中有许多有用的应用场景，包括：</p>
+<ul>
+<li>日志记录：在函数执行前后记录日志信息。</li>
+<li>性能测试：记录函数的执行时间，用于性能分析。</li>
+<li>权限验证：检查执行函数之前用户的权限。</li>
+<li>缓存：缓存函数的返回结果，提高性能。</li>
+</ul>
+<p>装饰器提供了一种优雅的方式来增强函数的功能，而不需要修改原始函数的代码，使得代码更加模块化和可重用。学习如何有效地使用装饰器，是成为一名高效Python程序员的重要步骤之一。</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -975,4 +1085,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

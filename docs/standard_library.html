@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <link href="./more.html" rel="next">
 <link href="./exceptions.html" rel="prev">
+<link href="./python-logo-only.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -102,11 +103,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -127,10 +134,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">我的Python学习笔记</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/exusiaiwei/My-Python-Learning" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -221,7 +231,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">参考文献</span></a>
   </div>
 </li>
     </ul>
@@ -251,7 +261,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#logging模块" id="toc-logging模块" class="nav-link" data-scroll-target="#logging模块"><span class="header-section-number">11.3</span> <code>logging</code>模块</a></li>
   <li><a href="#每周模块系列" id="toc-每周模块系列" class="nav-link" data-scroll-target="#每周模块系列"><span class="header-section-number">11.4</span> 每周模块系列</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/standard_library.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -292,19 +302,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>sys.argv</code>的长度是命令行参数的个数</li>
 </ul>
 <p>下面是一个简单的例子：</p>
-<div id="c1046b7d" class="cell" data-execution_count="1">
+<div id="3ef70264" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sys.argv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>['C:\\Conda_data\\envs\\main\\Lib\\site-packages\\ipykernel_launcher.py', '-f', 'C:\\Windows\\Temp\\tmpnvm7lsyn.json', '--HistoryManager.hist_file=:memory:']</code></pre>
+<pre><code>['c:\\Conda_data\\envs\\main\\Lib\\site-packages\\ipykernel_launcher.py', '-f', 'C:\\Windows\\Temp\\tmp79v95aph.json', '--HistoryManager.hist_file=:memory:']</code></pre>
 </div>
 </div>
 </section>
 <section id="sys.version" class="level3" data-number="11.1.2">
 <h3 data-number="11.1.2" class="anchored" data-anchor-id="sys.version"><span class="header-section-number">11.1.2</span> <code>sys.version</code></h3>
 <p><code>sys.version</code>包含了Python解释器的版本信息。</p>
-<div id="4da75860" class="cell" data-execution_count="2">
+<div id="fd99e8a8" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sys.version)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -317,12 +327,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="sys.path" class="level3" data-number="11.1.3">
 <h3 data-number="11.1.3" class="anchored" data-anchor-id="sys.path"><span class="header-section-number">11.1.3</span> <code>sys.path</code></h3>
 <p><code>sys.path</code>是一个包含了模块搜索路径的列表。</p>
-<div id="950dbed4" class="cell" data-execution_count="3">
+<div id="9a93d7e2" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sys.path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>['C:\\Conda_data\\envs\\main\\python311.zip', 'C:\\Conda_data\\envs\\main\\DLLs', 'C:\\Conda_data\\envs\\main\\Lib', 'C:\\Conda_data\\envs\\main', '', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages\\win32', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages\\win32\\lib', 'C:\\Conda_data\\envs\\main\\Lib\\site-packages\\Pythonwin']</code></pre>
+<pre><code>['c:\\Conda_data\\envs\\main\\python311.zip', 'c:\\Conda_data\\envs\\main\\DLLs', 'c:\\Conda_data\\envs\\main\\Lib', 'c:\\Conda_data\\envs\\main', '', 'c:\\Conda_data\\envs\\main\\Lib\\site-packages', 'c:\\Conda_data\\envs\\main\\Lib\\site-packages\\win32', 'c:\\Conda_data\\envs\\main\\Lib\\site-packages\\win32\\lib', 'c:\\Conda_data\\envs\\main\\Lib\\site-packages\\Pythonwin']</code></pre>
 </div>
 </div>
 </section>
@@ -334,24 +344,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="os.getcwd" class="level3" data-number="11.2.1">
 <h3 data-number="11.2.1" class="anchored" data-anchor-id="os.getcwd"><span class="header-section-number">11.2.1</span> <code>os.getcwd()</code></h3>
 <p><code>os.getcwd()</code>返回当前工作目录。</p>
-<div id="9b89724b" class="cell" data-execution_count="4">
+<div id="853d1fea" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.getcwd())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>C:\Users\WeiZichao\OneDrive - MSFT\Code\MyProjects\My-Python-Learning\my_python_learning_zh</code></pre>
+<pre><code>C:\Code\MyProjects\My-Python-Learning</code></pre>
 </div>
 </div>
 </section>
 <section id="os.listdir" class="level3" data-number="11.2.2">
 <h3 data-number="11.2.2" class="anchored" data-anchor-id="os.listdir"><span class="header-section-number">11.2.2</span> <code>os.listdir()</code></h3>
 <p><code>os.listdir()</code>返回指定目录下的文件和目录列表。</p>
-<div id="084053c1" class="cell" data-execution_count="5">
+<div id="52964496" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.listdir())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>['.gitignore', '.quarto', 'basic.qmd', 'control_flow.qmd', 'cover.png', 'data_structures.qmd', 'exceptions.qmd', 'functions.qmd', 'index.qmd', 'input_and_output.qmd', 'intro.qmd', 'modules.qmd', 'more.qmd', 'object_oriented_programming.qmd', 'operators_and_expressions.qmd', 'practical_code', 'problem_solving.qmd', 'references.bib', 'references.qmd', 'standard_library.ipynb', 'standard_library.qmd', 'standard_library_files', 'summary.qmd', '_book', '_quarto.yml']</code></pre>
+<pre><code>['.git', '.github', '.gitignore', '.quarto', 'basic.qmd', 'control_flow.qmd', 'data_structures.qmd', 'docs', 'exceptions.qmd', 'exceptions_files', 'functions.qmd', 'index.qmd', 'input_and_output.qmd', 'LICENSE', 'modules.qmd', 'more.qmd', 'object_oriented_programming.qmd', 'operators_and_expressions.qmd', 'practical_code', 'problem_solving.qmd', 'python-logo-only.svg', 'README.md', 'README.zh-CN.md', 'references.bib', 'references.qmd', 'standard_library.ipynb', 'standard_library.qmd', 'standard_library_files', '_book', '_quarto.yml']</code></pre>
 </div>
 </div>
 </section>
@@ -381,7 +391,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="11.3" class="anchored" data-anchor-id="logging模块"><span class="header-section-number">11.3</span> <code>logging</code>模块</h2>
 <p><code>logging</code>模块提供了一个灵活的方式来记录日志信息。</p>
 <p><code>logging</code>模块的基本语法如下：</p>
-<div id="5ded83ab" class="cell" data-execution_count="6">
+<div id="f98894c1" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> logging</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>logging.debug(<span class="st">'This is a debug message'</span>)</span>
@@ -397,7 +407,7 @@ CRITICAL:root:This is a critical message</code></pre>
 </div>
 <p>此外，<code>logging</code>模块还提供了一些配置选项，可以将日志信息输出到指定位置，或者指定日志的格式、等级等。</p>
 <p>以下是一个更复杂一点的例子：</p>
-<div id="cd55d885" class="cell" data-execution_count="7">
+<div id="ac9a7c4e" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> logging</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -419,7 +429,7 @@ CRITICAL:root:This is a critical message</code></pre>
 <pre><code>WARNING:root:This is a warning message</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Logging to C:\Users\WeiZichao\OneDrive - MSFT\Code\MyProjects\My-Python-Learning\my_python_learning_zh\practical_code/standard_library/logging.log</code></pre>
+<pre><code>Logging to C:\Code\MyProjects\My-Python-Learning\practical_code/standard_library/logging.log</code></pre>
 </div>
 </div>
 <p>在上述的示例代码中：</p>
@@ -866,4 +876,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/standard_library.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

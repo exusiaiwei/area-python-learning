@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <link href="./exceptions.html" rel="next">
 <link href="./object_oriented_programming.html" rel="prev">
+<link href="./python-logo-only.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -102,11 +103,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -127,10 +134,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">我的Python学习笔记</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/exusiaiwei/My-Python-Learning" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -239,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#pickle模块" id="toc-pickle模块" class="nav-link" data-scroll-target="#pickle模块"><span class="header-section-number">9.3</span> Pickle模块</a></li>
   <li><a href="#unicoin字符和编码" id="toc-unicoin字符和编码" class="nav-link" data-scroll-target="#unicoin字符和编码"><span class="header-section-number">9.4</span> Unicoin字符和编码</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/input_and_output.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -342,7 +352,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>close</code> 方法：用于关闭文件。关闭文件后，任何对文件对象的操作都将失败。</li>
 </ol>
 <p>以下是一些示例代码：</p>
-<div id="f449bf0b" class="cell" data-execution_count="1">
+<div id="3a63b4e5" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>file1 <span class="op">=</span> <span class="bu">open</span>(<span class="vs">r"practical_code\input_and_output\myfile.txt"</span>, <span class="st">"r"</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>content <span class="op">=</span> file1.read()</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(content)</span>
@@ -352,13 +362,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 And this is the second line.</code></pre>
 </div>
 </div>
-<div id="f7bbed87" class="cell" data-execution_count="2">
+<div id="82feb53d" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>file2 <span class="op">=</span> <span class="bu">open</span>(<span class="vs">r"practical_code\input_and_output\myfile2.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>file2.write(<span class="st">"This is a test"</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>file2.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>当进行文件操作时，应始终注意在操作结束后关闭文件。为了更有效地管理文件资源，Python提供了 <code>with</code> 语句，它可以自动关闭文件。以下是一个示例：</p>
-<div id="962ff27c" class="cell" data-execution_count="3">
+<div id="9bdf0b0e" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="vs">r"practical_code\input_and_output\myfile.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    content <span class="op">=</span> <span class="bu">file</span>.read()</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(content)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -368,7 +378,7 @@ And this is the second line.</code></pre>
 </div>
 </div>
 <p>以下是一个更复杂的示例：</p>
-<div id="94ffb723" class="cell" data-execution_count="4">
+<div id="e19db30d" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>poem <span class="op">=</span> <span class="st">'''</span><span class="ch">\</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="st">Programming is fun</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="st">When the work is done</span></span>
@@ -415,7 +425,7 @@ if you wanna make your work also fun:
 <li><code>pickle.load(file)</code>：从文件中读取字节流，并将这些字节流转化为Python对象。</li>
 </ul>
 <p>下面是这个模块一些基本使用示例：</p>
-<div id="eca7804e" class="cell" data-execution_count="5">
+<div id="eeb31a3d" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
@@ -448,7 +458,7 @@ if you wanna make your work also fun:
 </ul>
 <p>当我们编写一个使用Unicode字符的程序时，我们应该确保程序使用UTF-8编码。这样，我们的程序可以处理世界上所有的文字。</p>
 <p>下面是一个处理Unicode字符的示例：</p>
-<div id="b97563c3" class="cell" data-execution_count="6">
+<div id="8ebe959e" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> io</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> io.<span class="bu">open</span>(<span class="vs">r"practical_code\input_and_output\zh_CN.txt"</span>, <span class="st">"wt"</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
@@ -898,4 +908,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/input_and_output.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
