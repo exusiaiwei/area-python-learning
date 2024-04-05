@@ -374,7 +374,7 @@
     "href": "data_structures.html#集合set",
     "title": "6  数据结构",
     "section": "6.4 集合（Set）",
-    "text": "6.4 集合（Set）\n集合是非有序的数据结构，它不允许重复元素。\n集合用花括号{}包围元素，并用逗号 , 分割。\n\nmy_set = {1, \"apple\", 3.14, \"apple\"}\nprint(my_set) # prints: {1, \"apple\", 3.14}\n\n{1, 3.14, 'apple'}\n\n\n集合:\n\n是无序的\n集合中元素不能重复\n可以包含任何类型的元素\n不能通过索引访问元素",
+    "text": "6.4 集合（Set）\n集合是非有序的数据结构，它不允许重复元素。\n集合用花括号{}包围元素，并用逗号 , 分割。\n\nmy_set = {1, \"apple\", 3.14, \"apple\"}\nprint(my_set) # prints: {1, \"apple\", 3.14}\n\n{'apple', 1, 3.14}\n\n\n集合:\n\n是无序的\n集合中元素不能重复\n可以包含任何类型的元素\n不能通过索引访问元素",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>数据结构</span>"
     ]
@@ -384,7 +384,7 @@
     "href": "data_structures.html#字典dictionary",
     "title": "6  数据结构",
     "section": "6.5 字典（Dictionary）",
-    "text": "6.5 字典（Dictionary）\n字典是一个无序的键值对集合。\n“键值对”（Key-Value Pair）指的是两个关联的部分：一个是唯一的键（Key），另一个是值（Value）。每个键都有一个关联的值。这种关联叫做”映射”。\n字典使用花括号{}包围元素，键值之间用冒号:分隔，而键值对之间用逗号,分隔。\n\n\n\n\n\n\n为什么叫字典\n\n\n\n在一本实体字典中，你可以根据词条（对应于计算机中的“键”）找到对应的解释或者翻译（对应于计算机中的“值”）。这构成了一个”词条-解释”对，与计算机科学中的”键-值对”类似。\n因此，考虑到这种映射关系，计算机科学中的这种包含”键-值对”的数据结构，就被命名为字典（Dictionary）。\n\n\n\nmy_dict = {\n    \"name\": \"apple\",\n    \"color\": \"red\",\n}\nprint(my_dict[\"name\"]) # prints: apple\n\nages = {\n    \"Tom\": 30, \n    \"Alice\": 25, \n    \"Bob\": 27\n}\n\nprint(ages[\"Alice\"]) # 输出：25\nages[\"Tom\"] = 31  # 将Tom的年龄改为31\nprint(ages[\"Tom\"]) # 输出：31\n\napple\n25\n31\n\n\n字典:\n\n是无序的\n键值对中的键是唯一的,但值可以重复\n可以包含任何类型的元素\n通过键来访问元素",
+    "text": "6.5 字典（Dictionary）\n字典是一个无序的键值对集合。\n“键值对”（Key-Value Pair）指的是两个关联的部分：一个是唯一的键（Key），另一个是值（Value）。每个键都有一个关联的值。这种关联叫做”映射”。\n字典使用花括号{}包围元素，键值之间用冒号:分隔，而键值对之间用逗号,分隔。\n\n\n\n\n\n\n为什么叫字典\n\n\n\n在一本实体字典中，你可以根据词条（对应于计算机中的“键”）找到对应的解释或者翻译（对应于计算机中的“值”）。这构成了一个”词条-解释”对，与计算机科学中的”键-值对”类似。\n因此，考虑到这种映射关系，计算机科学中的这种包含”键-值对”的数据结构，就被命名为字典（Dictionary）。\n\n\n\nmy_dict = {\n    \"name\": \"apple\",\n    \"color\": \"red\",\n}\nprint(my_dict[\"name\"]) # prints: apple\n\nages = {\n    \"Tom\": 30, \n    \"Alice\": 25, \n    \"Bob\": 27\n}\n\nprint(ages[\"Alice\"]) # 输出：25\nages[\"Tom\"] = 31  # 将Tom的年龄改为31\nprint(ages[\"Tom\"]) # 输出：31\n\napple\n25\n31\n\n\n字典:\n\n是无序的\n键值对中的键是唯一的,但值可以重复\n可以包含任何类型的元素\n通过键来访问元素\n\n当你使用一个键来访问一个字典时，Python会返回与该键相关联的值。如果你使用一个不存在的键，Python会引发一个KeyError异常。\n为了避免这一点，可以使用get()方法。get(key, default)方法允许指定一个默认值，当字典中不存在指定的键时，它会返回该默认值而不是引发异常。",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>数据结构</span>"
     ]
