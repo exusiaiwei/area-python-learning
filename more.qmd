@@ -72,7 +72,7 @@ unique_squares = {x ** 2 for x in [1, 1, 2, 3, 3, 4]}
 ```
 
 - `key_expression`：表达式，用于生成字典的键。
-- `value_expression`：表达式，用于生成字典的值。
+- ~~`value_expression`：表达式，用于生成字典的值。~~
 - `item`、`iterable` 和 `if condition` 的含义与列表推导式相同。
 
 示例：
