@@ -21,7 +21,8 @@
 - `str.replace(old, new[, count])`：将字符串中的指定子串替换为新的子串。
 - `str.removeprefix(prefix)`：去除字符串开头的指定前缀。
 - `str.removesuffix(suffix)`：去除字符串结尾的指定后缀。
-
+- `str.translate(table)`：使用指定的转换表对字符串进行转换。
+- `str.makestrans(x[, y[, z]])`：创建一个转换表，用于 `str.translate()` 方法。
 
 ## Python 推导式（Comprehensions）
 
