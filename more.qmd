@@ -23,6 +23,8 @@
 - `str.removesuffix(suffix)`：去除字符串结尾的指定后缀。
 - `str.translate(table)`：使用指定的转换表对字符串进行转换。
 - `str.makestrans(x[, y[, z]])`：创建一个转换表，用于 `str.translate()` 方法。
+- `str.split(sep=None, maxsplit=-1)`：将字符串分割为子串，并返回一个列表。
+
 
 ## Python 推导式（Comprehensions）
 
