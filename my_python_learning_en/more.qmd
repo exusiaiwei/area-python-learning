@@ -1,5 +1,0 @@
-# More
-
-This section will be used to record issues I encounter and knowledge points when actually using Python.
-
-(For now this section is still empty.
