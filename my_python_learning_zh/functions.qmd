@@ -248,3 +248,86 @@ print(print_max.__doc__)
 - 在这个例子中，我们可以使用函数的 `__doc__` 属性（注意双下划线）来访问 `print_max` 函数的文档字符串。
 - Python中的 help()的作用即是获取该函数的 `__doc__` 属性，并以整洁的方式呈现。可以尝试输入 `help(print_max)` 来查看 `print_max` 函数的文档字符串。
 - 自动化工具可以以这种方式从您的程序中检索文档。因此，强烈建议在编写任何非平凡函数时使用文档字符串。
+
+## 装饰器
+
+装饰器（Decorators）是Python中一个非常强大且有用的特性，它允许程序员修改或增强一个函数、方法或类的行为，而不需要直接修改其本身的代码。装饰器本质上是一个函数，它接受一个函数作为参数并返回一个新的函数。通过这种方式，装饰器提供了一种灵活的方法来“装饰”或“包装”另一个函数，以便在调用原始函数之前或之后执行额外的代码。
+
+### 基本使用
+
+装饰器的基本语法如下：
+
+```{python}
+def my_decorator(func):
+    def wrapper():
+        # 在func被调用前可以执行一些代码
+        print("Something is happening before the function is called.")
+        func()
+        # 在func被调用后可以执行一些代码
+        print("Something is happening after the function is called.")
+    return wrapper
+
+# 使用装饰器
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+# 调用函数
+say_hello()
+```
+
+在这个例子中，`my_decorator` 是一个装饰器，它接受一个函数 `func` 作为参数，并返回一个新的函数 `wrapper`。`wrapper` 函数在调用 `func` 前后添加了额外的行为。使用 `@my_decorator` 语法，我们“装饰”了 `say_hello` 函数，使得在调用 `say_hello` 时，实际上是调用了 `wrapper` 函数。
+
+### 带参数的函数装饰器
+
+如果原始函数需要接受参数，装饰器可以通过在 `wrapper` 函数中使用 `*args` 和 `**kwargs` 来接受任意数量的位置参数和关键字参数：
+
+```{python}
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Something is happening before the function is called.")
+        result = func(*args, **kwargs)
+        print("Something is happening after the function is called.")
+        return result
+    return wrapper
+
+@my_decorator
+def say(message):
+    print(message)
+
+say("Hello with decorator!")
+```
+
+### 带参数的装饰器
+
+有时候，我们希望装饰器本身能够接受参数。这需要我们创建一个“返回装饰器的装饰器”的函数：
+
+```{python}
+def repeat(number_of_times):
+    def decorator_repeat(func):
+        def wrapper(*args, **kwargs):
+            for _ in range(number_of_times):
+                result = func(*args, **kwargs)
+            return result
+        return wrapper
+    return decorator_repeat
+
+@repeat(number_of_times=3)
+def greet(name):
+    print(f"Hello {name}")
+
+greet("World")
+```
+
+在这个例子中，`repeat` 函数是一个接受参数 `number_of_times` 的装饰器。它内部定义了装饰器 `decorator_repeat`，`decorator_repeat` 又定义了 `wrapper` 函数。这样，我们就可以控制 `greet` 函数被重复执行的次数。
+
+### 装饰器的实际应用
+
+装饰器在实际编程中有许多有用的应用场景，包括：
+
+- 日志记录：在函数执行前后记录日志信息。
+- 性能测试：记录函数的执行时间，用于性能分析。
+- 权限验证：检查执行函数之前用户的权限。
+- 缓存：缓存函数的返回结果，提高性能。
+
+装饰器提供了一种优雅的方式来增强函数的功能，而不需要修改原始函数的代码，使得代码更加模块化和可重用。学习如何有效地使用装饰器，是成为一名高效Python程序员的重要步骤之一。
