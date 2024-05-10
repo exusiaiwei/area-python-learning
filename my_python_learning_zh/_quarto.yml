@@ -49,7 +49,3 @@ format:
   html:
     theme: journal
     code-copy: true
-  pdf:
-    documentclass: scrreprt
-  epub:
-    cover-image: python-logo-only.svg
