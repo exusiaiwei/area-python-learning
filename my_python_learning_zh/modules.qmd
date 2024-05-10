@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 模块
 ## 基本概念
 
@@ -260,4 +261,268 @@ import my_package.sub_package.module2
 # 调用 module2 中的函数 func2
 my_package.sub_package.module2.func2()  # Outputs: This is function 2 from module 2
 
+=======
+# 模块
+## 基本概念
+
+在 Python 中，模块是一种组织和重用代码的方式。一个模块是一个包含了函数、类和变量的文件，它可以被其他程序导入和使用。
+
+模块的基本概念是将相关的代码组织在一起，以便于维护和重用。通过将代码分割成模块，可以提高代码的可读性和可维护性。
+
+模块具有以下特性：
+
+- 封装：模块将相关的代码封装在一个单独的文件中，使得代码更加有组织和易于管理。
+- 命名空间：模块创建了一个独立的命名空间，避免了命名冲突。通过使用模块名作为前缀，可以访问模块中定义的函数、类和变量。
+- 代码重用：模块可以被其他程序导入和使用，实现了代码的重用。通过导入模块，可以直接使用模块中定义的函数、类和变量，而无需重新编写代码。
+- 可扩展性：模块可以根据需要进行扩展和修改。可以在模块中添加新的函数、类和变量，以满足不同的需求。
+
+在 Python 中，模块可以是 Python 编写的，也可以是用 C/C++ 等其他编程语言编写并编译成二进制代码的。后者通常被称为"编译的模块"，或者"扩展模块"。
+
+它们通常用于提高性能（因为编译后的代码运行速度更快），或者提供Python不能直接提供的功能（比如调用操作系统的底层API）。
+
+模块使用方法参考如下的代码示例：
+
+```python
+
+import sys
+
+print("The script has the name %s" % (sys.argv[0]))
+if len(sys.argv) > 1:
+    print("It has some arguments:")
+    for arg in sys.argv[1:]:
+        print(arg)
+
+print('\n\nThe PYTHONPATH is', sys.path, '\n')
+```
+### `sys`模块{#sec-sys}
+`sys`模块包含与Python解释器及其环境（即系统）相关的功能。
+
+- `sys.argv`是Python中的一个列表，它包含了从命令行传递给Python脚本的参数。
+- 这些参数是以字符串的形式存储的，其中`sys.argv[0]`是脚本的名称（即执行的Python文件名），其余的`sys.argv[1]`、`sys.argv[2]`...依次是外部传入的参数。
+- 在`sys`模块中，可以使用点表示法访问`argv`变量，即`sys.argv`。这样可以清晰地表明`argv`变量是`sys`模块的一部分，同时避免和程序中所使用的任何`argv`变量冲突。
+
+
+## import 语句
+
+当 Python 执行 `import` 语句时，Python 解释器会通过以下步骤寻找需要 `import` 的对象。
+
+1. 首先，解释器会检查内建模块（`built-in modules`）。Python 的内建模块是用 C 编写的，并链接到 Python 解释器中。例如示例代码中使用的 `sys` 就是内建模块。
+2. 如果模块不在内建模块中，Python 解释器接着会检查 `sys.modules` 字典。`sys.modules` 字典储存了所有导入模块的路径名称和模块对象。可以将其理解为 Python 已经导入模块的一个历史记录或缓存。如果模块之前已经被导入，则直接从这个字典中获取。
+3. 如果在 `sys.modules` 中也找不到，Python 解释器接下来会查看 `sys.path` 列表。`sys.path` 列表包含了 Python 解释器搜索模块的位置，包括：
+   1. 程序执行的当前目录，即程序启动时所在的目录。运行 `import os; print(os.getcwd())` 以查找程序的当前目录。
+   2. 一些 Python 的标准库目录
+   3. 额外安装的第三方包的路径。通常位于 `site-packages` 目录下。
+4. Python 会在 `sys.path` 中列出的目录从上到下按顺序搜索模块。它会检查每一个目录，看是否含有需要导入的模块。如果在所有目录中都找不到，那么 Python 会引发一个 `ModuleNotFoundError`。
+
+## 字节编译的 `.pyc` 文件
+
+在 Python 中，字节编译的 `.pyc` 文件是一种优化技术，用于提高 Python 程序的执行速度。当 Python 解释器执行一个模块时，它会将模块的源代码编译成字节码，并将字节码保存到一个与模块同名的 `.pyc` 文件中。
+
+通常，这些 `.pyc` 文件在与相应的 `.py` 文件相同的目录中被创建。如果 Python 没有权限在该目录中写入文件，则 `.pyc` 文件将不会被创建。在 Python 3 中，标准库和第三方库的模块安装在 Python 的安装目录下，他们的 `.pyc` 文件通常被存储在 `__pycache__` 目录下。
+
+无论是自己编写的模块还是下载的模块，只要它们被 Python 解释器执行过，都会生成相应的 `.pyc` 文件，以提高程序的执行速度。
+
+字节编译的 `.pyc` 文件具有以下特性：
+
+- 提高执行速度：由于字节码是一种中间形式，比源代码更接近机器语言，因此执行字节码比执行源代码更快。通过将模块的字节码保存到 `.pyc` 文件中，可以避免每次执行模块时都重新编译源代码，从而提高程序的执行速度。
+- 跨平台兼容性：`.pyc` 文件是与平台无关的，可以在不同的操作系统上执行。这意味着可以在一个平台上编译 `.pyc` 文件，然后将其复制到另一个平台上执行，而无需重新编译源代码。
+- 缓存机制：Python 解释器会检查 `.pyc` 文件的时间戳，以确定是否需要重新编译源代码。如果源代码没有发生变化，且 `.pyc` 文件的时间戳较新，解释器将直接加载 `.pyc` 文件，而不重新编译源代码。这种缓存机制可以减少程序启动时间和内存占用。
+- 可读性差：`.pyc` 文件是经过编译的字节码，与源代码相比，可读性较差。这是因为字节码是一种低级的、面向机器的表示形式，而源代码是面向人的高级语言。因此，通常情况下，`.pyc` 文件不需要手动编辑或查看。
+
+## `from...import` 语句
+
+使用 `from...import` 语句可以让我们直接调用被导入的函数或者对象，不需要在前面加上模块名称。例如，我们可以直接导入 `math` 模块中的 `sqrt` 函数，这样在调用时就不需要再写 `math.` 了。
+
+这种方法的好处是我们可以只导入想用的函数或者类，不必加载整个模块，相比第一种方式可以节省一些内存。然而，如果代码中有大量的 `from...import` 语句，或从多个模块中导入具有相同名称的函数，那么这可能导致名字空间污染和函数冲突。
+
+同时，也可以使用 `from...import` 语句导入多个函数或者类，例如，我们导入 `math` 模块中的 `sqrt` 和 `pi`：
+
+```python
+from math import sqrt
+print(sqrt(16))  # Output: 4.0
+
+from math import sqrt, pi
+print(sqrt(16)) # Output: 4.0
+print(pi)       # Output: 3.141592653589793
+
+```
+
+## Python模块的 `__name__` 属性
+
+在 Python 中，每个模块都有一个内置的属性 `__name__` ，这个属性对于理解模块的加载方式、以及模块与运行脚本的区别非常重要。
+
+当直接运行一个 py 文件（比如命令行执行 `python your_script.py` ）时，Python会把 `__name__` 属性自动置为 `__main__` 。在这种情况下，我们说 `your_script.py` 是作为一个脚本运行的。
+
+但是，如果你导入这个 py 文件作为一个模块（比如在另一个 py 文件中使用 `import your_script` ），那么Python会把 `__name__` 属性自动置为模块的名称（这里的例子中就是 `your_script` ）。在这种情况下，我们说 `your_script.py` 是被导入的模块。
+
+参加如下的示例代码：
+
+```python
+if __name__ == '__main__':
+    print('This program is being run by itself')
+else:
+    print('I am being imported from another module')
+```
+
+根据以上的属性，许多 Python 脚本（尤其是那些同时被作为模块和脚本运行的脚本）都会在文件末尾包含以下代码：
+
+```
+if __name__ == "__main__":
+    run_my_script()
+```
+
+其中，`run_my_script()` 是该脚本中定义的一个函数。这段代码的目的是：
+
+- 如果你直接运行这个 py 文件，Python 会执行 `run_my_script()` 函数；
+- 如果你把这个 py 文件作为模块导入，Python 不会执行 `run_my_script()` 函数。
+
+这种方法允许一个 Python 模块同时被安全地导入并独立运行，是 Python 编程中一个常见且实用的技巧。
+
+
+总的来说，Python 的 `__name__` 属性作为一个内建的模块属性，通过它可以有效区分脚本的直接执行和模块的导入调用，对理解和控制 Python 代码流程有着重要作用。
+
+## 制作自己的模块
+
+在 Python 中，任何一个 Python 文件都可以被视为一个模块，只需要按照一定的格式组织你的代码，然后将其保存为以 `.py` 结尾的文件即可。
+
+导入模块时，Python 解释器会在几个特定的目录中寻找模块文件，这些目录的路径存储在 `sys.path` 列表中。如果你的模块位于这些目录之外的路径，需要将模块的路径添加到系统路径中，如下面的示例代码所示：
+```python
+# 示例代码来源： A Byte of Python
+import sys
+sys.path.append("practical_code/modules") # 将模块的路径添加到系统路径中
+
+import mymodule
+
+mymodule.say_hi()
+print('Version', mymodule.__version__)
+
+```
+
+使用 `from..import` 语句的示例代码如下：
+
+```python
+# 示例代码来源： A Byte of Python
+import sys
+sys.path.append("practical_code/modules") #
+
+from mymodule import say_hi, __version__
+
+say_hi()
+print('Version', __version__)
+```
+
+## `dir` 函数
+
+`dir` 函数是 Python 内置函数之一，用于返回一个对象的属性和方法列表。
+它接受一个可选的参数，该参数是一个对象或模块的名称。如果直接使用 `dir()` 并且不提供任何参数，则返回当前作用域中能访问到的所有变量、函数、类等的名称。
+
+基本概念：
+- 对象：在 Python 中，一切皆为对象，包括数字、字符串、列表、函数等。对象
+- 属性：对象的特征或数据，可以通过点运算符访问。
+- 方法：对象的行为或功能，可以通过点运算符调用。
+
+特性：
+- `dir` 函数返回的列表包含了对象或模块的所有属性和方法的名称。
+- 返回的列表是无序的，不保证属性和方法的顺序。
+- `dir` 函数只返回公共的属性和方法，不包括私有的属性和方法。
+- 如果参数是一个模块的名称，`dir` 函数返回的列表包含了该模块的所有公共属性和方法的名称。
+- 如果参数是一个对象，`dir` 函数返回的列表包含了该对象的所有属性和方法的名称。
+
+```python
+a = 5
+# 调用dir()函数，打印当前全局作用域的所有名称
+print(dir())
+
+# 使用del语句删除变量a
+del a
+
+# 再次调用dir()函数
+print(dir()) # 这一次，返回的列表中将不再包含 'a'，因为我们已经删除了 a 这个变量
+
+# 使用dir()函数查看sys的所有属性和方法
+import sys
+dir(sys)
+
+def my_function():
+    """
+    This is a sample function.
+    """
+    pass
+
+# 使用dir()函数查看my_function的所有属性和方法
+print(dir(my_function))
+```
+
+
+- `dir()` 函数在无参数调用时，返回的是当前范围内的变量、方法和定义的类型列表。
+- 当创建新的变量或者方法，他们会被添加到这个列表中；当删除变量或者方法，他们则会从这个列表中消失。
+- 当 `dir()` 函数以模块名或函数作为参数调用，例如 `dir(sys)`，它会返回包含模块或函数所有属性和方法的名字的列表。
+- 调用 `dir()` 函数来查看一个自定义模块或函数的属性和方法，它会返回包括以下属性的列表：
+  - `__doc__`：这是模块或函数的文档字符串，即在你定义它时用三引号包裹的那段描述文本。
+  - `__name__`：这是模块或函数的名称。
+    - 对于模块，如果直接运行这个模块的话，`__name__` 的值会是 '__main__' 。如果这个模块是被其他程序导入的，`__name__` 则会等于模块自身的名字。
+    - 对于函数，`__name__` 属性是函数的名称。
+  - `__module__`：`__module__` 属性只有函数对象才有，它代表的是定义这个函数的模块名。
+    - 在主程序中定义的函数，`__module__` 通常为'main'；
+    - 在被导入的模块中定义的函数，`__module__` 则会是那个模块的名字。
+
+
+## 包
+
+在 Python 中，包（Package）是一种组织和管理 Python 模块（Module）的方式。可以简单地将其视为包含一个或多个 Python 模块的文件夹。
+
+
+一个 Python 包可能包含 Python 模块、其他子包、或者一些附属的文件（如文档、数据文件等）。Python 包的主要目标是提供一种方便的方式来组织和共享一组相关功能的代码。
+
+
+通常，一个 Python 包中会有一个特殊文件 `__init__.py`，它用于标记所在目录是一个 Python 包，可以包含一些初始化代码或者指定包的特定属性。然而，从 Python 3.3开始，也支持所谓的隐式命名空间包，不再强制要求包中必须有 `__init__.py` 文件。
+
+代码示例：
+
+假如我们有以下目录结构：
+```
+my_package/
+├── __init__.py
+├── module1.py
+└── sub_package/
+    ├── __init__.py
+    └── module2.py
+    
+```
+在这个结构中，`my_package` 是一个 Python 包，它包含一个模块 `module1` 和一个子包 `sub_package`。`sub_package` 也是 Python 包，并且它包含一个模块 `module2.py`。
+
+假设在 `module1.py` 中，我们定义了一个函数 `func1`，在 `module2.py` 中，我们定义了一个函数`func2`。
+
+```python
+# 文件路径: my_package/module1.py
+
+def func1():
+    print("This is function 1 from module 1")
+
+# 文件路径: my_package/sub_package/module2.py
+
+def func2():
+    print("This is function 2 from module 2")    
+
+```
+
+在 Python 中，我们可以使用以下方法导入和使用这些函数：
+
+```python
+import sys
+sys.path.append("practical_code/modules") #将包的路径添加到系统路径中
+
+# 导入 my_package 包中的 module1 模块
+import my_package.module1
+
+# 调用 module1 中的函数 func1
+my_package.module1.func1()  # Outputs: This is function 1 from module 1
+
+# 导入 sub_package 包中的 module2 模块
+import my_package.sub_package.module2
+
+# 调用 module2 中的函数 func2
+my_package.sub_package.module2.func2()  # Outputs: This is function 2 from module 2
+
+>>>>>>> a0da713bf4678cbc45fcc0a7673f704354266d0e
 ```

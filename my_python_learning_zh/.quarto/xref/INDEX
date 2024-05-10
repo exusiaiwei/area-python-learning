@@ -1,0 +1,44 @@
+{
+  "basic.qmd": {
+    "basic.html": "1a4c6c47"
+  },
+  "index.qmd": {
+    "index.html": "5ce131b1"
+  },
+  "operators_and_expressions.qmd": {
+    "operators_and_expressions.html": "10ddf201"
+  },
+  "control_flow.qmd": {
+    "control_flow.html": "a6e9fd20"
+  },
+  "functions.qmd": {
+    "functions.html": "344bf90d"
+  },
+  "modules.qmd": {
+    "modules.html": "c4645f88"
+  },
+  "data_structures.qmd": {
+    "data_structures.html": "581ea588"
+  },
+  "problem_solving.qmd": {
+    "problem_solving.html": "59136f1f"
+  },
+  "object_oriented_programming.qmd": {
+    "object_oriented_programming.html": "4fb27427"
+  },
+  "input_and_output.qmd": {
+    "input_and_output.html": "8458effa"
+  },
+  "exceptions.qmd": {
+    "exceptions.html": "c6c4d33d"
+  },
+  "standard_library.qmd": {
+    "standard_library.html": "bd719377"
+  },
+  "more.qmd": {
+    "more.html": "c91be500"
+  },
+  "references.qmd": {
+    "references.html": "796bf76e"
+  }
+}
