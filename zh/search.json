@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "我的Python学习笔记",
     "section": "",
-    "text": "前言\n欢迎阅读《我的python学习笔记》！这里是我学习 Python 的笔记和实践记录。\n在我的 Python 学习之旅中，我使用 Quarto 记录了一系列的交互式笔记。我采用了 Quarto 书籍项目的形式，以便在阅读材料的同时，观看和执行相关的嵌入式代码。\n本仓库下的 ‘master-zh’ 和 ‘master-en’ 分支分别存放着我制作的中文和英文版本交互式笔记。\n此外，对于一些简单的代码实践，我将它们放置在 ‘practical_code’ 文件夹中。可以在这里查看我在学习 Python 过程中的实战项目和练习。\n目前，这些笔记是基于Swaroopch C H的书籍《A Byte of Python》(CH 2024)而编写的，该书采用CC BY-SA 3.0许可证。\n除非另有说明，这些笔记采用CC BY-SA 4.0许可证发布。\n在学完这本书之后，我可能会参考其他的书籍更进一步完善这本笔记。\n\n\n\n\nCH, Swaroop. 2024. “Swaroopch/Byte-of-Python.” https://github.com/swaroopch/byte-of-python.",
+    "text": "前言\n欢迎阅读《我的python学习笔记》！这里是我学习 Python 的笔记和实践记录。\n在我的 Python 学习之旅中，我使用 Quarto 记录了一系列的交互式笔记。我采用了 Quarto 书籍项目的形式，以便在阅读材料的同时，观看和执行相关的嵌入式代码。\n本仓库下的 ‘my-python-learning-zh’ 和 ‘my-python-learning-en’ 文件夹分别存放着我制作的中文和英文版本交互式笔记。\n此外，对于一些简单的代码实践，我将它们放置在 ‘practical_code’ 文件夹中。可以在这里查看我在学习 Python 过程中的实战项目和练习。\n目前，这些笔记是基于Swaroopch C H的书籍《A Byte of Python》(CH 2024)而编写的，该书采用CC BY-SA 3.0许可证。\n除非另有说明，这些笔记采用CC BY-SA 4.0许可证发布。\n在学完这本书之后，我可能会参考其他的书籍更进一步完善这本笔记。\n\n\n\n\nCH, Swaroop. 2024. “Swaroopch/Byte-of-Python.” https://github.com/swaroopch/byte-of-python.",
     "crumbs": [
       "前言"
     ]
@@ -634,7 +634,7 @@
     "href": "data_structures.html#集合set-1",
     "title": "6  数据结构",
     "section": "6.11 集合（Set）",
-    "text": "6.11 集合（Set）\n集合是非有序的数据结构，它不允许重复元素。\n集合用花括号{}包围元素，并用逗号 , 分割。\n\nmy_set = {1, \"apple\", 3.14, \"apple\"}\nprint(my_set) # prints: {1, \"apple\", 3.14}\n\n{'apple', 1, 3.14}\n\n\n集合:\n\n是无序的\n集合中元素不能重复\n可以包含任何类型的元素\n不能通过索引访问元素",
+    "text": "6.11 集合（Set）\n集合是非有序的数据结构，它不允许重复元素。\n集合用花括号{}包围元素，并用逗号 , 分割。\n\nmy_set = {1, \"apple\", 3.14, \"apple\"}\nprint(my_set) # prints: {1, \"apple\", 3.14}\n\n{1, 3.14, 'apple'}\n\n\n集合:\n\n是无序的\n集合中元素不能重复\n可以包含任何类型的元素\n不能通过索引访问元素",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>数据结构</span>"
     ]

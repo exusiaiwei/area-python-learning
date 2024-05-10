@@ -506,7 +506,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="6.9" class="anchored" data-anchor-id="列表list-1"><span class="header-section-number">6.9</span> 列表（List）</h2>
 <p>Python 的列表类似于其他编程语言中的数组，但是比这些数组更灵活。列表中的元素不一定要是相同的数据类型。</p>
 <p>列表用方括号 <code>[]</code> 包围元素，并用逗号 <code>,</code> 分割。</p>
-<div id="1f0a4ac1" class="cell" data-execution_count="1">
+<div id="39752f43" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>, <span class="st">"apple"</span>, <span class="fl">3.14</span>]</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list[<span class="dv">0</span>]) <span class="co"># prints: 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -539,7 +539,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="6.10" class="anchored" data-anchor-id="元组tuple-1"><span class="header-section-number">6.10</span> 元组（Tuple）</h2>
 <p>元组是有序的、不可变的列表。可以理解为一种“只读”版本的列表。</p>
 <p>元组用括号 <code>()</code> 包围元素，并用逗号 <code>,</code> 分割。</p>
-<div id="74d6a014" class="cell" data-execution_count="2">
+<div id="780836df" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>my_tuple <span class="op">=</span> (<span class="dv">1</span>, <span class="st">"apple"</span>, <span class="fl">3.14</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_tuple[<span class="dv">0</span>]) <span class="co"># prints: 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -554,7 +554,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>可以通过索引访问元素，索引从0开始</li>
 </ul>
 <p>下面是一个体现元组和列表的差别的代码示例</p>
-<div id="16bf770f" class="cell" data-execution_count="3">
+<div id="c02cae07" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 创建一个列表</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 在列表末尾添加一个元素</span></span>
@@ -573,11 +573,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="6.11" class="anchored" data-anchor-id="集合set-1"><span class="header-section-number">6.11</span> 集合（Set）</h2>
 <p>集合是非有序的数据结构，它不允许重复元素。</p>
 <p>集合用花括号<code>{}</code>包围元素，并用逗号 <code>,</code> 分割。</p>
-<div id="9716c6c6" class="cell" data-execution_count="4">
+<div id="29a223b4" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>my_set <span class="op">=</span> {<span class="dv">1</span>, <span class="st">"apple"</span>, <span class="fl">3.14</span>, <span class="st">"apple"</span>}</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_set) <span class="co"># prints: {1, "apple", 3.14}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>{'apple', 1, 3.14}</code></pre>
+<pre><code>{1, 3.14, 'apple'}</code></pre>
 </div>
 </div>
 <p>集合:</p>
@@ -607,7 +607,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>因此，考虑到这种映射关系，计算机科学中的这种包含”键-值对”的数据结构，就被命名为字典（Dictionary）。</p>
 </div>
 </div>
-<div id="04c7ebf5" class="cell" data-execution_count="5">
+<div id="02457326" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>my_dict <span class="op">=</span> {</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"name"</span>: <span class="st">"apple"</span>,</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"color"</span>: <span class="st">"red"</span>,</span>
@@ -646,7 +646,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>举例来说，一个人（对象）有姓名（属性）和能进行各种活动（方法）如跑步、学习等。</p>
 <p>类(Class)：类是对象的模板或蓝图。它定义了对象的基本结构，并封装了对象需要执行的行为（方法）。你可以定义一个类来创建属于这个类的对象。类就相当于制造物件的工厂，负责规定其生产出的对象应该拥有哪些特性。</p>
 <p>举例来说，你可以定义一个“人”的类（class），它有名字和年龄等属性，也有吃饭，睡觉等方法。然后根据这个“人”类，我们可以创建不同的人对象，比如创建一个名叫“张三”、年龄25岁的人对象。</p>
-<div id="4fc8238b" class="cell" data-execution_count="6">
+<div id="6ee3a668" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Person:</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
@@ -671,11 +671,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="创建对象和引用-1" class="level3" data-number="6.14.1">
 <h3 data-number="6.14.1" class="anchored" data-anchor-id="创建对象和引用-1"><span class="header-section-number">6.14.1</span> 创建对象和引用</h3>
 <p>举个例子，当你创建一个列表并赋值给某个变量：</p>
-<div id="d7d80f6c" class="cell" data-execution_count="7">
+<div id="41a643bd" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>list1 <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>此时，list1只是一个引用，它指向存储在内存中的一个列表对象，此对象包含元素1, 2, 3。如果你再创建一个引用，并指向同样的对象：</p>
-<div id="d6bb249f" class="cell" data-execution_count="8">
+<div id="894ead83" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>list2 <span class="op">=</span> list1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>此时你有两个引用——list1和list2，它们同时指向同一个对象。</p>
@@ -683,11 +683,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="修改可变类型的对象-1" class="level3" data-number="6.14.2">
 <h3 data-number="6.14.2" class="anchored" data-anchor-id="修改可变类型的对象-1"><span class="header-section-number">6.14.2</span> 修改可变类型的对象</h3>
 <p>如果你通过其中一个引用去修改这个对象，例如你通过list1去删除第一个元素：</p>
-<div id="36a539b5" class="cell" data-execution_count="9">
+<div id="a4c80b3a" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> list1[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>那么无论你是通过list1还是list2来访问这个列表对象，你都会发现的此对象的内容已经发生了变化：</p>
-<div id="3cf2368d" class="cell" data-execution_count="10">
+<div id="461a9331" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(list1)  <span class="co"># 输出: [2, 3]</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(list2)  <span class="co"># 输出: [2, 3]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -700,11 +700,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="对象的复制-1" class="level3" data-number="6.14.3">
 <h3 data-number="6.14.3" class="anchored" data-anchor-id="对象的复制-1"><span class="header-section-number">6.14.3</span> 对象的复制</h3>
 <p>然而，有时你可能需要创建一个对象的副本，这样你就可以修改这个副本，而不影响原来的对象。例如，通过切片操作可以创建一个列表的副本：</p>
-<div id="422afb14" class="cell" data-execution_count="11">
+<div id="94d0e838" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>list3 <span class="op">=</span> list2[:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>此时list3引用的是一个完全新的列表对象，这个对象的内容是list2所指向的列表的一个完全的拷贝。所以，当你更改list3的内容时，list2指向的列表内容不会被修改：</p>
-<div id="9aaad95f" class="cell" data-execution_count="12">
+<div id="3ff53c16" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> list3[<span class="dv">0</span>]</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(list2)  <span class="co"># 输出: [2, 3]</span></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(list3)  <span class="co"># 输出: [3]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
