@@ -217,4 +217,3 @@ def greet(name):
 
 greet("Bob")
 ```
-

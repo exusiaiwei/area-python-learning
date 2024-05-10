@@ -1,1 +1,0 @@
-{"options":{"chapters":true},"entries":[{"caption":"5.1.1 The sys Module","order":{"section":[5,1,1,0,0,0,0],"number":1},"key":"sec-sys"}],"headings":["basic-concepts","sec-sys","the-import-statement","byte-compiled-.pyc-files","from...import-statements","the-__name__-attribute-of-python-modules","making-your-own-modules","the-dir-function","packages"]}
