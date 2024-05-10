@@ -19,13 +19,21 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Jupyter
+        run: pip install jupyter
+
       - name: Render and Publish
         run: |
           quarto render my_python_learning_en
           quarto render my_python_learning_zh
           mkdir -p _site
-          mv en/_site _site/en
-          mv zh/_site _site/zh
+          mv my_python_learning_en/_site _site/en
+          mv my_python_learning_zh/_site _site/zh
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
