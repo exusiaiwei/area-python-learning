@@ -20,13 +20,13 @@ The flexibility of control flow allows programs to perform different operations 
 
 Conditional statements allow different code blocks to be executed based on the truth or falsehood of a condition. The `if` statement is used to execute a code block when a condition is true, while the `else` statement is used to execute a code block when a condition is false.
 
-```{python}
+```python
 # The sample code comes from A Byte of Python
 # Here we define the guess value directly, instead of obtaining it through input
 # This is because environments like Quarto and Jupyter Notebook can't handle intermediate input (input function)
 # Such environments are designed to execute code in bulk. Once all cells start executing, they can complete all runs without human intervention
 # Therefore, we directly set a value here, instead of obtaining it through input
-guess = 20  
+guess = 20
 
 number = 23
 
@@ -66,14 +66,14 @@ The knowledge points in the example code:
 
 The `while` statement allows a set of statements to be repeatedly executed as long as a condition is true. The `while` statement is a type of loop statement and can include an optional `if` statement.
 
-```{python}
+```python
 # The sample code comes from A Byte of Python
 number = 23
 running = True
 
 # As we can't use input() function in Quarto or Jupyter Notebook, we set up a preset guess list here
-guesses = [20, 25, 23]  
-guesses_iter = iter(guesses)  # Create an iterator 
+guesses = [20, 25, 23]
+guesses_iter = iter(guesses)  # Create an iterator
 
 while running:
     # In Quarto and Jupyter Notebook, 'input()' function needs to be rewritten as iterating guess value from preset list
@@ -114,7 +114,7 @@ The `for..in` statement is another type of loop statement that iterates over an 
 
 At this point, a sequence can be seen as an ordered collection of items.
 
-```{python}
+```python
 # Example code from A Byte of Python
 for i in range(1, 5):
     print(i)
@@ -136,7 +136,7 @@ The `break` statement is called a jump statement, which can stop the execution o
 
 If a `for` or `while` loop is exited using `break`, the corresponding `else` block of the loop will not be executed.
 
-```{python}
+```python
 # The sample code comes from A Byte of Python
 # Set up a preset input list
 inputs = ['Hello', 'abcdef', '12345', 'quit']
@@ -172,7 +172,7 @@ The knowledge points in the example code are as follows:
 
 The `continue` statement is used to skip the remaining statements in the current loop block and continue with the next iteration of the loop.
 
-```{python}
+```python
 # The sample code comes from A Byte of Python
 # Set up a preset input list
 inputs = ['Hello', 'abcdef', '12', '1234', 'quit']
@@ -195,7 +195,7 @@ while True:
     # You can do anything you want to do in the code block...
 print('Done')
 
-# This code can run smoothly in both Quarto and Jupyter environments. In each loop, 
+# This code can run smoothly in both Quarto and Jupyter environments. In each loop,
 # it will get an input from the preset string list and then perform different operations based on the length of this input:
 # 1. If the input is 'quit', then it will end the entire loop;
 # 2. If the length of the input is less than 3, then it will print 'Too short', and skip the rest of the current loop, and directly start the next loop;

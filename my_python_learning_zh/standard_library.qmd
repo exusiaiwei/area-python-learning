@@ -22,7 +22,7 @@ Python标准库是每个Python安装的一部分，它包含了许多有用的�
 - `sys.argv`的长度是命令行参数的个数
 
 下面是一个简单的例子：
-```{python}
+```python
 import sys
 
 print(sys.argv)
@@ -32,7 +32,7 @@ print(sys.argv)
 
 `sys.version`包含了Python解释器的版本信息。
 
-```{python}
+```python
 import sys
 
 print(sys.version)
@@ -43,7 +43,7 @@ print(sys.version)
 
 `sys.path`是一个包含了模块搜索路径的列表。
 
-```{python}
+```python
 import sys
 
 print(sys.path)
@@ -60,7 +60,7 @@ print(sys.path)
 
 `os.getcwd()`返回当前工作目录。
 
-```{python}
+```python
 import os
 
 print(os.getcwd())
@@ -70,7 +70,7 @@ print(os.getcwd())
 
 `os.listdir()`返回指定目录下的文件和目录列表。
 
-```{python}
+```python
 import os
 
 print(os.listdir())
@@ -112,7 +112,7 @@ os.rmdir(r'practical_code/standard_library/newdir')
 
 `logging`模块的基本语法如下：
 
-```{python}
+```python
 import logging
 
 logging.debug('This is a debug message')
@@ -126,7 +126,7 @@ logging.critical('This is a critical message')
 
 以下是一个更复杂一点的例子：
 
-```{python}
+```python
 import os
 import logging
 

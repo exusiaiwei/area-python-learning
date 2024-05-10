@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: docs
+  output-dir: _site
 
 
 book:
@@ -53,4 +53,3 @@ format:
     documentclass: scrreprt
   epub:
     cover-image: python-logo-only.svg
-

@@ -21,7 +21,7 @@ For example, an example of an expression is `2 + 3`, where the operator is `+` a
 - Exponentiation Operator (`**`): Used to calculate the exponent of a value.
 - Floor Division Operator (`//`): Used to calculate the integer part of the division of two values. The answer is rounded down to the nearest integer value; if either operand is a floating-point number, the answer will be a floating-point number.
 
-```{python}
+```python
 # Addition Operator
 x1 = 2 + 3
 print(x1)
@@ -63,7 +63,7 @@ print(e2)
 - Greater Than or Equal Operator (`>=`): Used to check if one value is greater than or equal to another.
 - Less Than or Equal Operator (`<=`): Used to check if one value is less than or equal to another.
 
-```{python}
+```python
 a = 1 == 1
 print(a)
 b = 1 != 1
@@ -83,7 +83,7 @@ print(f)
 - Or Operator (`or`): Used to check if at least one condition is true. The result is true as long as one condition is true.
 - Not Operator (`not`): Used to negate a condition.
 
-```{python}
+```python
 # Logical AND operator (and): The result is true only when all conditions are true
 a = True and True
 print(a)  # Output: True
@@ -106,7 +106,7 @@ f = not False
 print(f)  # Output: True
 ```
 
-#### Short-circuit evaluation: 
+#### Short-circuit evaluation:
 
 When using logical operators (such as and and or) to connect multiple conditional expressions, Python determines whether to evaluate all conditions based on the characteristics of the operator.
 
@@ -114,7 +114,7 @@ When using logical operators (such as and and or) to connect multiple conditiona
 - In the case of the or operator, if any condition is True, the entire expression will be True, and Python will stop evaluating the remaining values and immediately return True.
 Short-circuit evaluation can improve code efficiency and performance by avoiding unnecessary computations and evaluations.
 
-```{python}
+```python
 # Example of short-circuit evaluation
 a = 4
 b = 0
@@ -144,7 +144,7 @@ Bitwise Operators:
 - Left Shift Operator (`<<`): Shifts a value to the left by a specified number of bits.
 - Right Shift Operator (`>>`): Shifts a value to the right by a specified number of bits.
 
-```{python}
+```python
 # Define two variables
 a = 60  # The binary representation of 60 is 0011 1100
 b = 13  # The binary representation of 13 is 0000 1101
@@ -170,7 +170,7 @@ print("a >> 2 =", a >> 2)  # Right shift operation by 2 bits. The binary result 
 - Exponentiation Assignment Operator (`**=`): Used to calculate the exponent of a value and assign the result to a variable.
 - Floor Division Assignment Operator (`//=`): Used to calculate the integer part of two values divided and assign the result to a variable.
 
-```{python}
+```python
 # Simple Assignment Operator (=)
 a = 10
 print("a =", a)  # Output: a = 10
@@ -230,7 +230,7 @@ In cases where operators have the same precedence, the order of evaluation is de
     - Left-associative means evaluation proceeds from left to right. Common examples include arithmetic operators (such as addition, subtraction, multiplication, division, etc.), comparison operators, and most bitwise operators.
     - Right-associative means evaluation proceeds from right to left. Common examples include exponentiation operator, assignment operator (`=`), and compound assignment operators (such as `+=`, `-=`, `*=`, `/=`, `%=`, `**=`, `//=`, `&=`, `^=`, `>>=`, `<<=`).
 
-```{python}
+```python
 # Left-associative
 print(1 - 2 + 3)  # Output: 2
 
@@ -246,7 +246,7 @@ print((2 ** 4) ** 2)  # Output: 256
 ### Mathematical Operations and Shortcut for Assignment
 
 A common practice is to perform mathematical operations on variables and then assign the result back to the variable, and there is a shortcut for this type of expression.
-```{python}
+```python
 a = 2
 a = a * 3
 print("a =", a)

@@ -20,13 +20,13 @@
 
 条件语句允许根据条件的真假来执行不同的代码块。`if` 语句用于执行条件为真时的代码块，而 `else` 语句用于执行条件为假时的代码块。
 
-```{python}
+```python
 # 示例代码来源： A Byte of Python
 # 我们这里先定义一下猜测的值，而非通过input来获取值
 # 这是由于Quarto和Jupyter Notebook这类环境无法处理中间输入（input）
 # 这两个环境都被设计为批量执行代码的模式，一旦所有的cell开始执行，它们就能完成所有的运行，无需人工干预
 # 所以，我们这里直接设定一个值，而非通过input来获取这个值
-guess = 20  
+guess = 20
 
 number = 23
 
@@ -66,14 +66,14 @@ print('完成')
 
 `while`语句允许在条件为真时重复执行一组语句。`while`语句是一种循环语句，可以包括一个可选的`if`语句。
 
-```{python}
+```python
 # 示例代码来源： A Byte of Python
 number = 23
 running = True
 
 # 由于我们无法在Quarto或Jupyter环境中使用input()函数，这里我们设定了一个预设的猜测值列表
-guesses = [20, 25, 23]  
-guesses_iter = iter(guesses)  # 创建一个迭代对象 
+guesses = [20, 25, 23]
+guesses_iter = iter(guesses)  # 创建一个迭代对象
 
 while running:
     # 在Quarto和Jupyter环境中，'input()' 函数需要改写为从预设列表中迭代猜测值
@@ -114,7 +114,7 @@ print('完成')
 
 就现在的进度，序列可以被视作一个有序的项目集合。
 
-```{python}
+```python
 # 示例代码来源： A Byte of Python
 for i in range(1, 5):
     print(i)
@@ -136,7 +136,7 @@ else:
 
 如果跳出一个 `for` 或 `while` 循环，相应的循环 `else` 块不会被执行。
 
-```{python}
+```python
 # 示例代码来源： A Byte of Python
 # 设定预设的输入列表
 inputs = ['你好', 'abcdef', '12345', '退出']
@@ -171,7 +171,7 @@ print('完成')
 
 `continue` 语句用于跳过当前循环块中的其余语句，并继续下一次循环的迭代。
 
-```{python}
+```python
 # 示例代码来源： A Byte of Python
 # 设定预设的输入列表
 inputs = ['你好', 'abcdef', '12', '1234', '退出']

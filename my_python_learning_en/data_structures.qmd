@@ -25,7 +25,7 @@ Python's list is similar to arrays in other programming languages, but they are 
 Lists are characterized by elements being surrounded by square brackets `[]` and separated by commas `,`.
 
 
-```{python}
+```python
 mylist = [1, "apple", 3.14]
 print(mylist[0]) # prints: 1
 ```
@@ -33,7 +33,7 @@ List:
 
 - Is ordered
 - Is mutable
-- Can contain elements of any type 
+- Can contain elements of any type
 - Elements can be accessed by index, with indexes starting from 0
 
 ::: {.callout-tip}
@@ -46,7 +46,7 @@ A tuple is an ordered, immutable list. It can be understood as a "read-only" ver
 
 Tuples use parentheses `()` to enclose elements and are separated by commas `,`.
 
-```{python}
+```python
 my_tuple = (1, "apple", 3.14)
 print(my_tuple[0]) # prints: 1
 ```
@@ -55,12 +55,12 @@ Tuples:
 
 - Are ordered
 - Are immutable
-- Can contain elements of any type 
+- Can contain elements of any type
 - Elements can be accessed by index, with indexes starting from 0
 
 Below is a code example illustrating the difference between tuples and lists.
 
-```{python}
+```python
 # Create a list
 my_list = [1, 2, 3]
 # Add an element to the end of the list
@@ -78,7 +78,7 @@ A set is a non-ordered data structure that does not allow duplicate elements.
 
 Sets enclose elements with curly braces `{}` and separate them with commas `,`.
 
-```{python}
+```python
 my_set = {1, "apple", 3.14, "apple"}
 print(my_set) # prints: {1, "apple", 3.14}
 ```
@@ -87,7 +87,7 @@ Set:
 
 - Is unordered
 - Does not allow duplicate elements
-- Can contain elements of any type 
+- Can contain elements of any type
 - Can not be accessed by indexes
 
 
@@ -108,7 +108,7 @@ Therefore, considering this mapping relationship, this data structure containing
 :::
 
 
-```{python}
+```python
 my_dict = {
     "name": "apple",
     "color": "red",
@@ -116,8 +116,8 @@ my_dict = {
 print(my_dict["name"]) # prints: apple
 
 ages = {
-    "Tom": 30, 
-    "Alice": 25, 
+    "Tom": 30,
+    "Alice": 25,
     "Bob": 27
 }
 
@@ -131,7 +131,7 @@ Dictionaries:
 
 - Are unordered
 - In key-value pairs, the key is unique, but the value can be duplicated
-- Can contain elements of any type 
+- Can contain elements of any type
 - Elements are accessed by keys
 
 ## Object and Class {#sec-objects-and-classes}
@@ -146,7 +146,7 @@ Class: A class is a template or blueprint for objects. It defines the basic stru
 
 For example, you can define a class "Person" that has attributes like name and age, and methods like eating, sleeping, etc. Then based on this "Person" class, we can create different person objects, such as creating a person object named "Tom" that is 25 years old.
 
-```{python}
+```python
 class Person:
     def __init__(self, name, age):
         self.name = name
@@ -170,13 +170,13 @@ In Python, whenever you create an object and assign it to a variable, Python doe
 
 For example, when you create a list and assign it to a variable:
 
-```{python}
+```python
 list1 = [1, 2, 3]
 ```
 
-At this point, list1 is just a reference that points to a list object stored in memory, which contains the elements 1, 2, 3. If you create another reference that points to the same object: 
+At this point, list1 is just a reference that points to a list object stored in memory, which contains the elements 1, 2, 3. If you create another reference that points to the same object:
 
-```{python} 
+```python
 list2 = list1
 ```
 
@@ -188,13 +188,13 @@ Now you have two references - list1 and list2, both pointing to the same object.
 
 If you modify the object through one of the references, for example deleting the first element through list1:
 
-```{python}
-del list1[0]  
+```python
+del list1[0]
 ```
 Then no matter whether you access this list object through list1 or list2, you will find that the content of this object has changed:
 
-```{python}
-print(list1)  # prints: [2, 3]  
+```python
+print(list1)  # prints: [2, 3]
 print(list2)  # prints: [2, 3]
 ```
 
@@ -206,14 +206,14 @@ This is because list1 and list2 are just references, they do not contain the act
 
 However, sometimes you may need to create a copy of an object, so that you can modify the copy without affecting the original object. For example, you can create a copy of a list through slice operation:
 
-```{python} 
+```python
 list3 = list2[:]
 ```
 
 Now list3 references a completely new list object, whose content is a complete copy of the list that list2 points to. So when you change the content of list3, the content of the list that list2 points to will not be modified:
 
-```{python}
+```python
 del list3[0]
-print(list2) # prints: [2, 3]   
+print(list2) # prints: [2, 3]
 print(list3) # prints: [3]
 ```

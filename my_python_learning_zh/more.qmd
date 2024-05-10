@@ -52,7 +52,7 @@ Python 提供了四种类型的推导式：
 
 示例：
 
-```{python}
+```python
 squares = [x ** 2 for x in range(1, 6)]
 # 输出：[1, 4, 9, 16, 25]
 ```
@@ -80,7 +80,7 @@ unique_squares = {x ** 2 for x in [1, 1, 2, 3, 3, 4]}
 
 示例：
 
-```{python}
+```python
 square_dict = {x: x ** 2 for x in range(1, 6)}
 # 输出：{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
 ```
@@ -89,7 +89,7 @@ square_dict = {x: x ** 2 for x in range(1, 6)}
 
 生成器表达式用于创建生成器对象。其语法与列表推导式类似，但使用圆括号 `()` 而不是方括号 `[]`。生成器表达式是延迟计算的，只有在需要时才会生成数值，因此对于大型数据集或无限序列非常有用。
 
-```{python}
+```python
 square_generator = (x ** 2 for x in range(1, 6))
 for square in square_generator:
     print(square)
@@ -105,7 +105,7 @@ for square in square_generator:
 
 下面是一个例子：
 
-```{python}
+```python
 def count_failed_students(student_scores):
     """Count the number of failing students out of the group provided.
 
@@ -122,7 +122,7 @@ def count_failed_students(student_scores):
 
 推导式还可以嵌套使用，以生成更复杂的结构。例如，你可以使用嵌套的列表推导式来创建矩阵：
 
-```{python}
+```python
 matrix = [[i * j for j in range(1, 4)] for i in range(1, 4)]
 # 输出：[[1, 2, 3], [2, 4, 6], [3, 6, 9]]
 ```
@@ -146,7 +146,7 @@ matrix = [[i * j for j in range(1, 4)] for i in range(1, 4)]
 
 一个递归函数的示例如下：
 
-```{python}
+```python
 def find(search_list, value):
     median = len(search_list) // 2
     if value not in search_list:

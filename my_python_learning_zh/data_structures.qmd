@@ -26,7 +26,7 @@ Python 的列表类似于其他编程语言中的数组，但是比这些数组�
 
 列表用方括号 `[]` 包围元素，并用逗号 `,` 分割。
 
-```{python}
+```python
 my_list = [1, "apple", 3.14]
 print(my_list[0]) # prints: 1
 ```
@@ -52,7 +52,7 @@ print(my_list[0]) # prints: 1
 
 元组用括号 `()` 包围元素，并用逗号 `,` 分割。
 
-```{python}
+```python
 my_tuple = (1, "apple", 3.14)
 print(my_tuple[0]) # prints: 1
 ```
@@ -65,7 +65,7 @@ print(my_tuple[0]) # prints: 1
 - 可以通过索引访问元素，索引从0开始
 
 下面是一个体现元组和列表的差别的代码示例
-```{python}
+```python
 # 创建一个列表
 my_list = [1, 2, 3]
 # 在列表末尾添加一个元素
@@ -84,7 +84,7 @@ my_tuple = (1, 2, 3)
 集合用花括号`{}`包围元素，并用逗号 `,` 分割。
 
 
-```{python}
+```python
 my_set = {1, "apple", 3.14, "apple"}
 print(my_set) # prints: {1, "apple", 3.14}
 ```
@@ -112,7 +112,7 @@ print(my_set) # prints: {1, "apple", 3.14}
 因此，考虑到这种映射关系，计算机科学中的这种包含"键-值对"的数据结构，就被命名为字典（Dictionary）。
 :::
 
-```{python}
+```python
 my_dict = {
     "name": "apple",
     "color": "red",
@@ -120,8 +120,8 @@ my_dict = {
 print(my_dict["name"]) # prints: apple
 
 ages = {
-    "Tom": 30, 
-    "Alice": 25, 
+    "Tom": 30,
+    "Alice": 25,
     "Bob": 27
 }
 
@@ -157,7 +157,7 @@ Python是一种面向对象的编程语言。在Python中，几乎所有的东�
 
 举例来说，你可以定义一个“人”的类（class），它有名字和年龄等属性，也有吃饭，睡觉等方法。然后根据这个“人”类，我们可以创建不同的人对象，比如创建一个名叫“张三”、年龄25岁的人对象。
 
-```{python}
+```python
 class Person:
     def __init__(self, name, age):
         self.name = name
@@ -183,13 +183,13 @@ print(someone.introduce())
 
 举个例子，当你创建一个列表并赋值给某个变量：
 
-```{python}
+```python
 list1 = [1, 2, 3]
 ```
 
 此时，list1只是一个引用，它指向存储在内存中的一个列表对象，此对象包含元素1, 2, 3。如果你再创建一个引用，并指向同样的对象：
 
-```{python}
+```python
 list2 = list1
 ```
 
@@ -201,12 +201,12 @@ list2 = list1
 
 如果你通过其中一个引用去修改这个对象，例如你通过list1去删除第一个元素：
 
-```{python}
+```python
 del list1[0]
 ```
 那么无论你是通过list1还是list2来访问这个列表对象，你都会发现的此对象的内容已经发生了变化：
 
-```{python}
+```python
 print(list1)  # 输出: [2, 3]
 print(list2)  # 输出: [2, 3]
 ```
@@ -218,12 +218,12 @@ print(list2)  # 输出: [2, 3]
 
 然而，有时你可能需要创建一个对象的副本，这样你就可以修改这个副本，而不影响原来的对象。例如，通过切片操作可以创建一个列表的副本：
 
-```{python}
+```python
 list3 = list2[:]
 ```
 此时list3引用的是一个完全新的列表对象，这个对象的内容是list2所指向的列表的一个完全的拷贝。所以，当你更改list3的内容时，list2指向的列表内容不会被修改：
 
-```{python}
+```python
 del list3[0]
 print(list2)  # 输出: [2, 3]
 print(list3)  # 输出: [3]

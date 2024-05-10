@@ -19,7 +19,7 @@
 ## 类的构建（功能部分）
 
 一个最简单的类如下所示：
-```{python}
+```python
 class Person:
     pass  # An empty block
 
@@ -39,7 +39,7 @@ print(p)
 
 以下是一个简单的类的方法例子：
 
-```{python}
+```python
 class Person:
     def say_hi(self):
         print('Hello, how are you?')
@@ -55,7 +55,7 @@ p.say_hi()
 在定义类的方法时，我们并不知道这个方法将来会被哪个实例对象调用。所以我们需要一个参数（习惯上叫做`self`）来接收运行时传入的实例对象，这样这个方法才能访问到实例的属性或者调用实例的其他方法。
 :::
 
-```{python}
+```python
 class Dog:
     def __init__(self, name):
         self.name = name
@@ -83,7 +83,7 @@ rex.bark()
 
 在这里，当我们调用`rex.bark()`时，从表面看，我们并没有给`bark`方法提供任何参数。但实际上，Python解释器会自动把`rex`这个实例传递给`bark`方法的`self`参数。这就是为何在类的方法最开始位置总会有一个`self`参数，而在调用方法时，我们通常并不需要显式地提供这个参数。
 
-同理，这也意味着哪怕是一个不带参数的方法，他也仍然需要一个参数- `self` 
+同理，这也意味着哪怕是一个不带参数的方法，他也仍然需要一个参数- `self`
 :::
 
 
@@ -102,7 +102,7 @@ rex.bark()
 
 以下是一个包含有`__init__`方法的类的例子：
 
-```{python}
+```python
 class Dog:
     def __init__(self, name, age):
         self.name = name
@@ -134,7 +134,7 @@ my_dog = Dog('Willy', 5)
 
 下面是一个用于理解类变量和实例变量的例子：
 
-```{python}
+```python
 class Robot:
     """Represents a robot, with a name."""
 
@@ -195,7 +195,7 @@ Robot.how_many()
 
 - `population`是一个类变量，用于跟踪机器人的数量。
 - `name`是一个实例变量，用于存储机器人的名字。
-- `__init__`方法是一个特殊的方法，用于初始化机器人的名字。 
+- `__init__`方法是一个特殊的方法，用于初始化机器人的名字。
 - `how_many`是一个类方法，用于打印当前机器人的数量。我们使用装饰器将`how_many`方法标记为类方法。
 - `die`是一个实例方法，用于表示机器人的销毁。
 - 所有的类成员都是公有的。一个下划线开头的名称（例如`_name`）表示这个名称是受保护的，不应该被外部访问。两个下划线开头的名称（例如`__name`）表示这个名称是私有的，不应该被外部访问。
@@ -208,7 +208,7 @@ Robot.how_many()
 
 在Python中，继承是通过在类定义时在类名后面的括号中指定父类来实现的。下面是一个简单的继承的例子：
 
-```{python}
+```python
 class SchoolMember:
     '''Represents any school member.'''
     def __init__(self, name, age):
@@ -259,7 +259,7 @@ for member in members:
 在这个例子中：
 
 - 使用继承时，在类定义中的类名后面的元组中指定基类名（例如，`class Teacher(SchoolMember):`）。
-- 基类的`__init__`方法是通过调用`SchoolMember.__init__(self, name, age)`来显式调用的。 
+- 基类的`__init__`方法是通过调用`SchoolMember.__init__(self, name, age)`来显式调用的。
   - 这是因为子类的`__init__`方法会覆盖父类的`__init__`方法。
   - 如果我们想要在子类的`__init__`方法中调用父类的`__init__`方法，我们需要显式地调用它。
 - `Teacher`和`Student`类都继承了`SchoolMember`类。这意味着`Teacher`和`Student`类都可以访问`SchoolMember`类的属性和方法。
@@ -288,5 +288,3 @@ for member in members:
 
 逻辑编程（Logic Programming） ：通过描述问题的逻辑来编写程序，程序会自动推导出解决问题的答案。Prolog就是一种逻辑编程语言。
 :::
-
-

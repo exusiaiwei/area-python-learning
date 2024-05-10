@@ -6,7 +6,7 @@ In our learning process, we have already come across and used many of Python's b
 
 We use the `def` keyword to define functions. The `def` keyword is followed by the function name and parentheses `()`. The parentheses may contain some parameters (preset variable names), and the line ends with a colon `:`.
 
-```{python}
+```python
 def say_hello():
     # Block belonging to the function
     print('hello world')
@@ -35,7 +35,7 @@ Argument:
 
 This concept is analogous to a recipe and cooking. The list of ingredients on a recipe (e.g. certain grams of flour, certain grams of sugar) is like the parameter list, while the actual amount of flour and sugar you use is like the arguments.
 
-```{python}
+```python
 # Code sample from: A Byte of Python
 def print_max(a, b):
     if a > b:
@@ -66,7 +66,7 @@ The first time calling the `print_max` function, we directly provide numbers as 
 - A variable's scope starts from where it is declared to the end of that code block or function.
 - Local variables inside functions are viewed as independent even if variables with the same names exist outside the function. Regardless of identical names, local variables inside functions have no relation with variables outside functions.
 
-```{python}
+```python
 # Code sample from: A Byte of Python
 x = 50
 
@@ -92,7 +92,7 @@ Next, we assign the local variable `x` in the function a value of 2. When we mod
 - Despite this, we don't recommend this practice as it can confuse readers when trying to understand where that variable is defined.
 - If you want to operate on variables outside functions inside the function, it's recommended to use the `global` statement to explicitly indicate you are manipulating a globally defined variable.
 
-```{python}
+```python
 # Code sample from: A Byte of Python
 x = 50
 
@@ -117,7 +117,7 @@ We can make some function parameters optional by setting default parameter value
 
 This can be achieved by assigning default values after the parameter names in the function definition with an equals sign (=).
 
-```{python}
+```python
 # Code sample from: A Byte of Python
 def say(message, times=1):
     print(message * times)
@@ -145,7 +145,7 @@ Note:
 - Using keyword arguments allows us to call functions more flexibly without needing to match the order of parameters as defined in the function.
 - As long as the other parameters have default values, we can assign values only to the parameters we want.
 
-```{python}
+```python
 # Code sample from: A Byte of Python
 def func(a, b=5, c=10):
     print('a is', a, 'and b is', b, 'and c is', c)
@@ -168,7 +168,7 @@ Variable arguments are a special kind of parameter that can accept any number of
 
 In Python, variable arguments are indicated by adding an asterisk (*) before the parameter name.
 
-```{python}
+```python
 # Code sample from: A Byte of Python
 def total(a=5, *numbers, **phonebook):
     print('a', a)
@@ -195,7 +195,7 @@ The `return` statement is used to return results from functions or end function 
 
 Inside a function, an expression after a `return` statement can have a value, and that value gets returned from the function.
 
-```{python}
+```python
 # Code sample from: A Byte of Python
 def maximum(x, y):
     if x > y:
@@ -221,7 +221,7 @@ Docstrings refer to documentation strings in Python that are a way of documentin
 
 Docstrings are located on the first line of function, method, class and module definitions, enclosed within a pair of triple quotes `"""` or `'''`, which can be single line or multi-line.
 
-```{python}
+```python
 # Code sample from: A Byte of Python
 def print_max(x, y):
     '''Prints the maximum of two numbers.

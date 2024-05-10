@@ -35,7 +35,7 @@ empty_value = None  # 将None字面常量赋值给变量
 - 三引号可以指定多行字符串。
 - 字符串的值不可以修改。
 
-```{python}
+```python
 # 创建字符串
 name = "Alice"
 
@@ -66,7 +66,7 @@ print(new_name)  # 输出：Blice
 - 可以通过索引指定插入顺序，python从0开始计数。
 - 可以命名参数。
 
-```{python}
+```python
 name = "Alice"
 age = 25
 
@@ -106,7 +106,7 @@ print(greeting3)  # 输出：Hello, my name is Alice and I am 25 years old.
 - \\"：双引号
 - \\：反斜杠
 
-```{python}
+```python
 # 在字符串中使用转义序列来表示特殊字符：
 print("Hello\tWorld")  # 输出：Hello    World
 print("I\'m a programmer")  # 输出：I'm a programmer
@@ -132,7 +132,7 @@ print(result)  # 输出：['12345']
 - 变量可以在程序的不同位置使用和传递。
 - 变量的作用域可以限定在特定的代码块中。
 
-```{python}
+```python
 i = 5
 print(i)
 
@@ -168,7 +168,7 @@ print(s)
 
 Python鼓励每个物理行对应一个逻辑行，即每行一个语句，以保证代码的可读性。
 
-```{python}
+```python
 # 逻辑行跨越多个物理行的示例
 x = 1 + \
     2 + \
@@ -208,7 +208,7 @@ y = 5; print(y)
 代码示例：
 以下是一个缩进构成代码块的示例：
 
-```{python}
+```python
 def greet(name):
     if name == "Alice":
         print("Hello, Alice!")

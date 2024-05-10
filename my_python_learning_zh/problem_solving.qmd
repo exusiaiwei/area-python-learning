@@ -43,7 +43,7 @@ I want a program which creates a backup of all my important files.
 #### .format()方法
 `.format()`方法是一种字符串格式化方式，我们可以将值插入到字符串模板的占位符中。例如：
 
-```{python}
+```python
 name = "Alice"
 print("Hello, {}".format(name)) # 输出：Hello, Alice
 ```
@@ -51,7 +51,7 @@ print("Hello, {}".format(name)) # 输出：Hello, Alice
 
 我们还可以在`{}`中添加数字，以指定`.format()`方法参数的位置：
 
-```{python}
+```python
 firstname = "Alice"
 lastname = "Bob"
 print("Hello, {0} {1}".format(firstname, lastname)) # 输出：Hello, Alice Bob
@@ -61,13 +61,13 @@ print("Hello, {0} {1}".format(firstname, lastname)) # 输出：Hello, Alice Bob
 ### f-string（格式化字符串字面值）
 在Python 3.6及以上版本中，我们通常使用f-string进行字符串格式化，它使字符串格式化更加简洁、高效。f-string的工作方式是，在字符串前面加上一个`f`或`F`，然后将要插入的变量或表达式写在 `{}` 之中，Python 会自动将其替换为它的值。例如：
 
-```{python}
+```python
 name = "Alice"
 print(f"Hello, {name}") # 输出：Hello, Alice
 ```
 在 `{}` 中可以写入一些简单的Python表达式，Python会自动执行这些表达式并将结果替换到 `{}` 的位置：
 
-```{python}
+```python
 a = 5
 b = 10
 print(f"Five plus ten is {a + b}, not {2 * (a + b)}.") # 输出：Five plus ten is 15, not 30.
@@ -75,20 +75,20 @@ print(f"Five plus ten is {a + b}, not {2 * (a + b)}.") # 输出：Five plus ten 
 ### 操作系统路径分隔符在Python中的使用
 在不同的操作系统中，文件路径的表示方法是不同的。在Windows系统中，我们习惯使用反斜线`\`来表示路径，例如：`C:\Users\Admin\Documents`。而在UNIX系统（比如Linux, MacOS）中，我们使用正斜线`/`来表示路径，例如：`/home/admin/Documents`。
 然而，在Python的字符串中，反斜线'\'是一个特殊字符，被用作转义字符，用于引入特殊的字符序列。例如`\n`表示换行，`\t`表示制表符。例如：
-```{python}
+```python
 print("Hello\nWorld") # 输出：
 # Hello
 # World
 ```
 
 因此，如果我们想在Python字符串中使用Windows路径，如`C:\Users\Admin\Documents`，我们需要使用双反斜线`\\`来转义，例如`C:\\Users\\Admin\\Documents`。代码示例：
-```{python}
+```python
 path = "C:\\Users\\Admin\\Documents"
 print(path) # 输出：C:\Users\Admin\Documents
 ```
 
 另外，我们可以使用Python的原始字符串来表示路径。原始字符串不会处理反斜线`\`为特殊字符，我们只需在字符串前加上字符`r`即可。代码示例：
-```{python}
+```python
 path = r"C:\Users\Admin\Documents"
 print(path) # 输出：C:\Users\Admin\Documents
 ```

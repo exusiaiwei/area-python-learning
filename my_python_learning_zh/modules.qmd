@@ -223,7 +223,7 @@ my_package/
 └── sub_package/
     ├── __init__.py
     └── module2.py
-    
+
 ```
 在这个结构中，`my_package` 是一个 Python 包，它包含一个模块 `module1` 和一个子包 `sub_package`。`sub_package` 也是 Python 包，并且它包含一个模块 `module2.py`。
 
@@ -238,7 +238,7 @@ def func1():
 # 文件路径: my_package/sub_package/module2.py
 
 def func2():
-    print("This is function 2 from module 2")    
+    print("This is function 2 from module 2")
 
 ```
 

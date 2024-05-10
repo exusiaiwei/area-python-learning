@@ -15,7 +15,7 @@ Literal constants are used to assign values to variables, perform calculations, 
 
 They provide a way to represent fixed values directly in the code, making the program more understandable and maintainable.
 
-```{python}
+```python
 x = 10  # Assign an integer literal to the variable
 y = 3.14  # Assign a float literal to the variable
 name = 'John'  # String enclosed in single quotes
@@ -34,7 +34,7 @@ Features:
 - Triple quotes can be used to specify a multi-line string.
 - The value of a string cannot be modified.
 
-```{python}
+```python
 # Create a string
 name = "Alice"
 
@@ -66,7 +66,7 @@ The format function of a string can pass the corresponding parameters into the s
 - Parameters can be named.
 
 
-```{python}
+```python
 name = "Alice"
 age = 25
 
@@ -106,7 +106,7 @@ Here are some common escape sequences and what they represent:
 - `\\`: backslash
 
 
-```{python}
+```python
 # Using escape sequences to represent special characters in strings:
 print("Hello\tWorld")  # Output: Hello    World
 print("I\'m a programmer")  # Output: I'm a programmer
@@ -134,7 +134,7 @@ Features:
 - The scope of a variable can be limited within a specific block of code.
 
 
-```{python}
+```python
 i = 5
 print(i)
 
@@ -170,7 +170,7 @@ Features of Physical Lines:
 Python encourages each physical line to correspond to one logical line, that is, one statement per line, to ensure code readability.
 
 
-```{python}
+```python
 # Example of a logical line spanning multiple physical lines
 x = 1 + \
     2 + \
@@ -210,7 +210,7 @@ Features:
 Code Example:
 Here is one example where indentation forms blocks of code:
 
-```{python}
+```python
 def greet(name):
     if name == "Alice":
         print("Hello, Alice!")
@@ -219,4 +219,3 @@ def greet(name):
 
 greet("Bob")
 ```
-

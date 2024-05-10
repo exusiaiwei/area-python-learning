@@ -7,7 +7,7 @@
 我们使用 `def` 关键字来定义函数。关键字 `def` 后面紧跟着的是函数的名字，然后是一对括号。括号内可以包含一些参数（即预设的变量名），此行语句以冒号结束。
 
 
-```{python}
+```python
 def say_hello():
     # 属于函数的代码块
     print('hello world')
@@ -37,7 +37,7 @@ say_hello()  # 再次调用函数
 这个概念类似于食谱和做饭。食谱上的材料列表（比如说需要多少克的面粉，多少克的糖）就像是参数列表，而你实际使用的面粉和糖的数量就像实参。
 
 
-```{python}
+```python
 # 示例代码来源： A Byte of Python
 def print_max(a, b):
     if a > b:
@@ -68,7 +68,7 @@ print_max(x, y)
 - 变量的作用域从其声明的位置开始，直到该代码块或函数的结束。
 - 即使在函数外部存在同名变量，局部变量也被视为独立的变量。无论名称是否相同，函数内部的局部变量与函数外部的变量不会有任何关联。
 
-```{python}
+```python
 # 示例代码来源： A Byte of Python
 x = 50
 
@@ -95,7 +95,7 @@ print('x is still', x)  # 输出最初的 x 的值
 - 尽管如此，我们并不推荐这一措施，因为这可能导致代码阅读者在理解这个变量的定义位置上出现困扰。
 - 如果要在函数内部操作函数外部的变量，推荐使用 `global` 声明明确指出，表明你在操纵的是在全局范围内定义的变量。
 
-```{python}
+```python
 # 示例代码来源： A Byte of Python
 x = 50
 
@@ -121,7 +121,7 @@ print('Value of x is', x)  # 输出最终的 x 的值
 
 可以通过在函数定义中，在需要设置默认值的参数名后面加上等号（=）及其默认值来实现这一点。
 
-```{python}
+```python
 # 示例代码来源： A Byte of Python
 def say(message, times=1):
     print(message * times)
@@ -149,7 +149,7 @@ say('World', 5)  # 输出 "WorldWorldWorldWorldWorld"
 - 利用关键字参数，我们可以更灵活地调用函数，无需按照函数定义时参数的顺序一一对应。
 - 只要其他参数具有默认参数值，我们可以只给我们想要的参数赋值。
 
-```{python}
+```python
 # 示例代码来源： A Byte of Python
 def func(a, b=5, c=10):
     print('a is', a, 'and b is', b, 'and c is', c)
@@ -172,7 +172,7 @@ func(c=50, a=100)
 
 在Python中，可变参数是通过在参数前面添加星号（*）来表示的。
 
-```{python}
+```python
 # 示例代码来源： A Byte of Python
 def total(a=5, *numbers, **phonebook):
     print('a', a)
@@ -185,7 +185,7 @@ def total(a=5, *numbers, **phonebook):
     for first_part, second_part in phonebook.items():
         print(first_part, second_part)
 
-total(10, 1, 2, 3, Jack=1123, John=2231, Inge=1560) 
+total(10, 1, 2, 3, Jack=1123, John=2231, Inge=1560)
 ```
 
 - 当我们声明一个带星号的参数，比如 `*param` ，那么从该位置开始到最后的所有位置参数都会被收集成一个名为'param'的元组。
@@ -199,7 +199,7 @@ total(10, 1, 2, 3, Jack=1123, John=2231, Inge=1560)
 
 在一个函数中，`return` 语句后面可以跟一个表达式，此表达式的值就是这个函数的返回值。
 
-```{python}
+```python
 # 示例代码来源： A Byte of Python
 def maximum(x, y):
     if x > y:
@@ -209,7 +209,7 @@ def maximum(x, y):
     else:
         return y
 
-print(maximum(2, 3)) 
+print(maximum(2, 3))
 ```
 
 - 在这个函数中，`maximum` 函数使用一个简单的 `if..else` 语句来找到较大的值，然后返回该值。
@@ -224,7 +224,7 @@ print(maximum(2, 3))
 文档字符串，英文称为`Docstrings`，是一种在Python中对函数、方法、类、模块等提供说明的注释方式，具有非常重要的参考价值。
 
 文档字符串位于函数、方法、类、模块定义的第一行，由一对三引号("""或''')引起来，可以是单行也可以是多行。
-```{python}
+```python
 # 示例代码来源： A Byte of Python
 def print_max(x, y):
     '''Prints the maximum of two numbers.
@@ -257,7 +257,7 @@ print(print_max.__doc__)
 
 装饰器的基本语法如下：
 
-```{python}
+```python
 def my_decorator(func):
     def wrapper():
         # 在func被调用前可以执行一些代码
@@ -282,7 +282,7 @@ say_hello()
 
 如果原始函数需要接受参数，装饰器可以通过在 `wrapper` 函数中使用 `*args` 和 `**kwargs` 来接受任意数量的位置参数和关键字参数：
 
-```{python}
+```python
 def my_decorator(func):
     def wrapper(*args, **kwargs):
         print("Something is happening before the function is called.")
@@ -302,7 +302,7 @@ say("Hello with decorator!")
 
 有时候，我们希望装饰器本身能够接受参数。这需要我们创建一个“返回装饰器的装饰器”的函数：
 
-```{python}
+```python
 def repeat(number_of_times):
     def decorator_repeat(func):
         def wrapper(*args, **kwargs):

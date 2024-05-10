@@ -52,7 +52,7 @@ def reverse(text):
     return text[::-1]
 def is_palindrome(text):
     return text == reverse(text)
-    
+
 something = input("Enter text: ")
 filtered_something = ''.join(c for c in something if c.isalnum()).lower()
 if is_palindrome(filtered_something):
@@ -88,14 +88,14 @@ Python提供了一些内置的函数和方法，使我们能够创建、打开�
 
 以下是一些示例代码：
 
-```{python}
+```python
 file1 = open(r"practical_code\input_and_output\myfile.txt", "r")
 content = file1.read()
 print(content)
 file1.close()
 ```
 
-```{python}
+```python
 file2 = open(r"practical_code\input_and_output\myfile2.txt", "w")
 file2.write("This is a test")
 file2.close()
@@ -103,7 +103,7 @@ file2.close()
 
 当进行文件操作时，应始终注意在操作结束后关闭文件。为了更有效地管理文件资源，Python提供了 `with` 语句，它可以自动关闭文件。以下是一个示例：
 
-```{python}
+```python
 with open(r"practical_code\input_and_output\myfile.txt", "r") as file:
     content = file.read()
     print(content)
@@ -111,7 +111,7 @@ with open(r"practical_code\input_and_output\myfile.txt", "r") as file:
 
 以下是一个更复杂的示例：
 
-```{python}
+```python
 poem = '''\
 Programming is fun
 When the work is done
@@ -158,7 +158,7 @@ Pickle模块的功能就是持久化存储对象的重要手段之一。通过pi
 
 下面是这个模块一些基本使用示例：
 
-```{python}
+```python
 import pickle
 
 data = {
@@ -193,7 +193,7 @@ print(restored_data)
 
 下面是一个处理Unicode字符的示例：
 
-```{python}
+```python
 import io
 
 f = io.open(r"practical_code\input_and_output\zh_CN.txt", "wt", encoding="utf-8")
