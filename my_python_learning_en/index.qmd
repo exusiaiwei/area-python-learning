@@ -4,7 +4,7 @@ Welcome to read "My Python Learning Notes"! This is my notes and practice record
 
 In my Python learning journey, I have recorded a series of interactive notes using Quarto. I adopted the form of Quarto book projects for reading materials while viewing and executing related embedded code.
 
-The **'master-zh'** and **'master-en'** branches under this repository store the interactive notes I made in Chinese and English versions respectively.   
+The **'my-python-learning-zh'** and **'my-python-learning-en'** folders in this repository contain the interactive notebooks I have created in Chinese and English versions, respectively.
 
 In addition, for some simple code practices, I placed them in the **‘practical_code’** folder. You can view my hands-on projects and exercises during learning Python here.
 
