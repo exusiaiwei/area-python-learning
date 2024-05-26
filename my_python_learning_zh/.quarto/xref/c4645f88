@@ -1,1 +1,0 @@
-{"options":{"chapters":true},"headings":["基本概念","sec-sys","import-语句","字节编译的-.pyc-文件","from...import-语句","python模块的-__name__-属性","制作自己的模块","dir-函数","包"],"entries":[{"order":{"number":1,"section":[5,1,1,0,0,0,0]},"key":"sec-sys","caption":"5.1.1 sys模块"}]}
