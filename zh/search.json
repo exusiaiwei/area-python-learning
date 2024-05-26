@@ -14,7 +14,7 @@
     "href": "basic.html",
     "title": "1  基础",
     "section": "",
-    "text": "1.1 字面常量\n字面常量是在代码中直接写入且在程序执行过程中不会改变的固定值。\n在Python中，有几种类型的字面常量，包括：\n字面常量用于给变量赋值、进行计算和定义Python程序中的条件。\n它们提供了一种直接在代码中表示固定值的方式，使程序更易于理解和维护。\nx = 10  # 将整数字面常量赋值给变量\ny = 3.14  # 将浮点数字面常量赋值给变量\nname = 'John'  # 使用单引号括起来的字符串\nmessage = \"Hello, world!\"  # 使用双引号括起来的字符串\nis_active = True  # 将布尔字面常量赋值给变量\nempty_value = None  # 将None字面常量赋值给变量",
+    "text": "1.1 字面常量\n字面常量是在代码中直接写入且在程序执行过程中不会改变的固定值。\n在Python中，有几种类型的字面常量，包括：\n字面常量用于给变量赋值、进行计算和定义Python程序中的条件。\n它们提供了一种直接在代码中表示固定值的方式，使程序更易于理解和维护。",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>基础</span>"
     ]
@@ -24,7 +24,7 @@
     "href": "basic.html#字面常量",
     "title": "1  基础",
     "section": "",
-    "text": "数值字面常量：整数、浮点数和复数。\n字符串字面常量：用单引号（’’）或双引号（““）括起来的字符序列。\n布尔字面常量：True和False。\nNone：表示缺少值的特殊常量。",
+    "text": "数值字面常量：整数、浮点数和复数。\n字符串字面常量：用单引号（’’）或双引号（““）括起来的字符序列。\n布尔字面常量：True和False。\nNone：表示缺少值的特殊常量。\n\n\n\nx = 10  # 将整数字面常量赋值给变量\ny = 3.14  # 将浮点数字面常量赋值给变量\nname = 'John'  # 使用单引号括起来的字符串\nmessage = \"Hello, world!\"  # 使用双引号括起来的字符串\nis_active = True  # 将布尔字面常量赋值给变量\nempty_value = None  # 将None字面常量赋值给变量",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>基础</span>"
     ]
@@ -34,7 +34,7 @@
     "href": "basic.html#字符串",
     "title": "1  基础",
     "section": "1.2 字符串",
-    "text": "1.2 字符串\n字符串是用于表示文本数据的数据类型。\n特性：\n\n在python中，可以用单引号和双引号指定字符串。\n三引号可以指定多行字符串。\n字符串的值不可以修改。\n\n\n# 创建字符串\nname = \"Alice\"\n\n# 连接字符串\ngreeting = \"Hello, \" + name + \"!\"\n\n# 输出字符串\nprint(greeting)  # 输出：Hello, Alice!\n\n# 获取字符串长度\nlength = len(name)\nprint(length)  # 输出：5\n\n# 截取字符串\nsubstring = name[1:3]\nprint(substring)  # 输出：li\n\n# 替换字符串\nnew_name = name.replace(\"A\", \"B\")\nprint(new_name)  # 输出：Blice\n\nHello, Alice!\n5\nli\nBlice\n\n\n\n1.2.1 字符串的格式化函数\n字符串的format函数可以将相应参数传入字符串中。\n\n占位符为{}\n可以通过索引指定插入顺序，python从0开始计数。\n可以命名参数。\n\n\nname = \"Alice\"\nage = 25\n\n# 使用占位符插入变量\ngreeting = \"Hello, my name is {} and I am {} years old.\".format(name, age)\nprint(greeting)  # 输出：Hello, my name is Alice and I am 25 years old.\n\n# 可以通过索引指定插入的顺序\ngreeting2 = \"Hello, my name is {1} and I am {0} years old.\".format(age, name)\nprint(greeting2)  # 输出：Hello, my name is Alice and I am 25 years old.\n\n# 可以使用关键字参数指定插入的值\ngreeting3 = \"Hello, my name is {name} and I am {age} years old.\".format(name=\"Alice\", age=25)\nprint(greeting3)  # 输出：Hello, my name is Alice and I am 25 years old.\n\nHello, my name is Alice and I am 25 years old.\nHello, my name is Alice and I am 25 years old.\nHello, my name is Alice and I am 25 years old.",
+    "text": "1.2 字符串\n字符串是用于表示文本数据的数据类型。\n特性：\n\n在python中，可以用单引号和双引号指定字符串。\n三引号可以指定多行字符串。\n字符串的值不可以修改。\n\n# 创建字符串\nname = \"Alice\"\n\n# 连接字符串\ngreeting = \"Hello, \" + name + \"!\"\n\n# 输出字符串\nprint(greeting)  # 输出：Hello, Alice!\n\n# 获取字符串长度\nlength = len(name)\nprint(length)  # 输出：5\n\n# 截取字符串\nsubstring = name[1:3]\nprint(substring)  # 输出：li\n\n# 替换字符串\nnew_name = name.replace(\"A\", \"B\")\nprint(new_name)  # 输出：Blice\n\n1.2.1 字符串的格式化函数\n字符串的format函数可以将相应参数传入字符串中。\n\n占位符为{}\n可以通过索引指定插入顺序，python从0开始计数。\n可以命名参数。\n\nname = \"Alice\"\nage = 25\n\n# 使用占位符插入变量\ngreeting = \"Hello, my name is {} and I am {} years old.\".format(name, age)\nprint(greeting)  # 输出：Hello, my name is Alice and I am 25 years old.\n\n# 可以通过索引指定插入的顺序\ngreeting2 = \"Hello, my name is {1} and I am {0} years old.\".format(age, name)\nprint(greeting2)  # 输出：Hello, my name is Alice and I am 25 years old.\n\n# 可以使用关键字参数指定插入的值\ngreeting3 = \"Hello, my name is {name} and I am {age} years old.\".format(name=\"Alice\", age=25)\nprint(greeting3)  # 输出：Hello, my name is Alice and I am 25 years old.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>基础</span>"
     ]
@@ -44,7 +44,7 @@
     "href": "basic.html#转义序列",
     "title": "1  基础",
     "section": "1.3 转义序列",
-    "text": "1.3 转义序列\n转义序列是一种特殊的字符序列，以反斜杠（）开头，并在其后跟着一个或多个字符。用于表示非打印字符、特殊字符或具有特殊含义的字符。\n转义序列以反斜杠（）开头，后跟一个或多个字符，用于表示特定的字符或操作。通过使用转义序列，我们可以在字符串中插入这些特殊字符，而不是将它们解释为普通字符。\n转义序列的定义和特性：\n\n转义序列以反斜杠（）开头。\n转义序列由一个或多个字符组成。\n转义序列用于表示非打印字符、特殊字符或具有特殊含义的字符。\n转义序列可以在字符串、字符常量、正则表达式和其他上下文中使用。\n\n以下是一些常见的转义序列及其含义：\n\n：换行符\n制表符\n回车符\n\\’：单引号\n\\“：双引号\n\\：反斜杠\n\n\n# 在字符串中使用转义序列来表示特殊字符：\nprint(\"Hello\\tWorld\")  # 输出：Hello    World\nprint(\"I\\'m a programmer\")  # 输出：I'm a programmer\nprint(\"She said, \\\"Hello!\\\"\")  # 输出：She said, \"Hello!\"\nprint(\"\\\"I love you.\\\" \\n \\\"Me too.\\\"\")\n# 在正则表达式中使用转义序列来匹配特殊字符：\nimport re\npattern = r\"\\d+\"  # 匹配一个或多个数字\nresult = re.findall(pattern, \"12345\")\nprint(result)  # 输出：['12345']\n\nHello   World\nI'm a programmer\nShe said, \"Hello!\"\n\"I love you.\" \n \"Me too.\"\n['12345']",
+    "text": "1.3 转义序列\n转义序列是一种特殊的字符序列，以反斜杠（）开头，并在其后跟着一个或多个字符。用于表示非打印字符、特殊字符或具有特殊含义的字符。\n转义序列以反斜杠（）开头，后跟一个或多个字符，用于表示特定的字符或操作。通过使用转义序列，我们可以在字符串中插入这些特殊字符，而不是将它们解释为普通字符。\n转义序列的定义和特性：\n\n转义序列以反斜杠（）开头。\n转义序列由一个或多个字符组成。\n转义序列用于表示非打印字符、特殊字符或具有特殊含义的字符。\n转义序列可以在字符串、字符常量、正则表达式和其他上下文中使用。\n\n以下是一些常见的转义序列及其含义：\n\n：换行符\n制表符\n回车符\n\\’：单引号\n\\“：双引号\n\\：反斜杠\n\n# 在字符串中使用转义序列来表示特殊字符：\nprint(\"Hello\\tWorld\")  # 输出：Hello    World\nprint(\"I\\'m a programmer\")  # 输出：I'm a programmer\nprint(\"She said, \\\"Hello!\\\"\")  # 输出：She said, \"Hello!\"\nprint(\"\\\"I love you.\\\" \\n \\\"Me too.\\\"\")\n# 在正则表达式中使用转义序列来匹配特殊字符：\nimport re\npattern = r\"\\d+\"  # 匹配一个或多个数字\nresult = re.findall(pattern, \"12345\")\nprint(result)  # 输出：['12345']",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>基础</span>"
     ]
@@ -54,7 +54,7 @@
     "href": "basic.html#变量",
     "title": "1  基础",
     "section": "1.4 变量",
-    "text": "1.4 变量\n变量是 Python 中的一个概念，用于存储和操作数据。它可以存储各种类型的数据，例如整数、浮点数、字符串等。\n特性：\n\n可以通过赋值操作将数据存储到变量中。\n可以使用变量名来访问变量中存储的数据。\n变量的值可以随时修改。\n变量可以在程序的不同位置使用和传递。\n变量的作用域可以限定在特定的代码块中。\n\n\ni = 5\nprint(i)\n\ne = ( i + 1 ) * 2\n\nprint(e)\n\ns = '''This is a multi-line string.\nThis is the second line.'''\n\nprint(s)\n\n5\n12\nThis is a multi-line string.\nThis is the second line.",
+    "text": "1.4 变量\n变量是 Python 中的一个概念，用于存储和操作数据。它可以存储各种类型的数据，例如整数、浮点数、字符串等。\n特性：\n\n可以通过赋值操作将数据存储到变量中。\n可以使用变量名来访问变量中存储的数据。\n变量的值可以随时修改。\n变量可以在程序的不同位置使用和传递。\n变量的作用域可以限定在特定的代码块中。\n\ni = 5\nprint(i)\n\ne = ( i + 1 ) * 2\n\nprint(e)\n\ns = '''This is a multi-line string.\nThis is the second line.'''\n\nprint(s)",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>基础</span>"
     ]
@@ -64,7 +64,7 @@
     "href": "basic.html#运行逻辑",
     "title": "1  基础",
     "section": "1.5 运行逻辑",
-    "text": "1.5 运行逻辑\n\n1.5.1 逻辑行和物理行\n逻辑行是指在代码中表示一个语句或命令的行，而物理行是指在代码文件中实际占据一行的文本。\n逻辑行可以跨越多个物理行，通过使用行连接符（）将多个物理行连接成一个逻辑行。 物理行则是代码文件中的实际行数，每个物理行都以换行符（）结尾。\n逻辑行的特征：\n\n一个逻辑行可以包含一个或多个语句或命令。\n逻辑行可以跨越多个物理行。\n逻辑行以换行符（）结尾。\n\n物理行的特征：\n\n物理行是代码文件中的实际行数。\n每个物理行都以换行符（）结尾。\n\nPython鼓励每个物理行对应一个逻辑行，即每行一个语句，以保证代码的可读性。\n\n# 逻辑行跨越多个物理行的示例\nx = 1 + \\\n    2 + \\\n    3\n\nprint(x)\n\n# 逻辑行和物理行相同的示例\ny = 5\nprint(y)\n\ny = 5;\nprint(y);\n\ny = 5; print(y);\n\ny = 5; print(y)\n\n6\n5\n5\n5\n5\n\n\n\n\n1.5.2 缩进\n缩进是 Python 中的一种语法规则，用于表示代码块的层次结构。在 Python 中，缩进是强制性的，它决定了代码的执行顺序和逻辑关系。逻辑行的缩进级别决定了语句的分组，同组的语句构成一个代码块。\n基本概念：\n\n缩进是通过使用空格或制表符来实现的。\n缩进的数量和方式必须保持一致，通常建议使用四个空格进行缩进。\n缩进的层次结构决定了代码块的嵌套关系。\n\n特性：\n\n缩进用于定义函数、循环、条件语句等代码块。\n缩进可以提高代码的可读性和可维护性。\n缩进错误会导致语法错误或逻辑错误。\n\n代码示例： 以下是一个缩进构成代码块的示例：\n\ndef greet(name):\n    if name == \"Alice\":\n        print(\"Hello, Alice!\")\n    else:\n        print(\"Hello, stranger!\")\n\ngreet(\"Bob\")\n\nHello, stranger!",
+    "text": "1.5 运行逻辑\n\n1.5.1 逻辑行和物理行\n逻辑行是指在代码中表示一个语句或命令的行，而物理行是指在代码文件中实际占据一行的文本。\n逻辑行可以跨越多个物理行，通过使用行连接符（）将多个物理行连接成一个逻辑行。 物理行则是代码文件中的实际行数，每个物理行都以换行符（）结尾。\n逻辑行的特征：\n\n一个逻辑行可以包含一个或多个语句或命令。\n逻辑行可以跨越多个物理行。\n逻辑行以换行符（）结尾。\n\n物理行的特征：\n\n物理行是代码文件中的实际行数。\n每个物理行都以换行符（）结尾。\n\nPython鼓励每个物理行对应一个逻辑行，即每行一个语句，以保证代码的可读性。\n# 逻辑行跨越多个物理行的示例\nx = 1 + \\\n    2 + \\\n    3\n\nprint(x)\n\n# 逻辑行和物理行相同的示例\ny = 5\nprint(y)\n\ny = 5;\nprint(y);\n\ny = 5; print(y);\n\ny = 5; print(y)\n\n\n1.5.2 缩进\n缩进是 Python 中的一种语法规则，用于表示代码块的层次结构。在 Python 中，缩进是强制性的，它决定了代码的执行顺序和逻辑关系。逻辑行的缩进级别决定了语句的分组，同组的语句构成一个代码块。\n基本概念：\n\n缩进是通过使用空格或制表符来实现的。\n缩进的数量和方式必须保持一致，通常建议使用四个空格进行缩进。\n缩进的层次结构决定了代码块的嵌套关系。\n\n特性：\n\n缩进用于定义函数、循环、条件语句等代码块。\n缩进可以提高代码的可读性和可维护性。\n缩进错误会导致语法错误或逻辑错误。\n\n代码示例： 以下是一个缩进构成代码块的示例：\ndef greet(name):\n    if name == \"Alice\":\n        print(\"Hello, Alice!\")\n    else:\n        print(\"Hello, stranger!\")\n\ngreet(\"Bob\")",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>基础</span>"
     ]
@@ -94,27 +94,7 @@
     "href": "operators_and_expressions.html#表达式",
     "title": "2  运算符和表达式",
     "section": "2.2 表达式",
-    "text": "2.2 表达式\n表达式是由运算符和操作数组成的组合，用于计算和生成值。\n在Python中，表达式可以是简单的算术表达式，也可以是复杂的逻辑表达式。\n例如，以下是一些常见的表达式示例：\n\n算术表达式：2 + 3 * 4\n逻辑表达式：(x &gt; 5) and (y &lt; 10)\n字符串拼接表达式：‘Hello’ + ‘World’\n列表推导式：[x for x in range(10) if x % 2 == 0]\n\n表达式的值可以根据操作数的类型和运算符的规则进行计算。在计算表达式时，Python会按照一定的优先级和结合性来确定运算的顺序。\n\n2.2.1 计算顺序\n类似数学中的乘法优先级高于加法优先级，Python里的表达式也存在优先级之分。Python会先计算优先级较高的运算符和表达式，然后再计算优先级较低的表达式。\n对于复杂的表达式，虽然可以依靠记忆优先级规则来确保正确的运算顺序，但是为了代码的清晰和易读，一般建议显性地使用括号来标明运算顺序。\n在运算符具有相同的优先级时，计算顺序由它们的结合性确定。结合性可以是左结合或右结合。\n\n左结合意味着从左到右进行计算。常见的例子包括算术运算符（如加法、减法、乘法、除法等）、比较运算符和大多数位运算符。\n右结合意味着从右到左进行计算。常见的例子包括指数运算符、赋值运算符（=）和复合赋值运算符（如+=、-=、*=、/=、%=、**=、//=、&=、^=、&gt;&gt;=、&lt;&lt;=）。\n\n\n\n2.2.2 数学运算和赋值的快捷方式\n常见的做法是对变量进行数学运算，然后将运算结果赋值给变量，因此对于这种表达式有一个快捷方式。\na = 2\na = a * 3\nprint(\"a =\", a)\n\nb = 2\nb *= 3\nprint(\"b =\", b)\n======= # 运算符和表达式\n运算符是用于执行特定操作的符号或关键字。在Python中，有多种类型的运算符，包括算术运算符、比较运算符、逻辑运算符等。\n操作数是运算符所操作的数据。\n表达式是由运算符和操作数组成的组合，用于计算和生成值。在Python中，表达式可以是简单的算术表达式，也可以是复杂的逻辑表达式。\n例如，一个表达式的示例是2 + 3,其中运算符为+,操作数为2，3。",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>运算符和表达式</span>"
-    ]
-  },
-  {
-    "objectID": "operators_and_expressions.html#运算符-1",
-    "href": "operators_and_expressions.html#运算符-1",
-    "title": "2  运算符和表达式",
-    "section": "2.3 运算符",
-    "text": "2.3 运算符\n\n2.3.1 算术运算符：\n\n加法运算符（+）：用于将两个值相加。可以处理数值，字符串和列表等类型。\n减法运算符（-）：用于将一个值减去另一个值。如果第一个操作数缺失，默认为0。\n乘法运算符（*）：用于将两个值相乘。用于处理字符串时，则返回重复固定次数的字符串。\n除法运算符（/）：用于将一个值除以另一个值。\n取模运算符（%）：用于计算两个值相除的余数。\n幂运算符（**）：用于计算一个值的指数。\n整除运算符（//）：用于计算两个值相除的整数部分。答案会向下取整到最近的整数值；如果其中有操作数是浮点数，则答案会是浮点数。\n\n# 加法运算符\nx1 = 2 + 3\nprint(x1)\nx2 = \"a\" + \"b\"\nprint(x2)\n# 减法运算符\ny1 = 3 - 2\nprint(y1)\ny2 = - 2\nprint(y2)\n# 乘法运算符\na1 = 5 * 6\nprint(a1)\na2 = \"my\" * 6\nprint(a2)\n# 除法运算符\nb = 50 / 25\nprint(b)\n# 取模运算符\nc1 = 26 % 3\nprint(c1)\nc2 = -25.5 % 2.25\nprint(c2)\n# 幂运算符\nd= 2 ** 3\nprint(d)\n# 整除运算符\ne1 = 28 // 3\nprint(e1)\ne2 = 9//1.8\nprint(e2)\n\n\n2.3.2 比较运算符：\n\n等于运算符（==）：用于检查两个值是否相等。\n不等于运算符（!=）：用于检查两个值是否不相等。\n大于运算符（&gt;）：用于检查一个值是否大于另一个值。\n小于运算符（&lt;）：用于检查一个值是否小于另一个值。\n大于等于运算符（&gt;=）：用于检查一个值是否大于或等于另一个值。\n小于等于运算符（&lt;=）：用于检查一个值是否小于或等于另一个值。\n\na = 1 == 1\nprint(a)\nb = 1 != 1\nprint(b)\nc = 2 &gt; 1\nprint(c)\nd = 2 &lt; 1\nprint(d)\ne = 2 &gt;= 2\nprint(e)\nf = 1 &lt;= 2\nprint(f)\n\n\n2.3.3 逻辑运算符（布尔运算符）：\n\n与运算符（and）：用于检查多个条件是否同时为真。只有当所有条件都为真时，结果才为真。\n或运算符（or）：用于检查多个条件是否至少有一个为真。只要有一个条件为真，结果就为真。\n非运算符（not）：用于对条件进行取反。\n\n# 与运算符（and）：只有当所有条件都为真时，结果才为真\na = True and True\nprint(a)  # 输出：True\n\nb = True and False\nprint(b)  # 输出：False\n\n# 或运算符（or）：只要有一个条件为真，结果就为真\nc = True or False\nprint(c)  # 输出：True\n\nd = False or False\nprint(d)  # 输出：False\n\n# 非运算符（not）：对条件进行取反\ne = not True\nprint(e)  # 输出：False\n\nf = not False\nprint(f)  # 输出：True\n\n2.3.3.1 短路评估：\n当使用逻辑运算符（如and和or）连接多个条件表达式时，Python会根据运算符的特性来决定是否对所有条件进行求值。 - and运算中，只要任意一个条件为False，则整个表达式必然为False，此时Python会停止计算后面的值并立刻返回False。 - or运算中，只要任意一个条件为True，则整个表达式必然为True，此时Python会停止计算后面的值并立刻返回True。 - 短路评估可以提高代码的效率和性能，避免了不必要的运算和求值。\n# 短路评估的示例\na = 4\nb = 0\n\nif b != 0 and a / b &lt; 1:\n    print(\"条件满足\")\nelse:\n    print(\"条件不满足\")    \n在上面的示例中，通过短路评估，在b != 0这一步判断整体结果为False，进而跳过执行后面的a / b的除以0运算，避免了出现错误。如果不适用短路评估，会先判断b != 0为False，进而执行除法运算，会出现除以0错误。\n\n\n2.3.3.2 优先级\n每个运算符都有不同的优先级，其中 not 在 and 和 or 之前进行评估。括号可以用来在其他部分之前评估表达式的一部分。\n在Python中，所有的布尔运算符的优先级都低于比较运算符，比较运算符的优先级低于算术运算符。\n\n\n\n2.3.4 位运算符：\n位（bit）：存储、处理数据的最小单位。一位只能存储0或1这两个可能的值。计算机中的数字以二进制（即由0和1组成）的方式储存。\n位移：位移是用来修改数字位值的操作。位移分为左移和右移，左移是在原数右边添加一个0，右移是把最右边一位去掉。\n\n在十进制中，向左移动一位（即在尾部添加一个0）表示乘以10，向右移动一位（即去掉尾部的数字）表示除以10。\n在二进制中，向左移动一位（即在尾部添加一个0）表示乘以2，向右移动一位（即去掉尾部的数字）表示除以2。\n\n位运算符\n\n按位与运算符（&）：用于对两个值进行按位与操作。如果对应的两个二进制位都为1，则该位的结果值为1，否则0。\n按位或运算符（|）：用于对两个值进行按位或操作。如果对应的两个二进制位有一个为1，则该位的结果值为1，否则0。\n按位异或运算符（^）：用于对两个值进行按位异或操作。如果对应的两个二进制位一个为1，另一个为0，则该位结果值为1，否则0（即同为0或者同为1则结果为0）\n按位取反运算符（~）：用于对一个值进行按位取反操作。对一个二进制数按位取反，即将0变1，1变0。x的按位取反是-(x+1)。\n左移运算符（&lt;&lt;）：用于将一个值向左移动指定的位数。\n右移运算符（&gt;&gt;）：用于将一个值向右移动指定的位数。\n\n位运算符是操作二进制位的，不过在实际的编程过程中，使用并不频繁，所以在此处我只给出了简单的解释和例子。\n# 定义两个变量\na = 60  # 60的二进制表示为0011 1100\nb = 13  # 13的二进制表示为0000 1101\n\nprint(a, \"的二进制表示为\", bin(a))\nprint(b, \"的二进制表示为\", bin(b))\n\nprint(\"a & b =\", a & b)  # 按位与运算。二进制结果0000 1100，对应十进制为12\nprint(\"a | b =\", a | b)  # 按位或运算。二进制结果0011 1101，对应十进制为61\nprint(\"a ^ b =\", a ^ b)  # 按位异或运算。二进制结果0011 0001，对应十进制为49\nprint(\"~a =\", ~a)  # 按位取反运算。二进制结果1100 0011，对应十进制为-61（注意：是负数）\n\nprint(\"a &lt;&lt; 2 =\", a &lt;&lt; 2)  # 左移2位运算。二进制结果1111 0000，对应十进制为240\nprint(\"a &gt;&gt; 2 =\", a &gt;&gt; 2)  # 右移2位运算。二进制结果0000 1111，对应十进制为15\n\n\n2.3.5 赋值运算符：\n\n简单赋值运算符（=）：用于将一个值赋给一个变量。\n加法赋值运算符（+=）：用于将一个值与一个变量相加，并将结果赋给该变量。\n减法赋值运算符（-=）：用于将一个值从一个变量中减去，并将结果赋给该变量。\n乘法赋值运算符（*=）：用于将一个值与一个变量相乘，并将结果赋给该变量。\n除法赋值运算符（/=）：用于将一个值除以一个变量，并将结果赋给该变量。\n取模赋值运算符（%=）：用于计算两个值相除的余数，并将结果赋给一个变量。\n幂赋值运算符（**=）：用于计算一个值的指数，并将结果赋给一个变量。\n整除赋值运算符（//=）：用于计算两个值相除的整数部分，并将结果赋给一个变量。\n\n# 简单赋值运算符（=）\na = 10\nprint(\"a =\", a)  # 输出：a = 10\n\n# 加法赋值运算符（+=）\na += 2\nprint(\"a =\", a)  # 输出：a = 12\n\n# 减法赋值运算符（-=）\na -= 2\nprint(\"a =\", a)  # 输出：a = 10\n\n# 乘法赋值运算符（*=）\na *= 2\nprint(\"a =\", a)  # 输出：a = 20\n\n# 除法赋值运算符（/=）\na /= 2\nprint(\"a =\", a)  # 输出：a = 10.0\n\n# 取模赋值运算符（%=）\na %= 3\nprint(\"a =\", a)  # 输出：a = 1.0\n\n# 幂赋值运算符（**=）\na **= 3\nprint(\"a =\", a)  # 输出：a = 1.0\n\n# 整除赋值运算符（//=）\na = 10\na //= 3\nprint(\"a =\", a)  # 输出：a = 3",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>运算符和表达式</span>"
-    ]
-  },
-  {
-    "objectID": "operators_and_expressions.html#表达式-1",
-    "href": "operators_and_expressions.html#表达式-1",
-    "title": "2  运算符和表达式",
-    "section": "2.4 表达式",
-    "text": "2.4 表达式\n表达式是由运算符和操作数组成的组合，用于计算和生成值。\n在Python中，表达式可以是简单的算术表达式，也可以是复杂的逻辑表达式。\n例如，以下是一些常见的表达式示例：\n\n算术表达式：2 + 3 * 4\n逻辑表达式：(x &gt; 5) and (y &lt; 10)\n字符串拼接表达式：‘Hello’ + ‘World’\n列表推导式：[x for x in range(10) if x % 2 == 0]\n\n表达式的值可以根据操作数的类型和运算符的规则进行计算。在计算表达式时，Python会按照一定的优先级和结合性来确定运算的顺序。\n\n2.4.1 计算顺序\n类似数学中的乘法优先级高于加法优先级，Python里的表达式也存在优先级之分。Python会先计算优先级较高的运算符和表达式，然后再计算优先级较低的表达式。\n对于复杂的表达式，虽然可以依靠记忆优先级规则来确保正确的运算顺序，但是为了代码的清晰和易读，一般建议显性地使用括号来标明运算顺序。\n在运算符具有相同的优先级时，计算顺序由它们的结合性确定。结合性可以是左结合或右结合。\n\n左结合意味着从左到右进行计算。常见的例子包括算术运算符（如加法、减法、乘法、除法等）、比较运算符和大多数位运算符。\n右结合意味着从右到左进行计算。常见的例子包括指数运算符、赋值运算符（=）和复合赋值运算符（如+=、-=、*=、/=、%=、**=、//=、&=、^=、&gt;&gt;=、&lt;&lt;=）。\n\n\n\n2.4.2 数学运算和赋值的快捷方式\n常见的做法是对变量进行数学运算，然后将运算结果赋值给变量，因此对于这种表达式有一个快捷方式。\na = 2\na = a * 3\nprint(\"a =\", a)\n\nb = 2\nb *= 3\nprint(\"b =\", b)\n\n\n\n\n\n\n\na0da713bf4678cbc45fcc0a7673f704354266d0e",
+    "text": "2.2 表达式\n表达式是由运算符和操作数组成的组合，用于计算和生成值。\n在Python中，表达式可以是简单的算术表达式，也可以是复杂的逻辑表达式。\n例如，以下是一些常见的表达式示例：\n\n算术表达式：2 + 3 * 4\n逻辑表达式：(x &gt; 5) and (y &lt; 10)\n字符串拼接表达式：‘Hello’ + ‘World’\n列表推导式：[x for x in range(10) if x % 2 == 0]\n\n表达式的值可以根据操作数的类型和运算符的规则进行计算。在计算表达式时，Python会按照一定的优先级和结合性来确定运算的顺序。\n\n2.2.1 计算顺序\n类似数学中的乘法优先级高于加法优先级，Python里的表达式也存在优先级之分。Python会先计算优先级较高的运算符和表达式，然后再计算优先级较低的表达式。\n对于复杂的表达式，虽然可以依靠记忆优先级规则来确保正确的运算顺序，但是为了代码的清晰和易读，一般建议显性地使用括号来标明运算顺序。\n在运算符具有相同的优先级时，计算顺序由它们的结合性确定。结合性可以是左结合或右结合。\n\n左结合意味着从左到右进行计算。常见的例子包括算术运算符（如加法、减法、乘法、除法等）、比较运算符和大多数位运算符。\n右结合意味着从右到左进行计算。常见的例子包括指数运算符、赋值运算符（=）和复合赋值运算符（如+=、-=、*=、/=、%=、**=、//=、&=、^=、&gt;&gt;=、&lt;&lt;=）。\n\n\n\n2.2.2 数学运算和赋值的快捷方式\n常见的做法是对变量进行数学运算，然后将运算结果赋值给变量，因此对于这种表达式有一个快捷方式。\na = 2\na = a * 3\nprint(\"a =\", a)\n\nb = 2\nb *= 3\nprint(\"b =\", b)",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>运算符和表达式</span>"
     ]
@@ -274,97 +254,7 @@
     "href": "functions.html#装饰器",
     "title": "4  函数",
     "section": "4.9 装饰器",
-    "text": "4.9 装饰器\n装饰器（Decorators）是Python中一个非常强大且有用的特性，它允许程序员修改或增强一个函数、方法或类的行为，而不需要直接修改其本身的代码。装饰器本质上是一个函数，它接受一个函数作为参数并返回一个新的函数。通过这种方式，装饰器提供了一种灵活的方法来“装饰”或“包装”另一个函数，以便在调用原始函数之前或之后执行额外的代码。\n\n4.9.1 基本使用\n装饰器的基本语法如下：\ndef my_decorator(func):\n    def wrapper():\n        # 在func被调用前可以执行一些代码\n        print(\"Something is happening before the function is called.\")\n        func()\n        # 在func被调用后可以执行一些代码\n        print(\"Something is happening after the function is called.\")\n    return wrapper\n\n# 使用装饰器\n@my_decorator\ndef say_hello():\n    print(\"Hello!\")\n\n# 调用函数\nsay_hello()\n在这个例子中，my_decorator 是一个装饰器，它接受一个函数 func 作为参数，并返回一个新的函数 wrapper。wrapper 函数在调用 func 前后添加了额外的行为。使用 @my_decorator 语法，我们“装饰”了 say_hello 函数，使得在调用 say_hello 时，实际上是调用了 wrapper 函数。\n\n\n4.9.2 带参数的函数装饰器\n如果原始函数需要接受参数，装饰器可以通过在 wrapper 函数中使用 *args 和 **kwargs 来接受任意数量的位置参数和关键字参数：\ndef my_decorator(func):\n    def wrapper(*args, **kwargs):\n        print(\"Something is happening before the function is called.\")\n        result = func(*args, **kwargs)\n        print(\"Something is happening after the function is called.\")\n        return result\n    return wrapper\n\n@my_decorator\ndef say(message):\n    print(message)\n\nsay(\"Hello with decorator!\")\n\n\n4.9.3 带参数的装饰器\n有时候，我们希望装饰器本身能够接受参数。这需要我们创建一个“返回装饰器的装饰器”的函数：\ndef repeat(number_of_times):\n    def decorator_repeat(func):\n        def wrapper(*args, **kwargs):\n            for _ in range(number_of_times):\n                result = func(*args, **kwargs)\n            return result\n        return wrapper\n    return decorator_repeat\n\n@repeat(number_of_times=3)\ndef greet(name):\n    print(f\"Hello {name}\")\n\ngreet(\"World\")\n在这个例子中，repeat 函数是一个接受参数 number_of_times 的装饰器。它内部定义了装饰器 decorator_repeat，decorator_repeat 又定义了 wrapper 函数。这样，我们就可以控制 greet 函数被重复执行的次数。\n\n\n4.9.4 装饰器的实际应用\n装饰器在实际编程中有许多有用的应用场景，包括：\n\n日志记录：在函数执行前后记录日志信息。\n性能测试：记录函数的执行时间，用于性能分析。\n权限验证：检查执行函数之前用户的权限。\n缓存：缓存函数的返回结果，提高性能。\n\n======= # 函数\n函数是编程中的基本构建块，允许我们将一段代码命名，并在需要的地方反复使用。运行这些语句的操作被称为调用函数。\n在我们的学习过程中，已经接触和使用了许多 Python 的内置函数，比如 len 和 range 函数。\n我们使用 def 关键字来定义函数。关键字 def 后面紧跟着的是函数的名字，然后是一对括号。括号内可以包含一些参数（即预设的变量名），此行语句以冒号结束。\n\ndef say_hello():\n    # 属于函数的代码块\n    print('hello world')\n# 函数结束\n\nsay_hello()  # 调用函数\nsay_hello()  # 再次调用函数\n\nhello world\nhello world\n\n\n以上代码定义了一个名为 say_hello 的函数。该函数没有接受任何参数，因此在括号里没有声明变量。我们可以通过传入不同的参数来让函数获得不同的输入，并得到相应的结果。",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>函数</span>"
-    ]
-  },
-  {
-    "objectID": "functions.html#函数参数-1",
-    "href": "functions.html#函数参数-1",
-    "title": "4  函数",
-    "section": "4.10 函数参数",
-    "text": "4.10 函数参数\n函数可以接受参数，并利用这些值来执行某些效果。\n参数（parameter）：\n\n在定义函数时，我们为函数预留了一些位置，这些位置就是参数。参数是函数定义时的接收者。\n参数在函数头部的圆括号之间定义，用逗号分隔，它们在整个函数体内部都是可访问的。\n参数是变量，用于存储函数调用时传递的值（实参）。\n\n实参（argument）：\n\n在调用函数时，我们会向函数中传递一些值，这些值就是实参。实参是函数调用时的输入。\n实参是赋予函数中定义的参数的具体值。同样用逗号分隔。\n\n这个概念类似于食谱和做饭。食谱上的材料列表（比如说需要多少克的面粉，多少克的糖）就像是参数列表，而你实际使用的面粉和糖的数量就像实参。\n\n# 示例代码来源： A Byte of Python\ndef print_max(a, b):\n    if a &gt; b:\n        print(a, 'is maximum')  # 输出 a 是最大值\n    elif a == b:\n        print(a, 'is equal to', b)  # 输出 a 等于 b\n    else:\n        print(b, 'is maximum')  # 输出 b 是最大值\n\n# 直接传递字面值\nprint_max(3, 4)\n\nx = 5\ny = 7\n\n# 将变量作为参数传递\nprint_max(x, y)\n\n4 is maximum\n7 is maximum\n\n\n在示例代码中，我们定义了一个 print_max 的函数，其中包括两个参数 a 和 b。我们使用一个 if..else 语句来找出较大的数字并将其打印出来。\n第一次调用函数 print_max 时，我们直接提供数字作为参数。在第二种情况下，我们使用变量 x，y 作为参数调用函数。 print_max(x, y) 导致参数 x 的值被赋给参数 a，参数 y 的值被赋给参数 b。",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>函数</span>"
-    ]
-  },
-  {
-    "objectID": "functions.html#局部变量-1",
-    "href": "functions.html#局部变量-1",
-    "title": "4  函数",
-    "section": "4.11 局部变量",
-    "text": "4.11 局部变量\n\n在函数定义内部声明的变量被称为“局部变量”。\n“局部变量”的有效范围被限制在声明该变量的函数内部，这种约束被称为变量的”作用域”。\n变量的作用域从其声明的位置开始，直到该代码块或函数的结束。\n即使在函数外部存在同名变量，局部变量也被视为独立的变量。无论名称是否相同，函数内部的局部变量与函数外部的变量不会有任何关联。\n\n\n# 示例代码来源： A Byte of Python\nx = 50\n\ndef func(x):\n    print('x is', x)  # 输出 x 的值\n    x = 2  # 修改局部变量 x 的值\n    print('Changed local x to', x)  # 输出修改后的 x 的值\n\n\nfunc(x)\nprint('x is still', x)  # 输出最初的 x 的值\n\nx is 50\nChanged local x to 2\nx is still 50\n\n\n第一次在函数体的第一行打印变量 x 的值时，Python 使用在函数定义之前在主块中声明的参数值。\n接下来，我们给函数中的局部变量 x 赋值为2。当我们在函数中改变局部变量 x 的值时，主块中定义的 x 不受影响。",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>函数</span>"
-    ]
-  },
-  {
-    "objectID": "functions.html#global-语句-1",
-    "href": "functions.html#global-语句-1",
-    "title": "4  函数",
-    "section": "4.12 global 语句",
-    "text": "4.12 global 语句\n\n当我们需要对程序整体级别（即不在函数或类等特定作用域内）定义的变量进行赋值时，我们通常会使用全局声明语句（global statement）。\n全局声明语句告诉 Python，我们正在操作的是一个全局变量，而非局部变量。\n注意，如果不使用全局声明，我们是无法在函数内部直接修改函数外部定义的变量的。\n当在函数内部引用一个未经定义的变量时，Python 会尝试在函数外部查找这个变量。\n尽管如此，我们并不推荐这一措施，因为这可能导致代码阅读者在理解这个变量的定义位置上出现困扰。\n如果要在函数内部操作函数外部的变量，推荐使用 global 声明明确指出，表明你在操纵的是在全局范围内定义的变量。\n\n\n# 示例代码来源： A Byte of Python\nx = 50\n\ndef func():\n    global x\n\n    print('x is', x)  # 输出 x 的值\n    x = 2  # 修改全局变量 x 的值\n    print('Changed global x to', x)  # 输出修改后的 x 的值\n\n\nfunc()\nprint('Value of x is', x)  # 输出最终的 x 的值\n\nx is 50\nChanged global x to 2\nValue of x is 2\n\n\nglobal 语句用于声明 x 是一个全局变量 - 因此，当我们在函数内部给 x 赋值时，当我们在主块中使用 x 的值时，这个变化会反映出来。\n可以使用相同的 global 语句指定多个全局变量，例如 global x, y, z。",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>函数</span>"
-    ]
-  },
-  {
-    "objectID": "functions.html#默认参数值-1",
-    "href": "functions.html#默认参数值-1",
-    "title": "4  函数",
-    "section": "4.13 默认参数值",
-    "text": "4.13 默认参数值\n我们可以通过设置默认参数值，使得某些函数参数变得可选。当用户没有显式提供参数值时，函数将会采用这些设置的默认值。\n可以通过在函数定义中，在需要设置默认值的参数名后面加上等号（=）及其默认值来实现这一点。\n\n# 示例代码来源： A Byte of Python\ndef say(message, times=1):\n    print(message * times)\n\nsay('Hello')  # 输出 \"Hello\"\nsay('World', 5)  # 输出 \"WorldWorldWorldWorldWorld\"\n\nHello\nWorldWorldWorldWorldWorld\n\n\n函数say的功能是按照我们指定的次数重复打印一个字符串。\n\n当我们没有明确指定打印次数时，该函数会默认打印一次该字符串。这是通过设置参数times的默认值为1来实现的。\n在第一种使用情况中，我们仅传入字符串参数，此时函数会默认打印一次该字符串。\n在第二种使用情况中，我们将字符串和一个数值5作为参数传入函数，此数值表示我们希望该字符串被重复打印5次。\n\n注意：\n\n只有参数列表末尾的参数才能具有默认参数值。\n即在函数的参数列表中，不能将具有默认参数值的参数放在没有默认参数值的参数之前。这是因为参数是按位置赋值的。\n例如，def func(a, b=5) 是有效的，但 def func(a=5, b) 是无效的。",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>函数</span>"
-    ]
-  },
-  {
-    "objectID": "functions.html#关键字参数-1",
-    "href": "functions.html#关键字参数-1",
-    "title": "4  函数",
-    "section": "4.14 关键字参数",
-    "text": "4.14 关键字参数\n\n如果你有一个带有大量参数的函数，并且你只希望指定其中的一部分参数，那么你可以使用命名参数。\n这种参数被称为关键字参数，其中参数值的指定是基于参数名称（关键字），而不是位置（这是我们之前一直使用的方式）。\n利用关键字参数，我们可以更灵活地调用函数，无需按照函数定义时参数的顺序一一对应。\n只要其他参数具有默认参数值，我们可以只给我们想要的参数赋值。\n\n\n# 示例代码来源： A Byte of Python\ndef func(a, b=5, c=10):\n    print('a is', a, 'and b is', b, 'and c is', c)\n\nfunc(3, 7)\nfunc(25, c=24)\nfunc(c=50, a=100)\n\na is 3 and b is 7 and c is 10\na is 25 and b is 5 and c is 24\na is 100 and b is 5 and c is 50\n\n\n名为func的函数有一个参数没有默认参数值，接着是两个带有默认参数值的参数。\n\n在第一种用法中，func(3, 7)，参数a获得值3，参数b获得值7，而c获得默认值10。\n在第二种用法中，变量func(25, c=24)由于参数的位置而获得值25。然后，参数c由于命名即关键字参数而获得值24。变量b获得默认值5。\n在第三种用法中，我们对所有指定的值使用关键字参数。\n需要注意的是，尽管在函数定义中，参数a在参数c之前，我们却可以先为参数c指定值，再为参数a指定值。这是关键字参数的一个特点。",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>函数</span>"
-    ]
-  },
-  {
-    "objectID": "functions.html#可变参数-1",
-    "href": "functions.html#可变参数-1",
-    "title": "4  函数",
-    "section": "4.15 可变参数",
-    "text": "4.15 可变参数\n可变参数是一种特殊的参数，它可以接收任意数量的参数。这在你预先不知道会有多少参数被传入函数，或者数量会变化的情况下非常有用。\n在Python中，可变参数是通过在参数前面添加星号（*）来表示的。\n\n# 示例代码来源： A Byte of Python\ndef total(a=5, *numbers, **phonebook):\n    print('a', a)\n\n    # 遍历元组中的所有项\n    for single_item in numbers:\n        print('single_item', single_item)\n\n    # 遍历字典中的所有项\n    for first_part, second_part in phonebook.items():\n        print(first_part, second_part)\n\ntotal(10, 1, 2, 3, Jack=1123, John=2231, Inge=1560) \n\na 10\nsingle_item 1\nsingle_item 2\nsingle_item 3\nJack 1123\nJohn 2231\nInge 1560\n\n\n\n当我们声明一个带星号的参数，比如 *param ，那么从该位置开始到最后的所有位置参数都会被收集成一个名为’param’的元组。\n同样地，当我们声明一个双星参数，比如 **param ，那么从那个点开始直到结尾的所有关键字参数都会被收集到一个叫做’param’的字典中。\n我们可以在函数的内部，如同访问一个普通的元组或字典一样来访问这些参数。\n一个函数只能有一个可变参数，并且必须放在所有的位置参数和默认参数之后。",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>函数</span>"
-    ]
-  },
-  {
-    "objectID": "functions.html#return-语句-1",
-    "href": "functions.html#return-语句-1",
-    "title": "4  函数",
-    "section": "4.16 return 语句",
-    "text": "4.16 return 语句\nreturn 语句用于从函数中返回结果或者结束函数的运行。\n在一个函数中，return 语句后面可以跟一个表达式，此表达式的值就是这个函数的返回值。\n\n# 示例代码来源： A Byte of Python\ndef maximum(x, y):\n    if x &gt; y:\n        return x\n    elif x == y:\n        return 'The numbers are equal'\n    else:\n        return y\n\nprint(maximum(2, 3)) \n\n3\n\n\n\n在这个函数中，maximum 函数使用一个简单的 if..else 语句来找到较大的值，然后返回该值。\n在这个例子中，如果我们调用maximum(2, 3)，那么这个函数的返回值就是3。\n需要注意的是，一旦 return 语句被执行，函数的运行就会立即结束，后面的代码都不会再被执行。\n请注意，一个没有值的语句等同于 return None 。在Python中， None 是一个特殊类型，表示无值。\n每个函数在结尾处都隐含有一个 return None 语句，除非你自己编写了 return 语句。\n有一个内置函数叫做 max ，已经实现了“查找最大值”的功能。所以尽可能使用这个内置函数。",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>函数</span>"
-    ]
-  },
-  {
-    "objectID": "functions.html#文档字符串-1",
-    "href": "functions.html#文档字符串-1",
-    "title": "4  函数",
-    "section": "4.17 文档字符串",
-    "text": "4.17 文档字符串\n文档字符串，英文称为Docstrings，是一种在Python中对函数、方法、类、模块等提供说明的注释方式，具有非常重要的参考价值。\n文档字符串位于函数、方法、类、模块定义的第一行，由一对三引号(“““或’’’)引起来，可以是单行也可以是多行。\n\n# 示例代码来源： A Byte of Python\ndef print_max(x, y):\n    '''Prints the maximum of two numbers.\n\n    The two values must be integers.'''\n    # convert to integers, if possible\n    x = int(x)\n    y = int(y)\n\n    if x &gt; y:\n        print(x, 'is maximum')\n    else:\n        print(y, 'is maximum')\n\nprint_max(3, 5)\nprint(print_max.__doc__)\n\n5 is maximum\nPrints the maximum of two numbers.\n\n    The two values must be integers.\n\n\n\n通行的文档字符串的格式是：使用多行字符串，其中第一行以大写字母开头，以句号结尾。然后第二行为空行，接着从第三行开始提供任何详细的解释。\n强烈建议您在所有非平凡函数的文档字符串中遵循这个约定。\n在这个例子中，我们可以使用函数的 __doc__ 属性（注意双下划线）来访问 print_max 函数的文档字符串。\nPython中的 help()的作用即是获取该函数的 __doc__ 属性，并以整洁的方式呈现。可以尝试输入 help(print_max) 来查看 print_max 函数的文档字符串。\n自动化工具可以以这种方式从您的程序中检索文档。因此，强烈建议在编写任何非平凡函数时使用文档字符串。",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>函数</span>"
-    ]
-  },
-  {
-    "objectID": "functions.html#装饰器-1",
-    "href": "functions.html#装饰器-1",
-    "title": "4  函数",
-    "section": "4.18 装饰器",
-    "text": "4.18 装饰器\n装饰器（Decorators）是Python中一个非常强大且有用的特性，它允许程序员修改或增强一个函数、方法或类的行为，而不需要直接修改其本身的代码。装饰器本质上是一个函数，它接受一个函数作为参数并返回一个新的函数。通过这种方式，装饰器提供了一种灵活的方法来“装饰”或“包装”另一个函数，以便在调用原始函数之前或之后执行额外的代码。\n\n4.18.1 基本使用\n装饰器的基本语法如下：\n\ndef my_decorator(func):\n    def wrapper():\n        # 在func被调用前可以执行一些代码\n        print(\"Something is happening before the function is called.\")\n        func()\n        # 在func被调用后可以执行一些代码\n        print(\"Something is happening after the function is called.\")\n    return wrapper\n\n# 使用装饰器\n@my_decorator\ndef say_hello():\n    print(\"Hello!\")\n\n# 调用函数\nsay_hello()\n\nSomething is happening before the function is called.\nHello!\nSomething is happening after the function is called.\n\n\n在这个例子中，my_decorator 是一个装饰器，它接受一个函数 func 作为参数，并返回一个新的函数 wrapper。wrapper 函数在调用 func 前后添加了额外的行为。使用 @my_decorator 语法，我们“装饰”了 say_hello 函数，使得在调用 say_hello 时，实际上是调用了 wrapper 函数。\n\n\n4.18.2 带参数的函数装饰器\n如果原始函数需要接受参数，装饰器可以通过在 wrapper 函数中使用 *args 和 **kwargs 来接受任意数量的位置参数和关键字参数：\n\ndef my_decorator(func):\n    def wrapper(*args, **kwargs):\n        print(\"Something is happening before the function is called.\")\n        result = func(*args, **kwargs)\n        print(\"Something is happening after the function is called.\")\n        return result\n    return wrapper\n\n@my_decorator\ndef say(message):\n    print(message)\n\nsay(\"Hello with decorator!\")\n\nSomething is happening before the function is called.\nHello with decorator!\nSomething is happening after the function is called.\n\n\n\n\n4.18.3 带参数的装饰器\n有时候，我们希望装饰器本身能够接受参数。这需要我们创建一个“返回装饰器的装饰器”的函数：\n\ndef repeat(number_of_times):\n    def decorator_repeat(func):\n        def wrapper(*args, **kwargs):\n            for _ in range(number_of_times):\n                result = func(*args, **kwargs)\n            return result\n        return wrapper\n    return decorator_repeat\n\n@repeat(number_of_times=3)\ndef greet(name):\n    print(f\"Hello {name}\")\n\ngreet(\"World\")\n\nHello World\nHello World\nHello World\n\n\n在这个例子中，repeat 函数是一个接受参数 number_of_times 的装饰器。它内部定义了装饰器 decorator_repeat，decorator_repeat 又定义了 wrapper 函数。这样，我们就可以控制 greet 函数被重复执行的次数。\n\n\n4.18.4 装饰器的实际应用\n装饰器在实际编程中有许多有用的应用场景，包括：\n\n日志记录：在函数执行前后记录日志信息。\n性能测试：记录函数的执行时间，用于性能分析。\n权限验证：检查执行函数之前用户的权限。\n缓存：缓存函数的返回结果，提高性能。\n\n\n\n\n\n\n\n\na0da713bf4678cbc45fcc0a7673f704354266d0e 装饰器提供了一种优雅的方式来增强函数的功能，而不需要修改原始函数的代码，使得代码更加模块化和可重用。学习如何有效地使用装饰器，是成为一名高效Python程序员的重要步骤之一。",
+    "text": "4.9 装饰器\n装饰器（Decorators）是Python中一个非常强大且有用的特性，它允许程序员修改或增强一个函数、方法或类的行为，而不需要直接修改其本身的代码。装饰器本质上是一个函数，它接受一个函数作为参数并返回一个新的函数。通过这种方式，装饰器提供了一种灵活的方法来“装饰”或“包装”另一个函数，以便在调用原始函数之前或之后执行额外的代码。\n\n4.9.1 基本使用\n装饰器的基本语法如下：\ndef my_decorator(func):\n    def wrapper():\n        # 在func被调用前可以执行一些代码\n        print(\"Something is happening before the function is called.\")\n        func()\n        # 在func被调用后可以执行一些代码\n        print(\"Something is happening after the function is called.\")\n    return wrapper\n\n# 使用装饰器\n@my_decorator\ndef say_hello():\n    print(\"Hello!\")\n\n# 调用函数\nsay_hello()\n在这个例子中，my_decorator 是一个装饰器，它接受一个函数 func 作为参数，并返回一个新的函数 wrapper。wrapper 函数在调用 func 前后添加了额外的行为。使用 @my_decorator 语法，我们“装饰”了 say_hello 函数，使得在调用 say_hello 时，实际上是调用了 wrapper 函数。\n\n\n4.9.2 带参数的函数装饰器\n如果原始函数需要接受参数，装饰器可以通过在 wrapper 函数中使用 *args 和 **kwargs 来接受任意数量的位置参数和关键字参数：\ndef my_decorator(func):\n    def wrapper(*args, **kwargs):\n        print(\"Something is happening before the function is called.\")\n        result = func(*args, **kwargs)\n        print(\"Something is happening after the function is called.\")\n        return result\n    return wrapper\n\n@my_decorator\ndef say(message):\n    print(message)\n\nsay(\"Hello with decorator!\")\n\n\n4.9.3 带参数的装饰器\n有时候，我们希望装饰器本身能够接受参数。这需要我们创建一个“返回装饰器的装饰器”的函数：\ndef repeat(number_of_times):\n    def decorator_repeat(func):\n        def wrapper(*args, **kwargs):\n            for _ in range(number_of_times):\n                result = func(*args, **kwargs)\n            return result\n        return wrapper\n    return decorator_repeat\n\n@repeat(number_of_times=3)\ndef greet(name):\n    print(f\"Hello {name}\")\n\ngreet(\"World\")\n在这个例子中，repeat 函数是一个接受参数 number_of_times 的装饰器。它内部定义了装饰器 decorator_repeat，decorator_repeat 又定义了 wrapper 函数。这样，我们就可以控制 greet 函数被重复执行的次数。\n\n\n4.9.4 装饰器的实际应用\n装饰器在实际编程中有许多有用的应用场景，包括：\n\n日志记录：在函数执行前后记录日志信息。\n性能测试：记录函数的执行时间，用于性能分析。\n权限验证：检查执行函数之前用户的权限。\n缓存：缓存函数的返回结果，提高性能。\n\n装饰器提供了一种优雅的方式来增强函数的功能，而不需要修改原始函数的代码，使得代码更加模块化和可重用。学习如何有效地使用装饰器，是成为一名高效Python程序员的重要步骤之一。",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>函数</span>"
     ]
@@ -374,7 +264,17 @@
     "href": "modules.html",
     "title": "5  模块",
     "section": "",
-    "text": "5.0.1 sys模块\nsys模块包含与Python解释器及其环境（即系统）相关的功能。",
+    "text": "5.1 基本概念\n在 Python 中，模块是一种组织和重用代码的方式。一个模块是一个包含了函数、类和变量的文件，它可以被其他程序导入和使用。\n模块的基本概念是将相关的代码组织在一起，以便于维护和重用。通过将代码分割成模块，可以提高代码的可读性和可维护性。\n模块具有以下特性：\n在 Python 中，模块可以是 Python 编写的，也可以是用 C/C++ 等其他编程语言编写并编译成二进制代码的。后者通常被称为”编译的模块”，或者”扩展模块”。\n它们通常用于提高性能（因为编译后的代码运行速度更快），或者提供Python不能直接提供的功能（比如调用操作系统的底层API）。\n模块使用方法参考如下的代码示例：",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
+    ]
+  },
+  {
+    "objectID": "modules.html#基本概念",
+    "href": "modules.html#基本概念",
+    "title": "5  模块",
+    "section": "",
+    "text": "封装：模块将相关的代码封装在一个单独的文件中，使得代码更加有组织和易于管理。\n命名空间：模块创建了一个独立的命名空间，避免了命名冲突。通过使用模块名作为前缀，可以访问模块中定义的函数、类和变量。\n代码重用：模块可以被其他程序导入和使用，实现了代码的重用。通过导入模块，可以直接使用模块中定义的函数、类和变量，而无需重新编写代码。\n可扩展性：模块可以根据需要进行扩展和修改。可以在模块中添加新的函数、类和变量，以满足不同的需求。\n\n\n\n\n\nimport sys\n\nprint(\"The script has the name %s\" % (sys.argv[0]))\nif len(sys.argv) &gt; 1:\n    print(\"It has some arguments:\")\n    for arg in sys.argv[1:]:\n        print(arg)\n\nprint('\\n\\nThe PYTHONPATH is', sys.path, '\\n')\n\n5.1.1 sys模块\nsys模块包含与Python解释器及其环境（即系统）相关的功能。\n\nsys.argv是Python中的一个列表，它包含了从命令行传递给Python脚本的参数。\n这些参数是以字符串的形式存储的，其中sys.argv[0]是脚本的名称（即执行的Python文件名），其余的sys.argv[1]、sys.argv[2]…依次是外部传入的参数。\n在sys模块中，可以使用点表示法访问argv变量，即sys.argv。这样可以清晰地表明argv变量是sys模块的一部分，同时避免和程序中所使用的任何argv变量冲突。",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
     ]
@@ -383,8 +283,8 @@
     "objectID": "modules.html#import-语句",
     "href": "modules.html#import-语句",
     "title": "5  模块",
-    "section": "5.1 import 语句",
-    "text": "5.1 import 语句\n当 Python 执行 import 语句时，Python 解释器会通过以下步骤寻找需要 import 的对象。\n\n首先，解释器会检查内建模块（built-in modules）。Python 的内建模块是用 C 编写的，并链接到 Python 解释器中。例如示例代码中使用的 sys 就是内建模块。\n如果模块不在内建模块中，Python 解释器接着会检查 sys.modules 字典。sys.modules 字典储存了所有导入模块的路径名称和模块对象。可以将其理解为 Python 已经导入模块的一个历史记录或缓存。如果模块之前已经被导入，则直接从这个字典中获取。\n如果在 sys.modules 中也找不到，Python 解释器接下来会查看 sys.path 列表。sys.path 列表包含了 Python 解释器搜索模块的位置，包括：\n\n程序执行的当前目录，即程序启动时所在的目录。运行 import os; print(os.getcwd()) 以查找程序的当前目录。\n一些 Python 的标准库目录\n额外安装的第三方包的路径。通常位于 site-packages 目录下。\n\nPython 会在 sys.path 中列出的目录从上到下按顺序搜索模块。它会检查每一个目录，看是否含有需要导入的模块。如果在所有目录中都找不到，那么 Python 会引发一个 ModuleNotFoundError。",
+    "section": "5.2 import 语句",
+    "text": "5.2 import 语句\n当 Python 执行 import 语句时，Python 解释器会通过以下步骤寻找需要 import 的对象。\n\n首先，解释器会检查内建模块（built-in modules）。Python 的内建模块是用 C 编写的，并链接到 Python 解释器中。例如示例代码中使用的 sys 就是内建模块。\n如果模块不在内建模块中，Python 解释器接着会检查 sys.modules 字典。sys.modules 字典储存了所有导入模块的路径名称和模块对象。可以将其理解为 Python 已经导入模块的一个历史记录或缓存。如果模块之前已经被导入，则直接从这个字典中获取。\n如果在 sys.modules 中也找不到，Python 解释器接下来会查看 sys.path 列表。sys.path 列表包含了 Python 解释器搜索模块的位置，包括：\n\n程序执行的当前目录，即程序启动时所在的目录。运行 import os; print(os.getcwd()) 以查找程序的当前目录。\n一些 Python 的标准库目录\n额外安装的第三方包的路径。通常位于 site-packages 目录下。\n\nPython 会在 sys.path 中列出的目录从上到下按顺序搜索模块。它会检查每一个目录，看是否含有需要导入的模块。如果在所有目录中都找不到，那么 Python 会引发一个 ModuleNotFoundError。",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
     ]
@@ -393,8 +293,8 @@
     "objectID": "modules.html#字节编译的-.pyc-文件",
     "href": "modules.html#字节编译的-.pyc-文件",
     "title": "5  模块",
-    "section": "5.2 字节编译的 .pyc 文件",
-    "text": "5.2 字节编译的 .pyc 文件\n在 Python 中，字节编译的 .pyc 文件是一种优化技术，用于提高 Python 程序的执行速度。当 Python 解释器执行一个模块时，它会将模块的源代码编译成字节码，并将字节码保存到一个与模块同名的 .pyc 文件中。\n通常，这些 .pyc 文件在与相应的 .py 文件相同的目录中被创建。如果 Python 没有权限在该目录中写入文件，则 .pyc 文件将不会被创建。在 Python 3 中，标准库和第三方库的模块安装在 Python 的安装目录下，他们的 .pyc 文件通常被存储在 __pycache__ 目录下。\n无论是自己编写的模块还是下载的模块，只要它们被 Python 解释器执行过，都会生成相应的 .pyc 文件，以提高程序的执行速度。\n字节编译的 .pyc 文件具有以下特性：\n\n提高执行速度：由于字节码是一种中间形式，比源代码更接近机器语言，因此执行字节码比执行源代码更快。通过将模块的字节码保存到 .pyc 文件中，可以避免每次执行模块时都重新编译源代码，从而提高程序的执行速度。\n跨平台兼容性：.pyc 文件是与平台无关的，可以在不同的操作系统上执行。这意味着可以在一个平台上编译 .pyc 文件，然后将其复制到另一个平台上执行，而无需重新编译源代码。\n缓存机制：Python 解释器会检查 .pyc 文件的时间戳，以确定是否需要重新编译源代码。如果源代码没有发生变化，且 .pyc 文件的时间戳较新，解释器将直接加载 .pyc 文件，而不重新编译源代码。这种缓存机制可以减少程序启动时间和内存占用。\n可读性差：.pyc 文件是经过编译的字节码，与源代码相比，可读性较差。这是因为字节码是一种低级的、面向机器的表示形式，而源代码是面向人的高级语言。因此，通常情况下，.pyc 文件不需要手动编辑或查看。",
+    "section": "5.3 字节编译的 .pyc 文件",
+    "text": "5.3 字节编译的 .pyc 文件\n在 Python 中，字节编译的 .pyc 文件是一种优化技术，用于提高 Python 程序的执行速度。当 Python 解释器执行一个模块时，它会将模块的源代码编译成字节码，并将字节码保存到一个与模块同名的 .pyc 文件中。\n通常，这些 .pyc 文件在与相应的 .py 文件相同的目录中被创建。如果 Python 没有权限在该目录中写入文件，则 .pyc 文件将不会被创建。在 Python 3 中，标准库和第三方库的模块安装在 Python 的安装目录下，他们的 .pyc 文件通常被存储在 __pycache__ 目录下。\n无论是自己编写的模块还是下载的模块，只要它们被 Python 解释器执行过，都会生成相应的 .pyc 文件，以提高程序的执行速度。\n字节编译的 .pyc 文件具有以下特性：\n\n提高执行速度：由于字节码是一种中间形式，比源代码更接近机器语言，因此执行字节码比执行源代码更快。通过将模块的字节码保存到 .pyc 文件中，可以避免每次执行模块时都重新编译源代码，从而提高程序的执行速度。\n跨平台兼容性：.pyc 文件是与平台无关的，可以在不同的操作系统上执行。这意味着可以在一个平台上编译 .pyc 文件，然后将其复制到另一个平台上执行，而无需重新编译源代码。\n缓存机制：Python 解释器会检查 .pyc 文件的时间戳，以确定是否需要重新编译源代码。如果源代码没有发生变化，且 .pyc 文件的时间戳较新，解释器将直接加载 .pyc 文件，而不重新编译源代码。这种缓存机制可以减少程序启动时间和内存占用。\n可读性差：.pyc 文件是经过编译的字节码，与源代码相比，可读性较差。这是因为字节码是一种低级的、面向机器的表示形式，而源代码是面向人的高级语言。因此，通常情况下，.pyc 文件不需要手动编辑或查看。",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
     ]
@@ -403,8 +303,8 @@
     "objectID": "modules.html#from...import-语句",
     "href": "modules.html#from...import-语句",
     "title": "5  模块",
-    "section": "5.3 from...import 语句",
-    "text": "5.3 from...import 语句\n使用 from...import 语句可以让我们直接调用被导入的函数或者对象，不需要在前面加上模块名称。例如，我们可以直接导入 math 模块中的 sqrt 函数，这样在调用时就不需要再写 math. 了。\n这种方法的好处是我们可以只导入想用的函数或者类，不必加载整个模块，相比第一种方式可以节省一些内存。然而，如果代码中有大量的 from...import 语句，或从多个模块中导入具有相同名称的函数，那么这可能导致名字空间污染和函数冲突。\n同时，也可以使用 from...import 语句导入多个函数或者类，例如，我们导入 math 模块中的 sqrt 和 pi：\nfrom math import sqrt\nprint(sqrt(16))  # Output: 4.0\n\nfrom math import sqrt, pi\nprint(sqrt(16)) # Output: 4.0\nprint(pi)       # Output: 3.141592653589793",
+    "section": "5.4 from...import 语句",
+    "text": "5.4 from...import 语句\n使用 from...import 语句可以让我们直接调用被导入的函数或者对象，不需要在前面加上模块名称。例如，我们可以直接导入 math 模块中的 sqrt 函数，这样在调用时就不需要再写 math. 了。\n这种方法的好处是我们可以只导入想用的函数或者类，不必加载整个模块，相比第一种方式可以节省一些内存。然而，如果代码中有大量的 from...import 语句，或从多个模块中导入具有相同名称的函数，那么这可能导致名字空间污染和函数冲突。\n同时，也可以使用 from...import 语句导入多个函数或者类，例如，我们导入 math 模块中的 sqrt 和 pi：\nfrom math import sqrt\nprint(sqrt(16))  # Output: 4.0\n\nfrom math import sqrt, pi\nprint(sqrt(16)) # Output: 4.0\nprint(pi)       # Output: 3.141592653589793",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
     ]
@@ -413,8 +313,8 @@
     "objectID": "modules.html#python模块的-__name__-属性",
     "href": "modules.html#python模块的-__name__-属性",
     "title": "5  模块",
-    "section": "5.4 Python模块的 __name__ 属性",
-    "text": "5.4 Python模块的 __name__ 属性\n在 Python 中，每个模块都有一个内置的属性 __name__ ，这个属性对于理解模块的加载方式、以及模块与运行脚本的区别非常重要。\n当直接运行一个 py 文件（比如命令行执行 python your_script.py ）时，Python会把 __name__ 属性自动置为 __main__ 。在这种情况下，我们说 your_script.py 是作为一个脚本运行的。\n但是，如果你导入这个 py 文件作为一个模块（比如在另一个 py 文件中使用 import your_script ），那么Python会把 __name__ 属性自动置为模块的名称（这里的例子中就是 your_script ）。在这种情况下，我们说 your_script.py 是被导入的模块。\n参加如下的示例代码：\nif __name__ == '__main__':\n    print('This program is being run by itself')\nelse:\n    print('I am being imported from another module')\n根据以上的属性，许多 Python 脚本（尤其是那些同时被作为模块和脚本运行的脚本）都会在文件末尾包含以下代码：\nif __name__ == \"__main__\":\n    run_my_script()\n其中，run_my_script() 是该脚本中定义的一个函数。这段代码的目的是：\n\n如果你直接运行这个 py 文件，Python 会执行 run_my_script() 函数；\n如果你把这个 py 文件作为模块导入，Python 不会执行 run_my_script() 函数。\n\n这种方法允许一个 Python 模块同时被安全地导入并独立运行，是 Python 编程中一个常见且实用的技巧。\n总的来说，Python 的 __name__ 属性作为一个内建的模块属性，通过它可以有效区分脚本的直接执行和模块的导入调用，对理解和控制 Python 代码流程有着重要作用。",
+    "section": "5.5 Python模块的 __name__ 属性",
+    "text": "5.5 Python模块的 __name__ 属性\n在 Python 中，每个模块都有一个内置的属性 __name__ ，这个属性对于理解模块的加载方式、以及模块与运行脚本的区别非常重要。\n当直接运行一个 py 文件（比如命令行执行 python your_script.py ）时，Python会把 __name__ 属性自动置为 __main__ 。在这种情况下，我们说 your_script.py 是作为一个脚本运行的。\n但是，如果你导入这个 py 文件作为一个模块（比如在另一个 py 文件中使用 import your_script ），那么Python会把 __name__ 属性自动置为模块的名称（这里的例子中就是 your_script ）。在这种情况下，我们说 your_script.py 是被导入的模块。\n参加如下的示例代码：\nif __name__ == '__main__':\n    print('This program is being run by itself')\nelse:\n    print('I am being imported from another module')\n根据以上的属性，许多 Python 脚本（尤其是那些同时被作为模块和脚本运行的脚本）都会在文件末尾包含以下代码：\nif __name__ == \"__main__\":\n    run_my_script()\n其中，run_my_script() 是该脚本中定义的一个函数。这段代码的目的是：\n\n如果你直接运行这个 py 文件，Python 会执行 run_my_script() 函数；\n如果你把这个 py 文件作为模块导入，Python 不会执行 run_my_script() 函数。\n\n这种方法允许一个 Python 模块同时被安全地导入并独立运行，是 Python 编程中一个常见且实用的技巧。\n总的来说，Python 的 __name__ 属性作为一个内建的模块属性，通过它可以有效区分脚本的直接执行和模块的导入调用，对理解和控制 Python 代码流程有着重要作用。",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
     ]
@@ -423,8 +323,8 @@
     "objectID": "modules.html#制作自己的模块",
     "href": "modules.html#制作自己的模块",
     "title": "5  模块",
-    "section": "5.5 制作自己的模块",
-    "text": "5.5 制作自己的模块\n在 Python 中，任何一个 Python 文件都可以被视为一个模块，只需要按照一定的格式组织你的代码，然后将其保存为以 .py 结尾的文件即可。\n导入模块时，Python 解释器会在几个特定的目录中寻找模块文件，这些目录的路径存储在 sys.path 列表中。如果你的模块位于这些目录之外的路径，需要将模块的路径添加到系统路径中，如下面的示例代码所示：\n# 示例代码来源： A Byte of Python\nimport sys\nsys.path.append(\"practical_code/modules\") # 将模块的路径添加到系统路径中\n\nimport mymodule\n\nmymodule.say_hi()\nprint('Version', mymodule.__version__)\n使用 from..import 语句的示例代码如下：\n# 示例代码来源： A Byte of Python\nimport sys\nsys.path.append(\"practical_code/modules\") #\n\nfrom mymodule import say_hi, __version__\n\nsay_hi()\nprint('Version', __version__)",
+    "section": "5.6 制作自己的模块",
+    "text": "5.6 制作自己的模块\n在 Python 中，任何一个 Python 文件都可以被视为一个模块，只需要按照一定的格式组织你的代码，然后将其保存为以 .py 结尾的文件即可。\n导入模块时，Python 解释器会在几个特定的目录中寻找模块文件，这些目录的路径存储在 sys.path 列表中。如果你的模块位于这些目录之外的路径，需要将模块的路径添加到系统路径中，如下面的示例代码所示：\n# 示例代码来源： A Byte of Python\nimport sys\nsys.path.append(\"practical_code/modules\") # 将模块的路径添加到系统路径中\n\nimport mymodule\n\nmymodule.say_hi()\nprint('Version', mymodule.__version__)\n使用 from..import 语句的示例代码如下：\n# 示例代码来源： A Byte of Python\nimport sys\nsys.path.append(\"practical_code/modules\") #\n\nfrom mymodule import say_hi, __version__\n\nsay_hi()\nprint('Version', __version__)",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
     ]
@@ -433,8 +333,8 @@
     "objectID": "modules.html#dir-函数",
     "href": "modules.html#dir-函数",
     "title": "5  模块",
-    "section": "5.6 dir 函数",
-    "text": "5.6 dir 函数\ndir 函数是 Python 内置函数之一，用于返回一个对象的属性和方法列表。 它接受一个可选的参数，该参数是一个对象或模块的名称。如果直接使用 dir() 并且不提供任何参数，则返回当前作用域中能访问到的所有变量、函数、类等的名称。\n基本概念： - 对象：在 Python 中，一切皆为对象，包括数字、字符串、列表、函数等。对象 - 属性：对象的特征或数据，可以通过点运算符访问。 - 方法：对象的行为或功能，可以通过点运算符调用。\n特性： - dir 函数返回的列表包含了对象或模块的所有属性和方法的名称。 - 返回的列表是无序的，不保证属性和方法的顺序。 - dir 函数只返回公共的属性和方法，不包括私有的属性和方法。 - 如果参数是一个模块的名称，dir 函数返回的列表包含了该模块的所有公共属性和方法的名称。 - 如果参数是一个对象，dir 函数返回的列表包含了该对象的所有属性和方法的名称。\na = 5\n# 调用dir()函数，打印当前全局作用域的所有名称\nprint(dir())\n\n# 使用del语句删除变量a\ndel a\n\n# 再次调用dir()函数\nprint(dir()) # 这一次，返回的列表中将不再包含 'a'，因为我们已经删除了 a 这个变量\n\n# 使用dir()函数查看sys的所有属性和方法\nimport sys\ndir(sys)\n\ndef my_function():\n    \"\"\"\n    This is a sample function.\n    \"\"\"\n    pass\n\n# 使用dir()函数查看my_function的所有属性和方法\nprint(dir(my_function))\n\ndir() 函数在无参数调用时，返回的是当前范围内的变量、方法和定义的类型列表。\n当创建新的变量或者方法，他们会被添加到这个列表中；当删除变量或者方法，他们则会从这个列表中消失。\n当 dir() 函数以模块名或函数作为参数调用，例如 dir(sys)，它会返回包含模块或函数所有属性和方法的名字的列表。\n调用 dir() 函数来查看一个自定义模块或函数的属性和方法，它会返回包括以下属性的列表：\n\n__doc__：这是模块或函数的文档字符串，即在你定义它时用三引号包裹的那段描述文本。\n__name__：这是模块或函数的名称。\n\n对于模块，如果直接运行这个模块的话，__name__ 的值会是 ‘main’ 。如果这个模块是被其他程序导入的，__name__ 则会等于模块自身的名字。\n对于函数，__name__ 属性是函数的名称。\n\n__module__：__module__ 属性只有函数对象才有，它代表的是定义这个函数的模块名。\n\n在主程序中定义的函数，__module__ 通常为’main’；\n在被导入的模块中定义的函数，__module__ 则会是那个模块的名字。",
+    "section": "5.7 dir 函数",
+    "text": "5.7 dir 函数\ndir 函数是 Python 内置函数之一，用于返回一个对象的属性和方法列表。 它接受一个可选的参数，该参数是一个对象或模块的名称。如果直接使用 dir() 并且不提供任何参数，则返回当前作用域中能访问到的所有变量、函数、类等的名称。\n基本概念： - 对象：在 Python 中，一切皆为对象，包括数字、字符串、列表、函数等。对象 - 属性：对象的特征或数据，可以通过点运算符访问。 - 方法：对象的行为或功能，可以通过点运算符调用。\n特性： - dir 函数返回的列表包含了对象或模块的所有属性和方法的名称。 - 返回的列表是无序的，不保证属性和方法的顺序。 - dir 函数只返回公共的属性和方法，不包括私有的属性和方法。 - 如果参数是一个模块的名称，dir 函数返回的列表包含了该模块的所有公共属性和方法的名称。 - 如果参数是一个对象，dir 函数返回的列表包含了该对象的所有属性和方法的名称。\na = 5\n# 调用dir()函数，打印当前全局作用域的所有名称\nprint(dir())\n\n# 使用del语句删除变量a\ndel a\n\n# 再次调用dir()函数\nprint(dir()) # 这一次，返回的列表中将不再包含 'a'，因为我们已经删除了 a 这个变量\n\n# 使用dir()函数查看sys的所有属性和方法\nimport sys\ndir(sys)\n\ndef my_function():\n    \"\"\"\n    This is a sample function.\n    \"\"\"\n    pass\n\n# 使用dir()函数查看my_function的所有属性和方法\nprint(dir(my_function))\n\ndir() 函数在无参数调用时，返回的是当前范围内的变量、方法和定义的类型列表。\n当创建新的变量或者方法，他们会被添加到这个列表中；当删除变量或者方法，他们则会从这个列表中消失。\n当 dir() 函数以模块名或函数作为参数调用，例如 dir(sys)，它会返回包含模块或函数所有属性和方法的名字的列表。\n调用 dir() 函数来查看一个自定义模块或函数的属性和方法，它会返回包括以下属性的列表：\n\n__doc__：这是模块或函数的文档字符串，即在你定义它时用三引号包裹的那段描述文本。\n__name__：这是模块或函数的名称。\n\n对于模块，如果直接运行这个模块的话，__name__ 的值会是 ‘main’ 。如果这个模块是被其他程序导入的，__name__ 则会等于模块自身的名字。\n对于函数，__name__ 属性是函数的名称。\n\n__module__：__module__ 属性只有函数对象才有，它代表的是定义这个函数的模块名。\n\n在主程序中定义的函数，__module__ 通常为’main’；\n在被导入的模块中定义的函数，__module__ 则会是那个模块的名字。",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
     ]
@@ -443,78 +343,8 @@
     "objectID": "modules.html#包",
     "href": "modules.html#包",
     "title": "5  模块",
-    "section": "5.7 包",
-    "text": "5.7 包\n在 Python 中，包（Package）是一种组织和管理 Python 模块（Module）的方式。可以简单地将其视为包含一个或多个 Python 模块的文件夹。\n一个 Python 包可能包含 Python 模块、其他子包、或者一些附属的文件（如文档、数据文件等）。Python 包的主要目标是提供一种方便的方式来组织和共享一组相关功能的代码。\n通常，一个 Python 包中会有一个特殊文件 __init__.py，它用于标记所在目录是一个 Python 包，可以包含一些初始化代码或者指定包的特定属性。然而，从 Python 3.3开始，也支持所谓的隐式命名空间包，不再强制要求包中必须有 __init__.py 文件。\n代码示例：\n假如我们有以下目录结构：\nmy_package/\n├── __init__.py\n├── module1.py\n└── sub_package/\n    ├── __init__.py\n    └── module2.py\n\n在这个结构中，my_package 是一个 Python 包，它包含一个模块 module1 和一个子包 sub_package。sub_package 也是 Python 包，并且它包含一个模块 module2.py。\n假设在 module1.py 中，我们定义了一个函数 func1，在 module2.py 中，我们定义了一个函数func2。\n# 文件路径: my_package/module1.py\n\ndef func1():\n    print(\"This is function 1 from module 1\")\n\n# 文件路径: my_package/sub_package/module2.py\n\ndef func2():\n    print(\"This is function 2 from module 2\")\n在 Python 中，我们可以使用以下方法导入和使用这些函数：\nimport sys\nsys.path.append(\"practical_code/modules\") #将包的路径添加到系统路径中\n\n# 导入 my_package 包中的 module1 模块\nimport my_package.module1\n\n# 调用 module1 中的函数 func1\nmy_package.module1.func1()  # Outputs: This is function 1 from module 1\n\n# 导入 sub_package 包中的 module2 模块\nimport my_package.sub_package.module2\n\n# 调用 module2 中的函数 func2\nmy_package.sub_package.module2.func2()  # Outputs: This is function 2 from module 2\n\n=======\n# 模块\n## 基本概念\n\n在 Python 中，模块是一种组织和重用代码的方式。一个模块是一个包含了函数、类和变量的文件，它可以被其他程序导入和使用。\n\n模块的基本概念是将相关的代码组织在一起，以便于维护和重用。通过将代码分割成模块，可以提高代码的可读性和可维护性。\n\n模块具有以下特性：\n\n- 封装：模块将相关的代码封装在一个单独的文件中，使得代码更加有组织和易于管理。\n- 命名空间：模块创建了一个独立的命名空间，避免了命名冲突。通过使用模块名作为前缀，可以访问模块中定义的函数、类和变量。\n- 代码重用：模块可以被其他程序导入和使用，实现了代码的重用。通过导入模块，可以直接使用模块中定义的函数、类和变量，而无需重新编写代码。\n- 可扩展性：模块可以根据需要进行扩展和修改。可以在模块中添加新的函数、类和变量，以满足不同的需求。\n\n在 Python 中，模块可以是 Python 编写的，也可以是用 C/C++ 等其他编程语言编写并编译成二进制代码的。后者通常被称为\"编译的模块\"，或者\"扩展模块\"。\n\n它们通常用于提高性能（因为编译后的代码运行速度更快），或者提供Python不能直接提供的功能（比如调用操作系统的底层API）。\n\n模块使用方法参考如下的代码示例：\n\n```python\n\nimport sys\n\nprint(\"The script has the name %s\" % (sys.argv[0]))\nif len(sys.argv) &gt; 1:\n    print(\"It has some arguments:\")\n    for arg in sys.argv[1:]:\n        print(arg)\n\nprint('\\n\\nThe PYTHONPATH is', sys.path, '\\n')\n\n5.7.1 sys模块\nsys模块包含与Python解释器及其环境（即系统）相关的功能。\n\nsys.argv是Python中的一个列表，它包含了从命令行传递给Python脚本的参数。\n这些参数是以字符串的形式存储的，其中sys.argv[0]是脚本的名称（即执行的Python文件名），其余的sys.argv[1]、sys.argv[2]…依次是外部传入的参数。\n在sys模块中，可以使用点表示法访问argv变量，即sys.argv。这样可以清晰地表明argv变量是sys模块的一部分，同时避免和程序中所使用的任何argv变量冲突。",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
-    ]
-  },
-  {
-    "objectID": "modules.html#import-语句-1",
-    "href": "modules.html#import-语句-1",
-    "title": "5  模块",
-    "section": "5.8 import 语句",
-    "text": "5.8 import 语句\n当 Python 执行 import 语句时，Python 解释器会通过以下步骤寻找需要 import 的对象。\n\n首先，解释器会检查内建模块（built-in modules）。Python 的内建模块是用 C 编写的，并链接到 Python 解释器中。例如示例代码中使用的 sys 就是内建模块。\n如果模块不在内建模块中，Python 解释器接着会检查 sys.modules 字典。sys.modules 字典储存了所有导入模块的路径名称和模块对象。可以将其理解为 Python 已经导入模块的一个历史记录或缓存。如果模块之前已经被导入，则直接从这个字典中获取。\n如果在 sys.modules 中也找不到，Python 解释器接下来会查看 sys.path 列表。sys.path 列表包含了 Python 解释器搜索模块的位置，包括：\n\n程序执行的当前目录，即程序启动时所在的目录。运行 import os; print(os.getcwd()) 以查找程序的当前目录。\n一些 Python 的标准库目录\n额外安装的第三方包的路径。通常位于 site-packages 目录下。\n\nPython 会在 sys.path 中列出的目录从上到下按顺序搜索模块。它会检查每一个目录，看是否含有需要导入的模块。如果在所有目录中都找不到，那么 Python 会引发一个 ModuleNotFoundError。",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
-    ]
-  },
-  {
-    "objectID": "modules.html#字节编译的-.pyc-文件-1",
-    "href": "modules.html#字节编译的-.pyc-文件-1",
-    "title": "5  模块",
-    "section": "5.9 字节编译的 .pyc 文件",
-    "text": "5.9 字节编译的 .pyc 文件\n在 Python 中，字节编译的 .pyc 文件是一种优化技术，用于提高 Python 程序的执行速度。当 Python 解释器执行一个模块时，它会将模块的源代码编译成字节码，并将字节码保存到一个与模块同名的 .pyc 文件中。\n通常，这些 .pyc 文件在与相应的 .py 文件相同的目录中被创建。如果 Python 没有权限在该目录中写入文件，则 .pyc 文件将不会被创建。在 Python 3 中，标准库和第三方库的模块安装在 Python 的安装目录下，他们的 .pyc 文件通常被存储在 __pycache__ 目录下。\n无论是自己编写的模块还是下载的模块，只要它们被 Python 解释器执行过，都会生成相应的 .pyc 文件，以提高程序的执行速度。\n字节编译的 .pyc 文件具有以下特性：\n\n提高执行速度：由于字节码是一种中间形式，比源代码更接近机器语言，因此执行字节码比执行源代码更快。通过将模块的字节码保存到 .pyc 文件中，可以避免每次执行模块时都重新编译源代码，从而提高程序的执行速度。\n跨平台兼容性：.pyc 文件是与平台无关的，可以在不同的操作系统上执行。这意味着可以在一个平台上编译 .pyc 文件，然后将其复制到另一个平台上执行，而无需重新编译源代码。\n缓存机制：Python 解释器会检查 .pyc 文件的时间戳，以确定是否需要重新编译源代码。如果源代码没有发生变化，且 .pyc 文件的时间戳较新，解释器将直接加载 .pyc 文件，而不重新编译源代码。这种缓存机制可以减少程序启动时间和内存占用。\n可读性差：.pyc 文件是经过编译的字节码，与源代码相比，可读性较差。这是因为字节码是一种低级的、面向机器的表示形式，而源代码是面向人的高级语言。因此，通常情况下，.pyc 文件不需要手动编辑或查看。",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
-    ]
-  },
-  {
-    "objectID": "modules.html#from...import-语句-1",
-    "href": "modules.html#from...import-语句-1",
-    "title": "5  模块",
-    "section": "5.10 from...import 语句",
-    "text": "5.10 from...import 语句\n使用 from...import 语句可以让我们直接调用被导入的函数或者对象，不需要在前面加上模块名称。例如，我们可以直接导入 math 模块中的 sqrt 函数，这样在调用时就不需要再写 math. 了。\n这种方法的好处是我们可以只导入想用的函数或者类，不必加载整个模块，相比第一种方式可以节省一些内存。然而，如果代码中有大量的 from...import 语句，或从多个模块中导入具有相同名称的函数，那么这可能导致名字空间污染和函数冲突。\n同时，也可以使用 from...import 语句导入多个函数或者类，例如，我们导入 math 模块中的 sqrt 和 pi：\nfrom math import sqrt\nprint(sqrt(16))  # Output: 4.0\n\nfrom math import sqrt, pi\nprint(sqrt(16)) # Output: 4.0\nprint(pi)       # Output: 3.141592653589793",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
-    ]
-  },
-  {
-    "objectID": "modules.html#python模块的-__name__-属性-1",
-    "href": "modules.html#python模块的-__name__-属性-1",
-    "title": "5  模块",
-    "section": "5.11 Python模块的 __name__ 属性",
-    "text": "5.11 Python模块的 __name__ 属性\n在 Python 中，每个模块都有一个内置的属性 __name__ ，这个属性对于理解模块的加载方式、以及模块与运行脚本的区别非常重要。\n当直接运行一个 py 文件（比如命令行执行 python your_script.py ）时，Python会把 __name__ 属性自动置为 __main__ 。在这种情况下，我们说 your_script.py 是作为一个脚本运行的。\n但是，如果你导入这个 py 文件作为一个模块（比如在另一个 py 文件中使用 import your_script ），那么Python会把 __name__ 属性自动置为模块的名称（这里的例子中就是 your_script ）。在这种情况下，我们说 your_script.py 是被导入的模块。\n参加如下的示例代码：\nif __name__ == '__main__':\n    print('This program is being run by itself')\nelse:\n    print('I am being imported from another module')\n根据以上的属性，许多 Python 脚本（尤其是那些同时被作为模块和脚本运行的脚本）都会在文件末尾包含以下代码：\nif __name__ == \"__main__\":\n    run_my_script()\n其中，run_my_script() 是该脚本中定义的一个函数。这段代码的目的是：\n\n如果你直接运行这个 py 文件，Python 会执行 run_my_script() 函数；\n如果你把这个 py 文件作为模块导入，Python 不会执行 run_my_script() 函数。\n\n这种方法允许一个 Python 模块同时被安全地导入并独立运行，是 Python 编程中一个常见且实用的技巧。\n总的来说，Python 的 __name__ 属性作为一个内建的模块属性，通过它可以有效区分脚本的直接执行和模块的导入调用，对理解和控制 Python 代码流程有着重要作用。",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
-    ]
-  },
-  {
-    "objectID": "modules.html#制作自己的模块-1",
-    "href": "modules.html#制作自己的模块-1",
-    "title": "5  模块",
-    "section": "5.12 制作自己的模块",
-    "text": "5.12 制作自己的模块\n在 Python 中，任何一个 Python 文件都可以被视为一个模块，只需要按照一定的格式组织你的代码，然后将其保存为以 .py 结尾的文件即可。\n导入模块时，Python 解释器会在几个特定的目录中寻找模块文件，这些目录的路径存储在 sys.path 列表中。如果你的模块位于这些目录之外的路径，需要将模块的路径添加到系统路径中，如下面的示例代码所示：\n# 示例代码来源： A Byte of Python\nimport sys\nsys.path.append(\"practical_code/modules\") # 将模块的路径添加到系统路径中\n\nimport mymodule\n\nmymodule.say_hi()\nprint('Version', mymodule.__version__)\n使用 from..import 语句的示例代码如下：\n# 示例代码来源： A Byte of Python\nimport sys\nsys.path.append(\"practical_code/modules\") #\n\nfrom mymodule import say_hi, __version__\n\nsay_hi()\nprint('Version', __version__)",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
-    ]
-  },
-  {
-    "objectID": "modules.html#dir-函数-1",
-    "href": "modules.html#dir-函数-1",
-    "title": "5  模块",
-    "section": "5.13 dir 函数",
-    "text": "5.13 dir 函数\ndir 函数是 Python 内置函数之一，用于返回一个对象的属性和方法列表。 它接受一个可选的参数，该参数是一个对象或模块的名称。如果直接使用 dir() 并且不提供任何参数，则返回当前作用域中能访问到的所有变量、函数、类等的名称。\n基本概念： - 对象：在 Python 中，一切皆为对象，包括数字、字符串、列表、函数等。对象 - 属性：对象的特征或数据，可以通过点运算符访问。 - 方法：对象的行为或功能，可以通过点运算符调用。\n特性： - dir 函数返回的列表包含了对象或模块的所有属性和方法的名称。 - 返回的列表是无序的，不保证属性和方法的顺序。 - dir 函数只返回公共的属性和方法，不包括私有的属性和方法。 - 如果参数是一个模块的名称，dir 函数返回的列表包含了该模块的所有公共属性和方法的名称。 - 如果参数是一个对象，dir 函数返回的列表包含了该对象的所有属性和方法的名称。\na = 5\n# 调用dir()函数，打印当前全局作用域的所有名称\nprint(dir())\n\n# 使用del语句删除变量a\ndel a\n\n# 再次调用dir()函数\nprint(dir()) # 这一次，返回的列表中将不再包含 'a'，因为我们已经删除了 a 这个变量\n\n# 使用dir()函数查看sys的所有属性和方法\nimport sys\ndir(sys)\n\ndef my_function():\n    \"\"\"\n    This is a sample function.\n    \"\"\"\n    pass\n\n# 使用dir()函数查看my_function的所有属性和方法\nprint(dir(my_function))\n\ndir() 函数在无参数调用时，返回的是当前范围内的变量、方法和定义的类型列表。\n当创建新的变量或者方法，他们会被添加到这个列表中；当删除变量或者方法，他们则会从这个列表中消失。\n当 dir() 函数以模块名或函数作为参数调用，例如 dir(sys)，它会返回包含模块或函数所有属性和方法的名字的列表。\n调用 dir() 函数来查看一个自定义模块或函数的属性和方法，它会返回包括以下属性的列表：\n\n__doc__：这是模块或函数的文档字符串，即在你定义它时用三引号包裹的那段描述文本。\n__name__：这是模块或函数的名称。\n\n对于模块，如果直接运行这个模块的话，__name__ 的值会是 ‘main’ 。如果这个模块是被其他程序导入的，__name__ 则会等于模块自身的名字。\n对于函数，__name__ 属性是函数的名称。\n\n__module__：__module__ 属性只有函数对象才有，它代表的是定义这个函数的模块名。\n\n在主程序中定义的函数，__module__ 通常为’main’；\n在被导入的模块中定义的函数，__module__ 则会是那个模块的名字。",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
-    ]
-  },
-  {
-    "objectID": "modules.html#包-1",
-    "href": "modules.html#包-1",
-    "title": "5  模块",
-    "section": "5.14 包",
-    "text": "5.14 包\n在 Python 中，包（Package）是一种组织和管理 Python 模块（Module）的方式。可以简单地将其视为包含一个或多个 Python 模块的文件夹。\n一个 Python 包可能包含 Python 模块、其他子包、或者一些附属的文件（如文档、数据文件等）。Python 包的主要目标是提供一种方便的方式来组织和共享一组相关功能的代码。\n通常，一个 Python 包中会有一个特殊文件 __init__.py，它用于标记所在目录是一个 Python 包，可以包含一些初始化代码或者指定包的特定属性。然而，从 Python 3.3开始，也支持所谓的隐式命名空间包，不再强制要求包中必须有 __init__.py 文件。\n代码示例：\n假如我们有以下目录结构：\nmy_package/\n├── __init__.py\n├── module1.py\n└── sub_package/\n    ├── __init__.py\n    └── module2.py\n    \n在这个结构中，my_package 是一个 Python 包，它包含一个模块 module1 和一个子包 sub_package。sub_package 也是 Python 包，并且它包含一个模块 module2.py。\n假设在 module1.py 中，我们定义了一个函数 func1，在 module2.py 中，我们定义了一个函数func2。\n# 文件路径: my_package/module1.py\n\ndef func1():\n    print(\"This is function 1 from module 1\")\n\n# 文件路径: my_package/sub_package/module2.py\n\ndef func2():\n    print(\"This is function 2 from module 2\")    \n在 Python 中，我们可以使用以下方法导入和使用这些函数：\nimport sys\nsys.path.append(\"practical_code/modules\") #将包的路径添加到系统路径中\n\n# 导入 my_package 包中的 module1 模块\nimport my_package.module1\n\n# 调用 module1 中的函数 func1\nmy_package.module1.func1()  # Outputs: This is function 1 from module 1\n\n# 导入 sub_package 包中的 module2 模块\nimport my_package.sub_package.module2\n\n# 调用 module2 中的函数 func2\nmy_package.sub_package.module2.func2()  # Outputs: This is function 2 from module 2\n\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; a0da713bf4678cbc45fcc0a7673f704354266d0e",
+    "section": "5.8 包",
+    "text": "5.8 包\n在 Python 中，包（Package）是一种组织和管理 Python 模块（Module）的方式。可以简单地将其视为包含一个或多个 Python 模块的文件夹。\n一个 Python 包可能包含 Python 模块、其他子包、或者一些附属的文件（如文档、数据文件等）。Python 包的主要目标是提供一种方便的方式来组织和共享一组相关功能的代码。\n通常，一个 Python 包中会有一个特殊文件 __init__.py，它用于标记所在目录是一个 Python 包，可以包含一些初始化代码或者指定包的特定属性。然而，从 Python 3.3开始，也支持所谓的隐式命名空间包，不再强制要求包中必须有 __init__.py 文件。\n代码示例：\n假如我们有以下目录结构：\nmy_package/\n├── __init__.py\n├── module1.py\n└── sub_package/\n    ├── __init__.py\n    └── module2.py\n\n在这个结构中，my_package 是一个 Python 包，它包含一个模块 module1 和一个子包 sub_package。sub_package 也是 Python 包，并且它包含一个模块 module2.py。\n假设在 module1.py 中，我们定义了一个函数 func1，在 module2.py 中，我们定义了一个函数func2。\n# 文件路径: my_package/module1.py\n\ndef func1():\n    print(\"This is function 1 from module 1\")\n\n# 文件路径: my_package/sub_package/module2.py\n\ndef func2():\n    print(\"This is function 2 from module 2\")\n在 Python 中，我们可以使用以下方法导入和使用这些函数：\nimport sys\nsys.path.append(\"practical_code/modules\") #将包的路径添加到系统路径中\n\n# 导入 my_package 包中的 module1 模块\nimport my_package.module1\n\n# 调用 module1 中的函数 func1\nmy_package.module1.func1()  # Outputs: This is function 1 from module 1\n\n# 导入 sub_package 包中的 module2 模块\nimport my_package.sub_package.module2\n\n# 调用 module2 中的函数 func2\nmy_package.sub_package.module2.func2()  # Outputs: This is function 2 from module 2",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>模块</span>"
     ]
@@ -583,8 +413,8 @@
     "objectID": "data_structures.html#sec-objects-and-classes",
     "href": "data_structures.html#sec-objects-and-classes",
     "title": "6  数据结构",
-    "section": "6.13 对象（Object）和类（Class）",
-    "text": "6.13 对象（Object）和类（Class）\nPython是一种面向对象的编程语言。在Python中，几乎所有的东西都是对象，拥有其属性和方法。类(Class)就是为创建对象的种类或类型提供了定义的一种机制。\n对象(Object)：在Python中，对象是数据的核心单元。每个对象都具有一个类型（例如，字符串，列表，字典等），以及一个独一无二的身份（在内存中的地址）。对象可以包含包含多种数据（即属性）和功能（即方法）。它可以视为现实世界中的客观实体，比如一张桌子、一个圆形、一个人等。\n举例来说，一个人（对象）有姓名（属性）和能进行各种活动（方法）如跑步、学习等。\n类(Class)：类是对象的模板或蓝图。它定义了对象的基本结构，并封装了对象需要执行的行为（方法）。你可以定义一个类来创建属于这个类的对象。类就相当于制造物件的工厂，负责规定其生产出的对象应该拥有哪些特性。\n举例来说，你可以定义一个“人”的类（class），它有名字和年龄等属性，也有吃饭，睡觉等方法。然后根据这个“人”类，我们可以创建不同的人对象，比如创建一个名叫“张三”、年龄25岁的人对象。\n\nclass Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\n    def introduce(self):\n        return f\"Hello, my name is {self.name} and I am {self.age} years old.\"\n\n# 创建一个属于Person类的对象\nsomeone = Person('张三', 25)\n\n# 调用对象的方法\nprint(someone.introduce())\n\nHello, my name is 张三 and I am 25 years old.",
+    "section": "6.6 对象（Object）和类（Class）",
+    "text": "6.6 对象（Object）和类（Class）\nPython是一种面向对象的编程语言。在Python中，几乎所有的东西都是对象，拥有其属性和方法。类(Class)就是为创建对象的种类或类型提供了定义的一种机制。\n对象(Object)：在Python中，对象是数据的核心单元。每个对象都具有一个类型（例如，字符串，列表，字典等），以及一个独一无二的身份（在内存中的地址）。对象可以包含包含多种数据（即属性）和功能（即方法）。它可以视为现实世界中的客观实体，比如一张桌子、一个圆形、一个人等。\n举例来说，一个人（对象）有姓名（属性）和能进行各种活动（方法）如跑步、学习等。\n类(Class)：类是对象的模板或蓝图。它定义了对象的基本结构，并封装了对象需要执行的行为（方法）。你可以定义一个类来创建属于这个类的对象。类就相当于制造物件的工厂，负责规定其生产出的对象应该拥有哪些特性。\n举例来说，你可以定义一个“人”的类（class），它有名字和年龄等属性，也有吃饭，睡觉等方法。然后根据这个“人”类，我们可以创建不同的人对象，比如创建一个名叫“张三”、年龄25岁的人对象。\nclass Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\n    def introduce(self):\n        return f\"Hello, my name is {self.name} and I am {self.age} years old.\"\n\n# 创建一个属于Person类的对象\nsomeone = Person('张三', 25)\n\n# 调用对象的方法\nprint(someone.introduce())",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>数据结构</span>"
     ]
@@ -594,67 +424,7 @@
     "href": "data_structures.html#引用",
     "title": "6  数据结构",
     "section": "6.7 引用",
-    "text": "6.7 引用\n在Python中，每当你创建一个对象并将其赋值给一个变量时，Python并不会将对象的值存储在变量中。相反，Python仅仅是将变量设置为一个引用，指向存储在内存中的对象。这种方式被称为绑定变量名到对象，或者叫做引用。\n\n6.7.1 创建对象和引用\n举个例子，当你创建一个列表并赋值给某个变量：\nlist1 = [1, 2, 3]\n此时，list1只是一个引用，它指向存储在内存中的一个列表对象，此对象包含元素1, 2, 3。如果你再创建一个引用，并指向同样的对象：\nlist2 = list1\n此时你有两个引用——list1和list2，它们同时指向同一个对象。\n\n\n6.7.2 修改可变类型的对象\n如果你通过其中一个引用去修改这个对象，例如你通过list1去删除第一个元素：\ndel list1[0]\n那么无论你是通过list1还是list2来访问这个列表对象，你都会发现的此对象的内容已经发生了变化：\nprint(list1)  # 输出: [2, 3]\nprint(list2)  # 输出: [2, 3]\n这是因为list1和list2都只是引用，它们并不包含实际的列表内容，而只是指向内存中的一个位置，即同一个列表对象的地址。\n\n\n6.7.3 对象的复制\n然而，有时你可能需要创建一个对象的副本，这样你就可以修改这个副本，而不影响原来的对象。例如，通过切片操作可以创建一个列表的副本：\nlist3 = list2[:]\n此时list3引用的是一个完全新的列表对象，这个对象的内容是list2所指向的列表的一个完全的拷贝。所以，当你更改list3的内容时，list2指向的列表内容不会被修改：\ndel list3[0]\nprint(list2)  # 输出: [2, 3]\nprint(list3)  # 输出: [3]\n======= # 数据结构\n\n\n\npython数据结构",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>数据结构</span>"
-    ]
-  },
-  {
-    "objectID": "data_structures.html#序列sequence-1",
-    "href": "data_structures.html#序列sequence-1",
-    "title": "6  数据结构",
-    "section": "6.8 序列（Sequence）",
-    "text": "6.8 序列（Sequence）\n在Python中，序列(Sequence)是最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推。\nPython有三种常见的序列类型：\n\n列表（List）\n元组（Tuple）\n字符串（String）\n\n另外三种非序列的数据结构是：\n\n集合（Set）\n字典（Dictionary）\n冰冻集合（frozenset）\n\n这三种类型并非有序，也不能通过索引访问元素。",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>数据结构</span>"
-    ]
-  },
-  {
-    "objectID": "data_structures.html#列表list-1",
-    "href": "data_structures.html#列表list-1",
-    "title": "6  数据结构",
-    "section": "6.9 列表（List）",
-    "text": "6.9 列表（List）\nPython 的列表类似于其他编程语言中的数组，但是比这些数组更灵活。列表中的元素不一定要是相同的数据类型。\n列表用方括号 [] 包围元素，并用逗号 , 分割。\n\nmy_list = [1, \"apple\", 3.14]\nprint(my_list[0]) # prints: 1\n\n1\n\n\n列表：\n\n是有序的\n是可变的\n可以包含任何类型的元素\n可以通过索引访问元素，索引从0开始\n\n\n\n\n\n\n\n索引\n\n\n\n注意, Python的索引是从0开始。这意味着在使用索引访问列表元素时，列表中的第一个元素是 list[0]，第二个元素是 list[1]，以此类推。\n此外，索引是前包含后不包含的。word[1:3]这样的索引意味着从索引1开始，直到索引3之前的元素（即索引1和2）。",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>数据结构</span>"
-    ]
-  },
-  {
-    "objectID": "data_structures.html#元组tuple-1",
-    "href": "data_structures.html#元组tuple-1",
-    "title": "6  数据结构",
-    "section": "6.10 元组（Tuple）",
-    "text": "6.10 元组（Tuple）\n元组是有序的、不可变的列表。可以理解为一种“只读”版本的列表。\n元组用括号 () 包围元素，并用逗号 , 分割。\n\nmy_tuple = (1, \"apple\", 3.14)\nprint(my_tuple[0]) # prints: 1\n\n1\n\n\n元组：\n\n是有序的\n是不可变的\n可以包含任何类型的元素\n可以通过索引访问元素，索引从0开始\n\n下面是一个体现元组和列表的差别的代码示例\n\n# 创建一个列表\nmy_list = [1, 2, 3]\n# 在列表末尾添加一个元素\nmy_list.append(4)\nprint(my_list[3])\n# 创建一个元组\nmy_tuple = (1, 2, 3)\n# 不能修改元组\n# my_tuple.append(4)  # 这样会报错\n\n4",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>数据结构</span>"
-    ]
-  },
-  {
-    "objectID": "data_structures.html#集合set-1",
-    "href": "data_structures.html#集合set-1",
-    "title": "6  数据结构",
-    "section": "6.11 集合（Set）",
-    "text": "6.11 集合（Set）\n集合是非有序的数据结构，它不允许重复元素。\n集合用花括号{}包围元素，并用逗号 , 分割。\n\nmy_set = {1, \"apple\", 3.14, \"apple\"}\nprint(my_set) # prints: {1, \"apple\", 3.14}\n\n{1, 3.14, 'apple'}\n\n\n集合:\n\n是无序的\n集合中元素不能重复\n可以包含任何类型的元素\n不能通过索引访问元素",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>数据结构</span>"
-    ]
-  },
-  {
-    "objectID": "data_structures.html#字典dictionary-1",
-    "href": "data_structures.html#字典dictionary-1",
-    "title": "6  数据结构",
-    "section": "6.12 字典（Dictionary）",
-    "text": "6.12 字典（Dictionary）\n字典是一个无序的键值对集合。\n“键值对”（Key-Value Pair）指的是两个关联的部分：一个是唯一的键（Key），另一个是值（Value）。每个键都有一个关联的值。这种关联叫做”映射”。\n字典使用花括号{}包围元素，键值之间用冒号:分隔，而键值对之间用逗号,分隔。\n\n\n\n\n\n\n为什么叫字典\n\n\n\n在一本实体字典中，你可以根据词条（对应于计算机中的“键”）找到对应的解释或者翻译（对应于计算机中的“值”）。这构成了一个”词条-解释”对，与计算机科学中的”键-值对”类似。\n因此，考虑到这种映射关系，计算机科学中的这种包含”键-值对”的数据结构，就被命名为字典（Dictionary）。\n\n\n\nmy_dict = {\n    \"name\": \"apple\",\n    \"color\": \"red\",\n}\nprint(my_dict[\"name\"]) # prints: apple\n\nages = {\n    \"Tom\": 30, \n    \"Alice\": 25, \n    \"Bob\": 27\n}\n\nprint(ages[\"Alice\"]) # 输出：25\nages[\"Tom\"] = 31  # 将Tom的年龄改为31\nprint(ages[\"Tom\"]) # 输出：31\n\napple\n25\n31\n\n\n字典:\n\n是无序的\n键值对中的键是唯一的,但值可以重复\n可以包含任何类型的元素\n通过键来访问元素\n\n当你使用一个键来访问一个字典时，Python会返回与该键相关联的值。如果你使用一个不存在的键，Python会引发一个KeyError异常。\n为了避免这一点，可以使用get()方法。get(key, default)方法允许指定一个默认值，当字典中不存在指定的键时，它会返回该默认值而不是引发异常。",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>数据结构</span>"
-    ]
-  },
-  {
-    "objectID": "data_structures.html#引用-1",
-    "href": "data_structures.html#引用-1",
-    "title": "6  数据结构",
-    "section": "6.14 引用",
-    "text": "6.14 引用\n在Python中，每当你创建一个对象并将其赋值给一个变量时，Python并不会将对象的值存储在变量中。相反，Python仅仅是将变量设置为一个引用，指向存储在内存中的对象。这种方式被称为绑定变量名到对象，或者叫做引用。\n\n6.14.1 创建对象和引用\n举个例子，当你创建一个列表并赋值给某个变量：\n\nlist1 = [1, 2, 3]\n\n此时，list1只是一个引用，它指向存储在内存中的一个列表对象，此对象包含元素1, 2, 3。如果你再创建一个引用，并指向同样的对象：\n\nlist2 = list1\n\n此时你有两个引用——list1和list2，它们同时指向同一个对象。\n\n\n6.14.2 修改可变类型的对象\n如果你通过其中一个引用去修改这个对象，例如你通过list1去删除第一个元素：\n\ndel list1[0]\n\n那么无论你是通过list1还是list2来访问这个列表对象，你都会发现的此对象的内容已经发生了变化：\n\nprint(list1)  # 输出: [2, 3]\nprint(list2)  # 输出: [2, 3]\n\n[2, 3]\n[2, 3]\n\n\n这是因为list1和list2都只是引用，它们并不包含实际的列表内容，而只是指向内存中的一个位置，即同一个列表对象的地址。\n\n\n6.14.3 对象的复制\n然而，有时你可能需要创建一个对象的副本，这样你就可以修改这个副本，而不影响原来的对象。例如，通过切片操作可以创建一个列表的副本：\n\nlist3 = list2[:]\n\n此时list3引用的是一个完全新的列表对象，这个对象的内容是list2所指向的列表的一个完全的拷贝。所以，当你更改list3的内容时，list2指向的列表内容不会被修改：\n\ndel list3[0]\nprint(list2)  # 输出: [2, 3]\nprint(list3)  # 输出: [3]\n\n[2, 3]\n[3]\n\n\n\n\n\n\n\n\n\na0da713bf4678cbc45fcc0a7673f704354266d0e",
+    "text": "6.7 引用\n在Python中，每当你创建一个对象并将其赋值给一个变量时，Python并不会将对象的值存储在变量中。相反，Python仅仅是将变量设置为一个引用，指向存储在内存中的对象。这种方式被称为绑定变量名到对象，或者叫做引用。\n\n6.7.1 创建对象和引用\n举个例子，当你创建一个列表并赋值给某个变量：\nlist1 = [1, 2, 3]\n此时，list1只是一个引用，它指向存储在内存中的一个列表对象，此对象包含元素1, 2, 3。如果你再创建一个引用，并指向同样的对象：\nlist2 = list1\n此时你有两个引用——list1和list2，它们同时指向同一个对象。\n\n\n6.7.2 修改可变类型的对象\n如果你通过其中一个引用去修改这个对象，例如你通过list1去删除第一个元素：\ndel list1[0]\n那么无论你是通过list1还是list2来访问这个列表对象，你都会发现的此对象的内容已经发生了变化：\nprint(list1)  # 输出: [2, 3]\nprint(list2)  # 输出: [2, 3]\n这是因为list1和list2都只是引用，它们并不包含实际的列表内容，而只是指向内存中的一个位置，即同一个列表对象的地址。\n\n\n6.7.3 对象的复制\n然而，有时你可能需要创建一个对象的副本，这样你就可以修改这个副本，而不影响原来的对象。例如，通过切片操作可以创建一个列表的副本：\nlist3 = list2[:]\n此时list3引用的是一个完全新的列表对象，这个对象的内容是list2所指向的列表的一个完全的拷贝。所以，当你更改list3的内容时，list2指向的列表内容不会被修改：\ndel list3[0]\nprint(list2)  # 输出: [2, 3]\nprint(list3)  # 输出: [3]",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>数据结构</span>"
     ]
@@ -714,7 +484,7 @@
     "href": "object_oriented_programming.html",
     "title": "8  面向对象编程",
     "section": "",
-    "text": "8.1 对象和类的回顾\n在 Section 6.13 中我们已经介绍了对象和类的概念，我们可以总结如下：",
+    "text": "8.1 对象和类的回顾\n在 Section 6.6 中我们已经介绍了对象和类的概念，我们可以总结如下：",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>面向对象编程</span>"
     ]
@@ -884,7 +654,7 @@
     "href": "standard_library.html#sys模块",
     "title": "11  标准库",
     "section": "",
-    "text": "11.1.1 sys.argv\n正如我们在 Section 5.7.1 看到的，sys.argv是一个包含命令行参数的列表。\n我们在此总结一下：\n\nsys.argv[0]是脚本的名称\nsys.argv[1]是第一个参数\nsys.argv[2]是第二个参数\nsys.argv的长度是命令行参数的个数\n\n下面是一个简单的例子：\nimport sys\n\nprint(sys.argv)\n\n\n11.1.2 sys.version\nsys.version包含了Python解释器的版本信息。\nimport sys\n\nprint(sys.version)\nsys模块有一个名为version_info的元组，它包含了Python解释器的版本信息。\n\n\n11.1.3 sys.path\nsys.path是一个包含了模块搜索路径的列表。\nimport sys\n\nprint(sys.path)",
+    "text": "11.1.1 sys.argv\n正如我们在 Section 5.1.1 看到的，sys.argv是一个包含命令行参数的列表。\n我们在此总结一下：\n\nsys.argv[0]是脚本的名称\nsys.argv[1]是第一个参数\nsys.argv[2]是第二个参数\nsys.argv的长度是命令行参数的个数\n\n下面是一个简单的例子：\nimport sys\n\nprint(sys.argv)\n\n\n11.1.2 sys.version\nsys.version包含了Python解释器的版本信息。\nimport sys\n\nprint(sys.version)\nsys模块有一个名为version_info的元组，它包含了Python解释器的版本信息。\n\n\n11.1.3 sys.path\nsys.path是一个包含了模块搜索路径的列表。\nimport sys\n\nprint(sys.path)",
     "crumbs": [
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>标准库</span>"
     ]
@@ -944,7 +714,7 @@
     "href": "more.html#python-推导式comprehensions",
     "title": "12  更多",
     "section": "12.2 Python 推导式（Comprehensions）",
-    "text": "12.2 Python 推导式（Comprehensions）\nPython 推导式是一种简洁且功能强大的语法，用于创建新的序列（如列表、集合、字典）或生成器。推导式允许你在一行代码中将循环和条件语句组合起来，提高代码的可读性和效率。\nPython 提供了四种类型的推导式：\n\n列表推导式（List Comprehension）\n集合推导式（Set Comprehension）\n字典推导式（Dictionary Comprehension）\n生成器表达式（Generator Expression）\n\n\n12.2.1 列表推导式（List Comprehension）\n列表推导式用于创建新的列表。其语法如下：\n[expression for item in iterable if condition]\n\nexpression：表达式，用于对每个元素进行操作或转换。\nitem：迭代器变量，表示当前迭代的元素。\niterable：可迭代对象，如列表、元组、字符串等。\nif condition：可选的条件语句，用于过滤元素。\n\n示例：\n\nsquares = [x ** 2 for x in range(1, 6)]\n# 输出：[1, 4, 9, 16, 25]\n\n\n\n12.2.2 集合推导式（Set Comprehension）\n集合推导式用于创建新的集合。其语法与列表推导式类似，但使用大括号 {} 而不是方括号 []。\n\nunique_squares = {x ** 2 for x in [1, 1, 2, 3, 3, 4]}\n# 输出：{1, 4, 9, 16}\n\n\n\n12.2.3 字典推导式（Dictionary Comprehension）\n字典推导式用于创建新的字典。其语法如下：\n{key_expression: value_expression for item in iterable if condition}\n\nkey_expression：表达式，用于生成字典的键。\nvalue_expression：表达式，用于生成字典的值。\nitem、iterable 和 if condition 的含义与列表推导式相同。\n\n示例：\n\nsquare_dict = {x: x ** 2 for x in range(1, 6)}\n# 输出：{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}\n\n\n\n12.2.4 生成器表达式（Generator Expression）\n生成器表达式用于创建生成器对象。其语法与列表推导式类似，但使用圆括号 () 而不是方括号 []。生成器表达式是延迟计算的，只有在需要时才会生成数值，因此对于大型数据集或无限序列非常有用。\n\nsquare_generator = (x ** 2 for x in range(1, 6))\nfor square in square_generator:\n    print(square)\n# 输出：\n# 1\n# 4\n# 9\n# 16\n# 25\n\n1\n4\n9\n16\n25\n\n\n值得注意的是，生成器表达式并不局限于生成特定的值序列。它可以根据需求生成任意类型的对象，如字符串、元组、集合等，甚至是常量值。\n下面是一个例子：\n\ndef count_failed_students(student_scores):\n    \"\"\"Count the number of failing students out of the group provided.\n\n    :param student_scores: list - containing int student scores.\n    :return: int - count of student scores at or below 40.\n    \"\"\"\n    return sum(1 for score in student_scores if score &lt;= 40)\n\n在这个函数里，我们需要统计学生成绩中不及格的人数。我们使用了生成器表达式 sum(1 for score in student_scores if score &lt;= 40) 来计算不及格的学生人数。这里的生成器表达式返回的是一个生成器对象，它会在迭代时逐个生成值 1，最终通过 sum() 函数将这些值相加得到不及格的学生人数。\n这种用法可能不太常见，但它展示了生成器表达式的灵活性。它不仅可以生成基于表达式的值序列，还可以根据条件生成常量值，用于计数、过滤或其他目的。\n\n\n12.2.5 嵌套推导式\n推导式还可以嵌套使用，以生成更复杂的结构。例如，你可以使用嵌套的列表推导式来创建矩阵：\n\nmatrix = [[i * j for j in range(1, 4)] for i in range(1, 4)]\n# 输出：[[1, 2, 3], [2, 4, 6], [3, 6, 9]]\n\n\n\n12.2.6 总结\n推导式是 Python 中一种强大且表达力强的特性，可以简化代码并提高可读性。它们允许你在一行代码中将循环和条件语句组合起来，用于创建新的列表、集合、字典或生成器。\n理解和使用推导式是编写 Pythonic 代码的重要部分。合理运用推导式可以使你的代码更加简洁、优雅和高效。\n\nUnicode 码位\n循环中的%（取模）使用 ## 递归\n\n递归是一种重要的编程技术，用于解决可以被分解为相同问题的子问题的问题。在递归函数中，函数会调用自身来解决更小规模的问题，直到达到基本情况（终止条件）。\n递归函数通常包含两部分：\n\n基本情况（Base Case）：递归函数中的终止条件，用于结束递归过程。\n递归情况（Recursive Case）：递归函数中的递归调用，用于解决更小规模的问题。\n\n一个递归函数的示例如下：\n\ndef find(search_list, value):\n    median = len(search_list) // 2\n    if value not in search_list:\n        raise ValueError(\"value not in array\")\n    elif value == search_list[median]:\n        return median\n    elif value &lt; search_list[median]:\n        return find(search_list[:median], value)\n    else:\n        return median + find(search_list[median:], value)\n\n在这个示例中，find() 函数用于在有序列表中查找指定值的索引。它首先计算列表的中间索引 median，然后检查中间值是否等于目标值。如果不是，则根据目标值与中间值的大小关系，递归调用 find() 函数来查找左半部分或右半部分。",
+    "text": "12.2 Python 推导式（Comprehensions）\nPython 推导式是一种简洁且功能强大的语法，用于创建新的序列（如列表、集合、字典）或生成器。推导式允许你在一行代码中将循环和条件语句组合起来，提高代码的可读性和效率。\nPython 提供了四种类型的推导式：\n\n列表推导式（List Comprehension）\n集合推导式（Set Comprehension）\n字典推导式（Dictionary Comprehension）\n生成器表达式（Generator Expression）\n\n\n12.2.1 列表推导式（List Comprehension）\n列表推导式用于创建新的列表。其语法如下：\n[expression for item in iterable if condition]\n\nexpression：表达式，用于对每个元素进行操作或转换。\nitem：迭代器变量，表示当前迭代的元素。\niterable：可迭代对象，如列表、元组、字符串等。\nif condition：可选的条件语句，用于过滤元素。\n\n示例：\nsquares = [x ** 2 for x in range(1, 6)]\n# 输出：[1, 4, 9, 16, 25]\n\n\n12.2.2 集合推导式（Set Comprehension）\n集合推导式用于创建新的集合。其语法与列表推导式类似，但使用大括号 {} 而不是方括号 []。\nunique_squares = {x ** 2 for x in [1, 1, 2, 3, 3, 4]}\n# 输出：{1, 4, 9, 16}\n\n\n12.2.3 字典推导式（Dictionary Comprehension）\n字典推导式用于创建新的字典。其语法如下：\n{key_expression: value_expression for item in iterable if condition}\n\nkey_expression：表达式，用于生成字典的键。\nvalue_expression：表达式，用于生成字典的值。\nitem、iterable 和 if condition 的含义与列表推导式相同。\n\n示例：\nsquare_dict = {x: x ** 2 for x in range(1, 6)}\n# 输出：{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}\n\n\n12.2.4 生成器表达式（Generator Expression）\n生成器表达式用于创建生成器对象。其语法与列表推导式类似，但使用圆括号 () 而不是方括号 []。生成器表达式是延迟计算的，只有在需要时才会生成数值，因此对于大型数据集或无限序列非常有用。\nsquare_generator = (x ** 2 for x in range(1, 6))\nfor square in square_generator:\n    print(square)\n# 输出：\n# 1\n# 4\n# 9\n# 16\n# 25\n值得注意的是，生成器表达式并不局限于生成特定的值序列。它可以根据需求生成任意类型的对象，如字符串、元组、集合等，甚至是常量值。\n下面是一个例子：\ndef count_failed_students(student_scores):\n    \"\"\"Count the number of failing students out of the group provided.\n\n    :param student_scores: list - containing int student scores.\n    :return: int - count of student scores at or below 40.\n    \"\"\"\n    return sum(1 for score in student_scores if score &lt;= 40)\n在这个函数里，我们需要统计学生成绩中不及格的人数。我们使用了生成器表达式 sum(1 for score in student_scores if score &lt;= 40) 来计算不及格的学生人数。这里的生成器表达式返回的是一个生成器对象，它会在迭代时逐个生成值 1，最终通过 sum() 函数将这些值相加得到不及格的学生人数。\n这种用法可能不太常见，但它展示了生成器表达式的灵活性。它不仅可以生成基于表达式的值序列，还可以根据条件生成常量值，用于计数、过滤或其他目的。\n\n\n12.2.5 嵌套推导式\n推导式还可以嵌套使用，以生成更复杂的结构。例如，你可以使用嵌套的列表推导式来创建矩阵：\nmatrix = [[i * j for j in range(1, 4)] for i in range(1, 4)]\n# 输出：[[1, 2, 3], [2, 4, 6], [3, 6, 9]]\n\n\n12.2.6 总结\n推导式是 Python 中一种强大且表达力强的特性，可以简化代码并提高可读性。它们允许你在一行代码中将循环和条件语句组合起来，用于创建新的列表、集合、字典或生成器。\n理解和使用推导式是编写 Pythonic 代码的重要部分。合理运用推导式可以使你的代码更加简洁、优雅和高效。\n\nUnicode 码位\n循环中的%（取模）使用 ## 递归\n\n递归是一种重要的编程技术，用于解决可以被分解为相同问题的子问题的问题。在递归函数中，函数会调用自身来解决更小规模的问题，直到达到基本情况（终止条件）。\n递归函数通常包含两部分：\n\n基本情况（Base Case）：递归函数中的终止条件，用于结束递归过程。\n递归情况（Recursive Case）：递归函数中的递归调用，用于解决更小规模的问题。\n\n一个递归函数的示例如下：\ndef find(search_list, value):\n    median = len(search_list) // 2\n    if value not in search_list:\n        raise ValueError(\"value not in array\")\n    elif value == search_list[median]:\n        return median\n    elif value &lt; search_list[median]:\n        return find(search_list[:median], value)\n    else:\n        return median + find(search_list[median:], value)\n在这个示例中，find() 函数用于在有序列表中查找指定值的索引。它首先计算列表的中间索引 median，然后检查中间值是否等于目标值。如果不是，则根据目标值与中间值的大小关系，递归调用 find() 函数来查找左半部分或右半部分。",
     "crumbs": [
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>更多</span>"
     ]
