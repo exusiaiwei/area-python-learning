@@ -254,6 +254,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#嵌套推导式" id="toc-嵌套推导式" class="nav-link" data-scroll-target="#嵌套推导式"><span class="header-section-number">12.2.5</span> 嵌套推导式</a></li>
   <li><a href="#总结" id="toc-总结" class="nav-link" data-scroll-target="#总结"><span class="header-section-number">12.2.6</span> 总结</a></li>
   </ul></li>
+  <li><a href="#递归" id="toc-递归" class="nav-link" data-scroll-target="#递归"><span class="header-section-number">12.3</span> 递归</a></li>
+  <li><a href="#代办" id="toc-代办" class="nav-link" data-scroll-target="#代办"><span class="header-section-number">13</span> 代办</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/exusiaiwei/My-Python-Learning/edit/main/more.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -379,10 +381,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="12.2.6" class="anchored" data-anchor-id="总结"><span class="header-section-number">12.2.6</span> 总结</h3>
 <p>推导式是 Python 中一种强大且表达力强的特性，可以简化代码并提高可读性。它们允许你在一行代码中将循环和条件语句组合起来，用于创建新的列表、集合、字典或生成器。</p>
 <p>理解和使用推导式是编写 Pythonic 代码的重要部分。合理运用推导式可以使你的代码更加简洁、优雅和高效。</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Unicode 码位</label></li>
-<li><label><input type="checkbox">循环中的%（取模）使用 ## 递归</label></li>
-</ul>
+</section>
+</section>
+<section id="递归" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="递归"><span class="header-section-number">12.3</span> 递归</h2>
 <p>递归是一种重要的编程技术，用于解决可以被分解为相同问题的子问题的问题。在递归函数中，函数会调用自身来解决更小规模的问题，直到达到基本情况（终止条件）。</p>
 <p>递归函数通常包含两部分：</p>
 <ol type="1">
@@ -401,9 +403,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> median <span class="op">+</span> find(search_list[median:], value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>在这个示例中，<code>find()</code> 函数用于在有序列表中查找指定值的索引。它首先计算列表的中间索引 <code>median</code>，然后检查中间值是否等于目标值。如果不是，则根据目标值与中间值的大小关系，递归调用 <code>find()</code> 函数来查找左半部分或右半部分。</p>
-
-
 </section>
+<section id="代办" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> 代办</h1>
+<ul class="task-list">
+<li><label><input type="checkbox">Unicode 码位</label></li>
+<li><label><input type="checkbox">循环中的%（取模）使用</label></li>
+<li><label><input type="checkbox">时间处理中的datetime库和常见bug</label></li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
