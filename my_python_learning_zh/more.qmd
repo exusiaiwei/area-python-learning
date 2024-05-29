@@ -163,3 +163,5 @@ def find(search_list, value):
 - [ ] Unicode 码位
 - [ ] 循环中的%（取模）使用
 - [ ] 时间处理中的datetime库和常见bug
+  - [ ] 过早时间
+- [ ] 栈的处理和出栈入栈方法
