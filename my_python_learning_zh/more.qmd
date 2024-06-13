@@ -165,3 +165,4 @@ def find(search_list, value):
 - [ ] 时间处理中的datetime库和常见bug
   - [ ] 过早时间
 - [ ] 栈的处理和出栈入栈方法
+- [ ] 枚举常量
