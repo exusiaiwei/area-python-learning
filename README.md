@@ -1,51 +1,53 @@
-# My-Python-Learning
+<div align="center">
+  <a href="README.md">English</a> |
+  <a href="README.zh-CN.md">简体中文</a>
+</div>
 
-[中文版](https://github.com/exusiaiwei/My-Python-Learning/blob/main/README.zh-CN.md)
+# area-python-learning
 
-![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)
+Welcome to my Python learning area! This repository serves as a comprehensive collection of my journey in learning Python, including notes, small projects, and coding exercises.
 
-![GitHub Repo stars](https://img.shields.io/github/stars/exusiaiwei/My-Python-Learning)
+## 📚 Contents
 
-![GitHub forks](https://img.shields.io/github/forks/exusiaiwei/My-Python-Learning)
+- [area-python-learning](#area-python-learning)
+  - [📚 Contents](#-contents)
+  - [🌟 Introduction](#-introduction)
+  - [📁 Repository Structure](#-repository-structure)
+  - [📝 Notes](#-notes)
+  - [🛠️ Projects](#️-projects)
+  - [🏋️ Exercises](#️-exercises)
+  - [🤝 Contributing](#-contributing)
+  - [📄 License](#-license)
 
-A repository for organizing and showcasing my Python Learning journey.
+## 🌟 Introduction
 
-## Table of Contents
+This repository documents my ongoing journey in learning Python. It includes detailed notes, small practice projects, and coding exercises to reinforce my understanding of Python concepts and improve my programming skills.
 
-- [My-Python-Learning](#my-python-learning)
-  - [Table of Contents](#table-of-contents)
-  - [Background](#background)
-  - [Installation](#installation)
-  - [Badges](#badges)
-  - [Related Repositories](#related-repositories)
-  - [License](#license)
+## 📁 Repository Structure
 
-## Background
+The repository is organized as follows:
 
-Welcome to the "My-Python-Learning" repository, where I keep my notes and practice records for learning Python.
+- `note_en/`: English version of my Python learning notes
+- `note_zh/`: Chinese version of my Python learning notes
+- `projects/`: Small Python projects that don't warrant separate repositories
+- `exercises/`: Coding exercises from various platforms (currently only Exercism)
 
-During my Python learning journey, I have used Quarto to create a series of interactive notebooks. I have organized them as Quarto book projects, allowing me to read the materials and execute embedded code interactively.
+## 📝 Notes
 
-The **'my-python-learning-zh'** and **'my-python-learning-en'** folders in this repository contain the interactive notebooks I have created in Chinese and English versions, respectively.
+The notes are available in both English and Chinese, stored in the `note_en` and `note_zh` directories respectively. These notes, titled "My Python Learning", cover various Python topics and concepts I've learned throughout my journey.
 
-In addition, for some simple coding exercises, I have placed them in the **'practical_code'** folder. Here, you can find my practical projects and exercises as I learn Python.
+## 🛠️ Projects
 
-These notes are based on the book 'A Byte of Python' by Swaroop C H, which is licensed under the CC BY-SA 3.0 license.
+The `projects` directory contains small Python projects that I've created as part of my learning process. These projects are not substantial enough to have their own repositories but serve as practical applications of the concepts I've learned.
 
-Unless otherwise stated, the notes are released under the [CC BY-SA 4.0](LICENSE) license.
+## 🏋️ Exercises
 
-## Installation
+The `exercises` directory contains coding exercises I've completed from various platforms. Currently, it only includes exercises from Exercism, but it may expand to include exercises from other platforms in the future.
 
-Since this is just a repository for showcasing and documenting code learning, no installation is required.
+## 🤝 Contributing
 
-## Badges
+While this is primarily a personal learning repository, I welcome any suggestions, corrections, or insights. If you notice any errors or have recommendations for improvement, please feel free to open an issue or submit a pull request.
 
-![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)
+## 📄 License
 
-## Related Repositories
-
-- [A Byte of Python](https://github.com/swaroopch/byte-of-python): This is the main reference tutorial for my Python learning. Written by Swaroop Chitlur, it has been immensely helpful with its easy-to-understand and practical approach. The book is freely available and open-source on GitHub, making it perfect for beginners in Python. I express my sincere gratitude to the author!
-
-## License
-
-[CC BY-SA 4.0](LICENSE) © exusiaiwei
+This project is open source and available under the [MIT License](LICENSE).

@@ -1,51 +1,53 @@
-# 我的Python学习仓库
+<div align="center">
+  <a href="README.md">English</a> |
+  <a href="README.zh-CN.md">简体中文</a>
+</div>
 
-[English Version](https://github.com/exusiaiwei/My-Python-Learning/blob/main/README.md)
+# area-python-learning
 
-![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)
+欢迎来到我的 Python 学习区域！这个仓库是我学习 Python 旅程的综合集合，包括笔记、小项目和编码练习。
 
-![GitHub Repo stars](https://img.shields.io/github/stars/exusiaiwei/My-Python-Learning)
+## 📚 目录
 
-![GitHub forks](https://img.shields.io/github/forks/exusiaiwei/My-Python-Learning)
+- [area-python-learning](#area-python-learning)
+	- [📚 目录](#-目录)
+	- [🌟 简介](#-简介)
+	- [📁 仓库结构](#-仓库结构)
+	- [📝 笔记](#-笔记)
+	- [🛠️ 项目](#️-项目)
+	- [🏋️ 练习](#️-练习)
+	- [🤝 贡献](#-贡献)
+	- [📄 许可证](#-许可证)
 
-一个用于组织和展示我的 Python 学习历程的仓库。
+## 🌟 简介
 
-## 目录
+这个仓库记录了我正在进行的 Python 学习之旅。它包括详细的笔记、小型练习项目和编码练习，以加强我对 Python 概念的理解并提高我的编程技能。
 
-- [我的Python学习仓库](#我的python学习仓库)
-	- [目录](#目录)
-	- [背景](#背景)
-	- [安装](#安装)
-	- [徽章](#徽章)
-	- [相关仓库](#相关仓库)
-	- [许可证](#许可证)
+## 📁 仓库结构
 
-## 背景
+该仓库的组织结构如下：
 
-欢迎来到 "My-Python-Studying" 仓库，这里是我学习 Python 的笔记和实践记录。
+- `note_en/`：Python 学习笔记的英文版
+- `note_zh/`：Python 学习笔记的中文版
+- `projects/`：不足以单独成库的小型 Python 项目
+- `exercises/`：来自各种平台的编码练习（目前仅有 Exercism）
 
-在我的 Python 学习之旅中，我使用 Quarto 记录了一系列的交互式笔记。我采用的是 Quarto 书籍项目的形式，以便在阅读材料的同时，观看和执行相关的嵌入式代码。
+## 📝 笔记
 
-本仓库下的 **'my-python-learning-zh'** 和 **'my-python-learning-en'** 文件夹分别存放着我制作的中文和英文版本交互式笔记。
+笔记有英文和中文两个版本，分别存储在 `note_en` 和 `note_zh` 目录中。这些笔记题为"My Python Learning"，涵盖了我在学习过程中接触到的各种 Python 主题和概念。
 
-此外，对于一些简单的代码实践，我将它们放置在 **'practical_code'** 文件夹中。您可以在这里查看我在学习 Python 过程中的实战项目和练习。
+## 🛠️ 项目
 
-这些笔记是基于Swaroop C H的书籍《A Byte of Python》而编写的，该书采用CC BY-SA 3.0许可证。
+`projects` 目录包含了我在学习过程中创建的小型 Python 项目。这些项目不足以拥有自己的独立仓库，但它们作为我所学概念的实际应用示例。
 
-除非另有说明，这些笔记采用[CC BY-SA 4.0](LICENSE)许可证发布。
+## 🏋️ 练习
 
-## 安装
+`exercises` 目录包含我完成的来自各种平台的编码练习。目前，它只包括来自 Exercism 的练习，但未来可能会扩展到包括其他平台的练习。
 
-由于这只是一个用于展示和记录代码学习的仓库，无需进行安装。
+## 🤝 贡献
 
-## 徽章
+虽然这主要是一个个人学习仓库，但我欢迎任何建议、纠正或见解。如果你发现任何错误或有改进建议，请随时开issue或提交pull request。
 
-![standard-readme 符合规范](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)
+## 📄 许可证
 
-## 相关仓库
-
-- [A Byte of Python](https://github.com/swaroopch/byte-of-python): 这是我学习 Python 的主要参考教程。这本书由 Swaroop Chitlur 撰写，以其易于理解和实用的方法让我受益匪浅。该书免费并开源在 GitHub 上，非常适合那些刚开始接触 Python 的读者。我在此对作者表示由衷的感谢！
-
-## 许可证
-
-[CC BY-SA 4.0](LICENSE) © exusiaiwei
+这个项目是开源的，遵循 [MIT 许可证](LICENSE)。
