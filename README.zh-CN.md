@@ -7,9 +7,11 @@
 
   <!-- 徽章 -->
   <p>
+    <img src="https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square" alt="readme 样式">
+    <img src="https://img.shields.io/github/stars/exusiaiwei/area-python-learning" alt="星标数">
+    <img src="https://img.shields.io/github/forks/exusiaiwei/area-python-learning" alt="分支数">
     <img src="https://img.shields.io/github/license/exusiaiwei/area-python-learning" alt="许可证">
     <img src="https://img.shields.io/github/last-commit/exusiaiwei/area-python-learning" alt="最后提交">
-    <img src="https://img.shields.io/github/languages/top/exusiaiwei/area-python-learning" alt="主要语言">
   </p>
 </div>
 

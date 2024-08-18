@@ -7,9 +7,11 @@
 
   <!-- Badges -->
   <p>
+    <img src="https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square" alt="readme style">
+    <img src="https://img.shields.io/github/stars/exusiaiwei/area-python-learning" alt="stars">
+    <img src="https://img.shields.io/github/forks/exusiaiwei/area-python-learning" alt="forks">
     <img src="https://img.shields.io/github/license/exusiaiwei/area-python-learning" alt="license">
     <img src="https://img.shields.io/github/last-commit/exusiaiwei/area-python-learning" alt="last-commit">
-    <img src="https://img.shields.io/github/languages/top/exusiaiwei/area-python-learning" alt="top-language">
   </p>
 </div>
 
