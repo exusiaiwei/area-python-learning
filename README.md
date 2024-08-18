@@ -3,13 +3,13 @@
   <a href="README.zh-CN.md">简体中文</a>
 </div>
 
-# area-python-learning
+# Area Python Learning
 
 Welcome to my Python learning area! This repository serves as a comprehensive collection of my journey in learning Python, including notes, small projects, and coding exercises.
 
 ## 📚 Contents
 
-- [area-python-learning](#area-python-learning)
+- [Area Python Learning](#area-python-learning)
   - [📚 Contents](#-contents)
   - [🌟 Introduction](#-introduction)
   - [📁 Repository Structure](#-repository-structure)
@@ -50,4 +50,4 @@ While this is primarily a personal learning repository, I welcome any suggestion
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the [CC-BY-SA-4.0 License](LICENSE).

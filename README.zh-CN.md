@@ -3,13 +3,13 @@
   <a href="README.zh-CN.md">简体中文</a>
 </div>
 
-# area-python-learning
+# Area Python Learning
 
 欢迎来到我的 Python 学习区域！这个仓库是我学习 Python 旅程的综合集合，包括笔记、小项目和编码练习。
 
 ## 📚 目录
 
-- [area-python-learning](#area-python-learning)
+- [Area Python Learning](#area-python-learning)
 	- [📚 目录](#-目录)
 	- [🌟 简介](#-简介)
 	- [📁 仓库结构](#-仓库结构)
@@ -50,4 +50,4 @@
 
 ## 📄 许可证
 
-这个项目是开源的，遵循 [MIT 许可证](LICENSE)。
+这个项目是开源的，遵循 [CC-BY-SA-4.0 许可证](LICENSE)。
