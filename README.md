@@ -1,23 +1,29 @@
 <div align="center">
-  <a href="README.md">English</a> |
-  <a href="README.zh-CN.md">简体中文</a>
-</div>
+  <h1>Area Python Learning</h1>
+  <p>
+    <b>English</b> |
+    <a href="README.zh-CN.md">简体中文</a>
+  </p>
 
-# Area Python Learning
+  <!-- Badges -->
+  <p>
+    <img src="https://img.shields.io/github/license/exusiaiwei/area-python-learning" alt="license">
+    <img src="https://img.shields.io/github/last-commit/exusiaiwei/area-python-learning" alt="last-commit">
+    <img src="https://img.shields.io/github/languages/top/exusiaiwei/area-python-learning" alt="top-language">
+  </p>
+</div>
 
 Welcome to my Python learning area! This repository serves as a comprehensive collection of my journey in learning Python, including notes, small projects, and coding exercises.
 
 ## 📚 Contents
 
-- [Area Python Learning](#area-python-learning)
-  - [📚 Contents](#-contents)
-  - [🌟 Introduction](#-introduction)
-  - [📁 Repository Structure](#-repository-structure)
-  - [📝 Notes](#-notes)
-  - [🛠️ Projects](#️-projects)
-  - [🏋️ Exercises](#️-exercises)
-  - [🤝 Contributing](#-contributing)
-  - [📄 License](#-license)
+- [Introduction](#-introduction)
+- [Repository Structure](#-repository-structure)
+- [Notes](#-notes)
+- [Projects](#️-projects)
+- [Exercises](#️-exercises)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ## 🌟 Introduction
 
@@ -51,3 +57,9 @@ While this is primarily a personal learning repository, I welcome any suggestion
 ## 📄 License
 
 This project is open source and available under the [CC-BY-SA-4.0 License](LICENSE).
+
+<div align="center">
+  <p>
+    <a href="#area-python-learning">Back to Top</a>
+  </p>
+</div>
