@@ -29,11 +29,11 @@ jobs:
 
       - name: Render and Publish
         run: |
-          quarto render my_python_learning_en
-          quarto render my_python_learning_zh
+          quarto render note_en
+          quarto render note_zh
           mkdir -p _site
-          mv my_python_learning_en/_site _site/en
-          mv my_python_learning_zh/_site _site/zh
+          mv note_en/_site _site/en
+          mv note_zh/_site _site/zh
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
